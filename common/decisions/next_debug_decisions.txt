@@ -1,0 +1,59 @@
+next_debug_decisions = {
+
+	next_set_focus_generic = {
+
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			load_focus_tree = {
+				tree = next_generic
+				keep_completed = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	next_trigger_world_peace = {
+
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			every_country = {
+				limit = { always = yes }
+				news_event = {
+					id = next_init.1
+					days = 0
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

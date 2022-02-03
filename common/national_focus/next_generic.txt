@@ -1,0 +1,173 @@
+focus_tree = {
+	id = next_generic
+	
+	country = {
+		factor = 1
+	}
+	
+	default = yes
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = generic_worldatpeace
+	}
+
+	continuous_focus_position = { x = 0 y = 1000 } 
+
+	#Stand with the Freeworld
+	focus = {
+		id = generic_stand_with_the_freeworld
+		icon = GFX_generic_stand_with_the_freeworld-427
+		x = 0
+		y = 3
+		cost = 20
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = generic_a_new_world_order  }
+	}
+
+	#Stand with the comintern
+	focus = {
+		id = generic_stand_with_the_comintern
+		icon = GFX_generic_stand_with_the_comintern-426
+		x = 4
+		y = 3
+		cost = 20
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = generic_a_new_world_order  }
+	}
+
+	#Demobilize
+	focus = {
+		id = generic_demobilize
+		icon = GFX_focus_focus_fra_maquis
+		x = 3
+		y = 1
+		cost = 12
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = generic_worldatpeace  }
+		mutually_exclusive = { focus = generic_prepare_for_whats_next  }
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			
+						add_war_support = -25
+					
+		}
+	}
+
+	#The thrid way
+	focus = {
+		id = generic_the_thrid_way
+		icon = GFX_goal_generic_neutrality_focus
+		x = 2
+		y = 3
+		cost = 20
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = generic_a_new_world_order  }
+	}
+
+	#A new world order
+	focus = {
+		id = generic_a_new_world_order
+		icon = GFX_focus_hol_the_fourth_ally
+		x = 2
+		y = 2
+		cost = 20
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = generic_demobilize  focus = generic_prepare_for_whats_next  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Prepare for whats next
+	focus = {
+		id = generic_prepare_for_whats_next
+		icon = GFX_focus_generic_manpower
+		x = 1
+		y = 1
+		cost = 12
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = generic_worldatpeace  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			
+						add_war_support = -25
+					
+		}
+	}
+
+	#Professional Army
+	focus = {
+		id = generic_professional_army
+		icon = GFX_focus_chi_army_reform
+		x = 5
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = generic_demobilize  }
+	}
+
+	#World at peace!
+	focus = {
+		id = generic_worldatpeace
+		icon = GFX_focus_focus_fra_fascist_threat
+		x = 2
+		y = 0
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+						add_political_power = 100
+						add_war_support = -0.10
+						add_stability = 0.25
+					
+		}
+	}
+
+	#Army
+
+	focus = {
+		id = generic_army
+		icon = GFX_focus_eng_special_air_service
+		x = 8
+		y = 3
+		cost = 2
+		search_filters = {
+			
+						FOCUS_FILTER_WAR_SUPPORT
+					
+		}
+		prerequisite = { focus = generic_professional_army  focus = generic_defensivearmy  }
+	}
+
+	#Defensive Army
+
+	focus = {
+		id = generic_defensivearmy
+		icon = GFX_goal_rhineland
+		x = 9
+		y = 2
+		cost = 2
+		search_filters = {
+			
+						FOCUS_FILTER_MANPOWER
+					
+		}
+		prerequisite = { focus = generic_demobilize  }
+		mutually_exclusive = { focus = generic_professional_army  }
+	}
+
+}

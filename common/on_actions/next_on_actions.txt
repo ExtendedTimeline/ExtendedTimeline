@@ -1,0 +1,63 @@
+on_actions = {
+	#Not run on a specific country.
+	on_startup = {
+		effect = {
+		}
+	}
+	#ROOT - country that just went to peace
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = next_focus_coldwar_flag }
+					any_country = {
+						has_war = no
+					}
+					date > 1945.01.01
+				}
+				set_global_flag = next_focus_coldwar_flag
+				every_country = {
+					news_event = {
+						id = next_init.1
+						days = 0
+					}
+				}
+			}
+		}
+	}
+
+	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
+	#ROOT = nation being released, FROM = overlord
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = next_focus_cold_war_flag
+				}
+				ROOT = {
+					country_event = {
+						id = next_init.0
+						days = 0
+					}
+				}
+			}
+		}
+	}
+
+	#ROOT is free nation FROM is releaser
+	on_release_as_free = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = next_focus_cold_war_flag
+				}
+				ROOT = {
+					country_event = {
+						id = next_init.0
+						days = 0
+					}
+				}
+			}
+		}
+	}
+}

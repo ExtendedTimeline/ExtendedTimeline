@@ -1,0 +1,67 @@
+add_namespace = next_init
+
+country_event = {	# Change focus tree based on nation
+	id = next_init.0
+	title = next_init.0.t
+	desc = next_init.0.desc
+	#picture = GFX_news_event_tiberium
+
+	is_triggered_only = yes
+	hidden = yes
+	fire_only_once = no
+
+	immediate = {
+		# FOCUS TREES
+		THIS = {
+			if = {
+				limit = { original_tag = ENG }   
+				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to ENG" }
+				load_focus_tree = { tree = next_generic keep_completed = yes }
+			}
+			else_if = {
+				limit = { original_tag = GER }   
+				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
+				load_focus_tree = { tree = next_generic keep_completed = yes }
+			}
+			else = {
+				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
+				load_focus_tree = { tree = next_generic keep_completed = yes }
+			}
+		}
+	}
+
+	option = {
+		name = next_init.0.a
+	}
+}
+news_event = {
+	id = next_init.1
+	title = next_init.1.t
+	desc = next_init.1.d
+	picture = GFX_news_event_generic_sign_treaty2
+	
+	#major = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	immediate = {
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Have world peace event" }
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			add_named_threat = { 
+				threat = -25
+				name = NEXT_COLDWAR
+			}
+		}
+		country_event = {
+			id = next_init.0
+			days = 1
+		}
+	}
+
+	option = {
+		name = next_init.1.a
+	}
+}
