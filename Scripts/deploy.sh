@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION=$*
-PROJECT_NAME=""
+PROJECT_NAME="NextExtended"
 PROJECT_FILES=common
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
