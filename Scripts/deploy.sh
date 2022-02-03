@@ -5,7 +5,7 @@ PROJECT_NAME="NextExtended"
 PROJECT_FILES=common
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-PROJECT_ROOT_DIR=$SCRIPT_DIR
+PROJECT_ROOT_DIR="$SCRIPT_DIR/../"
 
 mkdir $PROJECT_ROOT_DIR/release/
 
