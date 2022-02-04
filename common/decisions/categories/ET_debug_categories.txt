@@ -1,4 +1,4 @@
-next_debug_decisions = {
+ET_debug_decisions = {
 	icon = generic_research
 	visible = {
 		is_debug = yes

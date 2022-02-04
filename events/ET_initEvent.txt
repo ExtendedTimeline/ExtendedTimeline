@@ -1,10 +1,10 @@
-add_namespace = next_init
+add_namespace = ET_init
+add_namespace = ET_init_news
 
 country_event = {	# Change focus tree based on nation
-	id = next_init.0
-	title = next_init.0.t
-	desc = next_init.0.desc
-	#picture = GFX_news_event_tiberium
+	id = ET_init.0
+	title = ET_init.0.t
+	desc = ET_init.0.desc
 
 	is_triggered_only = yes
 	hidden = yes
@@ -16,28 +16,28 @@ country_event = {	# Change focus tree based on nation
 			if = {
 				limit = { original_tag = ENG }   
 				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to ENG" }
-				load_focus_tree = { tree = next_generic keep_completed = yes }
+				load_focus_tree = { tree = ET_generic keep_completed = yes }
 			}
 			else_if = {
 				limit = { original_tag = GER }   
 				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
-				load_focus_tree = { tree = next_generic keep_completed = yes }
+				load_focus_tree = { tree = ET_generic keep_completed = yes }
 			}
 			else = {
 				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
-				load_focus_tree = { tree = next_generic keep_completed = yes }
+				load_focus_tree = { tree = ET_generic keep_completed = yes }
 			}
 		}
 	}
 
 	option = {
-		name = next_init.0.a
+		name = ET_init.0.a
 	}
 }
 news_event = {
-	id = next_init.1
-	title = next_init.1.t
-	desc = next_init.1.d
+	id = ET_init_news.0
+	title = ET_init_news.0.t
+	desc = ET_init_news.0.d
 	picture = GFX_news_event_generic_sign_treaty2
 	
 	#major = yes
@@ -52,16 +52,16 @@ news_event = {
 			}
 			add_named_threat = { 
 				threat = -25
-				name = NEXT_COLDWAR
+				name = ET_THREAT_COLDWAR
 			}
 		}
 		country_event = {
-			id = next_init.0
+			id = ET_init.0
 			days = 1
 		}
 	}
 
 	option = {
-		name = next_init.1.a
+		name = ET_init.0.a
 	}
 }

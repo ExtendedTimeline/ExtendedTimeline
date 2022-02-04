@@ -1,6 +1,6 @@
-next_debug_decisions = {
+ET_debug_decisions = {
 
-	next_set_focus_generic = {
+	ET_set_focus_generic = {
 
 		icon = generic_research
 
@@ -17,7 +17,7 @@ next_debug_decisions = {
 
 		complete_effect = {
 			load_focus_tree = {
-				tree = next_generic
+				tree = ET_generic
 				keep_completed = yes
 			}
 		}
@@ -27,7 +27,7 @@ next_debug_decisions = {
 		}
 	}
 
-	next_trigger_world_peace = {
+	ET_trigger_world_peace_news_event = {
 
 		icon = generic_research
 
@@ -46,7 +46,7 @@ next_debug_decisions = {
 			every_country = {
 				limit = { always = yes }
 				news_event = {
-					id = next_init.1
+					id = ET_init_news.0
 					days = 0
 				}
 			}

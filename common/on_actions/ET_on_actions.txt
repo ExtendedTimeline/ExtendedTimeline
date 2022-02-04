@@ -7,18 +7,20 @@ on_actions = {
 	#ROOT - country that just went to peace
 	on_peaceconference_ended = {
 		effect = {
+			
 			if = {
 				limit = {
-					NOT = { has_global_flag = next_focus_coldwar_flag }
+					NOT = { has_global_flag = ET_focus_coldwar_flag }
 					any_country = {
 						has_war = no
 					}
 					date > 1945.01.01
 				}
-				set_global_flag = next_focus_coldwar_flag
+				set_global_flag = ET_focus_coldwar_flag
 				every_country = {
+					limit = { always = yes }
 					news_event = {
-						id = next_init.1
+						id = ET_init_news.0
 						days = 0
 					}
 				}
@@ -32,11 +34,11 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_global_flag = next_focus_cold_war_flag
+					has_global_flag = ET_focus_coldwar_flag
 				}
 				ROOT = {
 					country_event = {
-						id = next_init.0
+						id = ET_init.0
 						days = 0
 					}
 				}
@@ -53,7 +55,7 @@ on_actions = {
 				}
 				ROOT = {
 					country_event = {
-						id = next_init.0
+						id = ET_init.0
 						days = 0
 					}
 				}

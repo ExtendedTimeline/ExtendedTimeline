@@ -1,5 +1,5 @@
 focus_tree = {
-	id = next_generic
+	id = ET_generic
 	
 	country = {
 		factor = 1
@@ -100,7 +100,6 @@ focus_tree = {
 		prerequisite = { focus = generic_worldatpeace  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
 						add_war_support = -25
 					
 		}
