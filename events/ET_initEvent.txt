@@ -8,25 +8,12 @@ country_event = {	# Change focus tree based on nation
 
 	is_triggered_only = yes
 	hidden = yes
-	fire_only_once = no
 
 	immediate = {
 		# FOCUS TREES
+
 		THIS = {
-			if = {
-				limit = { original_tag = ENG }   
-				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to ENG" }
-				load_focus_tree = { tree = ET_generic keep_completed = yes }
-			}
-			else_if = {
-				limit = { original_tag = GER }   
-				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
-				load_focus_tree = { tree = ET_generic keep_completed = yes }
-			}
-			else = {
-				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
-				load_focus_tree = { tree = ET_generic keep_completed = yes }
-			}
+			ET_get_new_focus_tree_effect = yes
 		}
 	}
 
@@ -42,7 +29,6 @@ news_event = {
 	
 	#major = yes
 	is_triggered_only = yes
-	fire_only_once = no
 	
 	immediate = {
 		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Have world peace event" }
@@ -62,6 +48,6 @@ news_event = {
 	}
 
 	option = {
-		name = ET_init.0.a
+		name = ET_init_news.0.a
 	}
 }

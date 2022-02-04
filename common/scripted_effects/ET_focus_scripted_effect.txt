@@ -1,0 +1,20 @@
+# SCOPE: TARGET
+ET_get_new_focus_tree_effect = {
+	custom_effect_tooltip = ET_get_new_focus_tree_effect_tt
+	hidden_effect = {
+		if = {
+			limit = { original_tag = ENG }   
+			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to ENG" }
+			load_focus_tree = { tree = ET_generic keep_completed = yes }
+		}
+		else_if = {
+			limit = { original_tag = GER }   
+			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
+			load_focus_tree = { tree = ET_generic keep_completed = yes }
+		}
+		else = {
+			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
+			load_focus_tree = { tree = ET_generic keep_completed = yes }
+		}
+	}
+}
