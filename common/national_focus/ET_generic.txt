@@ -1,43 +1,44 @@
 focus_tree = {
 	id = ET_generic
 	
-	country = {
-		factor = 1
-	}
-	
-	default = yes
 	reset_on_civilwar = no
-
 	initial_show_position = {
 		focus = generic_worldatpeace
 	}
-
 	continuous_focus_position = { x = 0 y = 1000 } 
-
+	
 	#Stand with the Freeworld
 	focus = {
 		id = generic_stand_with_the_freeworld
 		icon = GFX_generic_stand_with_the_freeworld-427
 		x = 0
 		y = 3
-		cost = 20
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = generic_a_new_world_order  }
+		ai_will_do = { factor = 1 }
+		available = {
+			has_government = democratic
+		}
 	}
 
 	#Stand with the comintern
 	focus = {
 		id = generic_stand_with_the_comintern
 		icon = GFX_generic_stand_with_the_comintern-426
-		x = 4
+		x = 6
 		y = 3
-		cost = 20
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = generic_a_new_world_order  }
+		ai_will_do = { factor = 1 }
+		available = {
+			has_government = communism
+		}
 	}
 
 	#Demobilize
@@ -46,17 +47,15 @@ focus_tree = {
 		icon = GFX_focus_focus_fra_maquis
 		x = 3
 		y = 1
-		cost = 12
+		cost = 8
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = generic_worldatpeace  }
 		mutually_exclusive = { focus = generic_prepare_for_whats_next  }
-		ai_will_do = { factor = 2 }
+		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
-						add_war_support = -25
-					
+			add_war_support = -25
 		}
 	}
 
@@ -66,11 +65,12 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		x = 2
 		y = 3
-		cost = 20
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = generic_a_new_world_order  }
+		ai_will_do = { factor = 1 }
 	}
 
 	#A new world order
@@ -79,12 +79,16 @@ focus_tree = {
 		icon = GFX_focus_hol_the_fourth_ally
 		x = 2
 		y = 2
-		cost = 20
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = generic_demobilize  focus = generic_prepare_for_whats_next  }
 		ai_will_do = { factor = 1 }
+		bypass = {
+			add_political_power = 100
+			
+		}
 	}
 
 	#Prepare for whats next
@@ -93,15 +97,16 @@ focus_tree = {
 		icon = GFX_focus_generic_manpower
 		x = 1
 		y = 1
-		cost = 12
+		cost = 8
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = generic_worldatpeace  }
+		mutually_exclusive = { focus = generic_demobilize  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-						add_war_support = -25
-					
+			add_war_support = -25
+			
 		}
 	}
 
@@ -109,12 +114,15 @@ focus_tree = {
 	focus = {
 		id = generic_professional_army
 		icon = GFX_focus_chi_army_reform
-		x = 5
+		x = 11
 		y = 2
+		cost = 4
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = generic_demobilize  }
+		prerequisite = { focus = generic_demobilize  focus = generic_prepare_for_whats_next  }
+		mutually_exclusive = { focus = generic_defensive_army  }
+		ai_will_do = { factor = 1 }
 	}
 
 	#World at peace!
@@ -123,7 +131,7 @@ focus_tree = {
 		icon = GFX_focus_focus_fra_fascist_threat
 		x = 2
 		y = 0
-		cost = 5
+		cost = 8
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -137,36 +145,311 @@ focus_tree = {
 	}
 
 	#Army
-
 	focus = {
 		id = generic_army
-		icon = GFX_focus_eng_special_air_service
+		icon = GFX_goal_generic_army_tanks
 		x = 8
 		y = 3
-		cost = 2
+		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_WAR_SUPPORT
-					
+			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = generic_professional_army  focus = generic_defensivearmy  }
+		prerequisite = { focus = generic_professional_army  focus = generic_defensive_army  }
+		ai_will_do = { factor = 1 }
 	}
 
 	#Defensive Army
-
 	focus = {
-		id = generic_defensivearmy
+		id = generic_defensive_army
 		icon = GFX_goal_rhineland
-		x = 9
+		x = 15
 		y = 2
-		cost = 2
+		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_MANPOWER
-					
+			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = generic_demobilize  }
+		prerequisite = { focus = generic_demobilize  focus = generic_prepare_for_whats_next  }
 		mutually_exclusive = { focus = generic_professional_army  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Naval
+	focus = {
+		id = generic_naval
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 11
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_professional_army  focus = generic_defensive_army  }
+	}
+
+	#Airforce
+	focus = {
+		id = generic_airforce
+		icon = GFX_goal_generic_build_airforce
+		x = 17
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_professional_army  focus = generic_defensive_army  }
+	}
+
+	#Economy
+	focus = {
+		id = generic_economy
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 19
+		y = 2
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_demobilize  focus = generic_prepare_for_whats_next  }
+	}
+
+	#A National Order
+	focus = {
+		id = generic_a_national_order
+		icon = GFX_generic_a_national_order-428
+		x = 4
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = generic_a_new_world_order  }
+		ai_will_do = { factor = 1 }
+		available = {
+			has_government = fascism
+		}
+	}
+
+	#Infrastructure
+	focus = {
+		id = generic_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 21
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = generic_economy  }
+	}
+
+	#Industrial
+	focus = {
+		id = generic_industrial
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 19
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = generic_economy  }
+	}
+
+	#Helicopter Effort
+	focus = {
+		id = generic_helicopter_effort
+		icon = GFX_goal_generic_air_fighter2
+		x = 20
+		y = 6
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_jet_effort  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Jet Effort
+	focus = {
+		id = generic_jet_effort
+		icon = GFX_focus_rocketry
+		x = 17
+		y = 4
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_airforce  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Jet Fighters
+	focus = {
+		id = generic_jet_fighters
+		icon = GFX_goal_generic_air_fighter2
+		x = 19
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_jet_effort  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Open Sea Navy
+	focus = {
+		id = generic_open_sea_navy
+		icon = GFX_focus_generic_navy_battleship2
+		x = 15
+		y = 4
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_naval  }
+		mutually_exclusive = { focus = generic_coastal_navy  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Coastal Navy
+	focus = {
+		id = generic_coastal_navy
+		icon = GFX_goal_generic_navy_cruiser
+		x = 11
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_naval  }
+		mutually_exclusive = { focus = generic_open_sea_navy  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Carrier
+	focus = {
+		id = generic_carrier
+		icon = GFX_goal_generic_navy_carrier
+		x = 17
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_jet_effort  } prerequisite = { focus = generic_open_sea_navy  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Destroyer
+	focus = {
+		id = generic_destroyer
+		icon = GFX_focus_generic_destroyer
+		x = 11
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_coastal_navy  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Frigates
+	focus = {
+		id = generic_frigates
+		icon = GFX_focus_generic_cruiser2
+		x = 13
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_open_sea_navy  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Carrier Fighters
+	focus = {
+		id = generic_carrier_fighters
+		icon = GFX_goal_generic_navy_carrier
+		x = 18
+		y = 6
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_carrier  } prerequisite = { focus = generic_jet_fighters  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Nuclear Powered
+	focus = {
+		id = generic_nuclear_powered
+		icon = GFX_focus_wonderweapons
+		x = 15
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_open_sea_navy  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Submarines
+	focus = {
+		id = generic_submarines
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 15
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_nuclear_powered  }
+	}
+
+	#Carrier 2
+	focus = {
+		id = generic_carrier_2
+		icon = GFX_goal_generic_navy_carrier
+		x = 16
+		y = 6
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_carrier  } prerequisite = { focus = generic_nuclear_powered  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Mechanized
+	focus = {
+		id = generic_mechanized
+		icon = GFX_goal_generic_army_motorized
+		x = 7
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_army  }
+		mutually_exclusive = { focus = generic_infantry  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Infantry
+	focus = {
+		id = generic_infantry
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 9
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = generic_army  }
+		mutually_exclusive = { focus = generic_mechanized  }
 	}
 
 }

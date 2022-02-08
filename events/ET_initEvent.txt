@@ -11,7 +11,6 @@ country_event = {	# Change focus tree based on nation
 
 	immediate = {
 		# FOCUS TREES
-
 		THIS = {
 			ET_get_new_focus_tree_effect = yes
 		}
