@@ -1,61 +1,61 @@
 ﻿l_english: 
-generic_stand_with_the_freeworld:0 "Stand with the Freeworld"
-generic_stand_with_the_freeworld_desc:0 "Stand with the Freeworld"
-generic_stand_with_the_comintern:0 "Stand with the comintern"
-generic_stand_with_the_comintern_desc:0 "Stand with the comintern"
-generic_demobilize:0 "Demobilize"
-generic_demobilize_desc:0 "Demobilize"
-generic_the_thrid_way:0 "The thrid way"
-generic_the_thrid_way_desc:0 "The thrid way"
-generic_a_new_world_order:0 "A new world order"
-generic_a_new_world_order_desc:0 "A new world order"
-generic_prepare_for_whats_next:0 "Prepare for whats next"
-generic_prepare_for_whats_next_desc:0 "Prepare for whats next"
-generic_professional_army:0 "Professional Army"
-generic_professional_army_desc:0 "Professional Army"
-generic_worldatpeace:0 "World at peace!"
-generic_worldatpeace_desc:0 "The war that defensively end all wars"
-generic_army:0 "Army"
-generic_army_desc:0 "Army"
-generic_defensive_army:0 "Defensive Army"
-generic_defensive_army_desc:0 "Defensive Army"
-generic_naval:0 "Naval"
-generic_naval_desc:0 "Naval"
-generic_airforce:0 "Airforce"
-generic_airforce_desc:0 "Airforce"
-generic_economy:0 "Economy"
-generic_economy_desc:0 "Economy"
-generic_a_national_order:0 "A National Order"
-generic_a_national_order_desc:0 "A National Order"
-generic_infrastructure:0 "Infrastructure"
-generic_infrastructure_desc:0 "Infrastructure"
-generic_industrial:0 "Industrial"
-generic_industrial_desc:0 "Industrial"
-generic_helicopter_effort:0 "Helicopter Effort"
-generic_helicopter_effort_desc:0 "Helicopter Effort"
-generic_jet_effort:0 "Jet Effort"
-generic_jet_effort_desc:0 "Jet Effort"
-generic_jet_fighters:0 "Jet Fighters"
-generic_jet_fighters_desc:0 "Jet Fighters"
-generic_open_sea_navy:0 "Open Sea Navy"
-generic_open_sea_navy_desc:0 "Open Sea Navy"
-generic_coastal_navy:0 "Coastal Navy"
-generic_coastal_navy_desc:0 "Coastal Navy"
-generic_carrier:0 "Carrier"
-generic_carrier_desc:0 "Carrier"
-generic_destroyer:0 "Destroyer"
-generic_destroyer_desc:0 "Destroyer"
-generic_frigates:0 "Frigates"
-generic_frigates_desc:0 "Frigates"
-generic_carrier_fighters:0 "Carrier Fighters"
-generic_carrier_fighters_desc:0 "Carrier Fighters"
-generic_nuclear_powered:0 "Nuclear Powered"
-generic_nuclear_powered_desc:0 "Nuclear Powered"
-generic_submarines:0 "Submarines"
-generic_submarines_desc:0 "Submarines"
-generic_carrier_2:0 "Carrier 2"
-generic_carrier_2_desc:0 "Carrier 2"
-generic_mechanized:0 "Mechanized"
-generic_mechanized_desc:0 "Mechanized"
-generic_infantry:0 "Infantry"
-generic_infantry_desc:0 "Infantry"
+et_generic_stand_with_the_freeworld:0 "Stand with the Freeworld"
+et_generic_stand_with_the_freeworld_desc:0 "Stand with the Freeworld"
+et_generic_stand_with_the_comintern:0 "Stand with the comintern"
+et_generic_stand_with_the_comintern_desc:0 "Stand with the comintern"
+et_generic_demobilize:0 "Demobilize"
+et_generic_demobilize_desc:0 "Demobilize"
+et_generic_the_thrid_way:0 "The thrid way"
+et_generic_the_thrid_way_desc:0 "The thrid way"
+et_generic_anewworldorder:0 "A new world order"
+et_generic_anewworldorder_desc:0 "A new world order"
+et_generic_prepareforwhatsnext:0 "Prepare for whats next"
+et_generic_prepareforwhatsnext_desc:0 "Prepare for whats next"
+et_generic_professionalarmy:0 "Professional Army"
+et_generic_professionalarmy_desc:0 "Professional Army"
+et_generic_worldatpeace:0 "World at peace!"
+et_generic_worldatpeace_desc:0 "The war that defensively end all wars"
+et_generic_army:0 "Army"
+et_generic_army_desc:0 "Army"
+et_generic_defensivearmy:0 "Defensive Army"
+et_generic_defensivearmy_desc:0 "Defensive Army"
+et_generic_naval:0 "Naval"
+et_generic_naval_desc:0 "Naval"
+et_generic_airforce:0 "Airforce"
+et_generic_airforce_desc:0 "Airforce"
+et_generic_economy:0 "Economy"
+et_generic_economy_desc:0 "Economy"
+et_generic_a_national_order:0 "A National Order"
+et_generic_a_national_order_desc:0 "A National Order"
+et_generic_infrastructure:0 "Infrastructure"
+et_generic_infrastructure_desc:0 "Infrastructure"
+et_generic_industrial:0 "Industrial"
+et_generic_industrial_desc:0 "Industrial"
+et_generic_helicoptereffort:0 "Helicopter Effort"
+et_generic_helicoptereffort_desc:0 "Helicopter Effort"
+et_generic_jeteffort:0 "Jet Effort"
+et_generic_jeteffort_desc:0 "Jet Effort"
+et_generic_jetfighters:0 "Jet Fighters"
+et_generic_jetfighters_desc:0 "Jet Fighters"
+et_generic_openseanavy:0 "Open Sea Navy"
+et_generic_openseanavy_desc:0 "Open Sea Navy"
+et_generic_coastalnavy:0 "Coastal Navy"
+et_generic_coastalnavy_desc:0 "Coastal Navy"
+et_generic_carrier:0 "Carrier"
+et_generic_carrier_desc:0 "Carrier"
+et_generic_destroyer:0 "Destroyer"
+et_generic_destroyer_desc:0 "Destroyer"
+et_generic_frigates:0 "Frigates"
+et_generic_frigates_desc:0 "Frigates"
+et_generic_carrierfighters:0 "Carrier Fighters"
+et_generic_carrierfighters_desc:0 "Carrier Fighters"
+et_generic_nuclearpowered:0 "Nuclear Powered"
+et_generic_nuclearpowered_desc:0 "Nuclear Powered"
+et_generic_submarines:0 "Submarines"
+et_generic_submarines_desc:0 "Submarines"
+et_generic_carrier2:0 "Carrier 2"
+et_generic_carrier2_desc:0 "Carrier 2"
+et_generic_mechanized:0 "Mechanized"
+et_generic_mechanized_desc:0 "Mechanized"
+et_generic_infantry:0 "Infantry"
+et_generic_infantry_desc:0 "Infantry"
