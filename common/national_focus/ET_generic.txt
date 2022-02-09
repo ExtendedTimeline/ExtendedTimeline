@@ -18,9 +18,7 @@ focus_tree = {
 		prerequisite = { focus = et_generic_anewworldorder  }
 		ai_will_do = { factor = 1 }
 		available = {
-			
-						has_government = democratic
-					
+			has_government = democratic
 		}
 	}
 
@@ -37,9 +35,7 @@ focus_tree = {
 		prerequisite = { focus = et_generic_anewworldorder  }
 		ai_will_do = { factor = 1 }
 		available = {
-			
-						has_government = communism
-					
+			has_government = communism
 		}
 	}
 
@@ -52,17 +48,13 @@ focus_tree = {
 		y = 1
 		cost = 8
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = et_generic_worldatpeace  }
 		mutually_exclusive = { focus = et_generic_prepareforwhatsnext  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
-						add_war_support = -25
-					
+			add_war_support = -0.25
 		}
 	}
 
@@ -89,17 +81,12 @@ focus_tree = {
 		y = 2
 		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepareforwhatsnext  }
 		ai_will_do = { factor = 1 }
-		bypass = {
-			
-						add_political_power = 100
-						
-					
+		completion_reward = {
+			add_political_power = 100
 		}
 	}
 
@@ -120,15 +107,11 @@ focus_tree = {
 		mutually_exclusive = { focus = et_generic_demobilize  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
-						add_war_support = -0.25
-						
-					
+			add_war_support = -0.25	
 		}
 	}
 
 	#Professional Army
-
 	focus = {
 		id = et_generic_professionalarmy
 		icon = GFX_focus_chi_army_reform
@@ -136,9 +119,7 @@ focus_tree = {
 		y = 2
 		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepareforwhatsnext  }
 		mutually_exclusive = { focus = et_generic_defensivearmy  }
@@ -146,7 +127,6 @@ focus_tree = {
 	}
 
 	#World at peace!
-
 	focus = {
 		id = et_generic_worldatpeace
 		icon = GFX_focus_focus_fra_fascist_threat
@@ -154,18 +134,13 @@ focus_tree = {
 		y = 0
 		cost = 8
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_POLITICAL
 		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
-									add_political_power = 100
-									add_war_support = -0.10
-									add_stability = 0.25
-								
-					
+			add_political_power = 100
+			add_war_support = -0.10
+			add_stability = 0.25
 		}
 	}
 
@@ -195,9 +170,7 @@ focus_tree = {
 		y = 2
 		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepareforwhatsnext  }
 		mutually_exclusive = { focus = et_generic_professionalarmy  }
@@ -213,9 +186,7 @@ focus_tree = {
 		y = 3
 		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_RESEARCH
-					
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = et_generic_professionalarmy  } prerequisite = { focus = et_generic_defensivearmy  }
 	}
@@ -229,9 +200,7 @@ focus_tree = {
 		y = 3
 		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_RESEARCH
-					
+			FOCUS_FILTER_RESEARCH	
 		}
 		prerequisite = { focus = et_generic_professionalarmy  } prerequisite = { focus = et_generic_defensivearmy  }
 	}
@@ -245,9 +214,7 @@ focus_tree = {
 		y = 2
 		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_RESEARCH
-					
+			FOCUS_FILTER_RESEARCH	
 		}
 		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepareforwhatsnext  }
 	}
@@ -280,9 +247,7 @@ focus_tree = {
 		y = 3
 		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_INDUSTRY
-					
+			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = et_generic_economy  }
 	}
@@ -296,9 +261,7 @@ focus_tree = {
 		y = 3
 		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_INDUSTRY
-					
+			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = et_generic_economy  }
 	}
@@ -329,9 +292,7 @@ focus_tree = {
 		y = 4
 		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_RESEARCH
-					
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = et_generic_airforce  }
 		ai_will_do = { factor = 1 }
