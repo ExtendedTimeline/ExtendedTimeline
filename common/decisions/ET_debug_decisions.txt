@@ -27,6 +27,53 @@ ET_debug_decisions = {
 		}
 	}
 
+	ET_next_era = {
+
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			set_global_flag = ET_focus_global_newera_1_flag
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ET_remove_era = {
+
+		icon = generic_research
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			clr_global_flag = ET_focus_global_newera_1_flag
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
 	ET_trigger_world_peace_news_event = {
 
 		icon = generic_research

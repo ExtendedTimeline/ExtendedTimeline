@@ -1,61 +1,87 @@
 ﻿l_english: 
+et_generic_manpats:0 "MANPATS"
+et_generic_manpats_desc:0 "Man-portable anti-tank systems"
+et_generic_coastal_submarines:0 "Coastal Submarines"
+et_generic_coastal_submarines_desc:0 "Coastal Submarines"
 et_generic_stand_with_the_freeworld:0 "Stand with the Freeworld"
 et_generic_stand_with_the_freeworld_desc:0 "Stand with the Freeworld"
 et_generic_stand_with_the_comintern:0 "Stand with the comintern"
 et_generic_stand_with_the_comintern_desc:0 "Stand with the comintern"
-et_generic_demobilize:0 "Demobilize"
-et_generic_demobilize_desc:0 "Demobilize"
+et_generic_demobilize:0 "Demobilize"
+et_generic_demobilize_desc:0 "Demobilize"
 et_generic_the_thrid_way:0 "The thrid way"
 et_generic_the_thrid_way_desc:0 "The thrid way"
-et_generic_anewworldorder:0 "A new world order"
-et_generic_anewworldorder_desc:0 "A new world order"
-et_generic_prepareforwhatsnext:0 "Prepare for whats next"
-et_generic_prepareforwhatsnext_desc:0 "Prepare for whats next"
-et_generic_professionalarmy:0 "Professional Army"
-et_generic_professionalarmy_desc:0 "Professional Army"
-et_generic_worldatpeace:0 "World at peace!"
-et_generic_worldatpeace_desc:0 "The war that defensively end all wars"
-et_generic_army:0 "Army"
-et_generic_army_desc:0 "Army"
-et_generic_defensivearmy:0 "Defensive Army"
-et_generic_defensivearmy_desc:0 "Defensive Army"
-et_generic_naval:0 "Naval"
-et_generic_naval_desc:0 "Naval"
-et_generic_airforce:0 "Airforce"
-et_generic_airforce_desc:0 "Airforce"
-et_generic_economy:0 "Economy"
-et_generic_economy_desc:0 "Economy"
+et_generic_a_new_world_order:0 "A new world order"
+et_generic_a_new_world_order_desc:0 "A new world order"
+et_generic_prepare_for_whats_next:0 "Prepare for whats next"
+et_generic_prepare_for_whats_next_desc:0 "Prepare for whats next"
+et_generic_professional_army:0 "Professional Army"
+et_generic_professional_army_desc:0 "Professional Army"
+et_generic_worldatpeace:0 "World at peace!"
+et_generic_worldatpeace_desc:0 "The war that defensively end all wars"
+et_generic_army:0 "Army"
+et_generic_army_desc:0 "Army"
+et_generic_defensive_army:0 "Defensive Army"
+et_generic_defensive_army_desc:0 "Defensive Army"
+et_generic_naval:0 "Naval"
+et_generic_naval_desc:0 "Naval"
+et_generic_airforce:0 "Airforce"
+et_generic_airforce_desc:0 "Airforce"
+et_generic_economy:0 "Economy"
+et_generic_economy_desc:0 "Economy"
 et_generic_a_national_order:0 "A National Order"
 et_generic_a_national_order_desc:0 "A National Order"
-et_generic_infrastructure:0 "Infrastructure"
-et_generic_infrastructure_desc:0 "Infrastructure"
-et_generic_industrial:0 "Industrial"
-et_generic_industrial_desc:0 "Industrial"
-et_generic_helicoptereffort:0 "Helicopter Effort"
-et_generic_helicoptereffort_desc:0 "Helicopter Effort"
-et_generic_jeteffort:0 "Jet Effort"
-et_generic_jeteffort_desc:0 "Jet Effort"
-et_generic_jetfighters:0 "Jet Fighters"
-et_generic_jetfighters_desc:0 "Jet Fighters"
-et_generic_openseanavy:0 "Open Sea Navy"
-et_generic_openseanavy_desc:0 "Open Sea Navy"
-et_generic_coastalnavy:0 "Coastal Navy"
-et_generic_coastalnavy_desc:0 "Coastal Navy"
-et_generic_carrier:0 "Carrier"
-et_generic_carrier_desc:0 "Carrier"
-et_generic_destroyer:0 "Destroyer"
-et_generic_destroyer_desc:0 "Destroyer"
-et_generic_frigates:0 "Frigates"
-et_generic_frigates_desc:0 "Frigates"
-et_generic_carrierfighters:0 "Carrier Fighters"
-et_generic_carrierfighters_desc:0 "Carrier Fighters"
-et_generic_nuclearpowered:0 "Nuclear Powered"
-et_generic_nuclearpowered_desc:0 "Nuclear Powered"
-et_generic_submarines:0 "Submarines"
-et_generic_submarines_desc:0 "Submarines"
-et_generic_carrier2:0 "Carrier 2"
-et_generic_carrier2_desc:0 "Carrier 2"
-et_generic_mechanized:0 "Mechanized"
-et_generic_mechanized_desc:0 "Mechanized"
-et_generic_infantry:0 "Infantry"
-et_generic_infantry_desc:0 "Infantry"
+et_generic_infrastructure:0 "Infrastructure"
+et_generic_infrastructure_desc:0 "Infrastructure"
+et_generic_industrial:0 "Industrial"
+et_generic_industrial_desc:0 "Industrial"
+et_generic_helicopter_effort:0 "Helicopter Effort"
+et_generic_helicopter_effort_desc:0 "Helicopter Effort"
+et_generic_jet_effort:0 "Jet Effort"
+et_generic_jet_effort_desc:0 "Jet Effort"
+et_generic_jet_fighters:0 "Jet Fighters"
+et_generic_jet_fighters_desc:0 "Jet Fighters"
+et_generic_open_sea_navy:0 "Open Sea Navy"
+et_generic_open_sea_navy_desc:0 "Open Sea Navy"
+et_generic_coastal_navy:0 "Coastal Navy"
+et_generic_coastal_navy_desc:0 "Coastal Navy"
+et_generic_carrier:0 "Carrier"
+et_generic_carrier_desc:0 "Carrier"
+et_generic_destroyer:0 "Destroyer"
+et_generic_destroyer_desc:0 "Destroyer"
+et_generic_frigates:0 "Frigates"
+et_generic_frigates_desc:0 "Frigates"
+et_generic_carrier_fighters:0 "Carrier Fighters"
+et_generic_carrier_fighters_desc:0 "Carrier Fighters"
+et_generic_nuclear_powered:0 "Nuclear Powered"
+et_generic_nuclear_powered_desc:0 "Nuclear Powered"
+et_generic_nuclear_submarines:0 "Nuclear Submarines"
+et_generic_nuclear_submarines_desc:0 "Nuclear Submarines"
+et_generic_nuclear_carrier:0 "Nuclear Carrier"
+et_generic_nuclear_carrier_desc:0 "Nuclear Carrier"
+et_generic_mechanized:0 "Mechanized"
+et_generic_mechanized_desc:0 "Mechanized"
+et_generic_infantry:0 "Infantry"
+et_generic_infantry_desc:0 "Infantry"
+et_generic_manpads:0 "MANPADS"
+et_generic_manpads_desc:0 "Man-portable air-defense system"
+et_generic_on_our_own:0 "On Our Own"
+et_generic_on_our_own_desc:0 "On Our Own"
+et_generic_mbt:0 "MBT"
+et_generic_mbt_desc:0 "MBT"
+et_generic_apcifv:0 "APC / IFV"
+et_generic_apcifv_desc:0 "APC / IFV"
+et_generic_cas:0 "CAS"
+et_generic_cas_desc:0 "CAS"
+et_generic_air_logistics:0 "Air Logistics"
+et_generic_air_logistics_desc:0 "Air Logistics"
+et_generic_together:0 "Together"
+et_generic_together_desc:0 "Together In neutrality"
+et_generic_strengthen_our_claims:0 "Strengthen our claims"
+et_generic_strengthen_our_claims_desc:0 "Strengthen our claims"
+et_generic_contain_the_red_menace:0 "Contain the red menace"
+et_generic_contain_the_red_menace_desc:0 "Contain the red menace"
+et_generic_cross_capitalism:0 "Cross capitalism"
+et_generic_cross_capitalism_desc:0 "Cross capitalism"
+et_generic_peaceful_coexistence:0 "Peaceful Coexistence"
+et_generic_peaceful_coexistence_desc:0 "Peaceful Coexistence"
