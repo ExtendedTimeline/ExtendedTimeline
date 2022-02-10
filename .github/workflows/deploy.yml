@@ -1,0 +1,24 @@
+﻿name: Deploy
+on:
+  release:
+      types: [ published, prereleased ]
+jobs:
+  build:
+    name: Create And Upload Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+
+      - name: Build release
+        run: ./scripts/deploy.sh ${{ steps.get_version.outputs.VERSION }}
+
+      - name: Upload Release
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: release/ExtendedTimeline.zip application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

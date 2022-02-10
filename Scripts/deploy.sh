@@ -21,3 +21,5 @@ do
 done
 
 sed -i "s/0.0.0/${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/ExtendedTimeline.mod
+
+zip release/$PROJECT_NAME.zip -r $PROJECT_ROOT_DIR/release/$PROJECT_NAME
