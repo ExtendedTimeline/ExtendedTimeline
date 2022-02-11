@@ -9,7 +9,6 @@ news_event = { # Joseph Stalin
 	
 	trigger = {
 		date > 1952.10.1
-		date < 1952.10.31
 		country_exists = SOV
 		has_government = communism
 		has_country_leader = { character = SOV_iosif_stalin }
