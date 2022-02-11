@@ -1,0 +1,25 @@
+ET_era_decisions = {
+	ET_getNextEraFocusTree = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_global_flag = ET_focus_global_newera_1_flag
+		}
+
+		visible = {
+			has_global_flag = ET_focus_global_newera_1_flag
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			ET_get_new_focus_tree_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

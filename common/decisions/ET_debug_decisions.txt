@@ -1,32 +1,4 @@
 ET_debug_decisions = {
-
-	ET_set_focus_generic = {
-
-		icon = generic_research
-
-		available = {
-			always = yes
-		}
-
-		visible = {
-			always = yes
-		}
-
-		fire_only_once = no
-		cost = 0
-
-		complete_effect = {
-			load_focus_tree = {
-				tree = ET_generic
-				keep_completed = yes
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-
 	ET_next_era = {
 
 		icon = generic_research
@@ -44,6 +16,15 @@ ET_debug_decisions = {
 
 		complete_effect = {
 			set_global_flag = ET_focus_global_newera_1_flag
+			if = {
+				limit = { NOT = { country_exists = GER } }
+				GER = {
+					add_named_threat = { 
+						threat = -100
+						name = et_ger_world_peace
+					}
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -230,8 +211,8 @@ ET_debug_decisions = {
 			base = 0
 		}
 	}
-	
-	ET_Other_Test = {
+
+	ET_other_test = {
 
 		icon = generic_research
 

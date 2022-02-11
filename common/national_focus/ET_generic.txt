@@ -139,7 +139,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepare_for_whats_next  }
+		prerequisite = { 
+			focus = et_generic_demobilize
+			focus = et_generic_prepare_for_whats_next
+		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 100
@@ -175,7 +178,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepare_for_whats_next  }
+		prerequisite = { 
+			focus = et_generic_demobilize
+			focus = et_generic_prepare_for_whats_next
+		}
 		mutually_exclusive = { focus = et_generic_defensive_army  }
 		ai_will_do = { factor = 1 }
 	}
@@ -212,7 +218,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_professional_army  } prerequisite = { focus = et_generic_defensive_army  }
+		prerequisite = {
+			focus = et_generic_professional_army
+			focus = et_generic_defensive_army
+		}
 		ai_will_do = { factor = 1 }
 	}
 
@@ -226,7 +235,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepare_for_whats_next  }
+		prerequisite = { 
+			focus = et_generic_demobilize
+			focus = et_generic_prepare_for_whats_next
+		}
 		mutually_exclusive = { focus = et_generic_professional_army  }
 		ai_will_do = { factor = 1 }
 	}
@@ -241,7 +253,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_professional_army  } prerequisite = { focus = et_generic_defensive_army  }
+		prerequisite = {
+			focus = et_generic_professional_army
+			focus = et_generic_defensive_army
+		}
 		ai_will_do = { factor = 1 }
 	}
 
@@ -255,7 +270,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_professional_army  } prerequisite = { focus = et_generic_defensive_army  }
+		prerequisite = {
+			focus = et_generic_professional_army
+			focus = et_generic_defensive_army
+		}
 		ai_will_do = { factor = 1 }
 	}
 
@@ -269,7 +287,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepare_for_whats_next  }
+		prerequisite = { 
+			focus = et_generic_demobilize
+			focus = et_generic_prepare_for_whats_next
+		}
 		ai_will_do = { factor = 1 }
 
 		completion_reward = {
@@ -516,7 +537,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_carrier  focus = et_generic_jet_fighters  }
+		prerequisite = {
+			focus = et_generic_carrier
+			focus = et_generic_jet_fighters
+		}
 		ai_will_do = { factor = 1 }
 		
 		completion_reward = {
@@ -582,7 +606,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_carrier  focus = et_generic_nuclear_powered  }
+		prerequisite = {
+			focus = et_generic_carrier
+			focus = et_generic_nuclear_powered
+		}
 		ai_will_do = { factor = 1 }
 
 		completion_reward = {
@@ -708,7 +735,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_infantry  focus = et_generic_mechanized  }
+		prerequisite = {
+			focus = et_generic_infantry
+			focus = et_generic_mechanized
+		}
 		ai_will_do = { factor = 1 }
 
 		completion_reward = {
