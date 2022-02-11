@@ -1,8 +1,10 @@
-add_namespace = ET_ColdWarEurope
-add_namespace = ET_ColdWarEuropeState
+add_namespace = ET_Division_Europe
+add_namespace = ET_Division_Europe_State
+add_namespace = ET_Division_Asia
+add_namespace = ET_Division_Asia_State
 
 country_event = { # Init Checks
-	id = ET_ColdWarEurope.0
+	id = ET_Division_Europe.0
 
 	is_triggered_only = yes
 	fire_only_once = no
@@ -18,7 +20,7 @@ country_event = { # Init Checks
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Polen is a country and not under Soviet control." }
-			10 = { state_event = { id = ET_ColdWarEurope.1 trigger_for = controller } } 
+			10 = { state_event = { id = ET_Division_Europe.1 trigger_for = controller } } 
 		}
 		else_if = {
 			limit = {
@@ -28,11 +30,11 @@ country_event = { # Init Checks
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Polen is not a country and not under Soviet Union control." }
-			10 = { state_event = { id = ET_ColdWarEurope.2 trigger_for = controller } } 
+			10 = { state_event = { id = ET_Division_Europe.2 trigger_for = controller } } 
 		}
 		else = {
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Polen is Soviet Union owned." }
-			10 = { state_event = { id = ET_ColdWarEurope.3 trigger_for = controller } } 
+			10 = { state_event = { id = ET_Division_Europe.3 trigger_for = controller } } 
 		}
 
 		# GERMANY
@@ -41,7 +43,7 @@ country_event = { # Init Checks
 				SOV = { NOT = { controls_state = 64 } }
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Germany is not under Soviet Union control." }
-			64 = { state_event = { id = ET_ColdWarEurope.6 trigger_for = controller } } 
+			64 = { state_event = { id = ET_Division_Europe.6 trigger_for = controller } } 
 		}
 
 		# STATE: Ermland-Masuren
@@ -53,7 +55,7 @@ country_event = { # Init Checks
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Ermland-Masuren state is not controlled by Soviet Union." }
-			5 = { state_event = { id = ET_ColdWarEuropeState.1 trigger_for = controller } }
+			5 = { state_event = { id = ET_Division_Europe_State.1 trigger_for = controller } }
 		}
 		# STATE: Wilno
 		if = {
@@ -61,7 +63,7 @@ country_event = { # Init Checks
 				SOV = { NOT = { controls_state = 784 } }
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Wilno state is not controlled by Soviet Union." }
-			784 = { state_event = { id = ET_ColdWarEuropeState.2 trigger_for = controller } }
+			784 = { state_event = { id = ET_Division_Europe_State.2 trigger_for = controller } }
 		}
 		# STATE: Köninsberg
 		if = {
@@ -69,7 +71,7 @@ country_event = { # Init Checks
 				SOV = { NOT = { controls_state = 763 } }
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Köninsberg state is not controlled by Soviet Union." }
-			763 = { state_event = { id = ET_ColdWarEuropeState.3 trigger_for = controller } }
+			763 = { state_event = { id = ET_Division_Europe_State.3 trigger_for = controller } }
 		}
 		# STATE: Carpathian Ruthenia
 		if = {
@@ -77,7 +79,7 @@ country_event = { # Init Checks
 				SOV = { NOT = { controls_state = 73 } }
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Carpathian Ruthenia state is not controlled by Soviet Union." }
-			73 = { state_event = { id = ET_ColdWarEuropeState.5 trigger_for = controller } }
+			73 = { state_event = { id = ET_Division_Europe_State.5 trigger_for = controller } }
 		}
 		# STATE: Memel
 		if = {
@@ -88,7 +90,7 @@ country_event = { # Init Checks
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Memel state is not controlled correct controll" }
-			188 = { state_event = { id = ET_ColdWarEuropeState.6 trigger_for = controller } }
+			188 = { state_event = { id = ET_Division_Europe_State.6 trigger_for = controller } }
 		}
 	}
 
@@ -97,9 +99,9 @@ country_event = { # Init Checks
 }
 
 country_event = { # Polen is a country and not under Soviet control.
-	id = ET_ColdWarEurope.1
-	title = ET_ColdWarEurope.1.t
-	desc = ET_ColdWarEurope.1.desc
+	id = ET_Division_Europe.1
+	title = ET_Division_Europe.1.t
+	desc = ET_Division_Europe.1.desc
 
 	is_triggered_only = yes
 
@@ -107,11 +109,11 @@ country_event = { # Polen is a country and not under Soviet control.
 	}
 
 	option = {
-		name = ET_ColdWarEurope.1.a
+		name = ET_Division_Europe.1.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 		POL = {
 			10 =  { transfer_state_to  = POL }
 			807 = { transfer_state_to  = POL }
@@ -158,16 +160,16 @@ country_event = { # Polen is a country and not under Soviet control.
 	}
 }
 country_event = { # Polen is not a country and not under Soviet Union control.
-	id = ET_ColdWarEurope.2
-	title = ET_ColdWarEurope.2.t
-	desc = ET_ColdWarEurope.2.desc
+	id = ET_Division_Europe.2
+	title = ET_Division_Europe.2.t
+	desc = ET_Division_Europe.2.desc
 
 	is_triggered_only = yes
 
 	immediate = {
 	}
 	option = {
-		name = ET_ColdWarEurope.2.a
+		name = ET_Division_Europe.2.a
 		ai_chance = {
 			factor = 0
 		}
@@ -205,14 +207,14 @@ country_event = { # Polen is not a country and not under Soviet Union control.
 				remove_state_core = 95
 				remove_state_core = 96
 			}
-			SOV = { country_event = { id = ET_ColdWarEuropeState.3 days = 3 } }
+			SOV = { country_event = { id = ET_Division_Europe_State.3 days = 3 } }
 		}
 	}
 }
 country_event = { # Polen is Soviet Union owned.
-	id = ET_ColdWarEurope.3
-	title = ET_ColdWarEurope.3.t
-	desc = ET_ColdWarEurope.3.desc
+	id = ET_Division_Europe.3
+	title = ET_Division_Europe.3.t
+	desc = ET_Division_Europe.3.desc
 
 	is_triggered_only = yes
 
@@ -220,11 +222,11 @@ country_event = { # Polen is Soviet Union owned.
 	}
 
 	option = {
-		name = ET_ColdWarEurope.3.a
+		name = ET_Division_Europe.3.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 		POL = {
 			remove_state_core = 784
 			remove_state_core = 89
@@ -262,7 +264,7 @@ country_event = { # Polen is Soviet Union owned.
 		}
 	}
 	option = {
-		name = ET_ColdWarEurope.3.b
+		name = ET_Division_Europe.3.b
 		ai_chance = {
 			factor = 0
 		}
@@ -305,9 +307,9 @@ country_event = { # Polen is Soviet Union owned.
 }
 
 country_event = { # Germany is not under Soviet Union control.
-	id = ET_ColdWarEurope.6
-	title = ET_ColdWarEurope.6.t
-	desc = ET_ColdWarEurope.6.desc
+	id = ET_Division_Europe.6
+	title = ET_Division_Europe.6.t
+	desc = ET_Division_Europe.6.desc
 
 	is_triggered_only = yes
 
@@ -315,11 +317,11 @@ country_event = { # Germany is not under Soviet Union control.
 	}
 
 	option = {
-		name = ET_ColdWarEurope.6.a
+		name = ET_Division_Europe.6.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 		5 =  { transfer_state_to  = SOV } # German & Polen core provinces
 		63 = { transfer_state_to  = SOV } # German & Polen core provinces
 		66 = { transfer_state_to  = SOV } # German & Polen core provinces
@@ -331,13 +333,13 @@ country_event = { # Germany is not under Soviet Union control.
 		64 = { transfer_state_to  = SOV } # German core provinces
 		65 = { transfer_state_to  = SOV } # German core provinces
 		hidden_effect = {
-			SOV = { country_event = { id = ET_ColdWarEurope.7 days = 2 } }
+			SOV = { country_event = { id = ET_Division_Europe.7 days = 2 } }
 		}
 	}
 }
 
 country_event = { # Soviet give polen East Germany
-	id = ET_ColdWarEurope.7
+	id = ET_Division_Europe.7
 
 	is_triggered_only = yes
 
@@ -345,11 +347,11 @@ country_event = { # Soviet give polen East Germany
 	}
 
 	option = {
-		name = ET_ColdWarEurope.7.a
+		name = ET_Division_Europe.7.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 		5 =  { transfer_state_to  = POL } # Polen core provinces
 		63 = { transfer_state_to  = POL } # Polen core provinces
 		66 = { transfer_state_to  = POL } # Polen core provinces
@@ -369,9 +371,9 @@ country_event = { # Soviet give polen East Germany
 
 
 country_event = { # STATE: Ermland-Masuren
-	id = ET_ColdWarEuropeState.1
-	title = ET_ColdWarEuropeState.1.t
-	desc = ET_ColdWarEuropeState.1.desc
+	id = ET_Division_Europe_State.1
+	title = ET_Division_Europe_State.1.t
+	desc = ET_Division_Europe_State.1.desc
 
 	is_triggered_only = yes
 
@@ -379,11 +381,11 @@ country_event = { # STATE: Ermland-Masuren
 	}
 
 	option = {
-		name = ET_ColdWarEuropeState.1.a
+		name = ET_Division_Europe_State.1.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 		THIS = {
 			5 =  { transfer_state_to  = POL } # German core provinces
 			add_state_core = 5
@@ -394,9 +396,9 @@ country_event = { # STATE: Ermland-Masuren
 	}
 }
 country_event = { # STATE: Wilno
-	id = ET_ColdWarEuropeState.2
-	title = ET_ColdWarEuropeState.2.t
-	desc = ET_ColdWarEuropeState.2.desc
+	id = ET_Division_Europe_State.2
+	title = ET_Division_Europe_State.2.t
+	desc = ET_Division_Europe_State.2.desc
 
 	is_triggered_only = yes
 
@@ -404,11 +406,11 @@ country_event = { # STATE: Wilno
 	}
 
 	option = {
-		name = ET_ColdWarEuropeState.2.a
+		name = ET_Division_Europe_State.2.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 		THIS = {
 			784 =  { transfer_state_to  = SOV } # POL & LIT core provinces
 			add_state_core = 784
@@ -416,9 +418,9 @@ country_event = { # STATE: Wilno
 	}
 }
 country_event = { # STATE: Köningsberg
-	id = ET_ColdWarEuropeState.3
-	title = ET_ColdWarEuropeState.3.t
-	desc = ET_ColdWarEuropeState.3.desc
+	id = ET_Division_Europe_State.3
+	title = ET_Division_Europe_State.3.t
+	desc = ET_Division_Europe_State.3.desc
 
 	is_triggered_only = yes
 
@@ -426,61 +428,34 @@ country_event = { # STATE: Köningsberg
 	}
 
 	option = {
-		name = ET_ColdWarEuropeState.3.a
+		name = ET_Division_Europe_State.3.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 		763 =  { transfer_state_to  = SOV } # Köningsberg
 		hidden_effect = {
 			SOV = { add_state_core = 763 }
-			SOV = { country_event = { id = ET_ColdWarEuropeState.4 days = 14 } }
 			GER = { remove_state_core = 763 }
-		}
-	}
-	option = {
-		name = ET_ColdWarEuropeState.3.b
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-country_event = { # Rename Köningsberg > Kaliningrad
-	id = ET_ColdWarEuropeState.4
-	title = ET_ColdWarEuropeState.4.t
-	desc = ET_ColdWarEuropeState.4.desc
-
-	is_triggered_only = yes
-
-	immediate = {
-	}
-
-	option = {
-		name = ET_ColdWarEuropeState.4.a
-		ai_chance = {
-			factor = 1
-		}
-		THIS = {
-			763 = {
-				set_state_name = "Kaliningrad"
-				set_province_name = {
-					id = 6332
-					name = "Kaliningrad"
+			SOV = {
+				if = {
+					limit = { has_government = communism }
+					country_event = { id = ET_SovietUnion_Renaming_Renaming.1 days = 30 }
 				}
 			}
 		}
 	}
 	option = {
-		name = ET_ColdWarEuropeState.4.b
+		name = ET_Division_Europe_State.3.b
 		ai_chance = {
 			factor = 0
 		}
 	}
 }
 country_event = { # STATE: Carpathian Ruthenia
-	id = ET_ColdWarEuropeState.5
-	title = ET_ColdWarEuropeState.5.t
-	desc = ET_ColdWarEuropeState.5.desc
+	id = ET_Division_Europe_State.5
+	title = ET_Division_Europe_State.5.t
+	desc = ET_Division_Europe_State.5.desc
 
 	is_triggered_only = yes
 
@@ -488,11 +463,11 @@ country_event = { # STATE: Carpathian Ruthenia
 	}
 
 	option = {
-		name = ET_ColdWarEuropeState.5.a
+		name = ET_Division_Europe_State.5.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 
 		73 = { transfer_state_to  = SOV } # CZE core provinces
 		SOV = { add_state_core = 73 }
@@ -501,16 +476,16 @@ country_event = { # STATE: Carpathian Ruthenia
 		}
 	}
 	option = {
-		name = ET_ColdWarEuropeState.5.b
+		name = ET_Division_Europe_State.5.b
 		ai_chance = {
 			factor = 0
 		}
 	}
 }
 country_event = { # STATE: Memel
-	id = ET_ColdWarEuropeState.6
-	title = ET_ColdWarEuropeState.6.t
-	desc = ET_ColdWarEuropeState.6.desc
+	id = ET_Division_Europe_State.6
+	title = ET_Division_Europe_State.6.t
+	desc = ET_Division_Europe_State.6.desc
 
 	is_triggered_only = yes
 
@@ -518,12 +493,12 @@ country_event = { # STATE: Memel
 	}
 
 	option = {
-		name = ET_ColdWarEuropeState.6.a
+		name = ET_Division_Europe_State.6.a
 		trigger = { NOT = { country_exists = LIT } }
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 
 		188 = { transfer_state_to  = SOV }
 		SOV = { add_state_core = 188 }
@@ -532,12 +507,12 @@ country_event = { # STATE: Memel
 		}
 	}
 	option = {
-		name = ET_ColdWarEuropeState.6.b
+		name = ET_Division_Europe_State.6.b
 		trigger = { country_exists = LIT }
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_ColdWarEurope_Historical_TT
+		custom_effect_tooltip = ET_Division_World_Historical_TT
 		
 		188 = { transfer_state_to  = LIT }
 		hidden_effect = {
