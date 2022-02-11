@@ -3,8 +3,6 @@ add_namespace = ET_init_news
 
 country_event = {	# Change focus tree based on nation
 	id = ET_init.0
-	title = ET_init.0.t
-	desc = ET_init.0.desc
 
 	is_triggered_only = yes
 	hidden = yes
@@ -16,9 +14,7 @@ country_event = {	# Change focus tree based on nation
 		}
 	}
 
-	option = {
-		name = ET_init.0.a
-	}
+	option = {}
 }
 news_event = {
 	id = ET_init_news.0
