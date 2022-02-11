@@ -19,21 +19,3 @@ ET_get_new_focus_tree_effect = {
 		set_country_flag = ET_focus_country_newera_1_flag
 	}
 }
-
-ET_lower_generated_threat = {
-	if = { limit = { threat > 0   threat < 9  } add_threat = -10 }
-	if = { limit = { threat > 10  threat < 19  } add_threat = -10 }
-	if = { limit = { threat > 20  threat < 29  } add_threat = -10 }
-	if = { limit = { threat > 30  threat < 39  } add_threat = -10 }
-	if = { limit = { threat > 40  threat < 49  } add_threat = -10 }
-	if = { limit = { threat > 50  threat < 59  } add_threat = -10 }
-	if = { limit = { threat > 60  threat < 69  } add_threat = -10 }
-	if = { limit = { threat > 70  threat < 79  } add_threat = -10 }
-	if = { limit = { threat > 80  threat < 89  } add_threat = -10 }
-	if = { limit = { threat > 90  threat < 99  } add_threat = -10 }
-	if = { limit = { threat > 100 threat < 109 } add_threat = -10 }
-	if = { limit = { threat > 110 threat < 119 } add_threat = -10 }
-	if = { limit = { threat > 120 threat < 129 } add_threat = -10 }
-	if = { limit = { threat > 130 threat < 139 } add_threat = -10 }
-	if = { limit = { threat > 140 threat < 149 } add_threat = -10 }
-}
