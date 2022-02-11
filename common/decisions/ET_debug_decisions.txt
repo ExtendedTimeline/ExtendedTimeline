@@ -1,6 +1,5 @@
 ET_debug_decisions = {
 	ET_next_era = {
-
 		icon = generic_research
 
 		available = {
@@ -24,6 +23,18 @@ ET_debug_decisions = {
 						name = et_ger_world_peace
 					}
 				}
+				ITA = {
+					add_named_threat = { 
+						threat = -100
+						name = et_ger_world_peace
+					}
+				}
+				JAP = {
+					add_named_threat = { 
+						threat = -100
+						name = et_ger_world_peace
+					}
+				}
 			}
 		}
 
@@ -32,7 +43,6 @@ ET_debug_decisions = {
 		}
 	}
 	ET_remove_era = {
-
 		icon = generic_research
 
 		available = {
@@ -55,8 +65,30 @@ ET_debug_decisions = {
 		}
 	}
 
-	ET_trigger_world_peace_news_event = {
+	ET_remove_newera_flags = {
+		icon = generic_research
 
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			has_country_flag = ET_focus_country_newera_1_flag 
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	ET_trigger_world_peace_news_event = {
 		icon = generic_research
 
 		available = {
@@ -84,8 +116,8 @@ ET_debug_decisions = {
 			base = 0
 		}
 	}
-	ET_shuffle_provinses_around_event = {
 
+	ET_shuffle_provinses_around_event = {
 		icon = generic_research
 
 		available = {
