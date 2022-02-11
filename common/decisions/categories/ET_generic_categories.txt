@@ -1,5 +1,7 @@
 ET_era_decisions = {
 	icon = generic_research
+	priority = 10
+	
 	visible = {
 		has_global_flag = ET_focus_global_newera_1_flag
 	}
