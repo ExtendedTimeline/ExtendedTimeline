@@ -11,14 +11,28 @@ on_actions = {
 					date > 1945.01.01
 				}
 				set_global_flag = ET_focus_global_newera_1_flag
-				
-				if = {
-					limit = { NOT = { country_exists = GER } }
-					GER = {
-						add_named_threat = { 
-							threat = -100
-							name = ET_GER_World_Peace
-						}
+				SOV = {
+					add_named_threat = { 
+						threat = -100
+						name = ET_GER_World_Peace
+					}
+				}
+				ENG = {
+					add_named_threat = { 
+						threat = -100
+						name = ET_GER_World_Peace
+					}
+				}
+				USA = {
+					add_named_threat = { 
+						threat = -100
+						name = ET_GER_World_Peace
+					}
+				}
+				FRA = {
+					add_named_threat = { 
+						threat = -100
+						name = ET_GER_World_Peace
 					}
 				}
 			}
