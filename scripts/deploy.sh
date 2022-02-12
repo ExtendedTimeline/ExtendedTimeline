@@ -14,13 +14,15 @@ mkdir -p $PROJECT_ROOT_DIR/release/$PROJECT_NAME
 
 #python3 $SCRIPT_DIR/make.py
 
+echo "Making release"
 for I in ${PROJECT_FILES[@]}
 do
-  [ -d "$I" ] || [ -f "$I" ] && echo "Copying $I for release"
+  [ -d "$I" ] || [ -f "$I" ] && echo "  copying: $I for release"
   [ -d "$I" ] || [ -f "$I" ] && cp -Rp "$I" "$PROJECT_ROOT_DIR/release/$PROJECT_NAME/."
 done
 
 sed -i "s/0.0.0/${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/ExtendedTimeline.mod
 
+echo "Building archive"
 cd $PROJECT_ROOT_DIR/release/
 zip $PROJECT_NAME.zip -r $PROJECT_NAME
