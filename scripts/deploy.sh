@@ -21,8 +21,13 @@ do
   [ -d "$I" ] || [ -f "$I" ] && cp -Rp "$I" "$PROJECT_ROOT_DIR/release/$PROJECT_NAME/."
 done
 
+echo "Writing ExtendedTimeline.mod"
 sed -i "s/0.0.0/${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/ExtendedTimeline.mod
 sed -i "s/ DevBuild//" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/ExtendedTimeline.mod
+
+echo "Writing Readme.md"
+sed -i "s/# EXTENDED TIMELINE/# EXTENDED TIMELINE v${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/README.md
+sed -i "2,8d" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/README.md
 
 echo "Building archive"
 cd $PROJECT_ROOT_DIR/release/
