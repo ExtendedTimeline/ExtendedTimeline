@@ -11,29 +11,14 @@ on_actions = {
 					date > 1945.01.01
 				}
 				set_global_flag = ET_focus_global_newera_1_flag
-				SOV = {
-					add_named_threat = { 
-						threat = -100
-						name = ET_GER_World_Peace
-					}
-				}
-				ENG = {
-					add_named_threat = { 
-						threat = -100
-						name = ET_GER_World_Peace
-					}
-				}
-				USA = {
-					add_named_threat = { 
-						threat = -100
-						name = ET_GER_World_Peace
-					}
-				}
-				FRA = {
-					add_named_threat = { 
-						threat = -100
-						name = ET_GER_World_Peace
-					}
+			}
+			FROM = {
+				set_temp_variable = { ET_threat_neg = 0 }
+				subtract_from_temp_variable = { ET_threat_neg = has_added_tension_amount }
+				
+				add_named_threat = {
+					threat = ET_threat_neg
+					name = ET_lost_war
 				}
 			}
 		}
