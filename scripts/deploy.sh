@@ -16,8 +16,8 @@ mkdir -p $PROJECT_ROOT_DIR/release/$PROJECT_NAME
 
 for I in ${PROJECT_FILES[@]}
 do
-  echo "Copying $I for release"
-  cp -Rp "$I" "$PROJECT_ROOT_DIR/release/$PROJECT_NAME/."
+  [ -d "$I" ] && echo "Copying $I for release"
+  [ -d "$I" ] && cp -Rp "$I" "$PROJECT_ROOT_DIR/release/$PROJECT_NAME/."
 done
 
 sed -i "s/0.0.0/${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/ExtendedTimeline.mod
