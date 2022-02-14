@@ -3,8 +3,15 @@ ET_era_decisions = {
 		icon = generic_political_discourse
 
 		available = {
-			has_global_flag = ET_focus_global_newera_1_flag
-			date > 1945.01.01
+			OR = {
+				AND = {
+					date > 1945.01.01
+					has_global_flag = ET_focus_global_newera_1_flag
+				}
+				hidden_trigger = {
+					is_debug = yes
+				}
+			}
 		}
 
 		visible = {

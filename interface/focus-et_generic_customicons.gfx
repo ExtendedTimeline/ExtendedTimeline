@@ -1,16 +1,16 @@
 spriteTypes = {	##Icon For: 
 	SpriteType = { 
-		name = "GFX_et_generic_stand_with_the_freeworld-427"
-		texturefile = "gfx/interface/goals/GFX_et_generic_stand_with_the_freeworld-427.dds"
+		name = "GFX_ET_Generic_communism-426"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_communism-426.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
-		name = "GFX_et_generic_stand_with_the_freeworld-427_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_stand_with_the_freeworld-427.dds"
+		name = "GFX_ET_Generic_communism-426_shine"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_communism-426.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_stand_with_the_freeworld-427.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_communism-426.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -22,7 +22,7 @@ spriteTypes = {	##Icon For:
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_stand_with_the_freeworld-427.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_communism-426.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -38,17 +38,17 @@ spriteTypes = {	##Icon For:
 
 	##Icon For: 
 	SpriteType = { 
-		name = "GFX_et_generic_stand_with_the_comintern-426"
-		texturefile = "gfx/interface/goals/GFX_et_generic_stand_with_the_comintern-426.dds"
+		name = "GFX_ET_Generic_coastal_submarines-20867"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_coastal_submarines-20867.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
-		name = "GFX_et_generic_stand_with_the_comintern-426_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_stand_with_the_comintern-426.dds"
+		name = "GFX_ET_Generic_coastal_submarines-20867_shine"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_coastal_submarines-20867.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_stand_with_the_comintern-426.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_coastal_submarines-20867.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -60,7 +60,7 @@ spriteTypes = {	##Icon For:
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_stand_with_the_comintern-426.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_coastal_submarines-20867.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -76,17 +76,17 @@ spriteTypes = {	##Icon For:
 
 	##Icon For: 
 	SpriteType = { 
-		name = "GFX_et_generic_prepare_for_whats_next-17041"
-		texturefile = "gfx/interface/goals/GFX_et_generic_prepare_for_whats_next-17041.dds"
+		name = "GFX_ET_Generic_democracy-427"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_democracy-427.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
-		name = "GFX_et_generic_prepare_for_whats_next-17041_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_prepare_for_whats_next-17041.dds"
+		name = "GFX_ET_Generic_democracy-427_shine"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_democracy-427.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_prepare_for_whats_next-17041.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_democracy-427.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -98,7 +98,7 @@ spriteTypes = {	##Icon For:
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_prepare_for_whats_next-17041.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_democracy-427.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -114,17 +114,17 @@ spriteTypes = {	##Icon For:
 
 	##Icon For: 
 	SpriteType = { 
-		name = "GFX_et_generic_economy-23026"
-		texturefile = "gfx/interface/goals/GFX_et_generic_economy-23026.dds"
+		name = "GFX_ET_Generic_national_seal-428"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_national_seal-428.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
-		name = "GFX_et_generic_economy-23026_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_economy-23026.dds"
+		name = "GFX_ET_Generic_national_seal-428_shine"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_national_seal-428.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_economy-23026.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_national_seal-428.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -136,7 +136,7 @@ spriteTypes = {	##Icon For:
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_economy-23026.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_national_seal-428.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -152,17 +152,17 @@ spriteTypes = {	##Icon For:
 
 	##Icon For: 
 	SpriteType = { 
-		name = "GFX_et_generic_a_national_order-428"
-		texturefile = "gfx/interface/goals/GFX_et_generic_a_national_order-428.dds"
+		name = "GFX_ET_Generic_open_sea_navy-404"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_open_sea_navy-404.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
-		name = "GFX_et_generic_a_national_order-428_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_a_national_order-428.dds"
+		name = "GFX_ET_Generic_open_sea_navy-404_shine"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_open_sea_navy-404.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_a_national_order-428.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_open_sea_navy-404.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -174,7 +174,7 @@ spriteTypes = {	##Icon For:
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_a_national_order-428.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_open_sea_navy-404.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -190,17 +190,17 @@ spriteTypes = {	##Icon For:
 
 	##Icon For: 
 	SpriteType = { 
-		name = "GFX_et_generic_infrastructure-141890"
-		texturefile = "gfx/interface/goals/GFX_et_generic_infrastructure-141890.dds"
+		name = "GFX_ET_Generic_nuclear_submarines-20867"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_nuclear_submarines-20867.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
-		name = "GFX_et_generic_infrastructure-141890_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_infrastructure-141890.dds"
+		name = "GFX_ET_Generic_nuclear_submarines-20867_shine"
+		texturefile = "gfx/interface/goals/GFX_ET_Generic_nuclear_submarines-20867.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_infrastructure-141890.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_nuclear_submarines-20867.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -212,235 +212,7 @@ spriteTypes = {	##Icon For:
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_infrastructure-141890.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no
-	}
-
-	##Icon For: 
-	SpriteType = { 
-		name = "GFX_et_generic_industrial-23026"
-		texturefile = "gfx/interface/goals/GFX_et_generic_industrial-23026.dds"
-	}
-
-	##Icon Shine For: 
-	SpriteType = { 
-		name = "GFX_et_generic_industrial-23026_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_industrial-23026.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_industrial-23026.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_industrial-23026.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no
-	}
-
-	##Icon For: 
-	SpriteType = { 
-		name = "GFX_et_generic_open_sea_navy-5615"
-		texturefile = "gfx/interface/goals/GFX_et_generic_open_sea_navy-5615.dds"
-	}
-
-	##Icon Shine For: 
-	SpriteType = { 
-		name = "GFX_et_generic_open_sea_navy-5615_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_open_sea_navy-5615.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_open_sea_navy-5615.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_open_sea_navy-5615.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no
-	}
-
-	##Icon For: 
-	SpriteType = { 
-		name = "GFX_et_generic_destroyer-5616"
-		texturefile = "gfx/interface/goals/GFX_et_generic_destroyer-5616.dds"
-	}
-
-	##Icon Shine For: 
-	SpriteType = { 
-		name = "GFX_et_generic_destroyer-5616_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_destroyer-5616.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_destroyer-5616.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_destroyer-5616.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no
-	}
-
-	##Icon For: 
-	SpriteType = { 
-		name = "GFX_et_generic_frigates-5617"
-		texturefile = "gfx/interface/goals/GFX_et_generic_frigates-5617.dds"
-	}
-
-	##Icon Shine For: 
-	SpriteType = { 
-		name = "GFX_et_generic_frigates-5617_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_frigates-5617.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_frigates-5617.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_frigates-5617.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no
-	}
-
-	##Icon For: 
-	SpriteType = { 
-		name = "GFX_et_generic_mechanized-10766"
-		texturefile = "gfx/interface/goals/GFX_et_generic_mechanized-10766.dds"
-	}
-
-	##Icon Shine For: 
-	SpriteType = { 
-		name = "GFX_et_generic_mechanized-10766_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_mechanized-10766.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_mechanized-10766.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_mechanized-10766.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no
-	}
-
-	##Icon For: 
-	SpriteType = { 
-		name = "GFX_et_generic_infantry-110846"
-		texturefile = "gfx/interface/goals/GFX_et_generic_infantry-110846.dds"
-	}
-
-	##Icon Shine For: 
-	SpriteType = { 
-		name = "GFX_et_generic_infantry-110846_shine"
-		texturefile = "gfx/interface/goals/GFX_et_generic_infantry-110846.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_infantry-110846.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_et_generic_infantry-110846.dds"
+			animationmaskfile = "gfx/interface/goals/GFX_ET_Generic_nuclear_submarines-20867.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
