@@ -1,4 +1,48 @@
 on_actions = {
+
+	on_startup = {
+		effect = {
+			set_variable = { et_var_conscription = 0.00 }
+		}
+	}
+
+	on_monthly = {
+		effect = {
+			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] on_monthly trigger!" }
+			if = {
+				limit = { has_idea = scraping_the_barrel }
+				set_variable = { et_var_conscription = -0.050 }
+			}
+			else_if = {
+				limit = { has_idea = all_adults_serve }
+				set_variable = { et_var_conscription = -0.030 }
+			}
+			else_if = {
+				limit = { has_idea = service_by_requirement }
+				set_variable = { et_var_conscription = -0.020 }
+			}
+			else_if = {
+				limit = { has_idea = extensive_conscription }
+				set_variable = { et_var_conscription = -0.010 }
+			}
+			else_if = {
+				limit = { has_idea = limited_conscription }
+				set_variable = { et_var_conscription = -0.005 }
+			}
+			else_if = {
+				limit = { has_idea = volunteer_only }
+				set_variable = { et_var_conscription = -0.005 }
+			}
+			else_if = {
+				limit = { has_idea = disarmed_nation }
+				set_variable = { et_var_conscription = -0.005 }
+			}
+			else = {
+				set_variable = { et_var_conscription = 0.000 }
+			}
+		}
+	}
+
 	#ROOT - country that just went to peace
 	on_peaceconference_ended = {
 		effect = {
@@ -11,6 +55,10 @@ on_actions = {
 					date > 1945.01.01
 				}
 				set_global_flag = ET_focus_global_newera_1_flag
+
+				add_dynamic_modifier = { modifier = ET_economy_dynamic_modifier }
+				add_dynamic_modifier = { modifier = ET_economy_dynamic_modifier }
+
 			}
 			FROM = {
 				set_temp_variable = { ET_threat_neg = 0 }

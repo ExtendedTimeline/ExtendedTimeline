@@ -3,7 +3,7 @@ ET_debug_decisions = {
 		icon = generic_research
 
 		available = {
-			always = yes
+			NOT = { has_global_flag = ET_focus_global_newera_1_flag }
 		}
 
 		visible = {
@@ -15,6 +15,11 @@ ET_debug_decisions = {
 
 		complete_effect = {
 			set_global_flag = ET_focus_global_newera_1_flag
+<<<<<<< HEAD
+=======
+			add_dynamic_modifier = { modifier = ET_economy_dynamic_modifier }
+			add_dynamic_modifier = { modifier = ET_manpower_dynamic_modifier }
+>>>>>>> b3f14af (Added dynamic penalties for tech progress post war)
 		}
 
 		ai_will_do = {
@@ -25,7 +30,7 @@ ET_debug_decisions = {
 		icon = generic_research
 
 		available = {
-			always = yes
+			has_global_flag = ET_focus_global_newera_1_flag
 		}
 
 		visible = {
@@ -37,6 +42,8 @@ ET_debug_decisions = {
 
 		complete_effect = {
 			clr_global_flag = ET_focus_global_newera_1_flag
+			remove_dynamic_modifier = { modifier = ET_economy_dynamic_modifier }
+			remove_dynamic_modifier = { modifier = ET_manpower_dynamic_modifier }
 		}
 
 		ai_will_do = {
@@ -59,7 +66,11 @@ ET_debug_decisions = {
 		cost = 0
 
 		complete_effect = {
+<<<<<<< HEAD
 			clr_country_flag = ET_focus_country_newera_1_flag 
+=======
+			clr_country_flag = ET_focus_country_newera_1_flag
+>>>>>>> b3f14af (Added dynamic penalties for tech progress post war)
 		}
 
 		ai_will_do = {
@@ -96,7 +107,7 @@ ET_debug_decisions = {
 		}
 	}
 
-	ET_shuffle_provinses_around_event = {
+	ET_debug_border_DefaultColdWar = {
 		icon = generic_research
 
 		available = {
