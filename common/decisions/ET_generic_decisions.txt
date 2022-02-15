@@ -31,3 +31,40 @@ ET_era_decisions = {
 		}
 	}
 }
+
+economic_decisions = {
+	ET_scrap_surpluss = {
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				has_war = no
+				hidden_trigger = {
+					has_global_flag = ET_focus_global_newera_1_flag
+					is_debug = yes
+				}
+			}
+		}
+
+		visible = {
+			has_global_flag = ET_focus_global_newera_1_flag
+			NOT = { has_country_flag = ET_focus_country_newera_1_flag }
+		}
+
+		fire_only_once = no
+		cost = 0
+		days_remove = 70
+
+		complete_effect = {
+			set_equipment_fraction = 0.25
+			add_named_threat = { 
+				threat = -0.5
+				name = ET_threat_scrap
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
