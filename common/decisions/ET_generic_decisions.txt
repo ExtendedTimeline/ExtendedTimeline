@@ -32,23 +32,22 @@ ET_era_decisions = {
 	}
 }
 
-economic_decisions = {
-	ET_scrap_surpluss = {
-		icon = generic_political_discourse
+economy_decisions = {
+	ET_scrap_surpluss_weapons = {
+		icon = generic_industry
 
 		available = {
+			has_equipment = {
+				infantry_equipment > 9999
+			}
 			OR = {
-				has_war = no
-				hidden_trigger = {
-					has_global_flag = ET_focus_global_newera_1_flag
-					is_debug = yes
-				}
+				ET_inNextEra = yes
+				ET_notInConflict = yes
 			}
 		}
 
 		visible = {
 			has_global_flag = ET_focus_global_newera_1_flag
-			NOT = { has_country_flag = ET_focus_country_newera_1_flag }
 		}
 
 		fire_only_once = no
@@ -56,15 +55,71 @@ economic_decisions = {
 		days_remove = 70
 
 		complete_effect = {
-			set_equipment_fraction = 0.25
+			if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_0 > 9999
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = -10000
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_1 > 9999
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = -10000
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_2 > 9999
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_2
+					amount = -10000
+				}
+			}
+			else_if = {
+				limit = {
+					has_equipment = {
+						infantry_equipment_3 > 9999
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_3
+					amount = -10000
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -10000
+				}
+			}
 			add_named_threat = { 
-				threat = -0.5
+				threat = -0.05
 				name = ET_threat_scrap
 			}
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 0
+			modifier = {
+				factor = 1
+				stockpile_ratio = {
+					archetype = infantry_equipment
+					ratio > 0.5
+				}
+			}
 		}
 	}
 }

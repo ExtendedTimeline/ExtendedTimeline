@@ -1,0 +1,42 @@
+# SCOPE: ROOT
+ET_inConflict = {
+    custom_trigger_tooltip  = {
+        tooltip = ET_inConflict_trigger_tt
+        OR = {
+            has_war = yes
+            any_other_country = {
+                has_volunteers_amount_from = {
+                    tag = ROOT
+                    count > 0
+                }
+            }
+        }
+    }
+}
+
+# SCOPE: ROOT
+ET_notInConflict = {
+    custom_trigger_tooltip  = {
+        tooltip = ET_notInConflict_trigger_tt
+        AND = {
+            has_war = no
+            any_other_country = {
+                has_volunteers_amount_from = {
+                    tag = ROOT
+                    count < 0
+                }
+            }
+        }
+    }
+}
+
+# SCOPE: ROOT
+ET_inNextEra = {
+    custom_trigger_tooltip = {
+        tooltip = ET_inNextEra_trigger_tt
+        OR = {
+            has_global_flag = ET_focus_global_newera_1_flag
+            is_debug = yes
+        }
+    }
+}

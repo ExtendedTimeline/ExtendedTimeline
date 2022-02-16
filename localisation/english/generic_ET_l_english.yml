@@ -3,3 +3,8 @@ ET_lost_war:0 "Lost war"
 ET_threat_scrap:0 "Scraped Equipment"
 ET_get_new_focus_tree_effect_tt:0 "§GWe will get a new focus tree.§!"
 ET_focus_global_newera_1_flag:0 "Finally reached peace in the world"
+ET_scrap_surpluss_weapons:0 "Scrap stockpiled surpluss weapons"
+ET_scrap_surpluss_equipment:0 "Scrap stockpiled armored
+ET_inConflict_trigger_tt:0 "Taking part in a conflict"
+ET_notInConflict_trigger_tt:0 "Not taking part in a conflict"
+ET_inNextEra_trigger_tt:0 "Is not in World War 2"
