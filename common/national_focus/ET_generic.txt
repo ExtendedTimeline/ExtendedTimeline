@@ -1,3 +1,11 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
 focus_tree = {
 	id = ET_Generic
 	continuous_focus_position = { x = 0 y = 1500 }
@@ -133,7 +141,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -146,7 +154,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -159,7 +167,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -172,7 +180,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -205,7 +213,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_industrial_effort  }
 		ai_will_do = { factor = 1 }
@@ -226,7 +234,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_industrial_effort  }
 		ai_will_do = { factor = 1 }
@@ -247,7 +255,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_jet_effort  }
 		ai_will_do = { factor = 1 }
@@ -268,20 +276,16 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_air_force  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
-						add_tech_bonus = {
-							uses = 1
-							bonus = 1.0
-							category = jet_technology
-						}
-					
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = jet_technology
+			}
 		}
 	}
 
@@ -293,7 +297,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_jet_effort  }
 		ai_will_do = { factor = 1 }
@@ -314,7 +318,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_naval  }
 		mutually_exclusive = { focus = ET_Generic_coastal_navy  }
@@ -328,7 +332,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_naval  }
 		mutually_exclusive = { focus = ET_Generic_open_sea_navy  }
@@ -343,7 +347,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_open_sea_navy  }
 		ai_will_do = { factor = 1 }
@@ -364,7 +368,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_coastal_navy  }
 		ai_will_do = { factor = 1 }
@@ -385,7 +389,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_battleships  }
 		ai_will_do = { factor = 1 }
@@ -406,19 +410,17 @@ focus_tree = {
 		y = 3
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_modern_carrier  }
 		prerequisite = { focus = ET_Generic_jet_fighters  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
-						add_tech_bonus = {
-							uses = 1
-							bonus = 1.0
-							category = jet_technology
-						}
-					
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = jet_technology
+			}
 		}
 	}
 
@@ -430,18 +432,16 @@ focus_tree = {
 		y = 3
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_open_sea_navy  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
-						add_tech_bonus = {
-							uses = 1
-							bonus = 1.0
-							category = nuclear
-						}
-					
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = nuclear
+			}
 		}
 	}
 
@@ -453,20 +453,16 @@ focus_tree = {
 		y = 5
 		cost = 10
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_nuclear_powered  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
-						add_tech_bonus = {
-							uses = 1
-							bonus = 1.0
-							category = ss_tech
-						}
-					
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = ss_tech
+			}	
 		}
 	}
 
@@ -478,18 +474,16 @@ focus_tree = {
 		y = 4
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_modern_carrier  focus = ET_Generic_nuclear_powered  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			
-						add_tech_bonus = {
-							uses = 1
-							bonus = 1.0
-							category = cv_tech
-						}
-					
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = cv_tech
+			}	
 		}
 	}
 
@@ -501,7 +495,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_army  }
 		mutually_exclusive = { focus = ET_Generic_infantry  }
@@ -527,7 +521,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_army  }
 		mutually_exclusive = { focus = ET_Generic_mechanized  }
@@ -590,7 +584,7 @@ focus_tree = {
 		y = 3
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_mechanized  }
 		ai_will_do = { factor = 1 }
@@ -611,7 +605,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_mechanized  focus = ET_Generic_infantry  }
 		ai_will_do = { factor = 1 }
@@ -632,7 +626,7 @@ focus_tree = {
 		y = 3
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_jet_fighters  } prerequisite = { focus = ET_Generic_helicopter_effort  }
 		ai_will_do = { factor = 1 }
@@ -653,7 +647,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ET_Generic_air_force  }
 		ai_will_do = { factor = 1 }
@@ -679,9 +673,7 @@ focus_tree = {
 		y = 9
 		cost = 10
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = ET_Generic_nonaligned  }
 		mutually_exclusive = { focus = ET_Generic_isolation  }
