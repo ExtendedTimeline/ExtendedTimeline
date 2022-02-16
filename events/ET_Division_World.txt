@@ -1,66 +1,163 @@
+add_namespace = ET_Division_Init
 add_namespace = ET_Division_Europe
 add_namespace = ET_Division_Europe_State
 add_namespace = ET_Division_Asia
 add_namespace = ET_Division_Asia_State
 
 country_event = { # Init Checks
-	id = ET_Division_Europe.0
+	id = ET_Division_Init.0
 
 	is_triggered_only = yes
 	fire_only_once = no
 	hidden = yes
 
-	immediate = {
+	immediate = { 
 		# POLEN
 		if = {
 			limit = {
-				AND = {
-					country_exists = POL
-					SOV = { NOT = { controls_state = 39 } }
+				NOT = { tag = SOV }
+				country_exists = POL
+				OR = {
+					controls_state = 10
+					controls_state = 63
+					controls_state = 66
+					controls_state = 67
+					controls_state = 68
+					controls_state = 762
+					controls_state = 807
+					controls_state = 86
+					controls_state = 87
+					controls_state = 88
+					controls_state = 92
+					controls_state = 97
+					controls_state = 98
+					controls_state = 98
+					controls_state = 98
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Polen is a country and not under Soviet control." }
-			10 = { state_event = { id = ET_Division_Europe.1 trigger_for = controller } } 
+			country_event = { id = ET_Division_Europe.1 }
 		}
-		else_if = {
+		if = {
 			limit = {
-				AND = {
-					NOT = { country_exists = POL }
-					SOV = { NOT = { controls_state = 39 } }
+				NOT = { tag = SOV }
+				NOT = { country_exists = POL }
+				OR = {
+					controls_state = 10
+					controls_state = 63
+					controls_state = 66
+					controls_state = 67
+					controls_state = 68
+					controls_state = 762
+					controls_state = 807
+					controls_state = 86
+					controls_state = 87
+					controls_state = 88
+					controls_state = 92
+					controls_state = 97
+					controls_state = 98
+					controls_state = 98
+					controls_state = 98
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Polen is not a country and not under Soviet Union control." }
-			10 = { state_event = { id = ET_Division_Europe.2 trigger_for = controller } } 
+			country_event = { id = ET_Division_Europe.2 }
 		}
-		else = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: Polen is Soviet Union owned." }
-			10 = { state_event = { id = ET_Division_Europe.3 trigger_for = controller } } 
-		}
-
-		# GERMANY
 		if = {
 			limit = {
-				SOV = { NOT = { controls_state = 64 } }
+				tag = SOV
+				country_exists = POL
+				OR = {
+					controls_state = 10
+					controls_state = 63
+					controls_state = 66
+					controls_state = 67
+					controls_state = 68
+					controls_state = 762
+					controls_state = 807
+					controls_state = 86
+					controls_state = 87
+					controls_state = 88
+					controls_state = 92
+					controls_state = 97
+					controls_state = 98
+					controls_state = 98
+					controls_state = 98
+				}
+			}
+			if = { limit = { is_debug = yes } log = "[GetDateText]: Polen is Soviet Union owned." }
+			country_event = { id = ET_Division_Europe.3 }
+		}
+
+		# EAST GERMANY
+		if = {
+			limit = {
+				NOT = { tag = SOV }
+				NOT = { country_exists = DDR }
+				OR = {
+					controls_state = 61
+					controls_state = 64
+					controls_state = 65
+					controls_state = 60
+				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Germany is not under Soviet Union control." }
-			64 = { state_event = { id = ET_Division_Europe.6 trigger_for = controller } } 
+			country_event = { id = ET_Division_Europe.6 }
 		}
+		# EAST GERMANY DDR EXIST
+		if = {
+			limit = {
+				NOT = { tag = SOV }
+				NOT = { tag = DDR }
+				country_exists = DDR
+				OR = {
+					controls_state = 5 
+					controls_state = 63
+					controls_state = 66
+					controls_state = 67
+					controls_state = 68
+				}
+			}
+			if = { limit = { is_debug = yes } log = "[GetDateText]: East Germany dont belong to Poland" }
+			country_event = { id = ET_Division_Europe.7 }
+		}
+
+		# CZECHSLOVAKIA (Czech)
+		if = {
+			limit = {
+				AND = {
+					NOT = { tag = SOV }
+					NOT = { country_exists = CZE }
+					OR = {
+						controls_state = 69
+						controls_state = 9 
+						controls_state = 75
+						controls_state = 74
+						controls_state = 62
+					}
+				}
+			}
+			if = { limit = { is_debug = yes } log = "[GetDateText]: Czechslovakia is not under Soviet Union control." }
+			country_event = { id = ET_Division_Europe.9 }
+		}
+
+
 
 		# STATE: Ermland-Masuren
 		if = {
 			limit = {
-				OR = {
-					SOV = { NOT = { controls_state = 5 } }
-					POL = { NOT = { controls_state = 5 } }
-				}
+				NOT = { tag = SOV }
+				NOT = { tag = POL }
+				controls_state = 5
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Ermland-Masuren state is not controlled by Soviet Union." }
-			5 = { state_event = { id = ET_Division_Europe_State.1 trigger_for = controller } }
+			country_event = { id = ET_Division_Europe_State.1 }
 		}
 		# STATE: Wilno
 		if = {
 			limit = {
-				SOV = { NOT = { controls_state = 784 } }
+				NOT = { tag = SOV }
+				controls_state = 784
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Wilno state is not controlled by Soviet Union." }
 			784 = { state_event = { id = ET_Division_Europe_State.2 trigger_for = controller } }
@@ -68,7 +165,8 @@ country_event = { # Init Checks
 		# STATE: Köninsberg
 		if = {
 			limit = {
-				SOV = { NOT = { controls_state = 763 } }
+				NOT = { tag = SOV }
+				controls_state = 763
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Köninsberg state is not controlled by Soviet Union." }
 			763 = { state_event = { id = ET_Division_Europe_State.3 trigger_for = controller } }
@@ -76,7 +174,8 @@ country_event = { # Init Checks
 		# STATE: Carpathian Ruthenia
 		if = {
 			limit = {
-				SOV = { NOT = { controls_state = 73 } }
+				NOT = { tag = SOV }
+				controls_state = 73
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Carpathian Ruthenia state is not controlled by Soviet Union." }
 			73 = { state_event = { id = ET_Division_Europe_State.5 trigger_for = controller } }
@@ -84,10 +183,9 @@ country_event = { # Init Checks
 		# STATE: Memel
 		if = {
 			limit = {
-				OR = {
-					SOV = { NOT = { controls_state = 188 } }
-					LIT = { NOT = { controls_state = 188 } }
-				}
+				NOT = { tag = SOV }
+				NOT = { tag = LIT }
+				controls_state = 188
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Memel state is not controlled correct controll" }
 			188 = { state_event = { id = ET_Division_Europe_State.6 trigger_for = controller } }
@@ -98,7 +196,7 @@ country_event = { # Init Checks
 	}
 }
 
-country_event = { # Polen is a country and not under Soviet control.
+country_event = { # 1 Polen is a country and not under Soviet control.
 	id = ET_Division_Europe.1
 	title = ET_Division_Europe.1.t
 	desc = ET_Division_Europe.1.desc
@@ -159,7 +257,8 @@ country_event = { # Polen is a country and not under Soviet control.
 		}
 	}
 }
-country_event = { # Polen is not a country and not under Soviet Union control.
+
+country_event = { # 2 Polen is not a country and not under Soviet Union control.
 	id = ET_Division_Europe.2
 	title = ET_Division_Europe.2.t
 	desc = ET_Division_Europe.2.desc
@@ -211,7 +310,7 @@ country_event = { # Polen is not a country and not under Soviet Union control.
 		}
 	}
 }
-country_event = { # Polen is Soviet Union owned.
+country_event = { # 3 Polen is Soviet Union owned.
 	id = ET_Division_Europe.3
 	title = ET_Division_Europe.3.t
 	desc = ET_Division_Europe.3.desc
@@ -306,7 +405,7 @@ country_event = { # Polen is Soviet Union owned.
 	}
 }
 
-country_event = { # Germany is not under Soviet Union control.
+country_event = { # 6 Germany is not under Soviet Union control.
 	id = ET_Division_Europe.6
 	title = ET_Division_Europe.6.t
 	desc = ET_Division_Europe.6.desc
@@ -337,8 +436,7 @@ country_event = { # Germany is not under Soviet Union control.
 		}
 	}
 }
-
-country_event = { # Soviet give polen East Germany
+country_event = { # 7 Soviet give polen East Germany
 	id = ET_Division_Europe.7
 
 	is_triggered_only = yes
@@ -368,6 +466,35 @@ country_event = { # Soviet give polen East Germany
 		}
 	}
 }
+
+
+country_event = { # 9 Czech Is not under the controll of the Soviet Union
+	id = ET_Division_Europe.9
+	title = ET_Division_Europe.9.t
+	desc = ET_Division_Europe.9.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ET_Division_Europe.9.a
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = ET_Division_World_Historical_TT
+		69 = { transfer_state_to  = SOV } # Czechslovakia core provinces
+		9  = { transfer_state_to  = SOV }   # Czechslovakia core provinces
+		75 = { transfer_state_to  = SOV }  # Czechslovakia core provinces
+		74 = { transfer_state_to  = SOV }  # Czechslovakia core provinces
+		72 = { transfer_state_to  = SOV }  # Czechslovakia core provinces
+		hidden_effect = {
+			SOV = { country_event = { id = ET_Division_Europe.9 days = 2 } }
+		}
+	}
+}
+
 
 
 country_event = { # STATE: Ermland-Masuren
