@@ -9,11 +9,7 @@ ET_set_new_focus_tree_effect = {
 		}
 		else_if = {
 			limit = { original_tag = ENG }   
-<<<<<<< HEAD
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
-=======
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to ENG" }
->>>>>>> b3f14af (Added dynamic penalties for tech progress post war)
 			load_focus_tree = { tree = ET_Generic keep_completed = yes }
 		}
 		else_if = {

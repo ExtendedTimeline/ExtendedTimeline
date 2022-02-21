@@ -55,10 +55,6 @@ on_actions = {
 					date > 1945.01.01
 				}
 				set_global_flag = ET_focus_global_newera_1_flag
-
-				add_dynamic_modifier = { modifier = ET_economy_dynamic_modifier }
-				add_dynamic_modifier = { modifier = ET_economy_dynamic_modifier }
-
 			}
 			FROM = {
 				set_temp_variable = { ET_threat_neg = 0 }
