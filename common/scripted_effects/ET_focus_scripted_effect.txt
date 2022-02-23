@@ -1,21 +1,45 @@
 # SCOPE: TARGET
-ET_get_new_focus_tree_effect = {
-	custom_effect_tooltip = ET_get_new_focus_tree_effect_tt
+ET_set_new_focus_tree_effect = {
+	custom_effect_tooltip = ET_set_new_focus_tree_effect_tt
 	hidden_effect = {
 		if = {
+			limit = { original_tag = USA }   
+			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to USA" }
+			load_focus_tree = { tree = ET_Generic keep_completed = yes }
+		}
+		else_if = {
 			limit = { original_tag = ENG }   
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to ENG" }
-			load_focus_tree = { tree = ET_generic keep_completed = yes }
+			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
+			load_focus_tree = { tree = ET_Generic keep_completed = yes }
 		}
 		else_if = {
 			limit = { original_tag = GER }   
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
-			load_focus_tree = { tree = ET_generic keep_completed = yes }
+			load_focus_tree = { tree = ET_Generic keep_completed = yes }
 		}
 		else = {
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
-			load_focus_tree = { tree = ET_generic keep_completed = yes }
+			load_focus_tree = { tree = ET_Generic keep_completed = yes }
 		}
+	}
+}
+ET_add_new_modifiers_effect = {
+	add_dynamic_modifier = { modifier = ET_politics_dynamic_modifier }
+	add_dynamic_modifier = { modifier = ET_economy_dynamic_modifier }
+	add_dynamic_modifier = { modifier = ET_manpower_dynamic_modifier }
+}
+
+ET_set_new_era_effect = {
+	hidden_effect = {
+		# Set new focustree
+		ET_set_new_focus_tree_effect = yes
+		ET_add_new_modifiers_effect = yes
+
+		if = {
+			limit = { has_focus = civilian_economy }
+			set_country_flag = ET_focus_country_hasDemobAfterWar_Eco_flag
+		}
+
 		set_country_flag = ET_focus_country_newera_1_flag
 	}
 }
