@@ -13,7 +13,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 100
+			add = 1000
 			has_global_flag = ET_focus_global_newera_1_flag
 		}
 	}
