@@ -30,7 +30,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = { has_global_flag = ET_focus_global_newera_1_flag }
-				ROOT = { ET_get_new_focus_tree_effect = yes }
+				ROOT = { ET_set_new_era_effect = yes }
 			}
 		}
 	}
@@ -40,7 +40,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = { has_global_flag = ET_focus_global_newera_1_flag }
-				ROOT = { ET_get_new_focus_tree_effect = yes }
+				ROOT = { ET_set_new_era_effect = yes }
 			}
 		}
 	}

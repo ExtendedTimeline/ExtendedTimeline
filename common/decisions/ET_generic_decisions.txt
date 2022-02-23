@@ -2,6 +2,8 @@ ET_era_decisions = {
 	ET_getNextEraFocusTree = {
 		icon = generic_political_discourse
 
+		is_good = yes
+
 		available = {
 			OR = {
 				AND = {
@@ -23,11 +25,11 @@ ET_era_decisions = {
 		cost = 0
 
 		complete_effect = {
-			ET_get_new_focus_tree_effect = yes
+			ET_set_new_era_effect = yes
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 100
 		}
 	}
 }
