@@ -1,0 +1,112 @@
+ET_Military = {
+	ET_Establish_Camelry_Corps = {
+		icon = generic_political_discourse
+
+		is_good = yes
+
+		available = {
+			OR = {
+				controls_state = 294
+				controls_state = 658
+				controls_state = 659
+				controls_state = 293
+				controls_state = 765
+				controls_state = 678
+				controls_state = 292
+				controls_state = 679
+				controls_state = 675
+				controls_state = 291
+
+				controls_state = 656
+
+				controls_state = 413
+				controls_state = 411
+				controls_state = 417
+				controls_state = 266
+				controls_state = 418
+				controls_state = 414
+
+				controls_state = 415
+				controls_state = 267
+
+				controls_state = 444
+				controls_state = 445
+				controls_state = 442
+
+				controls_state = 598
+				controls_state = 606
+				controls_state = 597
+
+				controls_state = 517
+
+				controls_state = 452
+				controls_state = 447
+				controls_state = 446
+				controls_state = 453
+				controls_state = 454
+				controls_state = 455
+
+				controls_state = 559
+				controls_state = 269
+			}
+		}
+
+		visible = {
+			OR = {
+				controls_state = 294
+				controls_state = 658
+				controls_state = 659
+				controls_state = 293
+				controls_state = 765
+				controls_state = 678
+				controls_state = 292
+				controls_state = 679
+				controls_state = 675
+				controls_state = 291
+
+				controls_state = 656
+
+				controls_state = 413
+				controls_state = 411
+				controls_state = 417
+				controls_state = 266
+				controls_state = 418
+				controls_state = 414
+
+				controls_state = 415
+				controls_state = 267
+
+				controls_state = 444
+				controls_state = 445
+				controls_state = 442
+
+				controls_state = 598
+				controls_state = 606
+				controls_state = 597
+
+				controls_state = 517
+
+				controls_state = 452
+				controls_state = 447
+				controls_state = 446
+				controls_state = 453
+				controls_state = 454
+				controls_state = 455
+
+				controls_state = 559
+				controls_state = 269
+			}
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			set_technology = { camelry = 1 }
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+}
