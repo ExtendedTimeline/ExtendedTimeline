@@ -70,35 +70,6 @@ ET_debug_decisions = {
 		}
 	}
 
-	ET_trigger_world_peace_event = {
-		icon = generic_decision
-
-		available = {
-			always = yes
-		}
-
-		visible = {
-			always = yes
-		}
-
-		fire_only_once = no
-		cost = 0
-
-		complete_effect = {
-			every_country = {
-				limit = { always = yes }
-				news_event = {
-					id = ET_S1_Division_Init.0
-					days = 1
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
-
 	ET_other_test = {
 
 		icon = generic_decision

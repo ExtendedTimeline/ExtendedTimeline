@@ -1,0 +1,17 @@
+add_namespace = ET_News_Scenario_1
+
+news_event = {
+	id = ET_News_Scenario_1.0
+	picture = GFX_news_ET_peaceinworld
+	title = ET_News_Scenario_1.0.t
+	desc = ET_News_Scenario_1.0.desc
+
+	is_triggered_only = yes
+
+	immediate = {}
+	
+	option = {
+		name = ET_News_Scenario_1.0.a
+		add_war_support = -0.25
+	}
+}

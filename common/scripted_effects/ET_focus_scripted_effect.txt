@@ -44,8 +44,8 @@ ET_set_new_era_effect = {
 	}
 }
 
-ET_get_post_war_scenario = {
-	# Default Historical Cold War
+ET_set_post_war_scenario = {
+	# Default Historical Cold War (Scenario 1 [S1])
 	if = {
 		limit = {
 			country_exists = USA
@@ -57,6 +57,18 @@ ET_get_post_war_scenario = {
 			USA = { has_government = democratic }
 			SOV = { has_government = communism }
 		}
+		
 		set_global_flag = ET_flag_global_scenario_1
+		every_country = {
+			limit = { always = yes }
+			news_event = {
+				id = ET_News_Scenario_1.0
+				days = 1
+			}
+			country_event = {
+				id = ET_S1_Division_Init.0
+				days = 3
+			}
+		}
 	}
 }
