@@ -8,7 +8,7 @@ ET_era_decisions = {
 			OR = {
 				AND = {
 					date > 1945.01.01
-					has_global_flag = ET_focus_global_newera_1_flag
+					has_global_flag = ET_flag_global_newera_1
 				}
 				hidden_trigger = {
 					is_debug = yes
@@ -17,8 +17,8 @@ ET_era_decisions = {
 		}
 
 		visible = {
-			has_global_flag = ET_focus_global_newera_1_flag
-			NOT = { has_country_flag = ET_focus_country_newera_1_flag }
+			has_global_flag = ET_flag_global_newera_1
+			NOT = { has_country_flag = ET_flag_country_newera_1 }
 		}
 
 		fire_only_once = no

@@ -4,15 +4,28 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { has_global_flag = ET_focus_global_newera_1_flag }
+					NOT = { has_global_flag = ET_flag_global_newera_1 }
 					any_country = {
 						has_war = no
 					}
 					date > 1945.01.01
 				}
-				set_global_flag = ET_focus_global_newera_1_flag
+				every_country = {
+					THIS = {
+						if = {
+							limit = { is_major = yes }
+							add_named_threat = {
+								threat = -100
+								name = ET_winner_of_worldwar2
+							}
+						}
+					}
+				}
+				set_global_flag = ET_flag_global_newera_1
+				set_global_flag = ET_flag_global_neweconomic_1
 			}
 			FROM = {
+
 				set_temp_variable = { ET_threat_neg = 0 }
 				subtract_from_temp_variable = { ET_threat_neg = has_added_tension_amount }
 				
@@ -29,8 +42,8 @@ on_actions = {
 	on_release_as_puppet = {
 		effect = {
 			if = {
-				limit = { has_global_flag = ET_focus_global_newera_1_flag }
-				ROOT = { ET_set_new_era_effect = yes }
+				limit = { has_global_flag = ET_flag_global_newera_1 }
+				ROOT = { ET_set_new_focus_tree_effect = yes }
 			}
 		}
 	}
@@ -39,8 +52,8 @@ on_actions = {
 	on_release_as_free = {
 		effect = {
 			if = {
-				limit = { has_global_flag = ET_focus_global_newera_1_flag }
-				ROOT = { ET_set_new_era_effect = yes }
+				limit = { has_global_flag = ET_flag_global_newera_1 }
+				ROOT = { ET_set_new_focus_tree_effect = yes }
 			}
 		}
 	}
