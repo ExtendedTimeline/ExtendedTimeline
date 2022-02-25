@@ -38,6 +38,14 @@ ET_S1_Division_Europe.6.a:0 "Release Czechslovakia as a puppet"
 ET_S1_Division_Europe.6.b:0 "Create a unified Czechslovakian puppet state"
 ET_S1_Division_Europe.6.c:0 "Create a unified Czechslovakian puppet state"
 
+ET_S1_Division_Europe.7.t:0 "Yalta Conference - West Germany"
+ET_S1_Division_Europe.7.desc:0 "You as a occupying power have agreed to during the Yalta Conference to transfer Western parts of Germany to the allie occupation athority."
+ET_S1_Division_Europe.7.a:0 "Transfer Western German Provinces to West Germany"
+ET_S1_Division_Europe.7.b:0 "Transfer Western German Provinces to allie occupation"
+ET_S1_Division_Europe.7.c:0 "Refuce (Disabled)"
+
+
+
 ET_S1_Division_Europe_State.1.t:0 "Potsdam Agreement - State of Ermland-Masuren"
 ET_S1_Division_Europe_State.1.desc:0 "Ermland-Masuren"
 ET_S1_Division_Europe_State.1.a:0 "Transfer Ermland-Masuren to Poland"
