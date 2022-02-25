@@ -3,7 +3,7 @@ set -e
 
 VERSION=$*
 PROJECT_NAME="ExtendedTimeline" 
-PROJECT_FILES=("common" "events" "gfx" "interface" "localisation" "ExtendedTimeline.mod" "LICENSE" "README.md")
+PROJECT_FILES=("common" "events" "gfx" "interface" "localisation" "ExtendedTimeline.mod" "LICENSE" "README.md", "thumbnail.png")
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 PROJECT_ROOT_DIR="$(dirname "$SCRIPT_DIR")"
