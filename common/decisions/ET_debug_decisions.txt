@@ -16,7 +16,7 @@ ET_debug_decisions = {
 		complete_effect = {
 			set_global_flag = ET_flag_global_newera_1
 			set_global_flag = ET_flag_global_neweconomic_1
-		}f
+		}
 
 		ai_will_do = {
 			base = 0
@@ -47,7 +47,7 @@ ET_debug_decisions = {
 		}
 	}
 
-	ET_remove_newera_flags = {
+	ET_remove_newera_country_flags = {
 		icon = generic_decision
 
 		available = {
@@ -62,7 +62,7 @@ ET_debug_decisions = {
 		cost = 0
 
 		complete_effect = {
-			clr_country_flag = ET_focus_country_newera_1_flag 
+			clr_country_flag = ET_flag_country_newera_1 
 		}
 
 		ai_will_do = {
