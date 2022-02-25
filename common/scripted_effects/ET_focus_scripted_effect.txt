@@ -23,21 +23,21 @@ ET_set_new_focus_tree_effect = {
 		}
 	}
 }
-ET_add_new_modifiers_effect = {
-	add_dynamic_modifier = { modifier = ET_politics_dynamic_modifier }
-	add_dynamic_modifier = { modifier = ET_economy_dynamic_modifier }
-	add_dynamic_modifier = { modifier = ET_manpower_dynamic_modifier }
+ET_clr_modifiers_effect = {
+	if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Clearing National Focus Modifiers" }
 }
 
 ET_set_new_era_effect = {
 	hidden_effect = {
 		# Set new focustree
 		ET_set_new_focus_tree_effect = yes
-		ET_add_new_modifiers_effect = yes
-
+		ET_clr_modifiers_effect = yes
+		
+		set_global_flag = ET_flag_global_newera_1
+		set_global_flag = ET_flag_global_neweconomic_1
 		if = {
-			limit = { has_focus = civilian_economy }
-			set_country_flag = ET_focus_country_hasDemobAfterWar_Eco_flag
+			limit = { has_focus = ET_modern_civilian_economy }
+			set_country_flag = ET_flag_country_HasDemobalizedEconomy
 		}
 
 		set_country_flag = ET_focus_country_newera_1_flag

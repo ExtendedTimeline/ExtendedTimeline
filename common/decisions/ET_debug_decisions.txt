@@ -3,7 +3,7 @@ ET_debug_decisions = {
 		icon = generic_research
 
 		available = {
-			NOT = { has_global_flag = ET_focus_global_newera_1_flag }
+			NOT = { has_global_flag = ET_flag_global_newera_1 }
 		}
 
 		visible = {
@@ -14,8 +14,9 @@ ET_debug_decisions = {
 		cost = 0
 
 		complete_effect = {
-			set_global_flag = ET_focus_global_newera_1_flag
-		}
+			set_global_flag = ET_flag_global_newera_1
+			set_global_flag = ET_flag_global_neweconomic_1
+		}f
 
 		ai_will_do = {
 			base = 0
@@ -26,7 +27,7 @@ ET_debug_decisions = {
 		icon = generic_research
 
 		available = {
-			has_global_flag = ET_focus_global_newera_1_flag
+			has_global_flag = ET_flag_global_newera_1
 		}
 
 		visible = {
@@ -37,7 +38,8 @@ ET_debug_decisions = {
 		cost = 0
 
 		complete_effect = {
-			clr_global_flag = ET_focus_global_newera_1_flag
+			clr_global_flag = ET_flag_global_newera_1
+			clr_global_flag = ET_flag_global_neweconomic_1
 		}
 
 		ai_will_do = {

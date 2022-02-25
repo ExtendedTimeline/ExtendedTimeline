@@ -1,62 +1,31 @@
 on_actions = {
-
-	on_startup = {
-		effect = {
-			set_variable = { et_var_conscription = 0.00 }
-		}
-	}
-
-	on_monthly = {
-		effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] on_monthly trigger!" }
-			if = {
-				limit = { has_idea = scraping_the_barrel }
-				set_variable = { et_var_conscription = -0.050 }
-			}
-			else_if = {
-				limit = { has_idea = all_adults_serve }
-				set_variable = { et_var_conscription = -0.030 }
-			}
-			else_if = {
-				limit = { has_idea = service_by_requirement }
-				set_variable = { et_var_conscription = -0.020 }
-			}
-			else_if = {
-				limit = { has_idea = extensive_conscription }
-				set_variable = { et_var_conscription = -0.010 }
-			}
-			else_if = {
-				limit = { has_idea = limited_conscription }
-				set_variable = { et_var_conscription = -0.005 }
-			}
-			else_if = {
-				limit = { has_idea = volunteer_only }
-				set_variable = { et_var_conscription = -0.005 }
-			}
-			else_if = {
-				limit = { has_idea = disarmed_nation }
-				set_variable = { et_var_conscription = -0.005 }
-			}
-			else = {
-				set_variable = { et_var_conscription = 0.000 }
-			}
-		}
-	}
-
 	#ROOT - country that just went to peace
 	on_peaceconference_ended = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { has_global_flag = ET_focus_global_newera_1_flag }
+					NOT = { has_global_flag = ET_flag_global_newera_1 }
 					any_country = {
 						has_war = no
 					}
 					date > 1945.01.01
 				}
-				set_global_flag = ET_focus_global_newera_1_flag
+				every_country = {
+					THIS = {
+						if = {
+							limit = { is_major = yes }
+							add_named_threat = {
+								threat = -100
+								name = ET_winner_of_worldwar2
+							}
+						}
+					}
+				}
+				set_global_flag = ET_flag_global_newera_1
+				set_global_flag = ET_flag_global_neweconomic_1
 			}
 			FROM = {
+
 				set_temp_variable = { ET_threat_neg = 0 }
 				subtract_from_temp_variable = { ET_threat_neg = has_added_tension_amount }
 				
@@ -73,8 +42,8 @@ on_actions = {
 	on_release_as_puppet = {
 		effect = {
 			if = {
-				limit = { has_global_flag = ET_focus_global_newera_1_flag }
-				ROOT = { ET_set_new_era_effect = yes }
+				limit = { has_global_flag = ET_flag_global_newera_1 }
+				ROOT = { ET_set_new_focus_tree_effect = yes }
 			}
 		}
 	}
@@ -83,8 +52,8 @@ on_actions = {
 	on_release_as_free = {
 		effect = {
 			if = {
-				limit = { has_global_flag = ET_focus_global_newera_1_flag }
-				ROOT = { ET_set_new_era_effect = yes }
+				limit = { has_global_flag = ET_flag_global_newera_1 }
+				ROOT = { ET_set_new_focus_tree_effect = yes }
 			}
 		}
 	}

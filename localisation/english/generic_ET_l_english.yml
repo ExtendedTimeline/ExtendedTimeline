@@ -1,6 +1,9 @@
 ﻿l_english: 
 ET_lost_war:0 "Lost war"
-ET_set_new_focus_tree_effect_tt:0 "§GWe will get a new focus tree.§!"
-ET_focus_global_newera_1_flag:0 "Finally reached peace in the world"
-ET_economy_dynamic_modifier:0 "Modern Economy"
-ET_manpower_dynamic_modifier:0 "TODO"
+ET_winner_of_worldwar2:0 "Winner of World War 2"
+ET_get_new_focus_tree_effect_tt:0 "§GWe will get a new focus tree.§!"
+ET_flag_global_newera_1:0 "Finally reached peace in the world"
+ET_flag_global_neweconomic_1:0 "Have new era economics"
+ET_modern_civilian_economy:0 "Modern Civilian Economy"
+ET_modern_economic_mobilisation:0 "Modern Mobilization Economy"
+ET_modern_war_economy:0 "Modern War Economy"
