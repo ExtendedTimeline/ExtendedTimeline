@@ -1,11 +1,11 @@
-add_namespace = ET_Division_Init
-add_namespace = ET_Division_Europe
-add_namespace = ET_Division_Europe_State
-add_namespace = ET_Division_Asia
-add_namespace = ET_Division_Asia_State
+add_namespace = ET_S1_Division_Init
+add_namespace = ET_S1_Division_Europe
+add_namespace = ET_S1_Division_Europe_State
+add_namespace = ET_S1_Division_Asia
+add_namespace = ET_S1_Division_Asia_State
 
 country_event = { # Init Checks
-	id = ET_Division_Init.0
+	id = ET_S1_Division_Init.0
 
 	is_triggered_only = yes
 	fire_only_once = no
@@ -38,7 +38,7 @@ country_event = { # Init Checks
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking Poland..." }
-			country_event = { id = ET_Division_Europe.1 }
+			country_event = { id = ET_S1_Division_Europe.1 }
 		}
 		# 3 WESTERN POLAND
 		if = {
@@ -53,7 +53,7 @@ country_event = { # Init Checks
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking West Poland..." }
-			country_event = { id = ET_Division_Europe.3 }
+			country_event = { id = ET_S1_Division_Europe.3 }
 		}
 		# 4 EAST GERMANY
 		if = {
@@ -68,7 +68,7 @@ country_event = { # Init Checks
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking East Germany..." }
-			country_event = { id = ET_Division_Europe.3 }
+			country_event = { id = ET_S1_Division_Europe.3 }
 		}
 
 		# 5 CZECHSLOVAKIA
@@ -91,7 +91,7 @@ country_event = { # Init Checks
 				}
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] own states in Czechslovakia" }
-			country_event = { id = ET_Division_Europe.5 }
+			country_event = { id = ET_S1_Division_Europe.5 }
 		}
 
 		# 1 STATE: Ermland-Masuren
@@ -101,7 +101,7 @@ country_event = { # Init Checks
 				controls_state = 5
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Ermland-Masuren state is not controlled by Soviet Union." }
-			country_event = { id = ET_Division_Europe_State.1 }
+			country_event = { id = ET_S1_Division_Europe_State.1 }
 		}
 		# 2 STATE: Wilno
 		if = {
@@ -110,7 +110,7 @@ country_event = { # Init Checks
 				controls_state = 784
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Wilno state is not controlled by Soviet Union." }
-			country_event = { id = ET_Division_Europe_State.2 }
+			country_event = { id = ET_S1_Division_Europe_State.2 }
 		}
 		# 3 STATE: Köninsberg
 		if = {
@@ -119,7 +119,7 @@ country_event = { # Init Checks
 				controls_state = 763
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Köninsberg state is not controlled by Soviet Union." }
-			country_event = { id = ET_Division_Europe_State.3 }
+			country_event = { id = ET_S1_Division_Europe_State.3 }
 		}
 		# 4 STATE: Carpathian Ruthenia
 		if = {
@@ -128,7 +128,7 @@ country_event = { # Init Checks
 				controls_state = 73
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Carpathian Ruthenia state is not controlled by Soviet Union." }
-			country_event = { id = ET_Division_Europe_State.5 }
+			country_event = { id = ET_S1_Division_Europe_State.5 }
 		}
 		# 5 STATE: Memel
 		if = {
@@ -138,7 +138,7 @@ country_event = { # Init Checks
 				controls_state = 188
 			}
 			if = { limit = { is_debug = yes } log = "[GetDateText]: Memel state is not controlled correct controll" }
-			country_event= { id = ET_Division_Europe_State.6 }
+			country_event= { id = ET_S1_Division_Europe_State.6 }
 		}
 	}
 
@@ -147,9 +147,9 @@ country_event = { # Init Checks
 }
 
 country_event = { # 1 POLAND
-	id = ET_Division_Europe.1
-	title = ET_Division_Europe.1.t
-	desc = ET_Division_Europe.1.desc
+	id = ET_S1_Division_Europe.1
+	title = ET_S1_Division_Europe.1.t
+	desc = ET_S1_Division_Europe.1.desc
 
 	is_triggered_only = yes
 
@@ -157,7 +157,7 @@ country_event = { # 1 POLAND
 	}
 
 	option = { # A: Give States to Poland
-		name = ET_Division_Europe.1.a
+		name = ET_S1_Division_Europe.1.a
 		trigger = {
 			country_exists = POL
 		}
@@ -194,7 +194,7 @@ country_event = { # 1 POLAND
 				add_state_core = 96
 			}
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
 		if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = POL } }
 		if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = POL } }
@@ -220,7 +220,7 @@ country_event = { # 1 POLAND
 		}
 	}
 	option = { # A: Give States to Soviet
-		name = ET_Division_Europe.1.b
+		name = ET_S1_Division_Europe.1.b
 		trigger = {
 			NOT = { original_tag =  SOV }
 			NOT = { country_exists = POL }
@@ -275,11 +275,11 @@ country_event = { # 1 POLAND
 		if = { limit = { controls_state = 95  } 95 =  { transfer_state_to  = SOV } } # POL core provinces
 		if = { limit = { controls_state = 96  } 96 =  { transfer_state_to  = SOV } } # POL core provinces
 
-		SOV = { country_event = { id = ET_Division_Europe.2 days = 1 } }
+		SOV = { country_event = { id = ET_S1_Division_Europe.2 days = 1 } }
 
 	}
 	option = { # C: Refuce (DISABLED)
-		name = ET_Division_Europe.1.c
+		name = ET_S1_Division_Europe.1.c
 		ai_chance = {
 			factor = 0
 		}
@@ -287,9 +287,9 @@ country_event = { # 1 POLAND
 	}
 }
 country_event = { # 2 POLAND - Puppet
-	id = ET_Division_Europe.2
-	title = ET_Division_Europe.2.t
-	desc = ET_Division_Europe.2.desc
+	id = ET_S1_Division_Europe.2
+	title = ET_S1_Division_Europe.2.t
+	desc = ET_S1_Division_Europe.2.desc
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -298,7 +298,7 @@ country_event = { # 2 POLAND - Puppet
 	}
 
 	option = { # A: Release Poland as a puppet
-		name = ET_Division_Europe.2.a
+		name = ET_S1_Division_Europe.2.a
 		ai_chance = {
 			factor = 1
 		}
@@ -322,9 +322,9 @@ country_event = { # 2 POLAND - Puppet
 				remove_state_core = 95
 				remove_state_core = 96
 			}
-			SOV = { country_event = { id = ET_Division_Europe_State.3 days = 3 } }
+			SOV = { country_event = { id = ET_S1_Division_Europe_State.3 days = 3 } }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = SOV } }
 		if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = SOV } }
 		if = { limit = { controls_state = 85  } 85 =  { transfer_state_to  = SOV } }
@@ -344,7 +344,7 @@ country_event = { # 2 POLAND - Puppet
 		release_puppet = POL
 	}
 	option = { # B: Keep it under our occupation
-		name = ET_Division_Europe.2.b
+		name = ET_S1_Division_Europe.2.b
 		ai_chance = {
 			factor = 0
 		}
@@ -389,9 +389,9 @@ country_event = { # 2 POLAND - Puppet
 }
 
 country_event = { # 3 WESTERN POLAND
-	id = ET_Division_Europe.3
-	title = ET_Division_Europe.3.t
-	desc = ET_Division_Europe.3.desc
+	id = ET_S1_Division_Europe.3
+	title = ET_S1_Division_Europe.3.t
+	desc = ET_S1_Division_Europe.3.desc
 
 	is_triggered_only = yes
 
@@ -399,7 +399,7 @@ country_event = { # 3 WESTERN POLAND
 	}
 
 	option = { # A: Transfer Western Poland to the Soviet Union
-		name = ET_Division_Europe.3.a
+		name = ET_S1_Division_Europe.3.a
 		trigger = {
 			NOT = { country_exists = POL }
 		}
@@ -431,7 +431,7 @@ country_event = { # 3 WESTERN POLAND
 				remove_state_core = 68
 			}
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		if = { limit = { controls_state = 63  } 63  = { transfer_state_to  = SOV } }
 		if = { limit = { controls_state = 68  } 68  = { transfer_state_to  = SOV } }
 		if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = SOV } }
@@ -439,7 +439,7 @@ country_event = { # 3 WESTERN POLAND
 		if = { limit = { controls_state = 762 } 762 = { transfer_state_to  = SOV } }
 	}
 	option = { # B: Transfer Western Poland to Poland
-		name = ET_Division_Europe.3.b
+		name = ET_S1_Division_Europe.3.b
 		trigger = {
 			country_exists = POL
 		}
@@ -471,7 +471,7 @@ country_event = { # 3 WESTERN POLAND
 				remove_state_core = 68
 			}
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		if = { limit = { controls_state = 63  } 63  = { transfer_state_to  = POL } }
 		if = { limit = { controls_state = 68  } 68  = { transfer_state_to  = POL } }
 		if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = POL } }
@@ -479,7 +479,7 @@ country_event = { # 3 WESTERN POLAND
 		if = { limit = { controls_state = 762 } 762 = { transfer_state_to  = POL } }
 	}
 	option = { # C: Refuce (DISABLED)
-		name = ET_Division_Europe.3.b
+		name = ET_S1_Division_Europe.3.b
 		ai_chance = {
 			factor = 0
 		}
@@ -487,9 +487,9 @@ country_event = { # 3 WESTERN POLAND
 	}
 }
 country_event = { # 4 EASTERN GERMANY
-	id = ET_Division_Europe.4
-	title = ET_Division_Europe.4.t
-	desc = ET_Division_Europe.4.desc
+	id = ET_S1_Division_Europe.4
+	title = ET_S1_Division_Europe.4.t
+	desc = ET_S1_Division_Europe.4.desc
 
 	is_triggered_only = yes
 
@@ -497,7 +497,7 @@ country_event = { # 4 EASTERN GERMANY
 	}
 
 	option = { # A: Transfer East Germany to the Soviet Union
-		name = ET_Division_Europe.4.a
+		name = ET_S1_Division_Europe.4.a
 		trigger = {
 			NOT = { country_exists = POL }
 		}
@@ -507,7 +507,7 @@ country_event = { # 4 EASTERN GERMANY
 		hidden_effect = {
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering East Germany states to the Soviet Union" }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		if = { limit = { controls_state = 61  } 61  = { transfer_state_to  = SOV } }
 		if = { limit = { controls_state = 62  } 62  = { transfer_state_to  = SOV } }
 		if = { limit = { controls_state = 64  } 64  = { transfer_state_to  = SOV } }
@@ -515,7 +515,7 @@ country_event = { # 4 EASTERN GERMANY
 		if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = SOV } }
 	}
 	option = { # B: Transfer East Germany to DDR
-		name = ET_Division_Europe.4.b
+		name = ET_S1_Division_Europe.4.b
 		trigger = {
 			country_exists = POL
 		}
@@ -525,7 +525,7 @@ country_event = { # 4 EASTERN GERMANY
 		hidden_effect = {
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering East Germany states to DDR" }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		if = { limit = { controls_state = 61  } 61  = { transfer_state_to  = DDR } }
 		if = { limit = { controls_state = 62  } 62  = { transfer_state_to  = DDR } }
 		if = { limit = { controls_state = 64  } 64  = { transfer_state_to  = DDR } }
@@ -535,7 +535,7 @@ country_event = { # 4 EASTERN GERMANY
 		SOV = { puppet = DDR }
 	}
 	option = { # C: Refuce (DISABLED)
-		name = ET_Division_Europe.4.b
+		name = ET_S1_Division_Europe.4.b
 		ai_chance = {
 			factor = 0
 		}
@@ -544,9 +544,9 @@ country_event = { # 4 EASTERN GERMANY
 }
 
 country_event = { # 5 CZECHSLOVAKIA
-	id = ET_Division_Europe.5
-	title = ET_Division_Europe.5.t
-	desc = ET_Division_Europe.5.desc
+	id = ET_S1_Division_Europe.5
+	title = ET_S1_Division_Europe.5.t
+	desc = ET_S1_Division_Europe.5.desc
 
 	is_triggered_only = yes
 
@@ -554,7 +554,7 @@ country_event = { # 5 CZECHSLOVAKIA
 	}
 
 	option = { # A: No CZE && No SLO give to Soviet
-		name = ET_Division_Europe.5.a
+		name = ET_S1_Division_Europe.5.a
 		trigger = {
 			NOT = { country_exists = CZE }
 			NOT = { country_exists = SLO }
@@ -563,9 +563,9 @@ country_event = { # 5 CZECHSLOVAKIA
 			factor = 1
 		}
 		hidden_effect = {
-			SOV = { country_event = { id = ET_Division_Europe.6 days = 1 } }
+			SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
 		if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = SOV } } # Czechslovakia core provinces
 		if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
@@ -576,10 +576,10 @@ country_event = { # 5 CZECHSLOVAKIA
 		if = { limit = { controls_state = 664 } 664 = { transfer_state_to  = SOV } } # Czechslovakia core provinces
 		if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
 
-		country_event = { id = ET_Division_Europe.6 days = 1 }
+		country_event = { id = ET_S1_Division_Europe.6 days = 1 }
 	}
 	option = { # B: SLO give to SLO
-		name = ET_Division_Europe.5.b
+		name = ET_S1_Division_Europe.5.b
 		trigger = {
 			NOT = { country_exists = CZE }
 			country_exists = SLO
@@ -588,9 +588,9 @@ country_event = { # 5 CZECHSLOVAKIA
 			factor = 1
 		}
 		hidden_effect = {
-			SOV = { country_event = { id = ET_Division_Europe.6 days = 1 } }
+			SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
 		if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = SLO } } # Czechslovakia core provinces
 		if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
@@ -603,7 +603,7 @@ country_event = { # 5 CZECHSLOVAKIA
 
 	}
 	option = { # C: CZE give to CZE
-		name = ET_Division_Europe.5.c
+		name = ET_S1_Division_Europe.5.c
 		trigger = {
 			country_exists = CZE
 			NOT = { country_exists = SLO }
@@ -612,9 +612,9 @@ country_event = { # 5 CZECHSLOVAKIA
 			factor = 1
 		}
 		hidden_effect = {
-			SOV = { country_event = { id = ET_Division_Europe.6 days = 1 } }
+			SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
 		if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = CZE } } # Czechslovakia core provinces
 		if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
@@ -626,7 +626,7 @@ country_event = { # 5 CZECHSLOVAKIA
 		if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
 	}
 	option = { # D: SLO give to CZE
-		name = ET_Division_Europe.5.d
+		name = ET_S1_Division_Europe.5.d
 		trigger = {
 			country_exists = CZE
 			country_exists = SLO
@@ -635,9 +635,9 @@ country_event = { # 5 CZECHSLOVAKIA
 			factor = 1
 		}
 		hidden_effect = {
-			SOV = { country_event = { id = ET_Division_Europe.6 days = 1 } }
+			SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
 		if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = CZE } } # Czechslovakia core provinces
 		if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
@@ -650,9 +650,9 @@ country_event = { # 5 CZECHSLOVAKIA
 	}
 }
 country_event = { # 6 CZECHSLOVAKIA - Puppet
-	id = ET_Division_Europe.6
-	title = ET_Division_Europe.6.t
-	desc = ET_Division_Europe.6.desc
+	id = ET_S1_Division_Europe.6
+	title = ET_S1_Division_Europe.6.t
+	desc = ET_S1_Division_Europe.6.desc
 
 	is_triggered_only = yes
 
@@ -660,7 +660,7 @@ country_event = { # 6 CZECHSLOVAKIA - Puppet
 	}
 
 	option = { # A: Release Czechslovakia as a puppet
-		name = ET_Division_Europe.6.a
+		name = ET_S1_Division_Europe.6.a
 		trigger = {
 			NOT = { country_exists = CZE }
 			NOT = { country_exists = SLO }
@@ -672,12 +672,12 @@ country_event = { # 6 CZECHSLOVAKIA - Puppet
 			CZE = { remove_state_core = 73 }
 			HUN = { remove_state_core = 73 }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
 		SOV = { release_puppet = CZE }
 	}
 	option = { # B: Create a unified Czechslovakian puppet state
-		name = ET_Division_Europe.6.b
+		name = ET_S1_Division_Europe.6.b
 		trigger = {
 			NOT = { country_exists = CZE }
 			country_exists = SLO
@@ -689,7 +689,7 @@ country_event = { # 6 CZECHSLOVAKIA - Puppet
 			CZE = { remove_state_core = 73 }
 			HUN = { remove_state_core = 73 }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
 		SOV = { release_puppet = CZE }
 		CZE = { annex_country = { target = SLO transfer_troops = yes } }
@@ -707,7 +707,7 @@ country_event = { # 6 CZECHSLOVAKIA - Puppet
 		CZE = { set_capital = { state = 9 } }
 	}
 	option = { # C: Create a unified Czechslovakian puppet state
-		name = ET_Division_Europe.6.c
+		name = ET_S1_Division_Europe.6.c
 		trigger = {
 			country_exists = CZE
 			NOT = { country_exists = SLO }
@@ -719,7 +719,7 @@ country_event = { # 6 CZECHSLOVAKIA - Puppet
 			CZE = { remove_state_core = 73 }
 			HUN = { remove_state_core = 73 }
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
 		69  = { transfer_state_to  = CZE } # Czechslovakia core provinces
 		9   = { transfer_state_to  = CZE } # Czechslovakia core provinces
@@ -736,9 +736,9 @@ country_event = { # 6 CZECHSLOVAKIA - Puppet
 }
 
 country_event = { # 7 AUSTRIA
-	id = ET_Division_Europe.7
-	title = ET_Division_Europe.7.t
-	desc = ET_Division_Europe.7.desc
+	id = ET_S1_Division_Europe.7
+	title = ET_S1_Division_Europe.7.t
+	desc = ET_S1_Division_Europe.7.desc
 
 	is_triggered_only = yes
 
@@ -746,7 +746,7 @@ country_event = { # 7 AUSTRIA
 	}
 
 	option = { # A: Give States to Austria
-		name = ET_Division_Europe.7.a
+		name = ET_S1_Division_Europe.7.a
 		trigger = {
 			country_exists = AUS
 		}
@@ -764,9 +764,9 @@ country_event = { # 7 AUSTRIA
 }
 
 country_event = { # 1 STATE: Ermland-Masuren
-	id = ET_Division_Europe_State.1
-	title = ET_Division_Europe_State.1.t
-	desc = ET_Division_Europe_State.1.desc
+	id = ET_S1_Division_Europe_State.1
+	title = ET_S1_Division_Europe_State.1.t
+	desc = ET_S1_Division_Europe_State.1.desc
 
 	is_triggered_only = yes
 
@@ -774,7 +774,7 @@ country_event = { # 1 STATE: Ermland-Masuren
 	}
 
 	option = { # A: Transfer Ermland-Masuren to Poland
-		name = ET_Division_Europe_State.1.a
+		name = ET_S1_Division_Europe_State.1.a
 		trigger = {
 			country_exists = POL
 		}
@@ -786,12 +786,12 @@ country_event = { # 1 STATE: Ermland-Masuren
 			GER = { remove_state_core = 5 }
 		}
 
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		5 =  { transfer_state_to  = POL } # German core provinces
 
 	}
 	option = { # B: Transfer Ermland-Masuren to Soviet Union
-		name = ET_Division_Europe_State.1.a
+		name = ET_S1_Division_Europe_State.1.a
 		trigger = {
 			NOT = { country_exists = POL }
 		}
@@ -803,12 +803,12 @@ country_event = { # 1 STATE: Ermland-Masuren
 			GER = { remove_state_core = 5 }
 		}
 
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		5 =  { transfer_state_to  = SOV } # German core provinces
 
 	}
 	option = { # C: Refuce
-		name = ET_Division_Europe_State.1.c
+		name = ET_S1_Division_Europe_State.1.c
 		ai_chance = {
 			factor = 0
 		}
@@ -819,9 +819,9 @@ country_event = { # 1 STATE: Ermland-Masuren
 	}
 }
 country_event = { # 2 STATE: Wilno
-	id = ET_Division_Europe_State.2
-	title = ET_Division_Europe_State.2.t
-	desc = ET_Division_Europe_State.2.desc
+	id = ET_S1_Division_Europe_State.2
+	title = ET_S1_Division_Europe_State.2.t
+	desc = ET_S1_Division_Europe_State.2.desc
 
 	is_triggered_only = yes
 
@@ -829,19 +829,19 @@ country_event = { # 2 STATE: Wilno
 	}
 
 	option = {
-		name = ET_Division_Europe_State.2.a
+		name = ET_S1_Division_Europe_State.2.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		784 =  { transfer_state_to  = SOV } # POL & LIT core provinces
 		SOV = { add_state_core = 784 }
 	}
 }
 country_event = { # 3 STATE: Köningsberg
-	id = ET_Division_Europe_State.3
-	title = ET_Division_Europe_State.3.t
-	desc = ET_Division_Europe_State.3.desc
+	id = ET_S1_Division_Europe_State.3
+	title = ET_S1_Division_Europe_State.3.t
+	desc = ET_S1_Division_Europe_State.3.desc
 
 	is_triggered_only = yes
 
@@ -849,11 +849,11 @@ country_event = { # 3 STATE: Köningsberg
 	}
 
 	option = { # A: Transfer Köningsberg to the Soviet Union
-		name = ET_Division_Europe_State.3.a
+		name = ET_S1_Division_Europe_State.3.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 		763 =  { transfer_state_to  = SOV } # Köningsberg
 		SOV = { add_state_core = 763 }
 
@@ -868,16 +868,16 @@ country_event = { # 3 STATE: Köningsberg
 		}
 	}
 	option = { # B: Refuce
-		name = ET_Division_Europe_State.3.b
+		name = ET_S1_Division_Europe_State.3.b
 		ai_chance = {
 			factor = 0
 		}
 	}
 }
 country_event = { # 4 STATE: Carpathian Ruthenia
-	id = ET_Division_Europe_State.5
-	title = ET_Division_Europe_State.5.t
-	desc = ET_Division_Europe_State.5.desc
+	id = ET_S1_Division_Europe_State.5
+	title = ET_S1_Division_Europe_State.5.t
+	desc = ET_S1_Division_Europe_State.5.desc
 
 	is_triggered_only = yes
 
@@ -885,11 +885,11 @@ country_event = { # 4 STATE: Carpathian Ruthenia
 	}
 
 	option = {
-		name = ET_Division_Europe_State.5.a
+		name = ET_S1_Division_Europe_State.5.a
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
 		73 = { transfer_state_to  = SOV } # CZE core provinces
 		SOV = { add_state_core = 73 }
@@ -901,9 +901,9 @@ country_event = { # 4 STATE: Carpathian Ruthenia
 	}
 }
 country_event = { # 5 STATE: Memel
-	id = ET_Division_Europe_State.6
-	title = ET_Division_Europe_State.6.t
-	desc = ET_Division_Europe_State.6.desc
+	id = ET_S1_Division_Europe_State.6
+	title = ET_S1_Division_Europe_State.6.t
+	desc = ET_S1_Division_Europe_State.6.desc
 
 	is_triggered_only = yes
 
@@ -911,12 +911,12 @@ country_event = { # 5 STATE: Memel
 	}
 
 	option = {
-		name = ET_Division_Europe_State.6.a
+		name = ET_S1_Division_Europe_State.6.a
 		trigger = { NOT = { country_exists = LIT } }
 		ai_chance = {
 			factor = 1
 		}
-		custom_effect_tooltip = ET_Division_World_Historical_TT
+		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
 		188 = { transfer_state_to  = SOV }
 		SOV = { add_state_core = 188 }
@@ -925,7 +925,7 @@ country_event = { # 5 STATE: Memel
 		}
 	}
 	option = {
-		name = ET_Division_Europe_State.6.b
+		name = ET_S1_Division_Europe_State.6.b
 		trigger = { country_exists = LIT }
 		ai_chance = {
 			factor = 2
@@ -937,7 +937,7 @@ country_event = { # 5 STATE: Memel
 		}
 	}
 	option = { # Refuce
-		name = ET_Division_Europe_State.6.c
+		name = ET_S1_Division_Europe_State.6.c
 		ai_chance = {
 			factor = 0
 		}

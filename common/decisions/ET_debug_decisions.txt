@@ -88,7 +88,7 @@ ET_debug_decisions = {
 			every_country = {
 				limit = { always = yes }
 				news_event = {
-					id = ET_Division_Init.0
+					id = ET_S1_Division_Init.0
 					days = 1
 				}
 			}

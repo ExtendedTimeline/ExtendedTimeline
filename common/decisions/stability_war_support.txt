@@ -487,7 +487,7 @@ demobilization = {
 				}
 				AND = {
 					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
-					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
+					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_HasDemobalizedEconomy } }
 					NOT = { has_idea = civilian_economy }
 				}
 			}
@@ -501,7 +501,7 @@ demobilization = {
 				}
 				AND = {
 					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
-					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
+					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_HasDemobalizedEconomy } }
 					NOT = { has_idea = civilian_economy }
 				}
 			}
@@ -516,7 +516,7 @@ demobilization = {
 				}
 				AND = {
 					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
-					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
+					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_HasDemobalizedEconomy } }
 					NOT = { has_idea = civilian_economy }
 				}
 			}
@@ -545,11 +545,11 @@ demobilization = {
 			if = {
 				limit = {
 					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
-					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
-					NOT = { has_idea = civilian_economy }
+					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_HasDemobalizedEconomy } }
+					NOT = { has_idea = ET_modern_civilian_economy }
 				}
-				add_ideas = civilian_economy
-				set_country_flag = ET_flag_country_hasDemobAfterWar_Eco
+				add_ideas = ET_modern_civilian_economy
+				set_country_flag = ET_flag_country_HasDemobalizedEconomy
 			}
 			else = {
 				if = {
@@ -590,7 +590,7 @@ demobilization = {
 				has_war = yes
 				AND = {
 					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
-					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
+					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_HasDemobalizedEconomy } }
 					NOT = { has_idea = civilian_economy }
 				}
 			}
@@ -604,7 +604,7 @@ demobilization = {
 				}
 				AND = {
 					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
-					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
+					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_HasDemobalizedEconomy } }
 					NOT = { has_idea = civilian_economy }
 				}
 			}
