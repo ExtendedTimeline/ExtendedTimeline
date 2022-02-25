@@ -40,6 +40,6 @@ ET_set_new_era_effect = {
 			set_country_flag = ET_flag_country_HasDemobalizedEconomy
 		}
 
-		set_country_flag = ET_focus_country_newera_1_flag
+		set_country_flag = ET_flag_country_newera_1
 	}
 }

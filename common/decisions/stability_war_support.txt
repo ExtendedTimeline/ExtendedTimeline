@@ -486,7 +486,7 @@ demobilization = {
 					has_war = no
 				}
 				AND = {
-					hidden_trigger = { has_country_flag = ET_focus_country_newera_1_flag }
+					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
 					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
 					NOT = { has_idea = civilian_economy }
 				}
@@ -500,7 +500,7 @@ demobilization = {
 					has_war = no
 				}
 				AND = {
-					hidden_trigger = { has_country_flag = ET_focus_country_newera_1_flag }
+					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
 					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
 					NOT = { has_idea = civilian_economy }
 				}
@@ -515,7 +515,7 @@ demobilization = {
 					has_war = no
 				}
 				AND = {
-					hidden_trigger = { has_country_flag = ET_focus_country_newera_1_flag }
+					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
 					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
 					NOT = { has_idea = civilian_economy }
 				}
@@ -544,7 +544,7 @@ demobilization = {
 			}
 			if = {
 				limit = {
-					hidden_trigger = { has_country_flag = ET_focus_country_newera_1_flag }
+					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
 					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
 					NOT = { has_idea = civilian_economy }
 				}
@@ -589,7 +589,7 @@ demobilization = {
 				has_unsupported_economic_law = no
 				has_war = yes
 				AND = {
-					hidden_trigger = { has_country_flag = ET_focus_country_newera_1_flag }
+					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
 					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
 					NOT = { has_idea = civilian_economy }
 				}
@@ -603,7 +603,7 @@ demobilization = {
 					has_war = no
 				}
 				AND = {
-					hidden_trigger = { has_country_flag = ET_focus_country_newera_1_flag }
+					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
 					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_hasDemobAfterWar_Eco } }
 					NOT = { has_idea = civilian_economy }
 				}
