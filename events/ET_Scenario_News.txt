@@ -12,6 +12,51 @@ news_event = {
 	
 	option = {
 		name = ET_News_Scenario_1.0.a
+		trigger = {
+			NOT = { has_government = fascism }
+		}
+		ai_chance = {
+			factor = 1
+		}
+
 		add_war_support = -0.25
+
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.10
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = ET_News_Scenario_1.0.b
+		trigger = {
+			has_government = fascism
+		}
+		ai_chance = {
+			factor = 1
+		}
+
+		add_war_support = -0.25
+		add_stability = -0.10
+
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.10
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
 	}
 }
