@@ -1,0 +1,24 @@
+ET_debug_decisions = {
+
+	ET_decolonization_test = {
+
+		icon = border_war
+
+		available = {
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
