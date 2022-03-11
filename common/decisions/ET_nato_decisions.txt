@@ -1,0 +1,37 @@
+ET_nato_decisions = {
+	ET_nato_found_the_alliance = {
+		icon = generic_political_discourse
+
+		is_good = yes
+
+		available = {
+			original_tag = USA
+			has_government = democratic
+			date > 1945.01.01
+		}
+
+		visible = {
+			NOT = { has_global_flag = ET_flag_global_nato }
+			
+			NOT = { has_government = fachists }
+			NOT = { has_government = communism }
+
+			has_war = no
+		}
+
+		fire_only_once = yes
+		cost = 250
+
+		complete_effect = {
+			set_global_flag = ET_flag_global_nato
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				date > 1949.04.01
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+ET_nato_decisions = {
+	icon = generic_propaganda
+
+	visible = {
+		has_global_flag = ET_flag_global_scenario_1
+	}
+}
