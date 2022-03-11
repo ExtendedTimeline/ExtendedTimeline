@@ -544,8 +544,8 @@ demobilization = {
 			}
 			if = {
 				limit = {
-					hidden_trigger = { has_country_flag = ET_flag_country_newera_1 }
-					hidden_trigger = { NOT = { has_country_flag = ET_flag_country_HasDemobalizedEconomy } }
+					has_country_flag = ET_flag_country_newera_1
+					NOT = { has_country_flag = ET_flag_country_HasDemobalizedEconomy }
 					NOT = { has_idea = ET_modern_civilian_economy }
 				}
 				add_ideas = ET_modern_civilian_economy
