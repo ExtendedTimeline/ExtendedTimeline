@@ -53,8 +53,8 @@ ET_set_post_war_scenario = {
 			country_exists = FRA
 			country_exists = SOV
 			USA = { has_government = democratic }
-			USA = { has_government = democratic }
-			USA = { has_government = democratic }
+			ENG = { has_government = democratic }
+			FRA = { has_government = democratic }
 			SOV = { has_government = communism }
 		}
 		
