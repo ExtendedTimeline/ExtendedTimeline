@@ -103,7 +103,7 @@ ET_military_decisions = {
 		}
 
 		fire_only_once = no
-		cost = 0
+
 		custom_cost_trigger = {
 			has_political_power > 49
 			has_army_experience > 24
@@ -136,7 +136,7 @@ ET_military_decisions = {
 		}
 
 		fire_only_once = no
-		cost = 0
+
 		custom_cost_trigger = {
 			has_political_power > 49
 			has_army_experience > 24
