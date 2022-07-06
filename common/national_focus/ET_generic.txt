@@ -1,50 +1,76 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
 focus_tree = {
-	id = ET_generic
-	continuous_focus_position = { x = 0 y = 1000 }
+	id = ET_Generic
+	continuous_focus_position = { x = 0 y = 1500 }
 	default = no
 	country = {
 		factor = 0
 		modifier = {
-			add = 100
-			has_global_flag = ET_focus_global_newera_1_flag
+			add = 1000
+			has_global_flag = ET_flag_global_newera_1
 		}
 	}
-	
-	#MANPATS
+
+	#Carrier Aircraft II
 	focus = {
-		id = et_generic_manpats
-		icon = GFX_goal_generic_army_artillery2
-		x = 15
+		id = ET_Generic_carrier_aircraft_ii
+		icon = GFX_goal_generic_navy_carrier
+		x = 9
 		y = 5
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_infantry  }
+		prerequisite = { focus = ET_Generic_carrier_aircraft  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
-				category = infantry_launchers
+				category = cv_tech
 			}
+		}
+	}
+
+	#Communism
+	focus = {
+		id = ET_Generic_communism
+		icon = GFX_ET_Generic_communism-426
+		x = 13
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ET_Generic_a_new_world_order  }
+		ai_will_do = { factor = 1 }
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			add_political_power = 100
 		}
 	}
 
 	#Coastal Submarines
 	focus = {
-		id = et_generic_coastal_submarines
-		icon = GFX_goal_generic_navy_submarine
-		x = 17
-		y = 7
+		id = ET_Generic_coastal_submarines
+		icon = GFX_ET_Generic_coastal_submarines-20867
+		x = 5
+		y = 3
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_coastal_navy  }
+		prerequisite = { focus = ET_Generic_coastal_navy  }
 		ai_will_do = { factor = 1 }
-		
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -54,18 +80,18 @@ focus_tree = {
 		}
 	}
 
-	#Stand with the Freeworld
+	#Democracy
 	focus = {
-		id = et_generic_stand_with_the_freeworld
-		icon = GFX_et_generic_stand_with_the_freeworld-427
+		id = ET_Generic_democracy
+		icon = GFX_ET_Generic_democracy-427
 		x = 1
-		y = 3
+		y = 8
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_a_new_world_order  }
-		ai_will_do = { factor = 2 }
+		prerequisite = { focus = ET_Generic_a_new_world_order  }
+		ai_will_do = { factor = 1 }
 		available = {
 			has_government = democratic
 		}
@@ -74,204 +100,144 @@ focus_tree = {
 		}
 	}
 
-	#Stand with the comintern
+	#Non-Aligned
 	focus = {
-		id = et_generic_stand_with_the_comintern
-		icon = GFX_et_generic_stand_with_the_comintern-426
-		x = 10
-		y = 3
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = et_generic_a_new_world_order  }
-		ai_will_do = { factor = 2 }
-		available = {
-			has_government = communism
-		}
-		completion_reward = {
-			add_political_power = 100
-		}
-	}
-
-	#Demobilize
-	focus = {
-		id = et_generic_demobilize
-		icon = GFX_focus_SOV_mobilization_plan
-		x = 6
-		y = 1
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = et_generic_worldatpeace  }
-		mutually_exclusive = { focus = et_generic_prepare_for_whats_next  }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_war_support = -0.25
-		}
-	}
-
-	#The thrid way
-	focus = {
-		id = et_generic_the_thrid_way
+		id = ET_Generic_nonaligned
 		icon = GFX_goal_generic_neutrality_focus
 		x = 5
-		y = 3
+		y = 8
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_a_new_world_order  }
+		prerequisite = { focus = ET_Generic_a_new_world_order  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 100	
 		}
 	}
 
 	#A new world order
 	focus = {
-		id = et_generic_a_new_world_order
+		id = ET_Generic_a_new_world_order
 		icon = GFX_focus_hol_the_fourth_ally
-		x = 4
-		y = 2
+		x = 8
+		y = 7
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepare_for_whats_next  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_political_power = 100
-			
-		}
-	}
-
-	#Prepare for whats next
-	focus = {
-		id = et_generic_prepare_for_whats_next
-		icon = GFX_et_generic_prepare_for_whats_next-17041
-		x = 2
-		y = 1
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = et_generic_worldatpeace  }
-		mutually_exclusive = { focus = et_generic_demobilize  }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_war_support = -0.25
-		}
-	}
-
-	#Professional Army
-	focus = {
-		id = et_generic_professional_army
-		icon = GFX_focus_chi_army_reform
-		x = 16
-		y = 2
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepare_for_whats_next  }
-		mutually_exclusive = { focus = et_generic_defensive_army  }
-		ai_will_do = { factor = 1 }
-	}
-
-	#World at peace!
-	focus = {
-		id = et_generic_worldatpeace
-		icon = GFX_focus_focus_fra_fascist_threat
-		x = 4
-		y = 0
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_war_support = -0.10
-			add_stability = 0.20
-			set_rule = {
-			  can_create_factions = no
-			  can_send_volunteers = yes
-			}
-			conscription_factor = 0.3
 		}
 	}
 
 	#Army
 	focus = {
-		id = et_generic_army
+		id = ET_Generic_army
 		icon = GFX_goal_generic_army_tanks
-		x = 13
-		y = 3
+		x = 1
+		y = 0
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_professional_army  } prerequisite = { focus = et_generic_defensive_army  }
-		ai_will_do = { factor = 1 }
-	}
-
-	#Defensive Army
-	focus = {
-		id = et_generic_defensive_army
-		icon = GFX_goal_rhineland
-		x = 18
-		y = 2
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepare_for_whats_next  }
-		mutually_exclusive = { focus = et_generic_professional_army  }
 		ai_will_do = { factor = 1 }
 	}
 
 	#Naval
 	focus = {
-		id = et_generic_naval
+		id = ET_Generic_naval
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 17
-		y = 3
+		x = 5
+		y = 0
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_professional_army  } prerequisite = { focus = et_generic_defensive_army  }
 		ai_will_do = { factor = 1 }
 	}
 
-	#Airforce
+	#Air Force
 	focus = {
-		id = et_generic_airforce
+		id = ET_Generic_air_force
 		icon = GFX_goal_generic_build_airforce
-		x = 22
-		y = 3
+		x = 11
+		y = 0
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_professional_army  } prerequisite = { focus = et_generic_defensive_army  }
 		ai_will_do = { factor = 1 }
 	}
 
-	#Economy
+	#Industrial Effort
 	focus = {
-		id = et_generic_economy
-		icon = GFX_et_generic_economy-23026
-		x = 25
-		y = 2
+		id = ET_Generic_industrial_effort
+		icon = GFX_focus_generic_industry_3
+		x = 15
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	#National Seal
+	focus = {
+		id = ET_Generic_national_seal
+		icon = GFX_ET_Generic_national_seal-428
+		x = 9
+		y = 8
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_demobilize  } prerequisite = { focus = et_generic_prepare_for_whats_next  }
+		prerequisite = { focus = ET_Generic_a_new_world_order  }
 		ai_will_do = { factor = 1 }
+		available = {
+			has_government = fascism
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
 
+	#Infrastructure Effort
+	focus = {
+		id = ET_Generic_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 16
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_industrial_effort  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = construction_tech
+			}
+		}
+	}
+
+	#Modern Industrial Effort
+	focus = {
+		id = ET_Generic_modern_industrial_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 14
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_industrial_effort  }
+		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -281,105 +247,39 @@ focus_tree = {
 		}
 	}
 
-	#A National Order
-	focus = {
-		id = et_generic_a_national_order
-		icon = GFX_et_generic_a_national_order-428
-		x = 8
-		y = 3
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = et_generic_a_new_world_order  }
-		ai_will_do = { factor = 2 }
-		available = {
-			has_government = fascism
-		}
-		completion_reward = {
-			add_political_power = 100
-		}
-	}
-
-	#Infrastructure
-	focus = {
-		id = et_generic_infrastructure
-		icon = GFX_et_generic_infrastructure-141890
-		x = 26
-		y = 3
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = et_generic_economy  }
-		ai_will_do = { factor = 1 }
-
-		completion_reward = {
-			add_tech_bonus = {
-				uses = 1
-				bonus = 1.0
-				category = construction_tech
-			}
-		}
-	}
-
-	#Industrial
-	focus = {
-		id = et_generic_industrial
-		icon = GFX_et_generic_industrial-23026
-		x = 24
-		y = 3
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = et_generic_economy  }
-		ai_will_do = { factor = 1 }
-		
-		completion_reward = {
-			add_tech_bonus = {
-				uses = 1
-				bonus = 1.0
-				category = construction_tech
-			}
-		}
-	}
-
 	#Helicopter Effort
 	focus = {
-		id = et_generic_helicopter_effort
+		id = ET_Generic_helicopter_effort
 		icon = GFX_goal_generic_air_fighter2
-		x = 24
-		y = 5
+		x = 12
+		y = 2
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_jet_effort  }
+		prerequisite = { focus = ET_Generic_jet_effort  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
 				category = cat_air_helicopters
-			}
+			}	
 		}
 	}
 
 	#Jet Effort
 	focus = {
-		id = et_generic_jet_effort
+		id = ET_Generic_jet_effort
 		icon = GFX_focus_rocketry
-		x = 21
-		y = 4
+		x = 10
+		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_airforce  }
+		prerequisite = { focus = ET_Generic_air_force  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -391,17 +291,16 @@ focus_tree = {
 
 	#Jet Fighters
 	focus = {
-		id = et_generic_jet_fighters
+		id = ET_Generic_jet_fighters
 		icon = GFX_goal_generic_air_fighter2
-		x = 22
-		y = 5
+		x = 10
+		y = 2
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_jet_effort  }
+		prerequisite = { focus = ET_Generic_jet_effort  }
 		ai_will_do = { factor = 1 }
-		
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -413,46 +312,45 @@ focus_tree = {
 
 	#Open Sea Navy
 	focus = {
-		id = et_generic_open_sea_navy
-		icon = GFX_et_generic_open_sea_navy-5615
-		x = 18
-		y = 4
+		id = ET_Generic_open_sea_navy
+		icon = GFX_ET_Generic_open_sea_navy-404
+		x = 7
+		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_naval  }
-		mutually_exclusive = { focus = et_generic_coastal_navy  }
+		prerequisite = { focus = ET_Generic_naval  }
+		mutually_exclusive = { focus = ET_Generic_coastal_navy  }
 	}
 
 	#Coastal Navy
 	focus = {
-		id = et_generic_coastal_navy
+		id = ET_Generic_coastal_navy
 		icon = GFX_goal_generic_navy_cruiser
-		x = 16
-		y = 4
+		x = 4
+		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_naval  }
-		mutually_exclusive = { focus = et_generic_open_sea_navy  }
+		prerequisite = { focus = ET_Generic_naval  }
+		mutually_exclusive = { focus = ET_Generic_open_sea_navy  }
 		ai_will_do = { factor = 1 }
 	}
 
-	#Carrier
+	#Modern Carrier
 	focus = {
-		id = et_generic_carrier
+		id = ET_Generic_modern_carrier
 		icon = GFX_goal_generic_navy_carrier
-		x = 20
-		y = 5
+		x = 8
+		y = 2
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_open_sea_navy  }
+		prerequisite = { focus = ET_Generic_open_sea_navy  }
 		ai_will_do = { factor = 1 }
-		
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -462,63 +360,61 @@ focus_tree = {
 		}
 	}
 
-	#Destroyer
+	#Destroyers
 	focus = {
-		id = et_generic_destroyer
-		icon = GFX_et_generic_destroyer-5616
-		x = 16
-		y = 6
+		id = ET_Generic_destroyers
+		icon = GFX_focus_generic_destroyer
+		x = 4
+		y = 2
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_coastal_navy  }
+		prerequisite = { focus = ET_Generic_coastal_navy  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
 				category = dd_tech
-			}
+			}		
 		}
 	}
 
 	#Frigates
 	focus = {
-		id = et_generic_frigates
-		icon = GFX_et_generic_frigates-5617
-		x = 18
-		y = 5
+		id = ET_Generic_frigates
+		icon = GFX_focus_generic_cruiser2
+		x = 6
+		y = 4
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_open_sea_navy  }
+		prerequisite = { focus = ET_Generic_battleships  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
 				category = cl_tech
-			}
+			}	
 		}
 	}
 
-	#Carrier Fighters
+	#Carrier Aircraft
 	focus = {
-		id = et_generic_carrier_fighters
+		id = ET_Generic_carrier_aircraft
 		icon = GFX_goal_generic_navy_carrier
-		x = 20
-		y = 6
+		x = 9
+		y = 3
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_carrier  focus = et_generic_jet_fighters  }
+		prerequisite = { focus = ET_Generic_modern_carrier  }
+		prerequisite = { focus = ET_Generic_jet_fighters  }
 		ai_will_do = { factor = 1 }
-		
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -530,17 +426,16 @@ focus_tree = {
 
 	#Nuclear Powered
 	focus = {
-		id = et_generic_nuclear_powered
+		id = ET_Generic_nuclear_powered
 		icon = GFX_focus_wonderweapons
-		x = 19
-		y = 7
+		x = 7
+		y = 3
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_open_sea_navy  }
+		prerequisite = { focus = ET_Generic_open_sea_navy  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -552,106 +447,111 @@ focus_tree = {
 
 	#Nuclear Submarines
 	focus = {
-		id = et_generic_nuclear_submarines
-		icon = GFX_goal_generic_navy_submarine
-		x = 19
-		y = 8
+		id = ET_Generic_nuclear_submarines
+		icon = GFX_ET_Generic_nuclear_submarines-20867
+		x = 7
+		y = 5
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_nuclear_powered  }
+		prerequisite = { focus = ET_Generic_nuclear_powered  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
 				category = ss_tech
-			}
+			}	
 		}
 	}
 
 	#Nuclear Carrier
 	focus = {
-		id = et_generic_nuclear_carrier
+		id = ET_Generic_nuclear_carrier
 		icon = GFX_goal_generic_navy_carrier
-		x = 21
-		y = 8
+		x = 8
+		y = 4
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_carrier  focus = et_generic_nuclear_powered  }
+		prerequisite = { focus = ET_Generic_modern_carrier  focus = ET_Generic_nuclear_powered  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
 				category = cv_tech
-			}
+			}	
 		}
 	}
 
 	#Mechanized
 	focus = {
-		id = et_generic_mechanized
-		icon = GFX_et_generic_mechanized-10766
-		x = 12
-		y = 4
+		id = ET_Generic_mechanized
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_army  }
-		mutually_exclusive = { focus = et_generic_infantry  }
-		
+		prerequisite = { focus = ET_Generic_army  }
+		mutually_exclusive = { focus = ET_Generic_infantry  }
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
 				category = cat_mechanized_equipment
 			}
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = motorized_equipment
+			}
 		}
 	}
 
 	#Infantry
 	focus = {
-		id = et_generic_infantry
-		icon = GFX_et_generic_infantry-110846
-		x = 14
-		y = 4
+		id = ET_Generic_infantry
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 1
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_army  }
-		mutually_exclusive = { focus = et_generic_mechanized  }
+		prerequisite = { focus = ET_Generic_army  }
+		mutually_exclusive = { focus = ET_Generic_mechanized  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
 				category = infantry_weapons
 			}
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = night_vision
+			}
 		}
 	}
 
-	#MANPADS
+	#Man-portable AT and AA Effort
 	focus = {
-		id = et_generic_manpads
-		icon = GFX_goal_generic_army_artillery2
-		x = 14
-		y = 6
+		id = ET_Generic_manportable_at_and_aa_effort
+		icon = GFX_goal_generic_special_forces
+		x = 2
+		y = 3
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_infantry  }
+		prerequisite = { focus = ET_Generic_infantry  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -661,56 +561,54 @@ focus_tree = {
 		}
 	}
 
-	#On Our Own
+	#Isolation
 	focus = {
-		id = et_generic_on_our_own
-		icon = GFX_focus_generic_self_management
+		id = ET_Generic_isolation
+		icon = GFX_focus_generic_treaty
 		x = 4
-		y = 4
+		y = 9
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_the_thrid_way  }
-		mutually_exclusive = { focus = et_generic_together  }
+		prerequisite = { focus = ET_Generic_nonaligned  }
+		mutually_exclusive = { focus = ET_Generic_together  }
 		ai_will_do = { factor = 1 }
 	}
 
-	#MBT
+	#Main Battle Tank
 	focus = {
-		id = et_generic_mbt
+		id = ET_Generic_main_battle_tank
 		icon = GFX_goal_generic_army_tanks
-		x = 12
-		y = 6
+		x = 0
+		y = 3
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_mechanized  }
+		prerequisite = { focus = ET_Generic_mechanized  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
 				category = armor
-			}
+			}	
 		}
 	}
 
-	#APC / IFV
+	#Infantry Fighting Vehicle
 	focus = {
-		id = et_generic_apcifv
-		icon = GFX_goal_generic_army_tanks
-		x = 13
-		y = 5
+		id = ET_Generic_infantry_fighting_vehicle
+		icon = GFX_goal_generic_army_motorized
+		x = 1
+		y = 2
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_infantry  focus = et_generic_mechanized  }
+		prerequisite = { focus = ET_Generic_mechanized  focus = ET_Generic_infantry  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -720,19 +618,18 @@ focus_tree = {
 		}
 	}
 
-	#CAS
+	#Modern Close Air Support
 	focus = {
-		id = et_generic_cas
-		icon = GFX_goal_generic_air_fighter2
-		x = 22
-		y = 6
+		id = ET_Generic_modern_close_air_support
+		icon = GFX_goal_generic_CAS
+		x = 12
+		y = 3
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_jet_fighters  }
+		prerequisite = { focus = ET_Generic_jet_fighters  } prerequisite = { focus = ET_Generic_helicopter_effort  }
 		ai_will_do = { factor = 1 }
-
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
@@ -744,95 +641,449 @@ focus_tree = {
 
 	#Air Logistics
 	focus = {
-		id = et_generic_air_logistics
+		id = ET_Generic_air_logistics
 		icon = GFX_goal_generic_air_fighter2
-		x = 23
-		y = 4
+		x = 12
+		y = 1
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = et_generic_airforce  }
+		prerequisite = { focus = ET_Generic_air_force  }
 		ai_will_do = { factor = 1 }
-		
 		completion_reward = {
 			add_tech_bonus = {
 				uses = 1
 				bonus = 1.0
 				category = air_equipment
 			}
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = logistics_tech
+			}	
 		}
 	}
 
 	#Together
 	focus = {
-		id = et_generic_together
+		id = ET_Generic_together
 		icon = GFX_goal_generic_major_alliance
 		x = 6
-		y = 4
+		y = 9
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_the_thrid_way  }
-		mutually_exclusive = { focus = et_generic_on_our_own  }
+		prerequisite = { focus = ET_Generic_nonaligned  }
+		mutually_exclusive = { focus = ET_Generic_isolation  }
 	}
 
-	#Strengthen our claims
+	#Strengthen Our Territorial Claims
 	focus = {
-		id = et_generic_strengthen_our_claims
-		icon = GFX_focus_BUL_free_balkan_states
-		x = 8
-		y = 4
+		id = ET_Generic_strengthen_our_territorial_claims
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 9
+		y = 9
 		cost = 10
 		search_filters = {
-			FOCUS_FILTER_FRA_OCCUPATION_COST
+			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_a_national_order  }
+		prerequisite = { focus = ET_Generic_national_seal  }
 		ai_will_do = { factor = 1 }
 	}
 
-	#Contain the red menace
+	#Domino theory
 	focus = {
-		id = et_generic_contain_the_red_menace
+		id = ET_Generic_domino_theory
 		icon = GFX_focus_attack_soviet
 		x = 0
-		y = 4
+		y = 9
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_stand_with_the_freeworld  }
-		ai_will_do = { factor = 1 }
-	}
-
-	#Cross capitalism
-	focus = {
-		id = et_generic_cross_capitalism
-		icon = GFX_focus_eng_crush_the_dream
-		x = 10
-		y = 4
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = et_generic_stand_with_the_comintern  }
+		prerequisite = { focus = ET_Generic_democracy  }
 		ai_will_do = { factor = 1 }
 	}
 
 	#Peaceful Coexistence
 	focus = {
-		id = et_generic_peaceful_coexistence
+		id = ET_Generic_peaceful_coexistence
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		x = 2
-		y = 4
+		y = 9
 		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = et_generic_stand_with_the_freeworld  }
-		mutually_exclusive = { focus = et_generic_contain_the_red_menace  }
+		prerequisite = { focus = ET_Generic_democracy  }
+		mutually_exclusive = { focus = ET_Generic_domino_theory  }
 		ai_will_do = { factor = 1 }
+	}
+
+	#Peaceful Coexistence
+	focus = {
+		id = ET_Generic_peaceful_coexistence
+		icon = GFX_focus_chi_mission_to_the_us
+		x = 14
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ET_Generic_communism  }
+		ai_will_do = { factor = 1 }
+	}
+
+	#Political Expansionism
+	focus = {
+		id = ET_Generic_political_expansionism
+		icon = GFX_focus_ger_great_red_menace
+		x = 12
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ET_Generic_communism  }
+		mutually_exclusive = { focus = ET_Generic_peaceful_coexistence  }
+	}
+
+	#Infrastructure Effort II
+	focus = {
+		id = ET_Generic_infrastructure_effort_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 16
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_infrastructure_effort  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = construction_tech
+			}
+		}
+	}
+
+	#Modern Industrial Effort II
+	focus = {
+		id = ET_Generic_modern_industrial_effort_ii
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 14
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_modern_industrial_effort  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = industry
+			}
+		}
+	}
+
+	#Modern Industrial Effort III
+	focus = {
+		id = ET_Generic_modern_industrial_effort_iii
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 14
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_modern_industrial_effort_ii  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = industry
+			}
+		}
+	}
+
+	#Telecom Infrastructure Effort
+	focus = {
+		id = ET_Generic_telecom_infrastructure_effort
+		icon = GFX_goal_generic_radar
+		x = 15
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_infrastructure_effort_ii focus = ET_Generic_modern_industrial_effort_iii  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = electronics
+			}
+		}
+	}
+
+	#Telecom Infrastructure Effort II
+	focus = {
+		id = ET_Generic_telecom_infrastructure_effort_ii
+		icon = GFX_goal_generic_radar
+		x = 15
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_telecom_infrastructure_effort  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = electronics
+			}
+		}
+	}
+
+	#Extra Research Slot
+	focus = {
+		id = ET_Generic_extra_research_slot
+		icon = GFX_focus_research
+		x = 15
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_telecom_infrastructure_effort_ii  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Main Battle Tank II
+	focus = {
+		id = ET_Generic_main_battle_tank_ii
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_main_battle_tank  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = armor
+			}	
+		}
+	}
+
+	#Man-portable AT and AA Effort II
+	focus = {
+		id = ET_Generic_manportable_at_and_aa_effort_ii
+		icon = GFX_goal_generic_special_forces
+		x = 2
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_manportable_at_and_aa_effort  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = infantry_launchers
+			}
+		}
+	}
+
+	#Infantry Fighting Vehicle II
+	focus = {
+		id = ET_Generic_infantry_fighting_vehicle_ii
+		icon = GFX_goal_generic_army_motorized
+		x = 1
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_infantry_fighting_vehicle  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	#Modern Close Air Support II
+	focus = {
+		id = ET_Generic_modern_close_air_support_ii
+		icon = GFX_goal_generic_CAS
+		x = 12
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_modern_close_air_support  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = cas_bomber
+			}
+		}
+	}
+
+	#Battleships
+	focus = {
+		id = ET_Generic_battleships
+		icon = GFX_focus_generic_navy_battleship2
+		x = 6
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_open_sea_navy  }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = bb_tech
+			}
+		}
+	}
+
+	#Destroyers II
+	focus = {
+		id = ET_Generic_destroyers_ii
+		icon = GFX_focus_generic_destroyer
+		x = 4
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_destroyers  }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = dd_tech
+			}		
+		}
+	}
+
+	#Jet Fighters II
+	focus = {
+		id = ET_Generic_jet_fighters_ii
+		icon = GFX_goal_generic_air_fighter2
+		x = 10
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ET_Generic_jet_fighters  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				uses = 1
+				bonus = 1.0
+				category = jet_technology
+			}
+		}
+	}
+
+	#Neocolonialism
+	focus = {
+		id = ET_Generic_neocolonialism
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 18
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ET_Generic_global_political_effort  }
+		mutually_exclusive = { focus = ET_Generic_decolonization  }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Decolonization
+	focus = {
+		id = ET_Generic_decolonization
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 20
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ET_Generic_global_political_effort  }
+		mutually_exclusive = { focus = ET_Generic_neocolonialism  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Global Political Effort
+	focus = {
+		id = ET_Generic_global_political_effort
+		icon = GFX_focus_generic_treaty
+		x = 17
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ET_Generic_a_new_world_order  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#United Nation
+	focus = {
+		id = ET_Generic_united_nation
+		icon = GFX_goal_generic_national_unity
+		x = 16
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ET_Generic_global_political_effort  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 
 }

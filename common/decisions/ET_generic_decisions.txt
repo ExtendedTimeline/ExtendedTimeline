@@ -1,0 +1,35 @@
+ET_era_decisions = {
+	ET_getNextEraFocusTree = {
+		icon = generic_political_discourse
+
+		is_good = yes
+
+		available = {
+			OR = {
+				AND = {
+					date > 1945.01.01
+					has_global_flag = ET_flag_global_newera_1
+				}
+				hidden_trigger = {
+					is_debug = yes
+				}
+			}
+		}
+
+		visible = {
+			has_global_flag = ET_flag_global_newera_1
+			NOT = { has_country_flag = ET_flag_country_newera_1 }
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			ET_set_new_era_effect = yes
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+	}
+}
