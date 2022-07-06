@@ -1,0 +1,44 @@
+add_namespace = ET_ScrapEquipment
+
+country_event = {
+	id = ET_ScrapEquipment.0
+	title = ET_ScrapEquipment.0.t
+	desc = ET_ScrapEquipment.0.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = {
+			flag = ET_flag_country_ScrapEquipment
+			days = 300
+		}
+	}
+
+	option = {	# Scrap outdated equipment
+		name = ET_ScrapEquipment.0.a
+		ai_chance = {
+			base = 1
+		}
+
+		ET_ScrapEquipment = yes
+
+		add_dynamic_modifier = {
+			modifier = ET_ScrapEquipment_scraping
+			days = 30
+		}
+	}
+	option = {	# Do not Scrap
+		name = ET_ScrapEquipment.0.b
+		ai_chance = {
+			base = 0
+			if = { limit = { has_army_size = { size < 5 type = infantry } }
+				add = 10
+			}
+		}
+
+		add_dynamic_modifier = {
+			modifier = ET_ScrapEquipment_expanding_storage
+			days = 30
+		}
+	}
+}

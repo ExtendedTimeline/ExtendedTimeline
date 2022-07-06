@@ -1,0 +1,6 @@
+ET_ScrapEquipment_scraping = {
+    consumer_goods_factor = -0.1
+}
+ET_ScrapEquipment_expanding_storage = {
+    civilian_factory_use = 3
+}

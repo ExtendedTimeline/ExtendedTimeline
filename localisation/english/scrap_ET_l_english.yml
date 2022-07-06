@@ -1,0 +1,7 @@
+﻿l_english: 
+ET_ScrapEquipment.0.t:0 "Equipment storage problems"
+ET_ScrapEquipment.0.desc:0 "The ministry of defence reports that they have issues with storing large portions of outdated military equipment and vehicles in stock. To resolve this they suggest selling off equipment to the civilian market as well as scrapping the outdated stock."
+ET_ScrapEquipment.0.a:0 "Approve scraping and selling of equipment"
+ET_ScrapEquipment.0.b:0 "Resovle the issue by increasing the storrage capacaty"
+ET_ScrapEquipment_scraping:0 "Scraping outdated equipment"
+ET_ScrapEquipment_expanding_storage:0 "Expanding army storage capability"

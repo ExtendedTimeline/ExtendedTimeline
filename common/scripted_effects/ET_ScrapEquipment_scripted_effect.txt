@@ -1,0 +1,919 @@
+# SCOPE: TARGET
+ET_ScrapEquipment = {
+	ET_ScrapEquipment_infantry_equipment = yes
+
+	ET_ScrapEquipment_light_tank_chassis = yes
+	ET_ScrapEquipment_medium_tank_chassis = yes
+	ET_ScrapEquipment_heavy_tank_chassis = yes
+	ET_ScrapEquipment_super_heavy_tank_chassis = yes
+	ET_ScrapEquipment_amphibious_tank_chassis = yes
+	
+	ET_ScrapEquipment_armored_car_equipment = yes
+
+	ET_ScrapEquipment_anti_air_equipment = yes
+	ET_ScrapEquipment_anti_tank_equipment = yes
+	ET_ScrapEquipment_artillery_equipment = yes
+}
+
+ET_ScrapEquipment_infantry_equipment = {
+	if = {
+		limit = {
+			date > 1948.01.01 # 1918 + 30
+			has_equipment = { infantry_equipment_0 > 0 }
+			OR = {
+				has_equipment = { infantry_equipment_1 > 0 }
+				has_equipment = { infantry_equipment_2 > 0 }
+				has_equipment = { infantry_equipment_3 > 0 }
+				has_equipment = { infantry_equipment_4 > 0 }
+				has_equipment = { infantry_equipment_5 > 0 }
+				has_equipment = { infantry_equipment_6 > 0 }
+				has_equipment = { infantry_equipment_7 > 0 }
+				has_equipment = { infantry_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped infantry_equipment_0" }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1950.01.01 # 1936 + 14
+			has_equipment = { infantry_equipment_1 > 0 }
+			OR = {
+				has_equipment = { infantry_equipment_2 > 0 }
+				has_equipment = { infantry_equipment_3 > 0 }
+				has_equipment = { infantry_equipment_4 > 0 }
+				has_equipment = { infantry_equipment_5 > 0 }
+				has_equipment = { infantry_equipment_6 > 0 }
+				has_equipment = { infantry_equipment_7 > 0 }
+				has_equipment = { infantry_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped infantry_equipment_1" }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1955.01.01 # 1939 + 16
+			has_equipment = { infantry_equipment_2 > 0 }
+			OR = {
+				has_equipment = { infantry_equipment_3 > 0 }
+				has_equipment = { infantry_equipment_4 > 0 }
+				has_equipment = { infantry_equipment_5 > 0 }
+				has_equipment = { infantry_equipment_6 > 0 }
+				has_equipment = { infantry_equipment_7 > 0 }
+				has_equipment = { infantry_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped infantry_equipment_2" }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_2
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1960.01.01 # 1942 + 18
+			has_equipment = { infantry_equipment_3 > 0 }
+			OR = {
+				has_equipment = { infantry_equipment_4 > 0 }
+				has_equipment = { infantry_equipment_5 > 0 }
+				has_equipment = { infantry_equipment_6 > 0 }
+				has_equipment = { infantry_equipment_7 > 0 }
+				has_equipment = { infantry_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped infantry_equipment_3" }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_3
+			amount = -99999999
+		}
+	}
+}
+
+
+# Tank Chassies
+ET_ScrapEquipment_light_tank_chassis = {
+	if = {
+		limit = {
+			date > 1922.01.01 # 1922
+			has_equipment = { light_tank_chassis_0 > 0 }
+			OR = {
+				has_equipment = { light_tank_chassis_1 > 0 }
+				has_equipment = { light_tank_chassis_2 > 0 }
+				has_equipment = { light_tank_chassis_3 > 0 }
+				has_equipment = { light_tank_chassis_4 > 0 }
+				has_equipment = { light_tank_chassis_5 > 0 }
+				has_equipment = { light_tank_chassis_6 > 0 }
+				has_equipment = { light_tank_chassis_7 > 0 }
+				has_equipment = { light_tank_chassis_8 > 0 }
+				has_equipment = { light_tank_chassis_9 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped light_tank_chassis_0" }
+		add_equipment_to_stockpile = {
+			type = light_tank_chassis_0
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1934.01.01 # 1934
+			has_equipment = { light_tank_chassis_1 > 0 }
+			OR = {
+				has_equipment = { light_tank_chassis_2 > 0 }
+				has_equipment = { light_tank_chassis_3 > 0 }
+				has_equipment = { light_tank_chassis_4 > 0 }
+				has_equipment = { light_tank_chassis_5 > 0 }
+				has_equipment = { light_tank_chassis_6 > 0 }
+				has_equipment = { light_tank_chassis_7 > 0 }
+				has_equipment = { light_tank_chassis_8 > 0 }
+				has_equipment = { light_tank_chassis_9 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped light_tank_chassis_1" }
+		add_equipment_to_stockpile = {
+			type = light_tank_chassis_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1936.01.01 # 1936
+			has_equipment = { light_tank_chassis_2 > 0 }
+			OR = {
+				has_equipment = { light_tank_chassis_3 > 0 }
+				has_equipment = { light_tank_chassis_4 > 0 }
+				has_equipment = { light_tank_chassis_5 > 0 }
+				has_equipment = { light_tank_chassis_6 > 0 }
+				has_equipment = { light_tank_chassis_7 > 0 }
+				has_equipment = { light_tank_chassis_8 > 0 }
+				has_equipment = { light_tank_chassis_9 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped light_tank_chassis_2" }
+		add_equipment_to_stockpile = {
+			type = light_tank_chassis_2
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1942.01.01 # 1942
+			has_equipment = { light_tank_chassis_3 > 0 }
+			OR = {
+				has_equipment = { light_tank_chassis_4 > 0 }
+				has_equipment = { light_tank_chassis_5 > 0 }
+				has_equipment = { light_tank_chassis_6 > 0 }
+				has_equipment = { light_tank_chassis_7 > 0 }
+				has_equipment = { light_tank_chassis_8 > 0 }
+				has_equipment = { light_tank_chassis_9 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped light_tank_chassis_3" }
+		add_equipment_to_stockpile = {
+			type = light_tank_chassis_3
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1945.01.01 # 1945
+			has_equipment = { light_tank_chassis_4 > 0 }
+			OR = {
+				has_equipment = { light_tank_chassis_5 > 0 }
+				has_equipment = { light_tank_chassis_6 > 0 }
+				has_equipment = { light_tank_chassis_7 > 0 }
+				has_equipment = { light_tank_chassis_8 > 0 }
+				has_equipment = { light_tank_chassis_9 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped light_tank_chassis_4" }
+		add_equipment_to_stockpile = {
+			type = light_tank_chassis_4
+			amount = -99999999
+		}
+	}
+}
+
+ET_ScrapEquipment_medium_tank_chassis = {
+	if = {
+		limit = {
+			date > 1936.01.01 # 1936
+			has_equipment = { medium_tank_chassis_0 > 0 }
+			OR = {
+				has_equipment = { medium_tank_chassis_1 > 0 }
+				has_equipment = { medium_tank_chassis_2 > 0 }
+				has_equipment = { medium_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped medium_tank_chassis_0" }
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_0
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1936.01.01 # 1936
+			has_equipment = { medium_tank_chassis_1 > 0 }
+			OR = {
+				has_equipment = { medium_tank_chassis_2 > 0 }
+				has_equipment = { medium_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped medium_tank_chassis_1" }
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1940.01.01 # 1940
+			has_equipment = { medium_tank_chassis_2 > 0 }
+			OR = {
+				has_equipment = { medium_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped medium_tank_chassis_2" }
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_2
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1943.01.01 # 1943
+			has_equipment = { medium_tank_chassis_3 > 0 }
+			OR = {
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped medium_tank_chassis_3" }
+		add_equipment_to_stockpile = {
+			type = medium_tank_chassis_3
+			amount = -99999999
+		}
+	}
+}
+
+ET_ScrapEquipment_heavy_tank_chassis = {
+	if = {
+		limit = {
+			date > 1922.01.01 # 1922
+			has_equipment = { heavy_tank_chassis_0 > 0 }
+			OR = {
+				has_equipment = { heavy_tank_chassis_1 > 0 }
+				has_equipment = { heavy_tank_chassis_2 > 0 }
+				has_equipment = { heavy_tank_chassis_3 > 0 }
+				has_equipment = { heavy_tank_chassis_4 > 0 }
+				has_equipment = { heavy_tank_chassis_5 > 0 }
+				has_equipment = { heavy_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped heavy_tank_chassis_0" }
+		add_equipment_to_stockpile = {
+			type = heavy_tank_chassis_0
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1936.01.01 # 1936
+			has_equipment = { heavy_tank_chassis_1 > 0 }
+			OR = {
+				has_equipment = { heavy_tank_chassis_2 > 0 }
+				has_equipment = { heavy_tank_chassis_3 > 0 }
+				has_equipment = { heavy_tank_chassis_4 > 0 }
+				has_equipment = { heavy_tank_chassis_5 > 0 }
+				has_equipment = { heavy_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped heavy_tank_chassis_1" }
+		add_equipment_to_stockpile = {
+			type = heavy_tank_chassis_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1940.01.01 # 1940
+			has_equipment = { heavy_tank_chassis_2 > 0 }
+			OR = {
+				has_equipment = { heavy_tank_chassis_3 > 0 }
+				has_equipment = { heavy_tank_chassis_4 > 0 }
+				has_equipment = { heavy_tank_chassis_5 > 0 }
+				has_equipment = { heavy_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped heavy_tank_chassis_2" }
+		add_equipment_to_stockpile = {
+			type = heavy_tank_chassis_2
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1940.01.01 # 1943
+			has_equipment = { heavy_tank_chassis_3 > 0 }
+			OR = {
+				has_equipment = { heavy_tank_chassis_4 > 0 }
+				has_equipment = { heavy_tank_chassis_5 > 0 }
+				has_equipment = { heavy_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped heavy_tank_chassis_3" }
+		add_equipment_to_stockpile = {
+			type = heavy_tank_chassis_3
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1945.01.01 # 1945
+			has_equipment = { heavy_tank_chassis_4 > 0 }
+			OR = {
+				has_equipment = { heavy_tank_chassis_5 > 0 }
+				has_equipment = { heavy_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped heavy_tank_chassis_4" }
+		add_equipment_to_stockpile = {
+			type = heavy_tank_chassis_4
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1950.01.01 # 1950
+			has_equipment = { heavy_tank_chassis_5 > 0 }
+			OR = {
+				has_equipment = { heavy_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped heavy_tank_chassis_5" }
+		add_equipment_to_stockpile = {
+			type = heavy_tank_chassis_5
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1960.01.01 # 1960
+			has_equipment = { heavy_tank_chassis_6 > 0 }
+			OR = {
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped heavy_tank_chassis_6" }
+		add_equipment_to_stockpile = {
+			type = heavy_tank_chassis_6
+			amount = -99999999
+		}
+	}
+}
+
+ET_ScrapEquipment_super_heavy_tank_chassis = {
+	if = {
+		limit = {
+			date > 1960.01.01 # 1943 + 17
+			has_equipment = { super_heavy_tank_chassis_1 > 0 }
+			OR = {
+				has_equipment = { super_heavy_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped super_heavy_tank_chassis_1" }
+		add_equipment_to_stockpile = {
+			type = super_heavy_tank_chassis_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1960.01.01 # 1945 + 15
+			has_equipment = { super_heavy_tank_chassis_2 > 0 }
+			OR = {
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped super_heavy_tank_chassis_1" }
+		add_equipment_to_stockpile = {
+			type = super_heavy_tank_chassis_1
+			amount = -99999999
+		}
+	}
+}
+
+ET_ScrapEquipment_amphibious_tank_chassis = {
+	if = {
+		limit = {
+			date > 1960.01.01 # 1940 + 20
+			has_equipment = { amphibious_tank_chassis_1 > 0 }
+			OR = {
+				has_equipment = { amphibious_tank_chassis_2 > 0 }
+				has_equipment = { amphibious_tank_chassis_3 > 0 }
+				has_equipment = { amphibious_tank_chassis_4 > 0 }
+				has_equipment = { amphibious_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped amphibious_tank_chassis_1" }
+		add_equipment_to_stockpile = {
+			type = amphibious_tank_chassis_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1965.01.01 # 1955 + 15
+			has_equipment = { amphibious_tank_chassis_2 > 0 }
+			OR = {
+				has_equipment = { amphibious_tank_chassis_3 > 0 }
+				has_equipment = { amphibious_tank_chassis_4 > 0 }
+				has_equipment = { amphibious_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_0 > 0 }
+				has_equipment = { modern_tank_chassis_1 > 0 }
+				has_equipment = { modern_tank_chassis_2 > 0 }
+				has_equipment = { modern_tank_chassis_3 > 0 }
+				has_equipment = { modern_tank_chassis_4 > 0 }
+				has_equipment = { modern_tank_chassis_5 > 0 }
+				has_equipment = { modern_tank_chassis_6 > 0 }
+				has_equipment = { modern_tank_chassis_7 > 0 }
+				has_equipment = { modern_tank_chassis_8 > 0 }
+				has_equipment = { modern_tank_chassis_9 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped amphibious_tank_chassis_2" }
+		add_equipment_to_stockpile = {
+			type = amphibious_tank_chassis_2
+			amount = -99999999
+		}
+	}
+}
+
+
+# Armored Car 
+ET_ScrapEquipment_armored_car_equipment = {
+	if = {
+		limit = {
+			date > 1914.01.01 # 1914
+			has_equipment = { gw_armored_car_equipment > 0 }
+			OR = {
+				has_equipment = { armored_car_equipment_1 > 0 }
+				has_equipment = { armored_car_equipment_2 > 0 }
+				has_equipment = { armored_car_at_equipment > 0 }
+				has_equipment = { armored_car_equipment_3 > 0 }
+				has_equipment = { armored_car_equipment_4 > 0 }
+				has_equipment = { armored_car_equipment_5 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped gw_armored_car_equipment" }
+		add_equipment_to_stockpile = {
+			type = gw_armored_car_equipment
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1934.01.01 # 1934
+			has_equipment = { armored_car_equipment_1 > 0 }
+			OR = {
+				has_equipment = { armored_car_equipment_2 > 0 }
+				has_equipment = { armored_car_at_equipment > 0 }
+				has_equipment = { armored_car_equipment_3 > 0 }
+				has_equipment = { armored_car_equipment_4 > 0 }
+				has_equipment = { armored_car_equipment_5 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped armored_car_equipment_1" }
+		add_equipment_to_stockpile = {
+			type = armored_car_equipment_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1941.01.01 # 1941
+			has_equipment = { armored_car_equipment_2 > 0 }
+			OR = {
+				has_equipment = { armored_car_equipment_3 > 0 }
+				has_equipment = { armored_car_equipment_4 > 0 }
+				has_equipment = { armored_car_equipment_5 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped armored_car_equipment_2" }
+		add_equipment_to_stockpile = {
+			type = armored_car_equipment_2
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1941.01.01 # 1941
+			has_equipment = { armored_car_at_equipment > 0 }
+			OR = {
+				has_equipment = { armored_car_equipment_3 > 0 }
+				has_equipment = { armored_car_equipment_4 > 0 }
+				has_equipment = { armored_car_equipment_5 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped armored_car_at_equipment" }
+		add_equipment_to_stockpile = {
+			type = armored_car_at_equipment
+			amount = -99999999
+		}
+	}
+}
+
+
+# AntiAir
+ET_ScrapEquipment_anti_air_equipment = {
+	if = {
+		limit = {
+			date > 1936.01.01 # 1936
+			has_equipment = { anti_air_equipment_1 > 0 }
+			OR = {
+				has_equipment = { anti_air_equipment_2 > 0 }
+				has_equipment = { anti_air_equipment_3 > 0 }
+				has_equipment = { anti_air_equipment_4 > 0 }
+				has_equipment = { anti_air_equipment_5 > 0 }
+				has_equipment = { anti_air_equipment_6 > 0 }
+				has_equipment = { anti_air_equipment_7 > 0 }
+				has_equipment = { anti_air_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_air_equipment_1" }
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1940.01.01 # 1940
+			has_equipment = { anti_air_equipment_2 > 0 }
+			OR = {
+				has_equipment = { anti_air_equipment_3 > 0 }
+				has_equipment = { anti_air_equipment_4 > 0 }
+				has_equipment = { anti_air_equipment_5 > 0 }
+				has_equipment = { anti_air_equipment_6 > 0 }
+				has_equipment = { anti_air_equipment_7 > 0 }
+				has_equipment = { anti_air_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_air_equipment_2" }
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_2
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1943.01.01 # 1943
+			has_equipment = { anti_air_equipment_3 > 0 }
+			OR = {
+				has_equipment = { anti_air_equipment_4 > 0 }
+				has_equipment = { anti_air_equipment_5 > 0 }
+				has_equipment = { anti_air_equipment_6 > 0 }
+				has_equipment = { anti_air_equipment_7 > 0 }
+				has_equipment = { anti_air_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_air_equipment_3" }
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment_3
+			amount = -99999999
+		}
+	}
+}
+
+# AntiTank
+ET_ScrapEquipment_anti_tank_equipment = {
+	if = {
+		limit = {
+			date > 1936.01.01 # 1936
+			has_equipment = { anti_tank_equipment_1 > 0 }
+			OR = {
+				has_equipment = { anti_tank_equipment_2 > 0 }
+				has_equipment = { anti_tank_equipment_3 > 0 }
+				has_equipment = { anti_tank_equipment_4 > 0 }
+				has_equipment = { anti_tank_equipment_5 > 0 }
+				has_equipment = { anti_tank_equipment_6 > 0 }
+				has_equipment = { anti_tank_equipment_7 > 0 }
+				has_equipment = { anti_tank_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_tank_equipment_1" }
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1940.01.01 # 1940
+			has_equipment = { anti_tank_equipment_2 > 0 }
+			OR = {
+				has_equipment = { anti_tank_equipment_3 > 0 }
+				has_equipment = { anti_tank_equipment_4 > 0 }
+				has_equipment = { anti_tank_equipment_5 > 0 }
+				has_equipment = { anti_tank_equipment_6 > 0 }
+				has_equipment = { anti_tank_equipment_7 > 0 }
+				has_equipment = { anti_tank_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_tank_equipment_2" }
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment_2
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1943.01.01 # 1943
+			has_equipment = { anti_tank_equipment_3 > 0 }
+			OR = {
+				has_equipment = { anti_tank_equipment_4 > 0 }
+				has_equipment = { anti_tank_equipment_5 > 0 }
+				has_equipment = { anti_tank_equipment_6 > 0 }
+				has_equipment = { anti_tank_equipment_7 > 0 }
+				has_equipment = { anti_tank_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_tank_equipment_3" }
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment_3
+			amount = -99999999
+		}
+	}
+}
+
+# Artillery
+ET_ScrapEquipment_artillery_equipment = {
+	if = {
+		limit = {
+			date > 1936.01.01 # 1936
+			has_equipment = { artillery_equipment_1 > 0 }
+			OR = {
+				has_equipment = { artillery_equipment_2 > 0 }
+				has_equipment = { artillery_equipment_3 > 0 }
+				has_equipment = { artillery_equipment_4 > 0 }
+				has_equipment = { artillery_equipment_5 > 0 }
+				has_equipment = { artillery_equipment_6 > 0 }
+				has_equipment = { artillery_equipment_7 > 0 }
+				has_equipment = { artillery_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped artillery_equipment_1" }
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1940.01.01 # 1940
+			has_equipment = { artillery_equipment_2 > 0 }
+			OR = {
+				has_equipment = { artillery_equipment_3 > 0 }
+				has_equipment = { artillery_equipment_4 > 0 }
+				has_equipment = { artillery_equipment_5 > 0 }
+				has_equipment = { artillery_equipment_6 > 0 }
+				has_equipment = { artillery_equipment_7 > 0 }
+				has_equipment = { artillery_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped artillery_equipment_2" }
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_2
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1943.01.01 # 1943
+			has_equipment = { artillery_equipment_3 > 0 }
+			OR = {
+				has_equipment = { artillery_equipment_4 > 0 }
+				has_equipment = { artillery_equipment_5 > 0 }
+				has_equipment = { artillery_equipment_6 > 0 }
+				has_equipment = { artillery_equipment_7 > 0 }
+				has_equipment = { artillery_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped artillery_equipment_3" }
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_3
+			amount = -99999999
+		}
+	}
+	if = {
+		limit = {
+			date > 1950.01.01 # 1950
+			has_equipment = { artillery_equipment_4 > 0 }
+			OR = {
+				has_equipment = { artillery_equipment_5 > 0 }
+				has_equipment = { artillery_equipment_6 > 0 }
+				has_equipment = { artillery_equipment_7 > 0 }
+				has_equipment = { artillery_equipment_8 > 0 }
+			}
+		}
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped artillery_equipment_3" }
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_3
+			amount = -99999999
+		}
+	}
+}

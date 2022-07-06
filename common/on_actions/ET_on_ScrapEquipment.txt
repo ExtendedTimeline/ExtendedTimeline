@@ -1,0 +1,17 @@
+on_actions = {
+    on_monthly = {
+        effect = {
+            if = {
+                limit = {
+                    has_war = no
+			        date > 1965.01.01
+                    NOT = { has_country_flag = ET_flag_country_ScrapEquipment }
+                }
+                country_event = {
+                    id = ET_ScrapEquipment.0
+                    random_days = 300
+                }
+            }
+        }
+    }
+}
