@@ -720,6 +720,13 @@ ET_ScrapEquipment_armored_car_equipment = {
 
 # AntiAir
 ET_ScrapEquipment_anti_air_equipment = {
+	set_variable      = { ET_var_equ_anti_air_equipment_1 = num_equipment@anti_air_equipment_1 }
+	multiply_variable = { ET_var_equ_anti_air_equipment_1 = -1 }
+	set_variable      = { ET_var_equ_anti_air_equipment_2 = num_equipment@anti_air_equipment_2 }
+	multiply_variable = { ET_var_equ_anti_air_equipment_2 = -1 }
+	set_variable      = { ET_var_equ_anti_air_equipment_3 = num_equipment@anti_air_equipment_3 }
+	multiply_variable = { ET_var_equ_anti_air_equipment_3 = -1 }
+
 	if = {
 		limit = {
 			date > 1936.01.01 # 1936
@@ -734,10 +741,10 @@ ET_ScrapEquipment_anti_air_equipment = {
 				has_equipment = { anti_air_equipment_8 > 0 }
 			}
 		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_air_equipment_1" }
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped [?ET_var_equ_anti_air_equipment_1] anti_air_equipment_1" }
 		add_equipment_to_stockpile = {
 			type = anti_air_equipment_1
-			amount = -99999999
+			amount = var:ET_var_equ_anti_air_equipment_1
 		}
 	}
 	if = {
@@ -753,10 +760,10 @@ ET_ScrapEquipment_anti_air_equipment = {
 				has_equipment = { anti_air_equipment_8 > 0 }
 			}
 		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_air_equipment_2" }
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped [?ET_var_equ_anti_air_equipment_2] anti_air_equipment_2" }
 		add_equipment_to_stockpile = {
 			type = anti_air_equipment_2
-			amount = -99999999
+			amount = var:ET_var_equ_anti_air_equipment_2
 		}
 	}
 	if = {
@@ -771,16 +778,23 @@ ET_ScrapEquipment_anti_air_equipment = {
 				has_equipment = { anti_air_equipment_8 > 0 }
 			}
 		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_air_equipment_3" }
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped [?ET_var_equ_anti_air_equipment_3] anti_air_equipment_3" }
 		add_equipment_to_stockpile = {
 			type = anti_air_equipment_3
-			amount = -99999999
+			amount = var:ET_var_equ_anti_air_equipment_3
 		}
 	}
 }
 
 # AntiTank
 ET_ScrapEquipment_anti_tank_equipment = {
+	set_variable      = { ET_var_equ_anti_tank_equipment_1 = num_equipment@anti_tank_equipment_1 }
+	multiply_variable = { ET_var_equ_anti_tank_equipment_1 = -1 }
+	set_variable      = { ET_var_equ_anti_tank_equipment_2 = num_equipment@anti_tank_equipment_2 }
+	multiply_variable = { ET_var_equ_anti_tank_equipment_2 = -1 }
+	set_variable      = { ET_var_equ_anti_tank_equipment_3 = num_equipment@anti_tank_equipment_3 }
+	multiply_variable = { ET_var_equ_anti_tank_equipment_3 = -1 }
+
 	if = {
 		limit = {
 			date > 1936.01.01 # 1936
@@ -795,10 +809,10 @@ ET_ScrapEquipment_anti_tank_equipment = {
 				has_equipment = { anti_tank_equipment_8 > 0 }
 			}
 		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_tank_equipment_1" }
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped [?ET_var_equ_anti_tank_equipment_1] anti_tank_equipment_1" }
 		add_equipment_to_stockpile = {
 			type = anti_tank_equipment_1
-			amount = -99999999
+			amount = var:ET_var_equ_anti_tank_equipment1
 		}
 	}
 	if = {
@@ -814,10 +828,10 @@ ET_ScrapEquipment_anti_tank_equipment = {
 				has_equipment = { anti_tank_equipment_8 > 0 }
 			}
 		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_tank_equipment_2" }
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped [?ET_var_equ_anti_tank_equipment_2] anti_tank_equipment_2" }
 		add_equipment_to_stockpile = {
 			type = anti_tank_equipment_2
-			amount = -99999999
+			amount = var:ET_var_equ_anti_tank_equipment_2
 		}
 	}
 	if = {
@@ -832,21 +846,28 @@ ET_ScrapEquipment_anti_tank_equipment = {
 				has_equipment = { anti_tank_equipment_8 > 0 }
 			}
 		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped anti_tank_equipment_3" }
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped [?ET_var_equ_anti_tank_equipment_3] anti_tank_equipment_3" }
 		add_equipment_to_stockpile = {
 			type = anti_tank_equipment_3
-			amount = -99999999
+			amount = var:ET_var_equ_anti_tank_equipment_3
 		}
 	}
 }
 
 # Artillery
 ET_ScrapEquipment_artillery_equipment = {
+	set_variable = { ET_var_equ_artillery_equipment_1 = num_equipment@artillery_equipment_1 }
+	multiply_variable = { ET_var_equ_artillery_equipment_1 = -1 }
+	set_variable = { ET_var_equ_artillery_equipment_2 = num_equipment@artillery_equipment_2 }
+	multiply_variable = { ET_var_equ_artillery_equipment_2 = -1 }
+	set_variable = { ET_var_equ_artillery_equipment_3 = num_equipment@artillery_equipment_3 }
+	multiply_variable = { ET_var_equ_artillery_equipment_3 = -1 }
+
 	if = {
 		limit = {
 			date > 1936.01.01 # 1936
 			has_equipment = { artillery_equipment_1 > 0 }
-			OR = {
+			OR = { 
 				has_equipment = { artillery_equipment_2 > 0 }
 				has_equipment = { artillery_equipment_3 > 0 }
 				has_equipment = { artillery_equipment_4 > 0 }
@@ -856,10 +877,10 @@ ET_ScrapEquipment_artillery_equipment = {
 				has_equipment = { artillery_equipment_8 > 0 }
 			}
 		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped artillery_equipment_1" }
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped [?ET_var_equ_artillery_equipment_1] artillery_equipment_1" }
 		add_equipment_to_stockpile = {
 			type = artillery_equipment_1
-			amount = -99999999
+			amount = var:ET_var_equ_artillery_equipment_1
 		}
 	}
 	if = {
@@ -875,10 +896,10 @@ ET_ScrapEquipment_artillery_equipment = {
 				has_equipment = { artillery_equipment_8 > 0 }
 			}
 		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped artillery_equipment_2" }
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped [?ET_var_equ_artillery_equipment_2] artillery_equipment_2" }
 		add_equipment_to_stockpile = {
 			type = artillery_equipment_2
-			amount = -99999999
+			amount = var:ET_var_equ_artillery_equipment_2
 		}
 	}
 	if = {
@@ -893,27 +914,10 @@ ET_ScrapEquipment_artillery_equipment = {
 				has_equipment = { artillery_equipment_8 > 0 }
 			}
 		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped artillery_equipment_3" }
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped [?ET_var_equ_artillery_equipment_3] artillery_equipment_3" }
 		add_equipment_to_stockpile = {
 			type = artillery_equipment_3
-			amount = -99999999
-		}
-	}
-	if = {
-		limit = {
-			date > 1950.01.01 # 1950
-			has_equipment = { artillery_equipment_4 > 0 }
-			OR = {
-				has_equipment = { artillery_equipment_5 > 0 }
-				has_equipment = { artillery_equipment_6 > 0 }
-				has_equipment = { artillery_equipment_7 > 0 }
-				has_equipment = { artillery_equipment_8 > 0 }
-			}
-		}
-		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have scraped artillery_equipment_3" }
-		add_equipment_to_stockpile = {
-			type = artillery_equipment_3
-			amount = -99999999
+			amount = var:ET_var_equ_artillery_equipment_3
 		}
 	}
 }

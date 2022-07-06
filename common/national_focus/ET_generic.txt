@@ -709,7 +709,7 @@ focus_tree = {
 
 	#Peaceful Coexistence
 	focus = {
-		id = ET_Generic_peaceful_coexistence
+		id = ET_Generic_peaceful_coexistence_democracy
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		x = 2
 		y = 9
@@ -724,7 +724,7 @@ focus_tree = {
 
 	#Peaceful Coexistence
 	focus = {
-		id = ET_Generic_peaceful_coexistence
+		id = ET_Generic_peaceful_coexistence_communism
 		icon = GFX_focus_chi_mission_to_the_us
 		x = 14
 		y = 9

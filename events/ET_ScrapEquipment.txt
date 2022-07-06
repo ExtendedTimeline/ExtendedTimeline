@@ -31,7 +31,13 @@ country_event = {
 		name = ET_ScrapEquipment.0.b
 		ai_chance = {
 			base = 0
-			if = { limit = { has_army_size = { size < 5 type = infantry } }
+			if = {
+				limit = {
+					has_army_size = {
+						 size < 5
+						 type = infantry
+					}
+				}
 				add = 10
 			}
 		}
