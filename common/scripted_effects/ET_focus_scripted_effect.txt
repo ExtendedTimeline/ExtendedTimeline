@@ -36,10 +36,11 @@ ET_set_new_era_effect = {
 		set_global_flag = ET_flag_global_newera_1
 		set_global_flag = ET_flag_global_neweconomic_1
 		if = {
-			limit = { has_focus = ET_modern_civilian_economy }
+			limit = { has_idea = civilian_economy }
 			set_country_flag = ET_flag_country_HasDemobalizedEconomy
 		}
 
+		add_ideas = ET_generic_modern_economics
 		set_country_flag = ET_flag_country_newera_1
 	}
 }
