@@ -68,6 +68,8 @@ country_event = { # Initialize Anti-colonialism sentiment
 
 country_event = { # Egypt
 	id = ET_Decolonization_Africa.1
+	title = ET_Decolonization_Africa.1.t
+	desc = ET_Decolonization_Africa.1.desc
 
 	is_triggered_only = yes
 
@@ -105,5 +107,6 @@ country_event = { # Egypt
 	}
 	
 	option = {
+		name = ET_Decolonization_Africa.1.a
 	}
 }

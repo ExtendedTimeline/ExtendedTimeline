@@ -12,6 +12,10 @@ ideologies = {
 		
 			socialism = {
 			}
+
+			arab_socialism = {
+				can_be_randomly_selected = no
+			}
 		}
 		
 		dynamic_faction_names = {
@@ -191,6 +195,7 @@ ideologies = {
 			
 			centrism = {
 			}
+			
 		}
 
 		dynamic_faction_names = {

@@ -1,4 +1,270 @@
 
-ET_set_modern_tech_middle_east = {
+ET_Init_Country_EGY_1 = {
+    set_variable = { ET_var_current_date = date }
+    EGY = {
+        set_cosmetic_tag = EGY_Republic
+        hidden_effect = {
+            create_country_leader = {
+                name = "Mohamed Naguib"
+                desc = "General Mohamed Naguib"
+                picture = GFX_AFG_mohammed_zahir_shah
+                expire = "1974.1.1"
+                ideology = arab_socialism
+                traits = {}
+            }
 
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = no
+                last_election = var:ET_var_current_date
+                election_frequency = 48
+                long_name = "Arab Socialist Union"
+                name = "Arab Socialist Union"
+            }
+            set_party_name = { 
+                ideology = fascism 
+                long_name = "Society of the Muslim Brothers" 
+                name = "Muslim Brotherhood"
+            }
+            set_popularities = {
+                democratic = 55
+                neutrality = 10
+                fascism = 10
+                communism = 25
+            }
+
+            set_rule = {
+                can_declare_war_on_same_ideology = yes
+            }
+
+            set_technology = {
+                popup = no
+                advanced_infantry_weapons = 1
+                advanced_line_production = 1
+                advanced_machine_tools = 1
+                amphibious_tank_chassis = 1
+                antiair1 = 1
+                antiair2 = 1
+                antitank1 = 1
+                antitank2 = 1
+                armor_tech_1 = 1
+                armor_tech_2 = 1
+                armor_tech_3 = 1
+                armored_car1 = 1
+                armored_car2 = 1
+                artillery1 = 1
+                artillery2 = 1
+                assembly_line_production = 1
+                atomic_research = 1
+                basic_depth_charges = 1
+                basic_heavy_tank_chassis = 1
+                basic_light_tank_chassis = 1
+                basic_machine_tools = 1
+                basic_medium_tank_chassis = 1
+                basic_train = 1
+                CAS1 = 1
+                CAS2 = 1
+                computing_machine = 1
+                concentrated_industry = 1
+                concentrated_industry2 = 1
+                concentrated_industry3 = 1
+                concentrated_industry4 = 1
+                construction1 = 1
+                construction2 = 1
+                construction3 = 1
+                construction4 = 1
+                decimetric_radar = 1
+                desertis = 1
+                desertis2 = 1
+                early_bomber = 1
+                early_fighter = 1
+                early_ship_hull_light = 1
+                electronic_mechanical_engineering = 1
+                engine_tech_1 = 1
+                engine_tech_2 = 1
+                excavation1 = 1
+                excavation2 = 1
+                excavation3 = 1
+                experimental_rockets = 1
+                fighter1 = 1
+                fighter2 = 1
+                flexible_line = 1
+                fuel_refining = 1
+                fuel_refining2 = 1
+                fuel_refining3 = 1
+                gw_artillery = 1
+                gwtank_chassis = 1
+                gwtank = 1
+                improved_computing_machine = 1
+                improved_fire_control_system = 1
+                improved_heavy_tank_chassis = 1
+                improved_infantry_weapons_2 = 1
+                improved_infantry_weapons = 1
+                improved_light_tank_chassis = 1
+                improved_machine_tools = 1
+                improved_medium_tank_chassis = 1
+                infantry_weapons = 1
+                infantry_weapons1 = 1
+                infantry_weapons2 = 1
+                interwar_antiair = 1
+                interwar_antitank = 1
+                interwar_artillery = 1
+                mechanical_computing = 1
+                mechanised_infantry = 1
+                motorised_infantry = 1
+                radio_detection = 1
+                radio = 1
+                rocket_artillery = 1
+                scout_plane1 = 1
+                smoke_generator = 1
+                sonar = 1
+                supplyhub_1 = 1
+                support_weapons = 1
+                support_weapons2 = 1
+                support_weapons3 = 1
+                support_weapons4 = 1
+                tactical_bomber1 = 1
+                tactical_bomber2 = 1
+                tech_engineers = 1
+                tech_engineers2 = 1
+                tech_engineers3 = 1
+                tech_field_hospital = 1
+                tech_field_hospital2 = 1
+                tech_logistics_company = 1
+                tech_logistics_company2 = 1
+                tech_logistics_company3 = 1
+                tech_maintenance_company = 1
+                tech_maintenance_company2 = 1
+                tech_maintenance_company3 = 1
+                tech_military_police = 1
+                tech_military_police2 = 1
+                tech_military_police3 = 1
+                tech_recon = 1
+                tech_recon2 = 1
+                tech_recon3 = 1
+                tech_signal_company = 1
+                tech_signal_company2 = 1
+                tech_signal_company3 = 1
+                tech_special_forces = 1
+                tech_support = 1
+                transport_plane1 = 1
+                transport_plane2 = 1
+                wartime_train = 1
+            }
+        }
+    }
+}
+ET_Init_Country_EGY_2 = {
+    EGY = {
+        # Divison Templates
+        delete_unit_template_and_units = {
+            division_template = "Infantry Division"
+        }
+        delete_unit_template_and_units = {
+            division_template = "Cavalry Division"
+        }
+        delete_unit_template_and_units = {
+            division_template = "Motorised Division"
+        }
+        delete_unit_template_and_units = {
+            division_template = "Tank Brigade"
+        }
+        delete_unit_template_and_units = {
+            division_template = "Colonial Garrison"
+        }
+
+        # Equipment
+        add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 500
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_4
+            amount = 2000
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_3
+            amount = 1500
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = anti_air_equipment
+            amount = 200
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = anti_air_equipment_2
+            amount = 100
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = anti_air_equipment_3
+            amount = 100
+            producer = FROM
+        }
+
+        add_equipment_to_stockpile = {
+            type = artillery_equipment
+            amount = 200
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = artillery_equipment_2
+            amount = 700
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = artillery_equipment_3
+            amount = 400
+            producer = FROM
+        }
+
+        add_equipment_to_stockpile = {
+            type = support_equipment_1
+            amount = 600
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = motorized_equipment_1
+            amount = 250
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = train_equipment_2
+            amount = 25
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = convoy
+            amount = 30
+            producer = FROM
+        }
+
+
+        add_equipment_to_stockpile = {
+            type = armored_car_equipment_1
+            amount = 250
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = armored_car_equipment_2
+            amount = 300
+            producer = FROM
+        }
+
+        add_equipment_to_stockpile = {
+            type = light_tank_chassis_3
+            amount = 600
+            producer = FROM
+        }
+        add_equipment_to_stockpile = {
+            type = medium_tank_chassis_3
+            amount = 300
+            producer = FROM
+        }
+
+        load_oob = "EGY_1952"
+    }
 }

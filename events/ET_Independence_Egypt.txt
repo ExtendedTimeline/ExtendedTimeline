@@ -20,28 +20,28 @@ country_event = { #0: Suez Crisis - 01 October 1951
 	option = { #1>  Refuse to leave the Suez Canal and bolster defences
 		name = ET_Independence_Egypt.0.a
 		446 = {
-			add_resistance = 30
-			add_compliance = -20
+			if = { limit = { resistance < 20 } add_resistance = 5 }
+			if = { limit = { compliance > 20 } add_compliance = -10 }
 		}
 		447 = {
-			add_resistance = 30
-			add_compliance = -20
+			if = { limit = { resistance < 20 } add_resistance = 5 }
+			if = { limit = { compliance > 20 } add_compliance = -10 }
 		}
 		452 = {
-			add_resistance = 20
-			add_compliance = -20
+			if = { limit = { resistance < 20 } add_resistance = 5 }
+			if = { limit = { compliance > 20 } add_compliance = -10 }
 		}
 		453 = {
-			add_resistance = 20
-			add_compliance = -20
+			if = { limit = { resistance < 20 } add_resistance = 5 }
+			if = { limit = { compliance > 20 } add_compliance = -10 }
 		}
 		456 = {
-			add_resistance = 20
-			add_compliance = -20
+			if = { limit = { resistance < 20 } add_resistance = 5 }
+			if = { limit = { compliance > 20 } add_compliance = -10 }
 		}
 		457 = {
-			add_resistance = 20
-			add_compliance = -20
+			if = { limit = { resistance < 20 } add_resistance = 5 }
+			if = { limit = { compliance > 20 } add_compliance = -10 }
 		}
 		country_event = {
 			id = ET_Independence_Egypt.1
@@ -118,6 +118,14 @@ country_event = { #2: Suez Crisis - 25 January 1952 "In response British sent ta
 
 	option = {
 		name = ET_Independence_Egypt.2.a
+
+		446 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.5
+			}
+		}
+
 		country_event = {
 			id = ET_Independence_Egypt.3
 			days = 90
@@ -140,45 +148,51 @@ country_event = { #3: Egyptian Coup d'etat - 23 July 1952 "Revolution"
 	is_triggered_only = yes
 	
 	immediate = {
-		EGY = { set_cosmetic_tag = EGY_Republic }
-		ITA = {
-			news_event = {
-				id = ET_Independence_Egypt.4
-				days = 1
+		ET_Init_Country_EGY_1 = yes
+		hidden_effect = {
+			ITA = {
+				news_event = {
+					id = ET_Independence_Egypt.4
+					days = 1
+				}
 			}
-		}
-		FRA = {
-			news_event = {
-				id = ET_Independence_Egypt.4
-				days = 1
+			FRA = {
+				news_event = {
+					id = ET_Independence_Egypt.4
+					days = 1
+				}
 			}
-		}
-		USA = {
-			news_event = {
-				id = ET_Independence_Egypt.4
-				days = 1
+			USA = {
+				news_event = {
+					id = ET_Independence_Egypt.4
+					days = 1
+				}
 			}
-		}
-		SOV = {
-			news_event = {
-				id = ET_Independence_Egypt.4
-				days = 1
+			SOV = {
+				news_event = {
+					id = ET_Independence_Egypt.4
+					days = 1
+				}
 			}
 		}
 	}
 
 	option = {
 		name = ET_Independence_Egypt.3.a
-		country_event = {
-			id = ET_Independence_Egypt.5
-			days = 3
+		hidden_effect = {
+			country_event = {
+				id = ET_Independence_Egypt.5
+				days = 3
+			}
 		}
 	}
 	option = {
 		name = ET_Independence_Egypt.3.b
-		country_event = {
-			id = ET_Independence_Egypt.5
-			days = 3
+		hidden_effect = {
+			country_event = {
+				id = ET_Independence_Egypt.5
+				days = 3
+			}
 		}
 	}
 }
@@ -219,9 +233,12 @@ country_event = { #5: Establishment of the Republic of Egypt - 23 July 1952 "Ind
 	
 	immediate = {
 		release = EGY
-		EGY = {
-			country_event = {
-				id = ET_Independence_Egypt.100
+		hidden_effect = {
+			EGY = {
+				country_event = {
+					id = ET_Independence_Egypt.100
+					days = 1
+				}
 			}
 		}
 	}
@@ -244,11 +261,12 @@ country_event = { #5: Establishment of the Republic of Egypt - 23 July 1952 "Ind
 			type = annex_everything
 		}
 	}
+	
 	option = {
 		name = ET_Independence_Egypt.5.c
-		add_stability = -0.10
+		add_stability = -0.05
 
-		EGY = { change_tag_from = THIS }
+		EGY = { change_tag_from = ROOT }
 	}
 	option = {
 		name = ET_Independence_Egypt.5.d
@@ -256,7 +274,7 @@ country_event = { #5: Establishment of the Republic of Egypt - 23 July 1952 "Ind
 			has_stability > 0.25
 			has_war_support > 0.10
 		}
-		add_stability = -0.10
+		add_stability = -0.0 5
 		add_political_power = -25
 
 		declare_war_on = {
@@ -264,7 +282,7 @@ country_event = { #5: Establishment of the Republic of Egypt - 23 July 1952 "Ind
 			type = annex_everything
 		}
 
-		EGY = { change_tag_from = THIS }
+		EGY = { change_tag_from = ROOT }
 	}
 }
 
@@ -276,50 +294,7 @@ country_event = { #100: INIT REPUBLIC OF EGYPT
 	hidden = yes
 
 	immediate = {
-		ET_set_modern_tech_middle_east = yes
-
-		# Politics 
-		retire_country_leader = yes
-
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = yes
-			last_election = "1952.10.22"
-			election_frequency = 48
-			long_name = "Free Officers Movement"
-			name = "Free Officers"
-		}
-
-		set_popularities = {
-			democratic = 15
-			neutrality = 65
-			fascism = 0
-			communism = 20
-		}
-
-		create_country_leader = {
-			name = "General Mohamed Naguib"
-			desc = "General Mohamed Naguib"
-			picture = GFX_AFG_mohammed_zahir_shah
-			expire = "1974.1.1"
-			ideology = centrism
-			traits = {}
-		}
-		promote_character = {
-			character = "General Mohamed Naguib"
-			Ideology = centrism
-		}
-
-		set_rule = {
-			can_declare_war_on_same_ideology = yes
-		}
-
-		# Equipment
-		add_equipment_to_stockpile = {
-			type = infantry_equipment_4
-			amount = 1000
-			producer = FROM
-		}
+		ET_Init_Country_EGY_2 = yes
 	}
 
 	option = {
