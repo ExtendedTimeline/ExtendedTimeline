@@ -1,113 +1,91 @@
 ET_debug_decisions = {
-	ET_next_era = {
-		icon = generic_research
+    ET_next_era = {
+        icon = generic_research
 
-		available = {
-			NOT = { has_global_flag = ET_flag_global_newera_1 }
-		}
+        available = {
+            NOT = { has_global_flag = ET_flag_global_newera_1 }
+        }
 
-		visible = {
-			always = yes
-		}
+        visible = {
+            always = yes
+        }
 
-		fire_only_once = no
-		cost = 0
+        fire_only_once = no
+        cost = 0
 
-		complete_effect = {
-			set_global_flag = ET_flag_global_newera_1
-			set_global_flag = ET_flag_global_neweconomic_1
-		}
+        complete_effect = {
+            set_global_flag = ET_flag_global_newera_1
+            set_global_flag = ET_flag_global_neweconomic_1
+        }
 
-		ai_will_do = {
-			base = 0
-		}
-	}
+        ai_will_do = {
+            base = 0
+        }
+    }
 
-	ET_remove_era = {
-		icon = generic_research
+    ET_remove_era = {
+        icon = generic_research
 
-		available = {
-			has_global_flag = ET_flag_global_newera_1
-		}
+        available = {
+            has_global_flag = ET_flag_global_newera_1
+        }
 
-		visible = {
-			always = yes
-		}
+        visible = {
+            always = yes
+        }
 
-		fire_only_once = no
-		cost = 0
+        fire_only_once = no
+        cost = 0
 
-		complete_effect = {
-			clr_global_flag = ET_flag_global_newera_1
-			clr_global_flag = ET_flag_global_neweconomic_1
-		}
+        complete_effect = {
+            clr_global_flag = ET_flag_global_newera_1
+            clr_global_flag = ET_flag_global_neweconomic_1
+        }
 
-		ai_will_do = {
-			base = 0
-		}
-	}
+        ai_will_do = {
+            base = 0
+        }
+    }
 
-	ET_remove_newera_flags = {
-		icon = generic_research
+    ET_remove_newera_flags = {
+        icon = generic_research
 
-		available = {
-			has_country_flag = ET_flag_country_newera_1
-		}
+        available = {
+            has_country_flag = ET_flag_country_newera_1
+        }
 
-		visible = {
-			always = yes
-		}
+        visible = {
+            always = yes
+        }
 
-		fire_only_once = no
-		cost = 0
+        fire_only_once = no
+        cost = 0
 
-		complete_effect = {
-			clr_country_flag = ET_flag_country_newera_1
-		}
+        complete_effect = {
+            clr_country_flag = ET_flag_country_newera_1
+        }
 
-		ai_will_do = {
-			base = 0
-		}
-	}
+        ai_will_do = {
+            base = 0
+        }
+    }
 
-	ET_ignore_decolonization_dates = {
 
-		icon = generic_research
+    ET_give_1948_tech = {
 
-		available = {
-			not = { has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates }
-		}
+        icon = generic_research
 
-		visible = {
-			always = yes
-		}
+        available = {
+        }
 
-		fire_only_once = no
-		cost = 0
+        visible = {
+            always = yes
+        }
 
-		complete_effect = {
-			set_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
-		}
+        fire_only_once = no
+        cost = 0
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	ET_give_1952_tech = {
-
-		icon = generic_research
-
-		available = {
-		}
-
-		visible = {
-			always = yes
-		}
-
-		fire_only_once = no
-		cost = 0
-
-		complete_effect = {
+        complete_effect = {
             set_technology = {
                 popup = no
                 advanced_infantry_weapons = 1
@@ -222,32 +200,83 @@ ET_debug_decisions = {
                 transport_plane2 = 1
                 wartime_train = 1
             }
-		}
+        }
 
-		ai_will_do = {
-			base = 0
-		}
-	}
-	ET_other_test = {
+        ai_will_do = {
+            base = 0
+        }
+    }
 
-		icon = generic_research
 
-		available = {
-		}
+    ET_ignore_decolonization_dates = {
 
-		visible = {
-			always = yes
-		}
+        icon = generic_research
 
-		fire_only_once = no
-		cost = 0
+        available = {
+            not = { has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates }
+        }
 
-		complete_effect = {
-			ET_Init_Country_EGY_2 = yes
-		}
+        visible = {
+            always = yes
+        }
 
-		ai_will_do = {
-			base = 0
-		}
-	}
+        fire_only_once = no
+        cost = 0
+
+        complete_effect = {
+            set_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+    ET_decolonialize_world = {
+
+        icon = generic_research
+
+        available = {
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        cost = 0
+
+        complete_effect = {
+            set_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+            ENG = {
+                country_event = {
+                    id = ET_Independence_Egypt.3
+                    days = 1
+                }
+            }
+        }
+    }
+
+
+    ET_other_test = {
+
+        icon = generic_research
+
+        available = {
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        cost = 0
+
+        complete_effect = {
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
 }

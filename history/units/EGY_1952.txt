@@ -1,129 +1,223 @@
 ﻿# https://en.wikipedia.org/wiki/Egyptian_Army#After_the_Egyptian_Revolution_of_1952
 
 division_template = {
-	name = "Infantry Division"
-	priority = 1
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-	}
-	support = { 
-		artillery = { x = 0 y = 0 }
-		anti_tank = { x = 0 y = 1 }
-	} 
+    name = "Infantry Division"
+    priority = 1
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+    support = { 
+        artillery = { x = 0 y = 0 }
+        anti_tank = { x = 0 y = 1 }
+    } 
 }
 division_template = {
-	name = "Armored Division"
-	priority = 1
-	regiments = {
-		infantry 		= { x = 0 y = 0 }
-		infantry 		= { x = 0 y = 1 }
-		armored_car 	= { x = 1 y = 0 }
-		motorized 		= { x = 1 y = 1 }
-		medium_armor 	= { x = 2 y = 0 }
-	}
-	support = { 
-		light_tank_recon = { x = 0 y = 0 }
-	} 
+    name = "Armored Division"
+    priority = 1
+    regiments = {
+        infantry 		= { x = 0 y = 0 }
+        infantry 		= { x = 0 y = 1 }
+        armored_car 	= { x = 1 y = 0 }
+        motorized 		= { x = 1 y = 1 }
+        medium_armor 	= { x = 2 y = 0 }
+    }
+    support = { 
+        light_tank_recon = { x = 0 y = 0 }
+    } 
 }
 division_template = {
-	name = "National Police"
-	priority = 0
-	template_counter = 0
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		cavalry = { x = 1 y = 0 }
-	}
-	support = { 
-		military_police = { x = 0 y = 0 }
-	} 
+    name = "National Police"
+    priority = 0
+    template_counter = 0
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        cavalry = { x = 1 y = 0 }
+    }
+    support = { 
+        military_police = { x = 0 y = 0 }
+    } 
 }
 
 units = {
-	division= {	
-		name = "National Police"
-		location = 9989 
-		division_template = "National Police"
+    division= {	
+        name = "National Police"
+        location = 9989 
+        division_template = "National Police"
         start_experience_factor = 0.5
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
-	division= {	
-		name = "National Police"
-		location = 7011
-		division_template = "National Police"
+    }
+    division= {	
+        name = "National Police"
+        location = 7011
+        division_template = "National Police"
         start_experience_factor = 0.5
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
-	division= {	
-		name = "National Police"
-		location = 4073
-		division_template = "National Police"
+    }
+    division= {	
+        name = "National Police"
+        location = 4073
+        division_template = "National Police"
         start_experience_factor = 0.25
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
-	division= {	
-		name = "National Police"
-		location = 12071
-		division_template = "National Police"
+    }
+    division= {	
+        name = "National Police"
+        location = 12071
+        division_template = "National Police"
         start_experience_factor = 0.25
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
+    }
 
-	division= {	
-		name = "Infantry Division"
-		location = 12002
-		division_template = "Infantry Division"
+    division= {	
+        name = "Infantry Division"
+        location = 12002
+        division_template = "Infantry Division"
         start_experience_factor = 0.5
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
-	division= {	
-		name = "Infantry Division"
-		location = 4161
-		division_template = "Infantry Division"
-		start_equipment_factor = 0.0
+    }
+    division= {	
+        name = "Infantry Division"
+        location = 4161
+        division_template = "Infantry Division"
+        start_equipment_factor = 0.0
         start_experience_factor = 0.25
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
-	division= {	
-		name = "Infantry Division"
-		location = 1071
-		division_template = "Infantry Division"
+    }
+    division= {	
+        name = "Infantry Division"
+        location = 1071
+        division_template = "Infantry Division"
         start_experience_factor = 0.25
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
-	division= {	
-		name = "Infantry Division"
-		location = 3996
-		division_template = "Infantry Division"
+    }
+    division= {	
+        name = "Infantry Division"
+        location = 3996
+        division_template = "Infantry Division"
         start_experience_factor = 0.25
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
-	division= {	
-		name = "Infantry Division"
-		location = 7011
-		division_template = "Infantry Division"
+    }
+    division= {	
+        name = "Infantry Division"
+        location = 7011
+        division_template = "Infantry Division"
         start_experience_factor = 0.25
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
-	division= {	
-		name = "Armored Division"
-		location = 12049
-		division_template = "Armored Division"
+    }
+    division= {	
+        name = "Armored Division"
+        location = 12049
+        division_template = "Armored Division"
         start_experience_factor = 0.25
-        start_equipment_factor = 0.05
+        start_equipment_factor = 0.01
         start_manpower_factor = 1.0
-	}
+    }
+}
+instant_effect = {
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_5 # FN FAL
+            amount = 200
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_4 # EM-2 Rifle
+            amount = 200
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_3 # Sten MKII
+            amount = 2000
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = infantry_equipment_2 # Rifle No4.Mk1
+            amount = 3000
+            producer = ENG
+        }
+
+        add_equipment_to_stockpile = {
+            type = anti_air_equipment_2 # QF 40mm Mark I
+            amount = 100
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = anti_air_equipment_3 # QF 40mm Mark II
+            amount = 100
+            producer = ENG
+        }
+
+        add_equipment_to_stockpile = {
+            type = artillery_equipment_2 # QF 25-pdr Mark I
+            amount = 700
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = artillery_equipment_3 # QF 25-pdr Mark II
+            amount = 400
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = anti_tank_equipment_2 # QF 6-pounder
+            amount = 200
+            producer = ENG
+        }
+
+        add_equipment_to_stockpile = {
+            type = support_equipment_1
+            amount = 800
+            producer = ENG
+        }
+
+        add_equipment_to_stockpile = {
+            type = motorized_equipment_1 # Austin K5
+            amount = 600
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = train_equipment_2
+            amount = 25
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = convoy
+            amount = 30
+            producer = ENG
+        }
+
+
+        add_equipment_to_stockpile = {
+            type = armored_car_equipment_1 # Humber
+            amount = 250
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = armored_car_equipment_2 # AEC
+            amount = 300
+            producer = ENG
+        }
+
+        add_equipment_to_stockpile = {
+            type = light_tank_chassis_3 #
+            amount = 600
+            producer = ENG
+        }
+        add_equipment_to_stockpile = {
+            type = medium_tank_chassis_3
+            amount = 300
+            producer = ENG
+        }
 }

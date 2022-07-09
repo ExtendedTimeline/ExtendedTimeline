@@ -14,99 +14,99 @@ add_namespace = ET_Decolonization_Init
 add_namespace = ET_Decolonization_Africa
 
 country_event = { # Initialize Anti-colonialism sentiment
-	id = ET_Decolonization_Init.0
+    id = ET_Decolonization_Init.0
 
-	is_triggered_only = yes
-	fire_only_once = no
-	hidden = yes
+    is_triggered_only = yes
+    fire_only_once = no
+    hidden = yes
 
-	immediate = {
-		# #
-		#  Europe
-		# #
+    immediate = {
+        # #
+        #  Europe
+        # #
 
-		# #
-		#  North America
-		# #
+        # #
+        #  North America
+        # #
 
-		# #
-		#  South America
-		# #
+        # #
+        #  South America
+        # #
 
-		# #
-		#  Africa
-		# #
+        # #
+        #  Africa
+        # #
 
-		if = { # Egypt
-			limit = {
-				NOT = { original_tag = EGY }
-				OR = {
-					controls_state = 446
-					controls_state = 447
-					controls_state = 452
-					controls_state = 453
-					controls_state = 456
-					controls_state = 457
-				}
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] has Egypt terretory..." }
- 			country_event = {
-				id = ET_Decolonization_Africa.1
-				days = 14
- 			}
-		}
+        if = { # Egypt
+            limit = {
+                NOT = { original_tag = EGY }
+                OR = {
+                    controls_state = 446
+                    controls_state = 447
+                    controls_state = 452
+                    controls_state = 453
+                    controls_state = 456
+                    controls_state = 457
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] has Egypt terretory..." }
+             country_event = {
+                id = ET_Decolonization_Africa.1
+                days = 14
+             }
+        }
 
-		# #
-		#  Asia
-		# #
+        # #
+        #  Asia
+        # #
 
-	}
+    }
 
-	option = {
-	}
+    option = {
+    }
 }
 
 country_event = { # Egypt
-	id = ET_Decolonization_Africa.1
-	title = ET_Decolonization_Africa.1.t
-	desc = ET_Decolonization_Africa.1.desc
+    id = ET_Decolonization_Africa.1
+    title = ET_Decolonization_Africa.1.t
+    desc = ET_Decolonization_Africa.1.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			country_event = {
-				id = ET_Independence_Egypt.0
-				days = 14
-			}
-			446 = {
-				if = { limit = { resistance < 20 } add_resistance = 20 }
-				if = { limit = { compliance > 20 } add_compliance = -25 }
-			}
-			447 = {
-				if = { limit = { resistance < 20 } add_resistance = 20 }
-				if = { limit = { compliance > 20 } add_compliance = -25 }
-			}
-			452 = {
-				if = { limit = { resistance < 20 } add_resistance = 20 }
-				if = { limit = { compliance > 20 } add_compliance = -25 }
-			}
-			453 = {
-				if = { limit = { resistance < 20 } add_resistance = 20 }
-				if = { limit = { compliance > 20 } add_compliance = -25 }
-			}
-			456 = {
-				if = { limit = { resistance < 20 } add_resistance = 20 }
-				if = { limit = { compliance > 20 } add_compliance = -25 }
-			}
-			457 = {
-				if = { limit = { resistance < 20 } add_resistance = 20 }
-				if = { limit = { compliance > 20 } add_compliance = -25 }
-			}
-		}
-	}
-	
-	option = {
-		name = ET_Decolonization_Africa.1.a
-	}
+    immediate = {
+        hidden_effect = {
+            country_event = {
+                id = ET_Independence_Egypt.0
+                days = 14
+            }
+            446 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            447 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            452 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            453 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            456 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            457 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+        }
+    }
+    
+    option = {
+        name = ET_Decolonization_Africa.1.a
+    }
 }

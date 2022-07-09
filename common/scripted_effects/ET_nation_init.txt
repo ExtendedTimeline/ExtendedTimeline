@@ -158,10 +158,10 @@ ET_Init_Country_EGY_2 = {
     EGY = {
         # Divison Templates
         delete_unit_template_and_units = {
-            division_template = "Infantry Division"
+            division_template = "Cavalry Division"
         }
         delete_unit_template_and_units = {
-            division_template = "Cavalry Division"
+            division_template = "Infantry Division"
         }
         delete_unit_template_and_units = {
             division_template = "Motorised Division"
@@ -171,98 +171,6 @@ ET_Init_Country_EGY_2 = {
         }
         delete_unit_template_and_units = {
             division_template = "Colonial Garrison"
-        }
-
-        # Equipment
-        add_equipment_to_stockpile = {
-            type = infantry_equipment
-            amount = 500
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = infantry_equipment_4
-            amount = 2000
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = infantry_equipment_3
-            amount = 1500
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = anti_air_equipment
-            amount = 200
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = anti_air_equipment_2
-            amount = 100
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = anti_air_equipment_3
-            amount = 100
-            producer = FROM
-        }
-
-        add_equipment_to_stockpile = {
-            type = artillery_equipment
-            amount = 200
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = artillery_equipment_2
-            amount = 700
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = artillery_equipment_3
-            amount = 400
-            producer = FROM
-        }
-
-        add_equipment_to_stockpile = {
-            type = support_equipment_1
-            amount = 600
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = motorized_equipment_1
-            amount = 250
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = train_equipment_2
-            amount = 25
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = convoy
-            amount = 30
-            producer = FROM
-        }
-
-
-        add_equipment_to_stockpile = {
-            type = armored_car_equipment_1
-            amount = 250
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = armored_car_equipment_2
-            amount = 300
-            producer = FROM
-        }
-
-        add_equipment_to_stockpile = {
-            type = light_tank_chassis_3
-            amount = 600
-            producer = FROM
-        }
-        add_equipment_to_stockpile = {
-            type = medium_tank_chassis_3
-            amount = 300
-            producer = FROM
         }
 
         load_oob = "EGY_1952"
