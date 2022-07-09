@@ -1,0 +1,109 @@
+# add:
+# 		every_country = {
+# 			limit = { always = yes }
+# 			country_event = {
+# 				id = ET_Decolonization_Init.0
+# 				days = 300
+# 			}
+# 		}
+# 
+# to
+#       /common/scripted_effects/ET_focus_scripted_effect.txt:ET_set_new_era_effect
+
+add_namespace = ET_Decolonization_Init
+add_namespace = ET_Decolonization_Africa
+
+country_event = { # Initialize Anti-colonialism sentiment
+	id = ET_Decolonization_Init.0
+
+	is_triggered_only = yes
+	fire_only_once = no
+	hidden = yes
+
+	immediate = {
+		# #
+		#  Europe
+		# #
+
+		# #
+		#  North America
+		# #
+
+		# #
+		#  South America
+		# #
+
+		# #
+		#  Africa
+		# #
+
+		if = { # Egypt
+			limit = {
+				NOT = { original_tag = EGY }
+				OR = {
+					controls_state = 446
+					controls_state = 447
+					controls_state = 452
+					controls_state = 453
+					controls_state = 456
+					controls_state = 457
+				}
+			}
+			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] has Egypt terretory..." }
+ 			country_event = {
+				id = ET_Decolonization_Africa.1
+				days = 14
+ 			}
+		}
+
+		# #
+		#  Asia
+		# #
+
+	}
+
+	option = {
+	}
+}
+
+country_event = { # Egypt
+	id = ET_Decolonization_Africa.1
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = ET_Independence_Egypt.0
+				days = 14
+			}
+			446 = {
+				if = { limit = { resistance < 20 } add_resistance = 20 }
+				if = { limit = { compliance > 20 } add_compliance = -25 }
+			}
+			447 = {
+				if = { limit = { resistance < 20 } add_resistance = 20 }
+				if = { limit = { compliance > 20 } add_compliance = -25 }
+			}
+			452 = {
+				if = { limit = { resistance < 20 } add_resistance = 20 }
+				if = { limit = { compliance > 20 } add_compliance = -25 }
+			}
+			453 = {
+				if = { limit = { resistance < 20 } add_resistance = 20 }
+				if = { limit = { compliance > 20 } add_compliance = -25 }
+			}
+			456 = {
+				if = { limit = { resistance < 20 } add_resistance = 20 }
+				if = { limit = { compliance > 20 } add_compliance = -25 }
+			}
+			457 = {
+				if = { limit = { resistance < 20 } add_resistance = 20 }
+				if = { limit = { compliance > 20 } add_compliance = -25 }
+			}
+		}
+	}
+	
+	option = {
+	}
+}
