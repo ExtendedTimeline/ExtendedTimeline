@@ -4,14 +4,6 @@ ET_Init_Country_EGY_1 = {
     EGY = {
         set_cosmetic_tag = EGY_Republic
         hidden_effect = {
-            create_country_leader = {
-                name = "Mohamed Naguib"
-                desc = "General Mohamed Naguib"
-                picture = GFX_AFG_mohammed_zahir_shah
-                expire = "1974.1.1"
-                ideology = arab_socialism
-                traits = {}
-            }
 
             set_politics = {
                 ruling_party = democratic
@@ -20,6 +12,12 @@ ET_Init_Country_EGY_1 = {
                 election_frequency = 48
                 long_name = "Arab Socialist Union"
                 name = "Arab Socialist Union"
+            }
+            #Fix leader
+            set_country_leader_ideology = arab_socialism
+            set_country_leader_name = {
+                ideology = democratic
+                name = "Mohamed Naguib"
             }
             set_party_name = { 
                 ideology = fascism 
