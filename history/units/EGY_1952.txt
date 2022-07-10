@@ -7,28 +7,32 @@ division_template = {
         infantry = { x = 0 y = 0 }
         infantry = { x = 0 y = 1 }
         infantry = { x = 0 y = 2 }
+        infantry = { x = 0 y = 3 }
         infantry = { x = 1 y = 0 }
         infantry = { x = 1 y = 1 }
         infantry = { x = 1 y = 2 }
+        infantry = { x = 1 y = 3 }
     }
     support = { 
         artillery = { x = 0 y = 0 }
         anti_tank = { x = 0 y = 1 }
+        engineer = { x = 0 y = 2 }
     } 
 }
 division_template = {
     name = "Armored Division"
     priority = 1
     regiments = {
-        infantry 		= { x = 0 y = 0 }
-        infantry 		= { x = 0 y = 1 }
-        armored_car 	= { x = 1 y = 0 }
-        motorized 		= { x = 1 y = 1 }
-        medium_armor 	= { x = 2 y = 0 }
+        infantry        = { x = 0 y = 0 }
+        infantry        = { x = 0 y = 1 }
+        motorized       = { x = 1 y = 1 }
+        armored_car     = { x = 1 y = 1 }
+        medium_armor    = { x = 2 y = 0 }
     }
-    support = { 
+    support = {
         light_tank_recon = { x = 0 y = 0 }
-    } 
+        engineer         = { x = 0 y = 1 }
+    }
 }
 division_template = {
     name = "National Police"
@@ -36,95 +40,95 @@ division_template = {
     template_counter = 0
     regiments = {
         infantry = { x = 0 y = 0 }
-        cavalry = { x = 1 y = 0 }
+        cavalry  = { x = 0 y = 1 }
+        cavalry  = { x = 1 y = 0 }
     }
-    support = { 
+    support = {
         military_police = { x = 0 y = 0 }
-    } 
+    }
 }
 
 units = {
-    division= {	
+    division = {
         name = "National Police"
         location = 9989 
         division_template = "National Police"
         start_experience_factor = 0.5
-        start_equipment_factor = 0.01
-        start_manpower_factor = 1.0
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.95
     }
-    division= {	
+    division = {
         name = "National Police"
         location = 7011
         division_template = "National Police"
-        start_experience_factor = 0.5
-        start_equipment_factor = 0.01
+        start_experience_factor = 0.35
+        start_equipment_factor = 0.001
         start_manpower_factor = 1.0
     }
-    division= {	
+    division = {
         name = "National Police"
         location = 4073
         division_template = "National Police"
-        start_experience_factor = 0.25
-        start_equipment_factor = 0.01
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.001
         start_manpower_factor = 1.0
     }
-    division= {	
+    division = {
         name = "National Police"
         location = 12071
         division_template = "National Police"
-        start_experience_factor = 0.25
-        start_equipment_factor = 0.01
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.001
         start_manpower_factor = 1.0
     }
 
-    division= {	
+    division = {
         name = "Infantry Division"
         location = 12002
         division_template = "Infantry Division"
-        start_experience_factor = 0.5
-        start_equipment_factor = 0.01
-        start_manpower_factor = 1.0
+        start_experience_factor = 0.6
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.8
     }
-    division= {	
+    division = {
         name = "Infantry Division"
         location = 4161
         division_template = "Infantry Division"
-        start_equipment_factor = 0.0
-        start_experience_factor = 0.25
-        start_equipment_factor = 0.01
-        start_manpower_factor = 1.0
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.5
     }
-    division= {	
+    division = {
         name = "Infantry Division"
         location = 1071
         division_template = "Infantry Division"
         start_experience_factor = 0.25
-        start_equipment_factor = 0.01
+        start_equipment_factor = 0.001
         start_manpower_factor = 1.0
     }
-    division= {	
+    division = {
         name = "Infantry Division"
         location = 3996
         division_template = "Infantry Division"
-        start_experience_factor = 0.25
-        start_equipment_factor = 0.01
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.001
         start_manpower_factor = 1.0
     }
-    division= {	
+    division = {
         name = "Infantry Division"
         location = 7011
         division_template = "Infantry Division"
-        start_experience_factor = 0.25
-        start_equipment_factor = 0.01
-        start_manpower_factor = 1.0
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.9
     }
-    division= {	
+    division = {
         name = "Armored Division"
         location = 12049
         division_template = "Armored Division"
-        start_experience_factor = 0.25
-        start_equipment_factor = 0.01
-        start_manpower_factor = 1.0
+        start_experience_factor = 0.15
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.4
     }
 }
 instant_effect = {
@@ -194,7 +198,7 @@ instant_effect = {
         }
         add_equipment_to_stockpile = {
             type = convoy
-            amount = 30
+            amount = 60
             producer = ENG
         }
 
