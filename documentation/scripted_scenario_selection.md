@@ -3,7 +3,7 @@
 ## Scenarios
 The mod selects a scenario at the end of the World War 2 of any of its shape of forms.
 
-### Historical - Scenario 1 (S1)
+### Scenario 1 - The Cold War
 This is a historical Cold War scenario. Experience a Cold War scenario within the vanilla game in all its glory.
 
 ## Development
