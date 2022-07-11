@@ -41,7 +41,7 @@ ET_set_new_era_effect = {
             set_country_flag = ET_flag_country_HasDemobalizedEconomy
         }
 
-        add_ideas = ET_generic_modern_economics
+        #add_ideas = ET_generic_modern_economics
         set_country_flag = ET_flag_country_newera_1
     }
 }
