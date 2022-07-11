@@ -1,5 +1,102 @@
 ﻿# https://en.wikipedia.org/wiki/Egyptian_Army#After_the_Egyptian_Revolution_of_1952
 
+instant_effect = {
+    set_equipment_fraction = 0
+    
+    add_equipment_to_stockpile = {
+        type = infantry_equipment_5 # FN FAL
+        amount = 200
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = infantry_equipment_4 # EM-2 Rifle
+        amount = 200
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = infantry_equipment_3 # Sten MKII
+        amount = 2000
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = infantry_equipment_2 # Rifle No4.Mk1
+        amount = 3000
+        producer = ENG
+    }
+
+    add_equipment_to_stockpile = {
+        type = anti_air_equipment_2 # QF 40mm Mark I
+        amount = 100
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = anti_air_equipment_3 # QF 40mm Mark II
+        amount = 100
+        producer = ENG
+    }
+
+    add_equipment_to_stockpile = {
+        type = artillery_equipment_2 # QF 25-pdr Mark I
+        amount = 700
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = artillery_equipment_3 # QF 25-pdr Mark II
+        amount = 400
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = anti_tank_equipment_2 # QF 6-pounder
+        amount = 200
+        producer = ENG
+    }
+
+    add_equipment_to_stockpile = {
+        type = support_equipment_1
+        amount = 800
+        producer = ENG
+    }
+
+    add_equipment_to_stockpile = {
+        type = motorized_equipment_1 # Austin K5
+        amount = 600
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = train_equipment_2
+        amount = 25
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = convoy
+        amount = 60
+        producer = ENG
+    }
+
+
+    add_equipment_to_stockpile = {
+        type = armored_car_equipment_1 # Humber
+        amount = 250
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = armored_car_equipment_2 # AEC
+        amount = 300
+        producer = ENG
+    }
+
+    add_equipment_to_stockpile = {
+        type = light_tank_chassis_3 #
+        amount = 600
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = medium_tank_chassis_3
+        amount = 300
+        producer = ENG
+    }
+}
+
 division_template = {
     name = "Infantry Division"
     priority = 1
@@ -130,98 +227,4 @@ units = {
         start_equipment_factor = 0.001
         start_manpower_factor = 0.4
     }
-}
-instant_effect = {
-        add_equipment_to_stockpile = {
-            type = infantry_equipment_5 # FN FAL
-            amount = 200
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = infantry_equipment_4 # EM-2 Rifle
-            amount = 200
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = infantry_equipment_3 # Sten MKII
-            amount = 2000
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = infantry_equipment_2 # Rifle No4.Mk1
-            amount = 3000
-            producer = ENG
-        }
-
-        add_equipment_to_stockpile = {
-            type = anti_air_equipment_2 # QF 40mm Mark I
-            amount = 100
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = anti_air_equipment_3 # QF 40mm Mark II
-            amount = 100
-            producer = ENG
-        }
-
-        add_equipment_to_stockpile = {
-            type = artillery_equipment_2 # QF 25-pdr Mark I
-            amount = 700
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = artillery_equipment_3 # QF 25-pdr Mark II
-            amount = 400
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = anti_tank_equipment_2 # QF 6-pounder
-            amount = 200
-            producer = ENG
-        }
-
-        add_equipment_to_stockpile = {
-            type = support_equipment_1
-            amount = 800
-            producer = ENG
-        }
-
-        add_equipment_to_stockpile = {
-            type = motorized_equipment_1 # Austin K5
-            amount = 600
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = train_equipment_2
-            amount = 25
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = convoy
-            amount = 60
-            producer = ENG
-        }
-
-
-        add_equipment_to_stockpile = {
-            type = armored_car_equipment_1 # Humber
-            amount = 250
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = armored_car_equipment_2 # AEC
-            amount = 300
-            producer = ENG
-        }
-
-        add_equipment_to_stockpile = {
-            type = light_tank_chassis_3 #
-            amount = 600
-            producer = ENG
-        }
-        add_equipment_to_stockpile = {
-            type = medium_tank_chassis_3
-            amount = 300
-            producer = ENG
-        }
 }

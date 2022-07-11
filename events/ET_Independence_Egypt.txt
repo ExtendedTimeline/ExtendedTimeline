@@ -148,7 +148,7 @@ country_event = { #3: Egyptian Coup d'etat - 23 July 1952 "Revolution"
     is_triggered_only = yes
     
     immediate = {
-        ET_Init_Country_EGY_1 = yes
+        ET_Init_Country_EGY = yes
         hidden_effect = {
             ITA = {
                 news_event = {
@@ -294,7 +294,7 @@ country_event = { #100: INIT REPUBLIC OF EGYPT
     hidden = yes
 
     immediate = {
-        ET_Init_Country_EGY_2 = yes
+        ET_Init_Country_EGY_obb = yes
     }
 
     option = {

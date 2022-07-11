@@ -12,7 +12,9 @@
 
 add_namespace = ET_Decolonization_Init
 add_namespace = ET_Decolonization_Africa
+add_namespace = ET_Decolonization_Asia
 
+# All natiosn recive this event once when the new era is triggerd.
 country_event = { # Initialize Anti-colonialism sentiment
     id = ET_Decolonization_Init.0
 
@@ -21,6 +23,8 @@ country_event = { # Initialize Anti-colonialism sentiment
     hidden = yes
 
     immediate = {
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Initialize Anti-colonialism sentiment" }
+
         # #
         #  Europe
         # #
@@ -37,7 +41,7 @@ country_event = { # Initialize Anti-colonialism sentiment
         #  Africa
         # #
 
-        if = { # Egypt
+        if = { # Egypt (ET_Decolonization_Africa.1)
             limit = {
                 NOT = { original_tag = EGY }
                 OR = {
@@ -49,17 +53,77 @@ country_event = { # Initialize Anti-colonialism sentiment
                     controls_state = 457
                 }
             }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] has Egypt terretory..." }
-             country_event = {
+            country_event = {
                 id = ET_Decolonization_Africa.1
                 days = 14
-             }
+            }
         }
 
         # #
         #  Asia
         # #
+    }
 
+    option = {
+    }
+}
+
+country_event = { # Opportunisticall Independence
+    id = ET_Decolonization_Init.1
+
+    is_triggered_only = yes
+    fire_only_once = no
+    hidden = yes
+
+    immediate = {
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking for opportunisticall independence..." }
+        # #
+        #  Europe
+        # #
+
+        # #
+        #  North America
+        # #
+
+        # #
+        #  South America
+        # #
+
+        # #
+        #  Africa
+        # #
+
+        # #
+        #  Asia
+        # #
+        if = { # Vietnam (ET_Decolonization_Asia.1) [December 19, 1946]
+            limit = {
+                date > 1946.11.20
+                NOT = { country_exists = VIN }
+                # NOT = { country_exists = SVI } # TODO Create South Vietnam
+
+                OR = { # France Controll Statets
+                    FRA = {
+                        controls_state = 286
+                    }
+                    VIC = {
+                        controls_state = 286
+                    }
+                }
+
+                OR = { # States have any resistance and low compliance
+                    286 = {
+                        resistance > 10
+                        compliance < 25
+                    }
+                }
+            }
+            ET_Init_Country_VIN = yes
+            country_event = {
+                id = ET_Decolonization_Asia.1
+                days = 18
+            }
+        }
     }
 
     option = {
@@ -108,5 +172,22 @@ country_event = { # Egypt
     
     option = {
         name = ET_Decolonization_Africa.1.a
+    }
+}
+
+# This event is triggerd
+country_event = { #1: Vietnam (Opportunisticall)
+    id = ET_Decolonization_Asia.1
+
+    is_triggered_only = yes
+
+    #trigger = {}
+
+    immediate = {
+        release = VIN
+        VIN = { ET_Init_Country_VIN_obb = yes }
+    }
+    
+    option = {
     }
 }
