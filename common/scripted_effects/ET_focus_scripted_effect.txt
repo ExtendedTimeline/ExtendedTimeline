@@ -44,10 +44,6 @@ ET_set_new_era_effect = {
         add_ideas = ET_generic_modern_economics
         set_country_flag = ET_flag_country_newera_1
     }
-
-        add_ideas = ET_generic_modern_economics
-        set_country_flag = ET_flag_country_newera_1
-    }
 }
 
 ET_set_post_war_scenario = {
