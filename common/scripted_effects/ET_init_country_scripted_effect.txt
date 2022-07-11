@@ -169,8 +169,7 @@ ET_set_generic_1960_tech = {
     }
 }
 
-### Nations
-
+# EGY Egypt
 ET_Init_Country_EGY = {
     set_variable = { ET_var_current_date = date }
     EGY = {
@@ -234,6 +233,7 @@ ET_Init_Country_EGY_obb = {
     }
 }
 
+# VIN Vietnam
 ET_Init_Country_VIN = {
     VIN = {
         set_variable = { ET_var_current_date = date }
