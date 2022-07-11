@@ -24,7 +24,7 @@ Scripts effects and triggers should be named what they do.
 
 **Bad:**
 ```
-ET_give_add_political_power = { add_political_power = 10 }
+ET_give_political_power_to_nation = { add_political_power = 10 }
 ```
 **Good:**
 ```
