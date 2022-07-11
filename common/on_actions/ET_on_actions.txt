@@ -11,6 +11,7 @@ on_actions = {
 					date > 1945.01.01
 				}
 				every_country = {
+					limit = { always = yes }
 					THIS = {
 						if = {
 							limit = { is_major = yes }
@@ -23,9 +24,12 @@ on_actions = {
 				}
 				set_global_flag = ET_flag_global_newera_1
 				set_global_flag = ET_flag_global_neweconomic_1
+				
+				# Determin Scenario
+				ET_set_post_war_scenario = yes
 			}
-			FROM = {
 
+			FROM = {
 				set_temp_variable = { ET_threat_neg = 0 }
 				subtract_from_temp_variable = { ET_threat_neg = has_added_tension_amount }
 				
