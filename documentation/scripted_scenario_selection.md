@@ -10,7 +10,7 @@ This is a historical Cold War scenario. Experience a Cold War scenario within th
 The scenario picker is triggered on a peace conference when its triggered passed year 1945.
 
 ### Flags
-- `ET_flag_country_newera` > Added on the new era desission.
+- `ET_flag_country_newera` > Added on the new era decision is pressed.
 - `ET_flag_global_newera` > Added when a new era is triggerd.
 - `ET_flag_global_scenario_1` > Is Scenario 1 name.
 
