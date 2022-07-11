@@ -20,7 +20,7 @@ The name structure for mod files are `[TAG]_[WhatEverItIsSupposeToDo](_[TYPE]).t
 
 
 ## scripted
-Scripts effects and triggers should be named what they do.
+Scripts effects and triggers should be named what they do and be generic.
 
 **Bad:**
 ```
@@ -30,3 +30,5 @@ ET_give_political_power_to_nation = { add_political_power = 10 }
 ```
 ET_add_political_power_10 = { add_political_power = 10 }
 ```
+
+`ET_Init_Something` Can be used to initialize a system.
