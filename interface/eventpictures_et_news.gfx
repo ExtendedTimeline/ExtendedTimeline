@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_news_ET_peaceinworld"
+		texturefile = "gfx/event_pictures/ET_news_S1_PeaceInEurope.dds"
+	}
+}

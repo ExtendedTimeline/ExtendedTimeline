@@ -1,6 +1,6 @@
 ET_debug_decisions = {
 	ET_next_era = {
-		icon = generic_research
+		icon = generic_decision
 
 		available = {
 			NOT = { has_global_flag = ET_flag_global_newera_1 }
@@ -24,7 +24,7 @@ ET_debug_decisions = {
 	}
 
 	ET_remove_era = {
-		icon = generic_research
+		icon = generic_decision
 
 		available = {
 			has_global_flag = ET_flag_global_newera_1
@@ -47,8 +47,8 @@ ET_debug_decisions = {
 		}
 	}
 
-	ET_remove_newera_flags = {
-		icon = generic_research
+	ET_remove_newera_country_flags = {
+		icon = generic_decision
 
 		available = {
 			has_country_flag = ET_flag_country_newera_1
@@ -62,7 +62,7 @@ ET_debug_decisions = {
 		cost = 0
 
 		complete_effect = {
-			clr_country_flag = ET_flag_country_newera_1
+			clr_country_flag = ET_flag_country_newera_1 
 		}
 
 		ai_will_do = {
@@ -72,7 +72,7 @@ ET_debug_decisions = {
 
 	ET_other_test = {
 
-		icon = generic_research
+		icon = generic_decision
 
 		available = {
 		}
