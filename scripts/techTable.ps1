@@ -9,6 +9,8 @@
 # .\TechTable.ps1 | where "Techfile" -eq "infantry.txt" | where "Categories" -imatch "infantry_tech"
 # .\TechTable.ps1 | where "Techfile" -eq "infantry.txt" | where "Categories" -imatch "infantry_tech" | ft
 # .\TechTable.ps1 | where "Techfile" -eq "infantry.txt" | where "Categories" -imatch "infantry_tech" | ft Name,Unlocks,ResearchCost,Year,Categories
+#
+# .\TechTable.ps1 | Export-Csv -Path .\AllTech.csv
 
 $Source               = "$ENV:USERPROFILE\Repositories\HoI4\!Workshop\2677872257\"
 $Source               = "C:\Users\andre\Repositories\HoI4\UTNH\"
