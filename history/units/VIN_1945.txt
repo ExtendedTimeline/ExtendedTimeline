@@ -3,123 +3,27 @@
 instant_effect = {
     set_equipment_fraction = 0
 
-    add_equipment_to_stockpile = {
-        type = infantry_equipment_5
-        amount = 200
-        producer = FRA
-    }
-    add_equipment_to_stockpile = {
-        type = infantry_equipment_4
-        amount = 200
-        producer = FRA
-    }
-    add_equipment_to_stockpile = {
-        type = infantry_equipment_3
-        amount = 2000
-        producer = FRA
-    }
-    add_equipment_to_stockpile = {
-        type = infantry_equipment_2
-        amount = 3000
-        producer = FRA
-    }
+    # Add FRA equipment
+    FRA = { ET_add_colonial_power_infantry_equipment = yes }
+    FRA = { ET_add_colonial_power_support_equipment = yes }
+    FRA = { ET_add_colonial_power_motorized_equipment = yes }
+    FRA = { ET_add_colonial_power_armored_car_equipment = yes }
 
-    add_equipment_to_stockpile = {
-        type = infantry_equipment_5
-        amount = 100
-        producer = JAP
-    }
-    add_equipment_to_stockpile = {
-        type = infantry_equipment_4
-        amount = 100
-        producer = JAP
-    }
-    add_equipment_to_stockpile = {
-        type = infantry_equipment_3
-        amount = 1000
-        producer = JAP
-    }
-    add_equipment_to_stockpile = {
-        type = infantry_equipment_2
-        amount = 1500
-        producer = JAP
-    }
+    FRA = { ET_add_colonial_power_artillery_equipment = yes }
+    FRA = { ET_add_colonial_power_anti_tank_equipment = yes }
+    FRA = { ET_add_colonial_power_anti_air_equipment = yes }
+    FRA = { ET_add_colonial_power_rocket_artillery_equipment = yes }
 
-    add_equipment_to_stockpile = {
-        type = anti_air_equipment_2
-        amount = 50
-        producer = FRA
-    }
-    add_equipment_to_stockpile = {
-        type = anti_air_equipment_3
-        amount = 50
-        producer = FRA
-    }
+    # Add JAP equipment
+    JAP = { ET_add_colonial_power_infantry_equipment = yes }
+    JAP = { ET_add_colonial_power_support_equipment = yes }
+    JAP = { ET_add_colonial_power_motorized_equipment = yes }
+    JAP = { ET_add_colonial_power_armored_car_equipment = yes }
 
-    add_equipment_to_stockpile = {
-        type = anti_air_equipment_2
-        amount = 50
-        producer = JAP
-    }
-    add_equipment_to_stockpile = {
-        type = anti_air_equipment_3
-        amount = 50
-        producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-        type = artillery_equipment_2
-        amount = 500
-        producer = FRA
-    }
-    add_equipment_to_stockpile = {
-        type = artillery_equipment_2
-        amount = 300
-        producer = JAP
-    }
-    add_equipment_to_stockpile = {
-        type = artillery_equipment_3
-        amount = 200
-        producer = FRA
-    }
-    add_equipment_to_stockpile = {
-        type = artillery_equipment_3
-        amount = 200
-        producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-        type = anti_tank_equipment_2
-        amount = 200
-        producer = FRA
-    }
-    add_equipment_to_stockpile = {
-        type = anti_tank_equipment_2
-        amount = 100
-        producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-        type = support_equipment_1
-        amount = 400
-        producer = FRA
-    }
-    add_equipment_to_stockpile = {
-        type = support_equipment_1
-        amount = 400
-        producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-        type = motorized_equipment_1
-        amount = 600
-        producer = JAP
-    }
-    add_equipment_to_stockpile = {
-        type = motorized_equipment_1
-        amount = 600
-        producer = FRA
-    }
+    JAP = { ET_add_colonial_power_artillery_equipment = yes }
+    JAP = { ET_add_colonial_power_anti_tank_equipment = yes }
+    JAP = { ET_add_colonial_power_anti_air_equipment = yes }
+    JAP = { ET_add_colonial_power_rocket_artillery_equipment = yes }
 
     add_equipment_to_stockpile = {
         type = train_equipment_2
