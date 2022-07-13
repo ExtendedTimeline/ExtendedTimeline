@@ -3,11 +3,20 @@ on_actions = {
 		effect = {
 			if = { # Opportunisticall Independence
 				limit = {
-					date > 1945.01.01
-					date < 1965.01.01
+					OR = {
+						date > 1945.01.01
+						has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+					}
+					date < 1980.01.01
+				}
+				country_event = {
+					id = ET_Decolonization_Init.0
 				}
 				country_event = {
 					id = ET_Decolonization_Init.1
+				}
+				country_event = {
+					id = ET_Decolonization_Init.2
 				}
 			}
 		}

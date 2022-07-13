@@ -1,0 +1,25 @@
+add_namespace = ET_Independence_Gambia # GAM
+
+country_event = { 
+    id = ET_Independence_Gambia.0
+    title = ET_Independence_Gambia.0.t
+    desc = ET_Independence_Gambia.0.desc
+
+    is_triggered_only = yes
+    
+    immediate = {
+    }
+
+    option = { # Release
+        name = ET_Independence_Gambia.0.a
+        release_on_controlled = GAM
+    }
+    option = { # Dont Release
+        name = ET_Independence_Gambia.0.b
+    }
+    option = { # Play as
+        name = ET_Independence_Gambia.0.c
+        release_on_controlled = GAM
+        GAM = { change_tag_from = ROOT }
+    }
+}

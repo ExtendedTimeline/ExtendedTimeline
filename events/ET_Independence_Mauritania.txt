@@ -1,0 +1,25 @@
+add_namespace = ET_Independence_Mauritania # MRT
+
+country_event = { 
+    id = ET_Independence_Mauritania.0
+    title = ET_Independence_Mauritania.0.t
+    desc = ET_Independence_Mauritania.0.desc
+
+    is_triggered_only = yes
+    
+    immediate = {
+    }
+
+    option = { # Release
+        name = ET_Independence_Mauritania.0.a
+        release_on_controlled = MRT
+    }
+    option = { # Dont Release
+        name = ET_Independence_Mauritania.0.b
+    }
+    option = { # Play as
+        name = ET_Independence_Mauritania.0.c
+        release_on_controlled = MRT
+        MRT = { change_tag_from = ROOT }
+    }
+}

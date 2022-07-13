@@ -1,0 +1,29 @@
+add_namespace = ET_Independence_Vietnam # VIN
+
+country_event = { 
+    id = ET_Independence_Vietnam.0
+    title = ET_Independence_Vietnam.0.t
+    desc = ET_Independence_Vietnam.0.desc
+
+    is_triggered_only = yes
+    
+    immediate = {
+        release = VIN
+        VIN = { ET_Init_Country_VIN_obb = yes }
+    }
+
+    option = { # Do nothing
+        name = ET_Independence_Vietnam.0.a
+    }
+    option = { # Stop this from happening
+        name = ET_Independence_Vietnam.0.b
+        declare_war_on = {
+            target = VIN
+            type = annex_everything
+        }
+    }
+    option = { # Play as
+        name = ET_Independence_Vietnam.0.c
+        VIN = { change_tag_from = ROOT }
+    }
+}

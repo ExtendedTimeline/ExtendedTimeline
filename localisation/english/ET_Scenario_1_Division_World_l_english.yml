@@ -1,6 +1,11 @@
 ﻿l_english:
 ET_S1_Division_World_Historical_TT:0 "§LWill lead to a historical outcome§!"
 
+ET_News_Scenario_1.0.t:0 "PEACE!"
+ET_News_Scenario_1.0.desc:0 "After years of war, destruction and thousands of deaths and millions of displaced people the world is finally at peace.\n\nPeople are celebrating in every major city and every little town and on the former battlegrounds, while in backrooms the maps of the new world are being drawn by the victorious powers. Peace at last! \n\nNow it is up to the victorius powers to shape the new world order, one that hopefully leads to long lasting peace."
+ET_News_Scenario_1.0.a:0 "Finally peace! The fascist are defeated!"
+ET_News_Scenario_1.0.b:0 "Finally peace! But what will this leave us?!"
+
 ET_S1_Division_Europe.1.t:0 "Potsdam Agreement - Poland"
 ET_S1_Division_Europe.1.desc:0 "As a occupying power during the Yalta Conference have agreed to give Poland to the Soviet Union."
 ET_S1_Division_Europe.1.a:0 "Transfer Poland to Soviet Union"

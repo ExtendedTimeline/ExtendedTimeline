@@ -1,9 +1,57 @@
-add_namespace = ET_Independence_Egypt
+add_namespace = ET_Independence_Egypt # EGY
 
-country_event = { #0: Suez Crisis - 01 October 1951
+country_event = { #0: Anti-colonial sentiment in Egypt
     id = ET_Independence_Egypt.0
     title = ET_Independence_Egypt.0.t
     desc = ET_Independence_Egypt.0.desc
+
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            country_event = {
+                id = ET_Independence_Egypt.0
+                days = 14
+            }
+            446 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            447 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            452 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            453 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            456 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+            457 = {
+                if = { limit = { resistance < 20 } add_resistance = 20 }
+                if = { limit = { compliance > 20 } add_compliance = -25 }
+            }
+        }
+    }
+    
+    option = {
+        name = ET_Independence_Egypt.1.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+country_event = { #1: Suez Crisis - 01 October 1951
+    id = ET_Independence_Egypt.1
+    title = ET_Independence_Egypt.1.t
+    desc = ET_Independence_Egypt.1.desc
 
     is_triggered_only = yes
     
@@ -17,8 +65,11 @@ country_event = { #0: Suez Crisis - 01 October 1951
     immediate = {
     }
 
-    option = { #1>  Refuse to leave the Suez Canal and bolster defences
-        name = ET_Independence_Egypt.0.a
+    option = { #2>  Refuse to leave the Suez Canal and bolster defences
+        name = ET_Independence_Egypt.1.a
+        ai_chance = {
+            base = 1
+        }
         446 = {
             if = { limit = { resistance < 20 } add_resistance = 5 }
             if = { limit = { compliance > 20 } add_compliance = -10 }
@@ -44,16 +95,16 @@ country_event = { #0: Suez Crisis - 01 October 1951
             if = { limit = { compliance > 20 } add_compliance = -10 }
         }
         country_event = {
-            id = ET_Independence_Egypt.1
+            id = ET_Independence_Egypt.2
             days = 60
         }
     }
 }
 
-country_event = { #1: Suez Crisis - 24 January 1952 "guerrillas staged an attack"
-    id = ET_Independence_Egypt.1
-    title = ET_Independence_Egypt.1.t
-    desc = ET_Independence_Egypt.1.desc
+country_event = { #2: Suez Crisis - 24 January 1952 "guerrillas staged an attack"
+    id = ET_Independence_Egypt.2
+    title = ET_Independence_Egypt.2.t
+    desc = ET_Independence_Egypt.2.desc
 
     is_triggered_only = yes
     
@@ -73,19 +124,22 @@ country_event = { #1: Suez Crisis - 24 January 1952 "guerrillas staged an attack
     immediate = {
     }
 
-    option = { #2> Retaliate
-        name = ET_Independence_Egypt.1.a
+    option = { #3> Retaliate
+        name = ET_Independence_Egypt.2.a
+        ai_chance = {
+            base = 1
+        }
         country_event = {
-            id = ET_Independence_Egypt.2
+            id = ET_Independence_Egypt.3
             days = 1
         }
     }
 }
 
-country_event = { #2: Suez Crisis - 25 January 1952 "In response British sent tanks"
-    id = ET_Independence_Egypt.2
-    title = ET_Independence_Egypt.2.t
-    desc = ET_Independence_Egypt.2.desc
+country_event = { #3: Suez Crisis - 25 January 1952 "In response British sent tanks"
+    id = ET_Independence_Egypt.3
+    title = ET_Independence_Egypt.3.t
+    desc = ET_Independence_Egypt.3.desc
 
     is_triggered_only = yes
     
@@ -117,7 +171,10 @@ country_event = { #2: Suez Crisis - 25 January 1952 "In response British sent ta
     }
 
     option = {
-        name = ET_Independence_Egypt.2.a
+        name = ET_Independence_Egypt.3.a
+        ai_chance = {
+            base = 1
+        }
 
         446 = {
             damage_building = {
@@ -127,16 +184,16 @@ country_event = { #2: Suez Crisis - 25 January 1952 "In response British sent ta
         }
 
         country_event = {
-            id = ET_Independence_Egypt.3
+            id = ET_Independence_Egypt.4
             days = 90
         }
     }
 }
 
-country_event = { #3: Egyptian Coup d'etat - 23 July 1952 "Revolution"
-    id = ET_Independence_Egypt.3
-    title = ET_Independence_Egypt.3.t
-    desc = ET_Independence_Egypt.3.desc
+country_event = { #4: Egyptian Coup d'etat - 23 July 1952 "Revolution"
+    id = ET_Independence_Egypt.4
+    title = ET_Independence_Egypt.4.t
+    desc = ET_Independence_Egypt.4.desc
     
     trigger = {
         OR = {
@@ -152,25 +209,25 @@ country_event = { #3: Egyptian Coup d'etat - 23 July 1952 "Revolution"
         hidden_effect = {
             ITA = {
                 news_event = {
-                    id = ET_Independence_Egypt.4
+                    id = ET_Independence_Egypt.5
                     days = 1
                 }
             }
             FRA = {
                 news_event = {
-                    id = ET_Independence_Egypt.4
+                    id = ET_Independence_Egypt.5
                     days = 1
                 }
             }
             USA = {
                 news_event = {
-                    id = ET_Independence_Egypt.4
+                    id = ET_Independence_Egypt.5
                     days = 1
                 }
             }
             SOV = {
                 news_event = {
-                    id = ET_Independence_Egypt.4
+                    id = ET_Independence_Egypt.5
                     days = 1
                 }
             }
@@ -178,29 +235,32 @@ country_event = { #3: Egyptian Coup d'etat - 23 July 1952 "Revolution"
     }
 
     option = {
-        name = ET_Independence_Egypt.3.a
+        name = ET_Independence_Egypt.4.a
+        ai_chance = {
+            base = 1
+        }
         hidden_effect = {
             country_event = {
-                id = ET_Independence_Egypt.5
+                id = ET_Independence_Egypt.6
                 days = 3
             }
         }
     }
     option = {
-        name = ET_Independence_Egypt.3.b
+        name = ET_Independence_Egypt.4.b
         hidden_effect = {
             country_event = {
-                id = ET_Independence_Egypt.5
+                id = ET_Independence_Egypt.6
                 days = 3
             }
         }
     }
 }
 
-news_event = {    #4: Coup d'etat In Egypt
-    id = ET_Independence_Egypt.4
-    title = ET_Independence_Egypt.4.t
-    desc = ET_Independence_Egypt.4.desc
+news_event = {    #5: Coup d'etat In Egypt
+    id = ET_Independence_Egypt.5
+    title = ET_Independence_Egypt.5.t
+    desc = ET_Independence_Egypt.5.desc
 
     is_triggered_only = yes
     
@@ -209,18 +269,20 @@ news_event = {    #4: Coup d'etat In Egypt
     }
 
     immediate = {
-        
     }
 
     option = {
-        name = ET_Independence_Egypt.4.a
+        name = ET_Independence_Egypt.5.a
+        ai_chance = {
+            base = 1
+        }
     }
 }
 
-country_event = { #5: Establishment of the Republic of Egypt - 23 July 1952 "Independence"
-    id = ET_Independence_Egypt.5
-    title = ET_Independence_Egypt.5.t
-    desc = ET_Independence_Egypt.5.desc
+country_event = { #6: Establishment of the Republic of Egypt - 23 July 1952 "Independence"
+    id = ET_Independence_Egypt.6
+    title = ET_Independence_Egypt.6.t
+    desc = ET_Independence_Egypt.6.desc
     
     trigger = {
         OR = {
@@ -244,11 +306,18 @@ country_event = { #5: Establishment of the Republic of Egypt - 23 July 1952 "Ind
     }
 
     option = {
-        name = ET_Independence_Egypt.5.a
+        name = ET_Independence_Egypt.6.a
+        ai_chance = {
+            base = 1
+        }
+        
         add_stability = -0.05
     }
     option = {
-        name = ET_Independence_Egypt.5.b
+        name = ET_Independence_Egypt.6.b
+        ai_chance = {
+            base = 0
+        }
         trigger = {
             has_stability > 0.25
             has_war_support > 0.10
@@ -263,16 +332,22 @@ country_event = { #5: Establishment of the Republic of Egypt - 23 July 1952 "Ind
     }
     
     option = {
-        name = ET_Independence_Egypt.5.c
+        name = ET_Independence_Egypt.6.c
+        ai_chance = {
+            base = 0
+        }
         add_stability = -0.05
 
         EGY = { change_tag_from = ROOT }
     }
     option = {
-        name = ET_Independence_Egypt.5.d
+        name = ET_Independence_Egypt.6.d
         trigger = {
             has_stability > 0.25
             has_war_support > 0.10
+        }
+        ai_chance = {
+            base = 0
         }
         add_stability = -0.0 5
         add_political_power = -25

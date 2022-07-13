@@ -1,21 +1,8 @@
-# add:
-# 		every_country = {
-# 			limit = { always = yes }
-# 			country_event = {
-# 				id = ET_Decolonization_Init.0
-# 				days = 300
-# 			}
-# 		}
-# 
-# to
-#       /common/scripted_effects/ET_focus_scripted_effect.txt:ET_set_new_era_effect
-
 add_namespace = ET_Decolonization_Init
 add_namespace = ET_Decolonization_Africa
 add_namespace = ET_Decolonization_Asia
 
-# All natiosn recive this event once when the new era is triggerd.
-country_event = { # Initialize Anti-colonialism sentiment
+country_event = { # Forced Independence
     id = ET_Decolonization_Init.0
 
     is_triggered_only = yes
@@ -23,7 +10,7 @@ country_event = { # Initialize Anti-colonialism sentiment
     hidden = yes
 
     immediate = {
-        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Initialize Anti-colonialism sentiment" }
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking Forced Independence" }
 
         # #
         #  Europe
@@ -40,9 +27,13 @@ country_event = { # Initialize Anti-colonialism sentiment
         # #
         #  Africa
         # #
-
-        if = { # Egypt (ET_Decolonization_Africa.1)
+        if = { # Egypt (ET_Decolonization_Africa.1) [18 June 1953] ENG
             limit = {
+                not = { has_global_flag = ET_flag_global_free_EGY }
+                OR = {
+                    date > 1953.05.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
                 NOT = { original_tag = EGY }
                 OR = {
                     controls_state = 446
@@ -53,9 +44,10 @@ country_event = { # Initialize Anti-colonialism sentiment
                     controls_state = 457
                 }
             }
+            set_global_flag = ET_flag_global_free_EGY
             country_event = {
                 id = ET_Decolonization_Africa.1
-                days = 14
+                days = 18
             }
         }
 
@@ -98,15 +90,21 @@ country_event = { # Opportunisticall Independence
         # #
         if = { # Vietnam (ET_Decolonization_Asia.1) [December 19, 1946]
             limit = {
-                date > 1946.11.20
+                not = { has_global_flag = ET_flag_global_free_VIN }
+                OR = {
+                    date > 1946.11.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
                 NOT = { country_exists = VIN }
-                # NOT = { country_exists = SVI } # TODO Create South Vietnam
+                # NOT = { country_exists = SVI } # TODO Make nation South Vietnam
 
                 OR = { # France Controll Statets
                     FRA = {
+                        controls_state = 671
                         controls_state = 286
                     }
                     VIC = {
+                        controls_state = 671
                         controls_state = 286
                     }
                 }
@@ -116,78 +114,756 @@ country_event = { # Opportunisticall Independence
                         resistance > 10
                         compliance < 25
                     }
+                    271 = {
+                        resistance > 10
+                        compliance < 25
+                    }
                 }
             }
+            set_global_flag = ET_flag_global_free_VIN
             ET_Init_Country_VIN = yes
             country_event = {
                 id = ET_Decolonization_Asia.1
+                days = 19
+            }
+        }
+    }
+
+    option = {
+    }
+}
+
+country_event = { # Releases
+    id = ET_Decolonization_Init.2
+
+    is_triggered_only = yes
+    fire_only_once = no
+    hidden = yes
+
+    immediate = {
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking for United Nation releases..." }
+        # #
+        #  Europe
+        # #
+
+        # #
+        #  North America
+        # #
+
+        # #
+        #  South America
+        # #
+
+        # #
+        #  Africa
+        #  https://en.wikipedia.org/wiki/List_of_sovereign_states_by_date_of_formation#Africa
+        # #
+        if = { # Algeria        [3 July 1962] FRA*
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_ALG }
+                OR = {
+                    date > 1962.06.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = ANG }
+                OR = {
+                    controls_state = 459
+                    controls_state = 460
+                    controls_state = 513
+                }
+            }
+            set_global_flag = ET_flag_global_free_ALG
+            country_event = {
+                id = ET_Independence_Algeria.0
+                days = 3
+            }
+        }
+        if = { # Angola         [11 November 1975] POR
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_ANG }
+                OR = {
+                    date > 1975.10.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = ANG }
+                controls_state = 540
+            }
+            set_global_flag = ET_flag_global_free_ANG
+            country_event = {
+                id = ET_Independence_Angola.0
+                days = 11
+            }
+        }
+        if = { # Benin          [1 August 1960] FRA # TODO Make nation Benin
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_BNI }
+                OR = {
+                    date > 1960.07.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = BNI }
+                controls_state = 776
+            }
+            set_global_flag = ET_flag_global_free_BNI
+            country_event = {
+                id = ET_Independence_Benin.0
+                days = 1
+            }
+        }
+        if = { # Botswana       [30 September 1966] ENG
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_BOT }
+                OR = {
+                    date > 1966.08.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = BOT }
+                controls_state = 542
+            }
+            set_global_flag = ET_flag_global_free_BOT
+            country_event = {
+                id = ET_Independence_Botswana.0
+                days = 30
+            }
+        }
+        if = { # Burkina Faso   [5 August 1960] FRA # TODO Make nation Burkina Faso
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_BUF }
+                OR = {
+                    date > 1960.07.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = BOT }
+                controls_state = 542
+            }
+            set_global_flag = ET_flag_global_free_BUF
+            country_event = {
+                id = ET_Independence_BurkinaFaso.0
+                days = 5
+            }
+        }
+        if = { # Burundi        [1 July 1962] BEL
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_BRD }
+                OR = {
+                    date > 1962.06.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = BOT }
+                controls_state = 769
+            }
+            set_global_flag = ET_flag_global_free_BRD
+            country_event = {
+                id = ET_Independence_Burundi.0
+                days = 1
+            }
+        }
+        if = { # Cabo Verde     [5 July 1975] POR
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_CAE }
+                OR = {
+                    date > 1975.06.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = CAE }
+                controls_state = 769
+            }
+            set_global_flag = ET_flag_global_free_CAE
+            country_event = {
+                id = ET_Independence_CaboVerde.0
+                days = 5
+            }
+        }
+        if = { # Cameroon       [1 January 1960] FRA
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_CMR }
+                OR = {
+                    date > 1959.12.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = CMR }
+                controls_state = 773
+            }
+            set_global_flag = ET_flag_global_free_CMR
+            country_event = {
+                id = ET_Independence_CaboVerde.0
+                days = 1
+            }
+        }
+        if = { # Central African Republic [13 August 1960] FRA
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_CAR }
+                OR = {
+                    date > 1960.07.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = CAR }
+                controls_state = 660
+            }
+            set_global_flag = ET_flag_global_free_CAR
+            country_event = {
+                id = ET_Independence_CentralAfricanRepublic.0
+                days = 13
+            }
+        }
+        if = { # Chad           [11 August 1960] FRA
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_CHA }
+                OR = {
+                    date > 1960.07.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = CHA }
+                OR = {
+                    controls_state = 775
+                    controls_state = 774
+                }
+            }
+            set_global_flag = ET_flag_global_free_CHA
+            country_event = {
+                id = ET_Independence_Chad.0
+                days = 11
+            }
+        }
+        if = { # Comoros        [6 July 1975] FRA # TODO Make nation Comoros
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_CMS }
+                OR = {
+                    date > 1975.06.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = CMS }
+                controls_state = 660
+            }
+            set_global_flag = ET_flag_global_free_CMS
+            country_event = {
+                id = ET_Independence_Comoros.0
+                days = 6
+            }
+        }
+        if = { # Republic of Congo [30 June 1960] BEL
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_RCG }
+                OR = {
+                    date > 1960.05.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = RCG }
+                OR = {
+                    controls_state = 295
+                    controls_state = 538
+                    controls_state = 718
+                }
+            }
+            set_global_flag = ET_flag_global_free_RCG
+            country_event = {
+                id = ET_Independence_RepublicOfCongo.0
+                days = 30
+            }
+        }
+        if = { # Djibouti       [27 June 1977] FRA
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_DJI }
+                OR = {
+                    date > 1977.05.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = DJI }
+                controls_state = 268
+            }
+            set_global_flag = ET_flag_global_free_DJI
+            country_event = {
+                id = ET_Independence_Djibouti.0
+                days = 27
+            }
+        }
+        if = { # Equatorial Guinea [12 October 1968] SPA
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_EQG }
+                OR = {
+                    date > 1968.09.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = EQG }
+                controls_state = 297
+            }
+            set_global_flag = ET_flag_global_free_EQG
+            country_event = {
+                id = ET_Independence_EquatorialGuinea.0
+                days = 12
+            }
+        }
+        if = { # Eritrea        [27 April 1993]
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_ERI }
+                OR = {
+                    date > 1993.03.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = ERI }
+                controls_state = 538
+            }
+            set_global_flag = ET_flag_global_free_ERI
+            country_event = {
+                id = ET_Independence_Eritrea.0
+                days = 27
+            }
+        }
+        #if = { # Eswatini       [6 September 1968] ENG
+        #    limit = {
+        #        not = { has_global_flag = ET_flag_global_free_ESW }
+        #        OR = {
+        #            date > 1968.08.01
+        #            has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+        #        }
+        #        NOT = { original_tag = ESW }
+        #        controls_state = XXX
+        #    }
+        #    set_global_flag = ET_flag_global_free_ESW
+        #    country_event = {
+        #        id = ET_Independence_Eswatini.0
+        #        days = 6
+        #    }
+        #}
+        if = { # Ethiopia       [21 August 1995]
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_ETH }
+                OR = {
+                    date > 1995.07.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = ETH }
+                controls_state = 271
+            }
+            set_global_flag = ET_flag_global_free_ETH
+            country_event = {
+                id = ET_Independence_Ethiopia.0
+                days = 21
+            }
+        }
+        if = { # Gabon          [17 August 1960] FRA
+             limit = {
+                not = { has_global_flag = ET_flag_global_free_GAB }
+                OR = {
+                    date > 1960.07.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = GAB }
+                controls_state = 539
+            }
+            set_global_flag = ET_flag_global_free_GAB
+            country_event = {
+                id = ET_Independence_Gabon.0
+                days = 17
+            }
+        }
+        if = { # Gambia         [18 February 1965] ENG
+             limit = {
+                not = { has_global_flag = ET_flag_global_free_GAM }
+                OR = {
+                    date > 1965.01.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = GAM }
+                controls_state = 701
+            }
+            set_global_flag = ET_flag_global_free_GAM
+            country_event = {
+                id = ET_Independence_Gambia.0
                 days = 18
             }
         }
-    }
-
-    option = {
-    }
-}
-
-country_event = { # Egypt
-    id = ET_Decolonization_Africa.1
-    title = ET_Decolonization_Africa.1.t
-    desc = ET_Decolonization_Africa.1.desc
-
-    is_triggered_only = yes
-
-    immediate = {
-        hidden_effect = {
+        if = { # Ghana          [6 March 1957] ENG
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_GHA }
+                OR = {
+                    date > 1957.02.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = GHA }
+                controls_state = 274
+            }
+            set_global_flag = ET_flag_global_free_GHA
             country_event = {
-                id = ET_Independence_Egypt.0
-                days = 14
-            }
-            446 = {
-                if = { limit = { resistance < 20 } add_resistance = 20 }
-                if = { limit = { compliance > 20 } add_compliance = -25 }
-            }
-            447 = {
-                if = { limit = { resistance < 20 } add_resistance = 20 }
-                if = { limit = { compliance > 20 } add_compliance = -25 }
-            }
-            452 = {
-                if = { limit = { resistance < 20 } add_resistance = 20 }
-                if = { limit = { compliance > 20 } add_compliance = -25 }
-            }
-            453 = {
-                if = { limit = { resistance < 20 } add_resistance = 20 }
-                if = { limit = { compliance > 20 } add_compliance = -25 }
-            }
-            456 = {
-                if = { limit = { resistance < 20 } add_resistance = 20 }
-                if = { limit = { compliance > 20 } add_compliance = -25 }
-            }
-            457 = {
-                if = { limit = { resistance < 20 } add_resistance = 20 }
-                if = { limit = { compliance > 20 } add_compliance = -25 }
+                id = ET_Independence_Ghana.0
+                days = 18
             }
         }
+        if = { # Guinea         [2 October 1958] FRA
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_GNA }
+                OR = {
+                    date > 1958.09.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = GNA }
+                controls_state = 780
+            }
+            set_global_flag = ET_flag_global_free_GNA
+            country_event = {
+                id = ET_Independence_Guinea.0
+                days = 2
+            }
+        }
+        if = { # Guinea-Bissau  [24 September 1973] POR*
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_GNB }
+                OR = {
+                    date > 1973.08.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = GNB }
+                controls_state = 296
+            }
+            set_global_flag = ET_flag_global_free_GNB
+            country_event = {
+                id = ET_Independence_GuineaBissau.0
+                days = 24
+            }
+        }
+        if = { # Ivory Coast    [4 December 1958] > French Community > [26 June 1960]
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_IVO }
+                OR = {
+                    date > 1973.11.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = IVO }
+                controls_state = 296
+            }
+            set_global_flag = ET_flag_global_free_IVO
+            country_event = {
+                id = ET_Independence_IvoryCoast.0
+                days = 4
+            }
+        }
+        if = { # Kenya          [12 December 1963] ENG
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_KEN }
+                OR = {
+                    date > 1963.11.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = KEN }
+                controls_state = 547
+            }
+            set_global_flag = ET_flag_global_free_KEN
+            country_event = {
+                id = ET_Independence_Kenya.0
+                days = 12
+            }
+        }
+        #if = { # Lesotho        [4 October 1966] ENG*
+        #    limit = {
+        #        not = { has_global_flag = ET_flag_global_free_LES }
+        #        OR = {
+        #            date > 1966.09.01
+        #            has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+        #        }
+        #        NOT = { original_tag = LES }
+        #        controls_state = XXX
+        #    }
+        #    set_global_flag = ET_flag_global_free_LES
+        #    country_event = {
+        #        id = ET_Independence_Lesotho.0
+        #        days = 4
+        #    }
+        #}
+        if = { # Libya          [24 December 1951] FRA ENG (ITA)*
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_LBA }
+                OR = {
+                    date > 1951.11.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = LBA }
+                OR = {
+                    controls_state = 448
+                    controls_state = 661
+                    controls_state = 449
+                    controls_state = 662
+                    controls_state = 450
+                    controls_state = 451
+                    controls_state = 663
+                }
+            }
+            set_global_flag = ET_flag_global_free_LBA
+            country_event = {
+                id = ET_Independence_Libya.0
+                days = 24
+            }
+        }
+        if = { # Madagascar     [14 October 1958] > French Community > [26 June 1960]
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_MAD }
+                OR = {
+                    date > 1951.11.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = MAD }
+                controls_state = 543
+            }
+            set_global_flag = ET_flag_global_free_MAD
+            country_event = {
+                id = ET_Independence_Madagascar.0
+                days = 14
+            }
+        }
+        if = { # Malawi         [6 July 1964] ENG
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_MLW }
+                OR = {
+                    date > 1964.06.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = MLW }
+                controls_state = 770
+            }
+            set_global_flag = ET_flag_global_free_MLW
+            country_event = {
+                id = ET_Independence_Malawi.0
+                days = 6
+            }
+        }
+        if = { # Mali           [25 November 1958] FRA > puppet > [22 September 1960]
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_MLI }
+                OR = {
+                    date > 1958.10.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = MLI }
+                controls_state = 770
+            }
+            set_global_flag = ET_flag_global_free_MLI
+            country_event = {
+                id = ET_Independence_Mali.0
+                days = 25
+            }
+        }
+        if = { # Mauritania     [28 November 1960] FRA
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_MTR }
+                OR = {
+                    date > 1960.10.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = MRT }
+                controls_state = 699
+            }
+            set_global_flag = ET_flag_global_free_MRT
+            country_event = {
+                id = ET_Independence_Mauritania.0
+                days = 28
+            }
+        }
+        if = { # Mauritius      [12 March 1968] ENG # TODO Make nation Mauritius
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_MAU }
+                OR = {
+                    date > 1968.02.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = MAU }
+                controls_state = 707
+            }
+            set_global_flag = ET_flag_global_free_MAU
+            country_event = {
+                id = ET_Independence_Mauritius.0
+                days = 12
+            }
+        }
+        if = { # Morocco        [18 November 1955] SPA*
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_MOR }
+                OR = {
+                    date > 1955.10.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = MOR }
+                OR = {
+                    controls_state = 290
+                    controls_state = 461
+                    controls_state = 462
+                    controls_state = 783
+                }
+            }
+            set_global_flag = ET_flag_global_free_MOR
+            country_event = {
+                id = ET_Independence_Morocco.0
+                days = 18
+            }
+        }
+        if = { # Mozambique     [25 June 1975] POR
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_MZB }
+                OR = {
+                    date > 1975.05.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = MZB }
+                controls_state = 544
+            }
+            set_global_flag = ET_flag_global_free_MZB
+            country_event = {
+                id = ET_Independence_Mozambique.0
+                days = 25
+            }
+        }
+        if = { # Namibia        [21 March 1990] South African
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_NMB }
+                OR = {
+                    date > 1990.02.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = NMB }
+                controls_state = 541
+            }
+            set_global_flag = ET_flag_global_free_NMB
+            country_event = {
+                id = ET_Independence_Namibia.0
+                days = 21
+            }
+        }
+        if = { # Niger          [4 December 1958] FRA > French Community > [3 August 1960]
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_NGR }
+                OR = {
+                    date > 1958.11.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = NGR }
+                controls_state = 515
+            }
+            set_global_flag = ET_flag_global_free_NGR
+            country_event = {
+                id = ET_Independence_Niger.0
+                days = 4
+            }
+        }
+        if = { # Nigeria        [3 August 1960] ENG
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_NGA }
+                OR = {
+                    date > 1960.07.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = NGR }
+                controls_state = 515
+            }
+            set_global_flag = ET_flag_global_free_NGA
+            country_event = {
+                id = ET_Independence_Nigeria.0
+                days = 3
+            }
+        }
+        if = { # Congo          [15 August 1960] FRA
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_COG }
+                OR = {
+                    date > 1960.07.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = COG }
+                controls_state = 515
+            }
+            set_global_flag = ET_flag_global_free_COG
+            country_event = {
+                id = ET_Independence_Congo.0
+                days = 15
+            }
+        }
+        if = { # Rwanda         [1 July 1962] BEL
+            limit = {
+                not = { has_global_flag = ET_flag_global_free_RWA }
+                OR = {
+                    date > 1962.06.01
+                    has_global_flag = ET_DEBUG_Ignore_Decolonization_Dates
+                }
+                NOT = { original_tag = RWA }
+                controls_state = 515
+            }
+            set_global_flag = ET_flag_global_free_RWA
+            country_event = {
+                id = ET_Independence_Rwanda.0
+                days = 1
+            }
+        }
+        # >>>>>>>>>>>>>>><<<<<<<<<<<<
+        if = { # São Tomé and Príncipe [12 July 1975] POR
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Senegal        [20 August 1960] FRA
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Seychelles     [29 June 1976] ENG
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Sierra Leone   [27 April 1961] ENG
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Somalia        [1 July 1960] ENG
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Sudan          [1 January 1956] EGY,ENG*
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Tanzania       [9 December 1961] ENG Tanganyika*
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Togo           [30 August 1958] > French Union > [27 April 1960]
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Tunisia        [20 March 1956] FRA
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Uganda         [1 March 1962] ENG > Puppet > [9 October 1962]
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+        if = { # Zambia         [24 October 1964] ENG
+            limit = {
+                date > 1960.1.20
+                #NOT = { country_exists = TAG } #TODO TAG
+            }
+        }
+
+        # #
+        #  Asia
+        # #
+
     }
-    
-    option = {
-        name = ET_Decolonization_Africa.1.a
-    }
-}
 
-# This event is triggerd
-country_event = { #1: Vietnam (Opportunisticall)
-    id = ET_Decolonization_Asia.1
-
-    is_triggered_only = yes
-
-    #trigger = {}
-
-    immediate = {
-        release = VIN
-        VIN = { ET_Init_Country_VIN_obb = yes }
-    }
-    
     option = {
     }
 }

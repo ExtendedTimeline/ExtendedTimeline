@@ -1,0 +1,25 @@
+add_namespace = ET_Independence_Mozambique # MZB
+
+country_event = { 
+    id = ET_Independence_Mozambique.0
+    title = ET_Independence_Mozambique.0.t
+    desc = ET_Independence_Mozambique.0.desc
+
+    is_triggered_only = yes
+    
+    immediate = {
+    }
+
+    option = { # Release
+        name = ET_Independence_Mozambique.0.a
+        release_on_controlled = MZB
+    }
+    option = { # Dont Release
+        name = ET_Independence_Mozambique.0.b
+    }
+    option = { # Play as
+        name = ET_Independence_Mozambique.0.c
+        release_on_controlled = MZB
+        MZB = { change_tag_from = ROOT }
+    }
+}
