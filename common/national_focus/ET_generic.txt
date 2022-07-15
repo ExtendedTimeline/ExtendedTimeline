@@ -265,7 +265,7 @@ focus_tree = {
 
 	focus = { #Coastal Submarines
 		id = ET_Generic_coastal_submarines
-		icon = GFX_ET_Generic_coastal_submarines-20867
+		icon = GFX_goal_generic_navy_submarine
 		x = 5
 		y = 3
 		cost = 10
@@ -285,7 +285,7 @@ focus_tree = {
 
 	focus = { #Open Sea Navy
 		id = ET_Generic_open_sea_navy
-		icon = GFX_ET_Generic_open_sea_navy-404
+		icon = GFX_goal_generic_navy_battleship
 		x = 7
 		y = 1
 		cost = 10
@@ -297,9 +297,9 @@ focus_tree = {
 	}
 
 	
-	focus = { #Battleships
-		id = ET_Generic_battleships
-		icon = GFX_focus_generic_navy_battleship2
+	focus = { #Frigates
+		id = ET_Generic_frigates
+		icon = GFX_focus_generic_cruiser2
 		x = 6
 		y = 2
 		cost = 10
@@ -315,8 +315,8 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { #Frigates
-		id = ET_Generic_frigates
+	focus = { #Frigates Ii
+		id = ET_Generic_frigates_ii
 		icon = GFX_focus_generic_cruiser2
 		x = 6
 		y = 4
@@ -324,7 +324,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = ET_Generic_battleships  }
+		prerequisite = { focus = ET_Generic_frigates  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
@@ -378,7 +378,7 @@ focus_tree = {
 	}
 	focus = { #Nuclear Submarines
 		id = ET_Generic_nuclear_submarines
-		icon = GFX_ET_Generic_nuclear_submarines-20867
+		icon = GFX_goal_generic_navy_submarine
 		x = 7
 		y = 5
 		cost = 10
@@ -793,7 +793,7 @@ focus_tree = {
 
 	focus = { #Democracy
 		id = ET_Generic_democracy
-		icon = GFX_ET_Generic_democracy-427
+		icon = GFX_goal_support_democracy
 		x = 1
 		y = 8
 		cost = 10
@@ -880,7 +880,7 @@ focus_tree = {
 
 	focus = { #National Seal
 		id = ET_Generic_national_seal
-		icon = GFX_ET_Generic_national_seal-428
+		icon = GFX_goal_support_fascism
 		x = 9
 		y = 8
 		cost = 10
@@ -912,7 +912,7 @@ focus_tree = {
 	
 	focus = { #Communism
 		id = ET_Generic_communism
-		icon = GFX_ET_Generic_communism-426
+		icon = GFX_goal_support_communism
 		x = 13
 		y = 8
 		cost = 10
