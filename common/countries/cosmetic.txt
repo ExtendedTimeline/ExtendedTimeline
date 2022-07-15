@@ -803,15 +803,6 @@ SOV_ROME = {
 
 
 # MOD EXTENDED
-
-EGY_Republic = {
-	graphical_culture = middle_eastern_gfx
-	graphical_culture_2d = middle_eastern_2d
-
-	color = rgb { 230 230 70 }
-	color_ui = rgb { 230 230 70 }
-}
-
 VIN_North = {
 	graphical_culture = asian_gfx
 	graphical_culture_2d = asian_2d
