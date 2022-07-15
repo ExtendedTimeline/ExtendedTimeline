@@ -13,14 +13,16 @@ country_event = { #0: Check if eqypt is independet
                 NOT = { has_government = democratic }
                 is_puppet = no
             }
-            country_event = { id = ET_Independence_Egypt.10 }
+            country_event = { id = ET_Independence_Egypt.10 } # TODO: this event chain
+            log = "WIP Event ET Independence_Egypt.10 is supposed to run but don't exist..."
         }
         else_if = {     # Egypt exist and is puppet
             limit = {
                 original_tag = EGY
                 is_puppet = yes
             }
-            country_event = { id = ET_Independence_Egypt.20 }
+            #country_event = { id = ET_Independence_Egypt.20 } # TODO: this event chain
+            log = "WIP Event ET Independence_Egypt.20 is supposed to run but don't exist..."
         }
         else = {        # The "historical" and expected path
             country_event = { id = ET_Independence_Egypt.30 }
