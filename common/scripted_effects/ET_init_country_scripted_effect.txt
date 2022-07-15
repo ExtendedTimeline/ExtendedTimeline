@@ -872,9 +872,7 @@ ET_add_colonial_power_rocket_artillery_equipment = { # add 500
 ET_Init_Country_EGY = {
     set_variable = { ET_var_current_date = date }
     EGY = {
-        set_cosmetic_tag = EGY_Republic
         hidden_effect = {
-
             set_politics = {
                 ruling_party = democratic
                 elections_allowed = no

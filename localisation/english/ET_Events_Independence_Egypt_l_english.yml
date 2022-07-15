@@ -1,19 +1,49 @@
 ﻿l_english:
 ET_Independence_Egypt.30.t:0 "Anti-colonial sentiment in [EGY.GetName]"
 ET_Independence_Egypt.30.desc:0 "A surge of nationalist and anti-[Root.GetAdjectiveCap] sentiment is on the rise in [EGY.GetNonIdeologyName]. Further more a Anti-monarchy sentiments against [EGY.GetLeader]."
-ET_Independence_Egypt.0.a:0 "Worrying"
+ET_Independence_Egypt.30.a:0 "Worrying"
 
 ET_Independence_Egypt.31.t:0 "Election in [EGY.GetName]"
 ET_Independence_Egypt.31.desc:0 "Election in [EGY.GetName] resulted in a landslide victory for the nationalist party Wafd Party. King [EGY.GetLeader] appointed Mostafa El-Nahas as the Prime minister of [EGY.GetNameDef]."
 ET_Independence_Egypt.31.a:0 "Worrying"
 
-ET_Independence_Egypt.32.t:0 "[EGY.GetNonIdeologyName] withdrawl from the Anglo-Egyptian Treaty"
-ET_Independence_Egypt.32.desc:0 "[EGY.GetName] have unilaterally withdrawl from the Anglo-Egyptian Treaty and order all our troops to leave the Suez Canal terretory immediately."
+ET_Independence_Egypt.32.t:0 "[EGY.GetNonIdeologyName] withdrawl from the [Root.GetAdjectiveCap]-[EGY.GetAdjectiveCap] Treaty"
+ET_Independence_Egypt.32.desc:0 "[EGY.GetName] have unilaterally withdrawl from the [Root.GetAdjectiveCap]-[EGY.GetAdjectiveCap] Treaty and order all our troops to leave the Suez Canal terretory immediately."
 ET_Independence_Egypt.32.a:0 "Refuce"
 ET_Independence_Egypt.32.b:0 "Comply and withdrawal from the Suez Canal adjacent states"
+ET_Independence_Egypt_Damage_Prevention_tt:0 "§YHaving divisions deployed in [446.GetName] and [453.GetName] do have effect on upcoming events§!"
 
-ET_Independence_Egypt.33.t:0 "[EGY.GetNonIdeologyName] withdrawl from the Anglo-Egyptian Treaty"
-ET_Independence_Egypt.33.desc:0 "[EGY.GetName] have unilaterally withdrawl from the Anglo-Egyptian Treaty and order all our troops to leave the Suez Canal terretory immediately."
-ET_Independence_Egypt.33.a:0 "Refuce"
-ET_Independence_Egypt.33.b:0 "Comply and withdrawal from the Suez Canal adjacent states"
+ET_Independence_Egypt.33.t:0 "Guerilla attacks!"
+ET_Independence_Egypt.33.desc:0 "Guerilla forces have attacked our bases around the Zues Canal in the region of [446.GetName] and [453.GetName]."
+ET_Independence_Egypt.33.a:0 "Oh no!"
+ET_Independence_Egypt_Inf_Damaged_tt:0 "§RInfrastructure in [446.GetName] and [453.GetName] have been damaged.§!"
+ET_Independence_Egypt_Div_Damaged_tt:0 "§RDivsions stationed in in [446.GetName] and [453.GetName] have been damaged.§!"
+
+ET_Independence_Egypt.34.t:0 "Guerilla attacks!"
+ET_Independence_Egypt.34.desc:0 "[EGY.GetAdjectiveCap] guerrillas staged an attack on our forces around the Suez Canal in the region [446.GetName] and [453.GetName] again. However witnesses observed that the [EGY.GetAdjectiveCap] Auxiliary Police were helping the guerrillas."
+ET_Independence_Egypt.34.a:0 "Lets retaliate at the source!"
+
+ET_Independence_Egypt.35.t:0 "After Action Report"
+ET_Independence_Egypt.35.desc:0 "In our garrisons attempted to arrest [EGY.GetAdjectiveCap] Auxiliary Police in [446.GetName] and [453.GetName] resulted in a battle leveling a police staion in a town named Ismailia to be leveld."
+ET_Independence_Egypt.35.a:0 "This will teach them"
+
+ET_Independence_Egypt.36.t:0 "Anti-[Root.GetAdjectiveCap] riots in [EGY.GetNonIdeologyName]"
+ET_Independence_Egypt.36.desc:0 "Enormus Anti-[Root.GetAdjectiveCap] protests and riots have broken out in [EGY.GetNonIdeologyName] in responce to our relatian."
+ET_Independence_Egypt.36.a:0 "This will truly be a Black Saturday"
+
+ET_Independence_Egypt.40.t:0 "Coup d'etat in [EGY.GetNameDef]"
+ET_Independence_Egypt.40.desc:0 "There has been Coup d'etat in [EGY.GetNameDef]. King [EGY.GetLeader] have been exiled by the military by a group named them self the Free Officer Movement. A new independent government have been instated with [EGY.GetDemocraticLeader] as its president."
+ET_Independence_Egypt.40.a:0 "My God!"
+
+ET_Independence_Egypt.41.t:0 "Coup d'etat in [EGY.GetNameDef]"
+ET_Independence_Egypt.41.desc:0 "There has been Coup d'etat in [EGY.GetNameDef]. King [EGY.GetLeader] have been exiled by the military by a group named them self the Free Officer Movement. A new independent government have been instated with [EGY.GetDemocraticLeader] as its president."
+
+
+ET_Independence_Egypt.50.t:0 "[EGY.GetNonIdeologyName] Independence"
+ET_Independence_Egypt.50.desc:0 "Our [EGY.GetAdjective] terretor is now formally independent."
+ET_Independence_Egypt.50.a:0 "Withdrawal from [EGY.GetNonIdeologyName]"
+ET_Independence_Egypt.50.b:0 "We cannot allow this to happen! Rally the Troops!"
+ET_Independence_Egypt.50.c:0 "The British seem to have left us alone!\n(Play as [EGY.GetName])"
+ET_Independence_Egypt.50.d:0 "The British have rallied their forces!\n(Play as [EGY.GetName])"
+
 

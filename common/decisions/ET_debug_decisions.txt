@@ -84,29 +84,6 @@ ET_debug_decisions = {
 
         complete_effect = {
             set_variable = { ET_var_current_date = date }
-            log = ""
-            
-            damage_units = {
-                state = 453
-                org_damage = 0.30
-                str_damage = 0.10
-                ratio = yes
-                army = yes
-            }
-            damage_units = {
-                state = 446
-                org_damage = 0.30
-                str_damage = 0.10
-                ratio = yes
-                army = yes
-            }
-            446 = {
-                damage_building = {
-                    type = infrastructure
-                    damage = 1
-                }
-            }
-
         }
 
         ai_will_do = {
