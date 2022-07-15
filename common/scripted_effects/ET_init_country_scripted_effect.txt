@@ -22,21 +22,21 @@ ET_set_generic_tech = {
     else = {}
 }
 
-ET_set_generic_1940_tech = {
+ET_set_generic_1940_tech = { # FIXME
     hidden_effect = {
         set_technology = {
             popup = no
         }
     }
 }
-ET_set_generic_1945_tech = {
+ET_set_generic_1945_tech = { # FIXME
     hidden_effect = {
         set_technology = {
             popup = no
         }
     }
 }
-ET_set_generic_1950_tech = {
+ET_set_generic_1950_tech = { # FIXME
     hidden_effect = {
         set_technology = {
             popup = no
@@ -154,14 +154,14 @@ ET_set_generic_1950_tech = {
         }
     }
 }
-ET_set_generic_1955_tech = {
+ET_set_generic_1955_tech = { # FIXME
     hidden_effect = {
         set_technology = {
             popup = no
         }
     }
 }
-ET_set_generic_1960_tech = {
+ET_set_generic_1960_tech = { # FIXME
     hidden_effect = {
         set_technology = {
             popup = no
@@ -177,7 +177,7 @@ ET_set_generic_1960_tech = {
 #     limit = { original_tag = EGY }
 #     ENG = { ET_inherit_technology = yes }
 # }
-ET_inherit_technology = {
+ET_inherit_technology = { # FIXME
     if = {
         limit = {
             has_tech = my_technology
