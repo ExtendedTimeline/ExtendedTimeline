@@ -811,3 +811,11 @@ EGY_Republic = {
 	color = rgb { 230 230 70 }
 	color_ui = rgb { 230 230 70 }
 }
+
+VIN_North = {
+	graphical_culture = asian_gfx
+	graphical_culture_2d = asian_2d
+
+	color = rgb { 125  13  24 }
+	color_ui = rgb { 125  13  24 }
+}

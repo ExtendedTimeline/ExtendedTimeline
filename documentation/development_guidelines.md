@@ -10,7 +10,7 @@ A suffixe for type of file may be used on some files.
 
 `00_ideologies.txt` > replaces vanilla ideologies.
 
-The name structure for mod files are `[TAG]_[WhatEverItIsSupposeToDo](_[TYPE]).txt`
+The name structure for mod files are `[TAG]_[WhatEverItIsSupposeToBeDoing](_[TYPE]).txt`
 (*`_[TYPE]` is optional were it is not pressent on other files.*)
 
 ## flags

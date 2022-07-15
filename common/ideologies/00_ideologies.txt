@@ -13,7 +13,7 @@ ideologies = {
 			socialism = {
 			}
 
-			arab_socialism = {
+			ET_dem_arab_socialism = {
 				can_be_randomly_selected = no
 			}
 		}

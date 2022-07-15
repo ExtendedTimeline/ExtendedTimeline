@@ -1,0 +1,34 @@
+﻿l_english:
+ET_Independence_Egypt.0.t:0 "Anti-colonial sentiment in Egypt"
+ET_Independence_Egypt.0.desc:0 "A surge of anti-colonial sentiment is on the rise in our colonial territory of [EGY.GetName]. If this is allowed to continue it might lead to open revolt!."
+ET_Independence_Egypt.0.a:0 "Worrying"
+
+ET_Independence_Egypt.1.t:0 "Suez Crisis" # https://en.wikipedia.org/wiki/Kingdom_of_Egypt#Suez_Emergency
+ET_Independence_Egypt.1.desc:0 "The Local Egyptian Government want us to leave the Suez Canal"
+ET_Independence_Egypt.1.a:0 "Rally the Troops!"
+ET_Independence_Egypt.1.b:0 "Prepare for a Military Evacuation of the Suez"
+
+ET_Independence_Egypt.2.t:0 "Suez Crisis - Guerrilla attack!"
+ET_Independence_Egypt.2.desc:0 "Guerrillas staged an attack on our local garrison forces yesterday at the Suez Canal. Our Intelligence suggests report that the local police forces may be arming the guerrilla forces that are causing the attacks."
+ET_Independence_Egypt.2.a:0 "We must Retaliate!"
+ET_Independence_Egypt.2.b:0 "We cannot Spare the Resources for Retaliation"
+
+ET_Independence_Egypt.3.t:0 "Suez Crisis - Clashes with the local police forces and our local garrison!"
+ET_Independence_Egypt.3.desc:0 "Our retaliation to the attack has resulted in a serious battle in Cairo, our forces destroyed a local police station causing 43 Egyptian police officers to be killed and multiple wounded. However only 3 of our soldiers were killed in the retaliation."
+ET_Independence_Egypt.3.a:0 "This will teach them about revolt against the might of the [THIS.GetName]!"
+
+ET_Independence_Egypt.4.t:0 "Coup d'état against the Kingdom of Egypt" # https://en.wikipedia.org/wiki/Egyptian_revolution_of_1952
+ET_Independence_Egypt.4.desc:0 "A Coup d'état has occurred against our puppet ruler in the Kingdom of Egypt!. Intelligence reports that King Farouk I has fled Egypt in great haste, and has abandoned all his possessions—including his huge collection of pornography material."
+ET_Independence_Egypt.4.a:0 "This cannot be good."
+ET_Independence_Egypt.4.b:0 "This isn't good, wait what?"
+
+ET_Independence_Egypt.5.t:0 "Coup d'état In Egypt"
+ET_Independence_Egypt.5.desc:0 "There has been Coup d'etat in the Kingdom of Egypt. The puppet ruler Farouk I have been exiled by the Military which has begun an open revolt naming themselves the Free Officer Movement. A new independent government have been instated with General Mohamed Naguib as it's head/president."
+ET_Independence_Egypt.5.a:0 "My God!"
+
+ET_Independence_Egypt.6.t:0 "Independence"
+ET_Independence_Egypt.6.desc:0 "Egyptian colony have declared independence."
+ET_Independence_Egypt.6.a:0 "We must prepare our Withdrawal from [EGY.GetName]"
+ET_Independence_Egypt.6.b:0 "We cannot allow this to happen! Rally the Troops!"
+ET_Independence_Egypt.6.c:0 "The British seem to have left us alone!\n(Play as [EGY.GetName])"
+ET_Independence_Egypt.6.d:0 "The British have rallied their forces!\n(Play as [EGY.GetName])"

@@ -1,0 +1,19 @@
+﻿l_english:
+ET_Independence_Egypt.30.t:0 "Anti-colonial sentiment in [EGY.GetName]"
+ET_Independence_Egypt.30.desc:0 "A surge of nationalist and anti-[Root.GetAdjectiveCap] sentiment is on the rise in [EGY.GetNonIdeologyName]. Further more a Anti-monarchy sentiments against [EGY.GetLeader]."
+ET_Independence_Egypt.0.a:0 "Worrying"
+
+ET_Independence_Egypt.31.t:0 "Election in [EGY.GetName]"
+ET_Independence_Egypt.31.desc:0 "Election in [EGY.GetName] resulted in a landslide victory for the nationalist party Wafd Party. King [EGY.GetLeader] appointed Mostafa El-Nahas as the Prime minister of [EGY.GetNameDef]."
+ET_Independence_Egypt.31.a:0 "Worrying"
+
+ET_Independence_Egypt.32.t:0 "[EGY.GetNonIdeologyName] withdrawl from the Anglo-Egyptian Treaty"
+ET_Independence_Egypt.32.desc:0 "[EGY.GetName] have unilaterally withdrawl from the Anglo-Egyptian Treaty and order all our troops to leave the Suez Canal terretory immediately."
+ET_Independence_Egypt.32.a:0 "Refuce"
+ET_Independence_Egypt.32.b:0 "Comply and withdrawal from the Suez Canal adjacent states"
+
+ET_Independence_Egypt.33.t:0 "[EGY.GetNonIdeologyName] withdrawl from the Anglo-Egyptian Treaty"
+ET_Independence_Egypt.33.desc:0 "[EGY.GetName] have unilaterally withdrawl from the Anglo-Egyptian Treaty and order all our troops to leave the Suez Canal terretory immediately."
+ET_Independence_Egypt.33.a:0 "Refuce"
+ET_Independence_Egypt.33.b:0 "Comply and withdrawal from the Suez Canal adjacent states"
+
