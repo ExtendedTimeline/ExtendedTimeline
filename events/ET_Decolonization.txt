@@ -27,7 +27,8 @@ country_event = { # Releases
         # #
         if = { # Algeria        [3 July 1962] FRA*
             limit = {
-                not = { has_global_flag = ET_flag_global_free_ALG }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_ALG }
                 OR = {
                     date > 1962.06.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -39,7 +40,10 @@ country_event = { # Releases
                     controls_state = 513
                 }
             }
-            set_global_flag = ET_flag_global_free_ALG
+            set_country_flag = {
+                flag = ET_flag_country_free_ALG
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Algeria.0
                 days = 3
@@ -47,7 +51,8 @@ country_event = { # Releases
         }
         if = { # Angola         [11 November 1975] POR
             limit = {
-                not = { has_global_flag = ET_flag_global_free_ANG }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_ANG }
                 OR = {
                     date > 1975.10.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -55,7 +60,10 @@ country_event = { # Releases
                 NOT = { original_tag = ANG }
                 controls_state = 540
             }
-            set_global_flag = ET_flag_global_free_ANG
+            set_country_flag = {
+                flag = ET_flag_country_free_ANG
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Angola.0
                 days = 11
@@ -63,7 +71,8 @@ country_event = { # Releases
         }
         #if = { # Benin          [1 August 1960] FRA # TODO Make nation Benin
         #    limit = {
-        #        not = { has_global_flag = ET_flag_global_free_BNI }
+        #        is_ai = yes
+        #        NOT = { has_country_flag = ET_flag_country_free_BNI }
         #        OR = {
         #            date > 1960.07.01
         #            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -71,7 +80,7 @@ country_event = { # Releases
         #        NOT = { original_tag = BNI }
         #        controls_state = 776
         #    }
-        #    set_global_flag = ET_flag_global_free_BNI
+        #    set_global_flag = ET_flag_country_free_BNI
         #    country_event = {
         #        id = ET_Independence_Benin.0
         #        days = 1
@@ -79,7 +88,8 @@ country_event = { # Releases
         #}
         if = { # Botswana       [30 September 1966] ENG
             limit = {
-                not = { has_global_flag = ET_flag_global_free_BOT }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_BOT }
                 OR = {
                     date > 1966.08.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -87,7 +97,10 @@ country_event = { # Releases
                 NOT = { original_tag = BOT }
                 controls_state = 542
             }
-            set_global_flag = ET_flag_global_free_BOT
+            set_country_flag = {
+                flag = ET_flag_country_free_BOT
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Botswana.0
                 days = 30
@@ -95,7 +108,8 @@ country_event = { # Releases
         }
         #if = { # Burkina Faso   [5 August 1960] FRA # TODO Make nation Burkina Faso
         #    limit = {
-        #        not = { has_global_flag = ET_flag_global_free_BUF }
+        #        is_ai = yes
+        #        NOT = { has_country_flag = ET_flag_country_free_BUF }
         #        OR = {
         #            date > 1960.07.01
         #            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -103,7 +117,7 @@ country_event = { # Releases
         #        NOT = { original_tag = BOT }
         #        controls_state = 542
         #    }
-        #    set_global_flag = ET_flag_global_free_BUF
+        #    set_global_flag = ET_flag_country_free_BUF
         #    country_event = {
         #        id = ET_Independence_BurkinaFaso.0
         #        days = 5
@@ -111,7 +125,8 @@ country_event = { # Releases
         #}
         if = { # Burundi        [1 July 1962] BEL
             limit = {
-                not = { has_global_flag = ET_flag_global_free_BRD }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_BRD }
                 OR = {
                     date > 1962.06.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -119,7 +134,10 @@ country_event = { # Releases
                 NOT = { original_tag = BOT }
                 controls_state = 769
             }
-            set_global_flag = ET_flag_global_free_BRD
+            set_country_flag = {
+                flag = ET_flag_country_free_BRD
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Burundi.0
                 days = 1
@@ -127,7 +145,8 @@ country_event = { # Releases
         }
         if = { # Cabo Verde     [5 July 1975] POR
             limit = {
-                not = { has_global_flag = ET_flag_global_free_CAE }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_CAE }
                 OR = {
                     date > 1975.06.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -135,7 +154,10 @@ country_event = { # Releases
                 NOT = { original_tag = CAE }
                 controls_state = 769
             }
-            set_global_flag = ET_flag_global_free_CAE
+            set_country_flag = {
+                flag = ET_flag_country_free_CAE
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_CaboVerde.0
                 days = 5
@@ -143,7 +165,8 @@ country_event = { # Releases
         }
         if = { # Cameroon       [1 January 1960] FRA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_CMR }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_CMR }
                 OR = {
                     date > 1959.12.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -151,7 +174,10 @@ country_event = { # Releases
                 NOT = { original_tag = CMR }
                 controls_state = 773
             }
-            set_global_flag = ET_flag_global_free_CMR
+            set_country_flag = {
+                flag = ET_flag_country_free_CMR
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_CaboVerde.0
                 days = 1
@@ -159,7 +185,8 @@ country_event = { # Releases
         }
         if = { # Central African Republic [13 August 1960] FRA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_CAR }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_CAR }
                 OR = {
                     date > 1960.07.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -167,7 +194,10 @@ country_event = { # Releases
                 NOT = { original_tag = CAR }
                 controls_state = 660
             }
-            set_global_flag = ET_flag_global_free_CAR
+            set_country_flag = {
+                flag = ET_flag_country_free_CAR
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_CentralAfricanRepublic.0
                 days = 13
@@ -175,7 +205,8 @@ country_event = { # Releases
         }
         if = { # Chad           [11 August 1960] FRA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_CHA }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_CHA }
                 OR = {
                     date > 1960.07.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -186,7 +217,10 @@ country_event = { # Releases
                     controls_state = 774
                 }
             }
-            set_global_flag = ET_flag_global_free_CHA
+            set_country_flag = {
+                flag = ET_flag_country_free_CHA
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Chad.0
                 days = 11
@@ -194,7 +228,8 @@ country_event = { # Releases
         }
         #if = { # Comoros        [6 July 1975] FRA # TODO Make nation Comoros
         #    limit = {
-        #        not = { has_global_flag = ET_flag_global_free_CMS }
+        #        is_ai = yes
+        #        NOT = { has_country_flag = ET_flag_country_free_CMS }
         #        OR = {
         #            date > 1975.06.01
         #            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -202,7 +237,7 @@ country_event = { # Releases
         #        NOT = { original_tag = CMS }
         #        controls_state = 660
         #    }
-        #    set_global_flag = ET_flag_global_free_CMS
+        #    set_global_flag = ET_flag_country_free_CMS
         #    country_event = {
         #        id = ET_Independence_Comoros.0
         #        days = 6
@@ -210,7 +245,8 @@ country_event = { # Releases
         #}
         if = { # Republic of Congo [30 June 1960] BEL
             limit = {
-                not = { has_global_flag = ET_flag_global_free_RCG }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_RCG }
                 OR = {
                     date > 1960.05.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -222,7 +258,10 @@ country_event = { # Releases
                     controls_state = 718
                 }
             }
-            set_global_flag = ET_flag_global_free_RCG
+            set_country_flag = {
+                flag = ET_flag_country_free_RCG
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_RepublicOfCongo.0
                 days = 30
@@ -230,7 +269,8 @@ country_event = { # Releases
         }
         if = { # Djibouti       [27 June 1977] FRA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_DJI }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_DJI }
                 OR = {
                     date > 1977.05.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -238,7 +278,10 @@ country_event = { # Releases
                 NOT = { original_tag = DJI }
                 controls_state = 268
             }
-            set_global_flag = ET_flag_global_free_DJI
+            set_country_flag = {
+                flag = ET_flag_country_free_DJI
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Djibouti.0
                 days = 27
@@ -246,7 +289,7 @@ country_event = { # Releases
         }
         if = { # Egypt          [18 June 1953] ENG* "Suez Emergency & Egyptian Revolution of 1952"
             limit = {
-                NOT = { has_global_flag = ET_flag_global_free_EGY }
+                NOT = { has_country_flag = ET_flag_country_free_EGY }
                 OR = {
                     date > 1953.05.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -263,7 +306,10 @@ country_event = { # Releases
                     controls_state = 457
                 }
             }
-            set_global_flag = ET_flag_global_free_EGY
+            set_country_flag = {
+                flag = ET_flag_country_free_EGY
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Egypt.0
                 days = 18
@@ -271,7 +317,8 @@ country_event = { # Releases
         }
         if = { # Equatorial Guinea [12 October 1968] SPA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_EQG }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_EQG }
                 OR = {
                     date > 1968.09.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -279,7 +326,10 @@ country_event = { # Releases
                 NOT = { original_tag = EQG }
                 controls_state = 297
             }
-            set_global_flag = ET_flag_global_free_EQG
+            set_country_flag = {
+                flag = ET_flag_country_free_EQG
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_EquatorialGuinea.0
                 days = 12
@@ -287,7 +337,8 @@ country_event = { # Releases
         }
         if = { # Eritrea        [27 April 1993]
             limit = {
-                not = { has_global_flag = ET_flag_global_free_ERI }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_ERI }
                 OR = {
                     date > 1993.03.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -295,7 +346,10 @@ country_event = { # Releases
                 NOT = { original_tag = ERI }
                 controls_state = 538
             }
-            set_global_flag = ET_flag_global_free_ERI
+            set_country_flag = {
+                flag = ET_flag_country_free_ERI
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Eritrea.0
                 days = 27
@@ -303,7 +357,8 @@ country_event = { # Releases
         }
         #if = { # Eswatini       [6 September 1968] ENG # TODO Make nation Eswatini
         #    limit = {
-        #        not = { has_global_flag = ET_flag_global_free_ESW }
+        #        is_ai = yes
+        #        NOT = { has_country_flag = ET_flag_country_free_ESW }
         #        OR = {
         #            date > 1968.08.01
         #            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -311,7 +366,7 @@ country_event = { # Releases
         #        NOT = { original_tag = ESW }
         #        controls_state = XXX
         #    }
-        #    set_global_flag = ET_flag_global_free_ESW
+        #    set_global_flag = ET_flag_country_free_ESW
         #    country_event = {
         #        id = ET_Independence_Eswatini.0
         #        days = 6
@@ -319,7 +374,8 @@ country_event = { # Releases
         #}
         if = { # Ethiopia       [21 August 1995]
             limit = {
-                not = { has_global_flag = ET_flag_global_free_ETH }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_ETH }
                 OR = {
                     date > 1995.07.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -327,7 +383,10 @@ country_event = { # Releases
                 NOT = { original_tag = ETH }
                 controls_state = 271
             }
-            set_global_flag = ET_flag_global_free_ETH
+            set_country_flag = {
+                flag = ET_flag_country_free_ETH
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Ethiopia.0
                 days = 21
@@ -335,7 +394,8 @@ country_event = { # Releases
         }
         if = { # Gabon          [17 August 1960] FRA
              limit = {
-                not = { has_global_flag = ET_flag_global_free_GAB }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_GAB }
                 OR = {
                     date > 1960.07.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -343,7 +403,10 @@ country_event = { # Releases
                 NOT = { original_tag = GAB }
                 controls_state = 539
             }
-            set_global_flag = ET_flag_global_free_GAB
+            set_country_flag = {
+                flag = ET_flag_country_free_GAB
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Gabon.0
                 days = 17
@@ -351,7 +414,8 @@ country_event = { # Releases
         }
         if = { # Gambia         [18 February 1965] ENG
              limit = {
-                not = { has_global_flag = ET_flag_global_free_GAM }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_GAM }
                 OR = {
                     date > 1965.01.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -359,7 +423,10 @@ country_event = { # Releases
                 NOT = { original_tag = GAM }
                 controls_state = 701
             }
-            set_global_flag = ET_flag_global_free_GAM
+            set_country_flag = {
+                flag = ET_flag_country_free_GAM
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Gambia.0
                 days = 18
@@ -367,7 +434,8 @@ country_event = { # Releases
         }
         if = { # Ghana          [6 March 1957] ENG
             limit = {
-                not = { has_global_flag = ET_flag_global_free_GHA }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_GHA }
                 OR = {
                     date > 1957.02.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -375,7 +443,10 @@ country_event = { # Releases
                 NOT = { original_tag = GHA }
                 controls_state = 274
             }
-            set_global_flag = ET_flag_global_free_GHA
+            set_country_flag = {
+                flag = ET_flag_country_free_GHA
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Ghana.0
                 days = 18
@@ -383,7 +454,8 @@ country_event = { # Releases
         }
         if = { # Guinea         [2 October 1958] FRA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_GNA }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_GNA }
                 OR = {
                     date > 1958.09.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -391,7 +463,10 @@ country_event = { # Releases
                 NOT = { original_tag = GNA }
                 controls_state = 780
             }
-            set_global_flag = ET_flag_global_free_GNA
+            set_country_flag = {
+                flag = ET_flag_country_free_GNA
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Guinea.0
                 days = 2
@@ -399,7 +474,8 @@ country_event = { # Releases
         }
         if = { # Guinea-Bissau  [24 September 1973] POR*
             limit = {
-                not = { has_global_flag = ET_flag_global_free_GNB }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_GNB }
                 OR = {
                     date > 1973.08.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -407,7 +483,10 @@ country_event = { # Releases
                 NOT = { original_tag = GNB }
                 controls_state = 296
             }
-            set_global_flag = ET_flag_global_free_GNB
+            set_country_flag = {
+                flag = ET_flag_country_free_GNB
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_GuineaBissau.0
                 days = 24
@@ -415,7 +494,8 @@ country_event = { # Releases
         }
         if = { # Ivory Coast    [4 December 1958] > French Community > [26 June 1960]
             limit = {
-                not = { has_global_flag = ET_flag_global_free_IVO }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_IVO }
                 OR = {
                     date > 1973.11.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -423,7 +503,10 @@ country_event = { # Releases
                 NOT = { original_tag = IVO }
                 controls_state = 296
             }
-            set_global_flag = ET_flag_global_free_IVO
+            set_country_flag = {
+                flag = ET_flag_country_free_IVO
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_IvoryCoast.0
                 days = 4
@@ -431,7 +514,8 @@ country_event = { # Releases
         }
         if = { # Kenya          [12 December 1963] ENG
             limit = {
-                not = { has_global_flag = ET_flag_global_free_KEN }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_KEN }
                 OR = {
                     date > 1963.11.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -439,7 +523,10 @@ country_event = { # Releases
                 NOT = { original_tag = KEN }
                 controls_state = 547
             }
-            set_global_flag = ET_flag_global_free_KEN
+            set_country_flag = {
+                flag = ET_flag_country_free_KEN
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Kenya.0
                 days = 12
@@ -447,7 +534,8 @@ country_event = { # Releases
         }
         #if = { # Lesotho        [4 October 1966] ENG* # TODO Make nation Lesotho
         #    limit = {
-        #        not = { has_global_flag = ET_flag_global_free_LES }
+        #        is_ai = yes
+        #        NOT = { has_country_flag = ET_flag_country_free_LES }
         #        OR = {
         #            date > 1966.09.01
         #            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -455,7 +543,7 @@ country_event = { # Releases
         #        NOT = { original_tag = LES }
         #        controls_state = XXX
         #    }
-        #    set_global_flag = ET_flag_global_free_LES
+        #    set_global_flag = ET_flag_country_free_LES
         #    country_event = {
         #        id = ET_Independence_Lesotho.0
         #        days = 4
@@ -463,7 +551,8 @@ country_event = { # Releases
         #}
         if = { # Libya          [24 December 1951] FRA ENG (ITA)*
             limit = {
-                not = { has_global_flag = ET_flag_global_free_LBA }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_LBA }
                 OR = {
                     date > 1951.11.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -479,7 +568,10 @@ country_event = { # Releases
                     controls_state = 663
                 }
             }
-            set_global_flag = ET_flag_global_free_LBA
+            set_country_flag = {
+                flag = ET_flag_country_free_LBA
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Libya.0
                 days = 24
@@ -487,7 +579,8 @@ country_event = { # Releases
         }
         if = { # Madagascar     [14 October 1958] > French Community > [26 June 1960]
             limit = {
-                not = { has_global_flag = ET_flag_global_free_MAD }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_MAD }
                 OR = {
                     date > 1951.11.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -495,7 +588,10 @@ country_event = { # Releases
                 NOT = { original_tag = MAD }
                 controls_state = 543
             }
-            set_global_flag = ET_flag_global_free_MAD
+            set_country_flag = {
+                flag = ET_flag_country_free_MAD
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Madagascar.0
                 days = 14
@@ -503,7 +599,8 @@ country_event = { # Releases
         }
         if = { # Malawi         [6 July 1964] ENG
             limit = {
-                not = { has_global_flag = ET_flag_global_free_MLW }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_MLW }
                 OR = {
                     date > 1964.06.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -511,7 +608,10 @@ country_event = { # Releases
                 NOT = { original_tag = MLW }
                 controls_state = 770
             }
-            set_global_flag = ET_flag_global_free_MLW
+            set_country_flag = {
+                flag = ET_flag_country_free_MLW
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Malawi.0
                 days = 6
@@ -519,7 +619,8 @@ country_event = { # Releases
         }
         if = { # Mali           [25 November 1958] FRA > puppet > [22 September 1960]
             limit = {
-                not = { has_global_flag = ET_flag_global_free_MLI }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_MLI }
                 OR = {
                     date > 1958.10.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -527,7 +628,10 @@ country_event = { # Releases
                 NOT = { original_tag = MLI }
                 controls_state = 770
             }
-            set_global_flag = ET_flag_global_free_MLI
+            set_country_flag = {
+                flag = ET_flag_country_free_MLI
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Mali.0
                 days = 25
@@ -535,7 +639,8 @@ country_event = { # Releases
         }
         if = { # Mauritania     [28 November 1960] FRA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_MTR }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_MTR }
                 OR = {
                     date > 1960.10.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -543,7 +648,10 @@ country_event = { # Releases
                 NOT = { original_tag = MRT }
                 controls_state = 699
             }
-            set_global_flag = ET_flag_global_free_MRT
+            set_country_flag = {
+                flag = ET_flag_country_free_MRT
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Mauritania.0
                 days = 28
@@ -551,7 +659,8 @@ country_event = { # Releases
         }
         #if = { # Mauritius      [12 March 1968] ENG # TODO Make nation Mauritius
         #    limit = {
-        #        not = { has_global_flag = ET_flag_global_free_MAU }
+        #        is_ai = yes
+        #        NOT = { has_country_flag = ET_flag_country_free_MAU }
         #        OR = {
         #            date > 1968.02.01
         #            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -559,7 +668,7 @@ country_event = { # Releases
         #        NOT = { original_tag = MAU }
         #        controls_state = 707
         #    }
-        #    set_global_flag = ET_flag_global_free_MAU
+        #    set_global_flag = ET_flag_country_free_MAU
         #    country_event = {
         #        id = ET_Independence_Mauritius.0
         #        days = 12
@@ -567,7 +676,8 @@ country_event = { # Releases
         #}
         if = { # Morocco        [18 November 1955] SPA*
             limit = {
-                not = { has_global_flag = ET_flag_global_free_MOR }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_MOR }
                 OR = {
                     date > 1955.10.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -580,7 +690,10 @@ country_event = { # Releases
                     controls_state = 783
                 }
             }
-            set_global_flag = ET_flag_global_free_MOR
+            set_country_flag = {
+                flag = ET_flag_country_free_MOR
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Morocco.0
                 days = 18
@@ -588,7 +701,8 @@ country_event = { # Releases
         }
         if = { # Mozambique     [25 June 1975] POR
             limit = {
-                not = { has_global_flag = ET_flag_global_free_MZB }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_MZB }
                 OR = {
                     date > 1975.05.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -596,7 +710,10 @@ country_event = { # Releases
                 NOT = { original_tag = MZB }
                 controls_state = 544
             }
-            set_global_flag = ET_flag_global_free_MZB
+            set_country_flag = {
+                flag = ET_flag_country_free_MZB
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Mozambique.0
                 days = 25
@@ -604,7 +721,8 @@ country_event = { # Releases
         }
         if = { # Namibia        [21 March 1990] South African
             limit = {
-                not = { has_global_flag = ET_flag_global_free_NMB }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_NMB }
                 OR = {
                     date > 1990.02.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -612,7 +730,10 @@ country_event = { # Releases
                 NOT = { original_tag = NMB }
                 controls_state = 541
             }
-            set_global_flag = ET_flag_global_free_NMB
+            set_country_flag = {
+                flag = ET_flag_country_free_NMB
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Namibia.0
                 days = 21
@@ -620,7 +741,8 @@ country_event = { # Releases
         }
         if = { # Niger          [4 December 1958] FRA > French Community > [3 August 1960]
             limit = {
-                not = { has_global_flag = ET_flag_global_free_NGR }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_NGR }
                 OR = {
                     date > 1958.11.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -628,7 +750,10 @@ country_event = { # Releases
                 NOT = { original_tag = NGR }
                 controls_state = 515
             }
-            set_global_flag = ET_flag_global_free_NGR
+            set_country_flag = {
+                flag = ET_flag_country_free_NGR
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Niger.0
                 days = 4
@@ -636,7 +761,8 @@ country_event = { # Releases
         }
         if = { # Nigeria        [3 August 1960] ENG
             limit = {
-                not = { has_global_flag = ET_flag_global_free_NGA }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_NGA }
                 OR = {
                     date > 1960.07.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -644,7 +770,10 @@ country_event = { # Releases
                 NOT = { original_tag = NGR }
                 controls_state = 515
             }
-            set_global_flag = ET_flag_global_free_NGA
+            set_country_flag = {
+                flag = ET_flag_country_free_NGA
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Nigeria.0
                 days = 3
@@ -652,7 +781,8 @@ country_event = { # Releases
         }
         if = { # Congo          [15 August 1960] FRA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_COG }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_COG }
                 OR = {
                     date > 1960.07.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -660,7 +790,10 @@ country_event = { # Releases
                 NOT = { original_tag = COG }
                 controls_state = 515
             }
-            set_global_flag = ET_flag_global_free_COG
+            set_country_flag = {
+                flag = ET_flag_country_free_COG
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Congo.0
                 days = 15
@@ -668,7 +801,8 @@ country_event = { # Releases
         }
         if = { # Rwanda         [1 July 1962] BEL
             limit = {
-                not = { has_global_flag = ET_flag_global_free_RWA }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_RWA }
                 OR = {
                     date > 1962.06.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -676,7 +810,10 @@ country_event = { # Releases
                 NOT = { original_tag = RWA }
                 controls_state = 515
             }
-            set_global_flag = ET_flag_global_free_RWA
+            set_country_flag = {
+                flag = ET_flag_country_free_RWA
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Rwanda.0
                 days = 1
@@ -684,7 +821,8 @@ country_event = { # Releases
         }
         #if = { # São Tomé and Príncipe [12 July 1975] POR # TODO Make nation São Tomé and Príncipe
         #    limit = {
-        #        not = { has_global_flag = ET_flag_global_free_STP }
+        #        is_ai = yes
+        #        NOT = { has_country_flag = ET_flag_country_free_STP }
         #        OR = {
         #            date > 1975.06.01
         #            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -692,7 +830,7 @@ country_event = { # Releases
         #        NOT = { original_tag = STP }
         #        controls_state = 705
         #    }
-        #    set_global_flag = ET_flag_global_free_STP
+        #    set_global_flag = ET_flag_country_free_STP
         #    country_event = {
         #        id = ET_Independence_SaoTomePrincipe.0
         #        days = 1
@@ -700,7 +838,8 @@ country_event = { # Releases
         #}
         if = { # Senegal        [20 August 1960] FRA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_SEN }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_SEN }
                 OR = {
                     date > 1960.07.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -708,7 +847,10 @@ country_event = { # Releases
                 NOT = { original_tag = SEN }
                 controls_state = 272
             }
-            set_global_flag = ET_flag_global_free_SEN
+            set_country_flag = {
+                flag = ET_flag_country_free_SEN
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Senegal.0
                 days = 20
@@ -716,7 +858,8 @@ country_event = { # Releases
         }
         #if = { # Seychelles     [29 June 1976] ENG # TODO Make nation Seychelles
         #    limit = {
-        #        not = { has_global_flag = ET_flag_global_free_SEY }
+        #        is_ai = yes
+        #        NOT = { has_country_flag = ET_flag_country_free_SEY }
         #        OR = {
         #            date > 1960.05.01
         #            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -724,7 +867,7 @@ country_event = { # Releases
         #        NOT = { original_tag = SEY }
         #        controls_state = 709
         #    }
-        #    set_global_flag = ET_flag_global_free_SEY
+        #    set_global_flag = ET_flag_country_free_SEY
         #    country_event = {
         #        id = ET_Independence_Seychelles.0
         #        days = 29
@@ -732,7 +875,8 @@ country_event = { # Releases
         #}
         if = { # Sierra Leone   [27 April 1961] ENG
             limit = {
-                not = { has_global_flag = ET_flag_global_free_SIE }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_SIE }
                 OR = {
                     date > 1960.07.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -740,7 +884,10 @@ country_event = { # Releases
                 NOT = { original_tag = SIE }
                 controls_state = 515
             }
-            set_global_flag = ET_flag_global_free_SIE
+            set_country_flag = {
+                flag = ET_flag_country_free_SIE
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_SierraLeone.0
                 days = 27
@@ -748,7 +895,8 @@ country_event = { # Releases
         }
         if = { # Somalia        [1 July 1960] ENG
             limit = {
-                not = { has_global_flag = ET_flag_global_free_SOM }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_SOM }
                 OR = {
                     date > 1960.06.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -759,7 +907,10 @@ country_event = { # Releases
                     controls_state = 559
                 }
             }
-            set_global_flag = ET_flag_global_free_SOM
+            set_country_flag = {
+                flag = ET_flag_country_free_SOM
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Somalia.0
                 days = 1
@@ -767,7 +918,8 @@ country_event = { # Releases
         }
         if = { # Sudan          [1 January 1956] EGY,ENG*
             limit = {
-                not = { has_global_flag = ET_flag_global_free_SUD }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_SUD }
                 OR = {
                     date > 1955.12.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -778,7 +930,10 @@ country_event = { # Releases
                     controls_state = 551
                 }
             }
-            set_global_flag = ET_flag_global_free_SUD
+            set_country_flag = {
+                flag = ET_flag_country_free_SUD
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Sudan.0
                 days = 1
@@ -786,7 +941,8 @@ country_event = { # Releases
         }
         if = { # Tanzania       [9 December 1961] ENG Tanganyika*
             limit = {
-                not = { has_global_flag = ET_flag_global_free_TZN }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_TZN }
                 OR = {
                     date > 1960.12.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -794,7 +950,10 @@ country_event = { # Releases
                 NOT = { original_tag = TZN }
                 controls_state = 546
             }
-            set_global_flag = ET_flag_global_free_TZN
+            set_country_flag = {
+                flag = ET_flag_country_free_TZN
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Tanzania.0
                 days = 9
@@ -802,7 +961,8 @@ country_event = { # Releases
         }
         if = { # Togo           [30 August 1958] > French Union > [27 April 1960]
             limit = {
-                not = { has_global_flag = ET_flag_global_free_TOG }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_TOG }
                 OR = {
                     date > 1958.07.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -810,7 +970,10 @@ country_event = { # Releases
                 NOT = { original_tag = TOG }
                 controls_state = 777
             }
-            set_global_flag = ET_flag_global_free_TOG
+            set_country_flag = {
+                flag = ET_flag_country_free_TOG
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Togo.0
                 days = 30
@@ -818,7 +981,8 @@ country_event = { # Releases
         }
         if = { # Tunisia        [20 March 1956] FRA
             limit = {
-                not = { has_global_flag = ET_flag_global_free_TUN }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_TUN }
                 OR = {
                     date > 1956.02.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -829,7 +993,10 @@ country_event = { # Releases
                     controls_state = 665
                 }
             }
-            set_global_flag = ET_flag_global_free_TUN
+            set_country_flag = {
+                flag = ET_flag_country_free_TUN
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Tunisia.0
                 days = 20
@@ -837,7 +1004,8 @@ country_event = { # Releases
         }
         if = { # Uganda         [1 March 1962] ENG > Puppet > [9 October 1962]
             limit = {
-                not = { has_global_flag = ET_flag_global_free_UGA }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_UGA }
                 OR = {
                     date > 1962.02.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -845,7 +1013,10 @@ country_event = { # Releases
                 NOT = { original_tag = UGA }
                 controls_state = 548
             }
-            set_global_flag = ET_flag_global_free_UGA
+            set_country_flag = {
+                flag = ET_flag_country_free_UGA
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Uganda.0
                 days = 1
@@ -853,7 +1024,8 @@ country_event = { # Releases
         }
         if = { # Zambia         [24 October 1964] ENG
             limit = {
-                not = { has_global_flag = ET_flag_global_free_ZAM }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_ZAM }
                 OR = {
                     date > 1962.02.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -861,7 +1033,10 @@ country_event = { # Releases
                 NOT = { original_tag = ZAM }
                 controls_state = 771
             }
-            set_global_flag = ET_flag_global_free_ZAM
+            set_country_flag = {
+                flag = ET_flag_country_free_ZAM
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Zambia.0
                 days = 1
@@ -875,7 +1050,8 @@ country_event = { # Releases
         if = { # Vietnam        [19 December 1959] FRA* "First Indochina War"
             # https://en.wikipedia.org/wiki/First_Indochina_War
             limit = {
-                not = { has_global_flag = ET_flag_global_free_VIN }
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_VIN }
                 OR = {
                     date > 1959.11.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -891,7 +1067,10 @@ country_event = { # Releases
             }
             ET_init_countrys_firstIndochinaWar = yes
 
-            set_global_flag = ET_flag_global_free_VIN
+            set_country_flag = {
+                flag = ET_flag_country_free_VIN
+                days = 90
+            }
             country_event = {
                 id = ET_Independence_Vietnam.0
                 days = 19
