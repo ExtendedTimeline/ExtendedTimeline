@@ -13,7 +13,7 @@ country_event = { #0: Check if eqypt is independet
                 NOT = { has_government = democratic }
                 is_puppet = no
             }
-            country_event = { id = ET_Independence_Egypt.10 } # TODO: this event chain
+            #country_event = { id = ET_Independence_Egypt.10 } # TODO: this event chain
             log = "WIP Event ET Independence_Egypt.10 is supposed to run but don't exist..."
         }
         else_if = {     # Egypt exist and is puppet
