@@ -8,7 +8,6 @@ country_event = { # Init Checks
 	id = ET_S1_Division_Init.0
 
 	is_triggered_only = yes
-	fire_only_once = no
 	hidden = yes
 
 	immediate = {
