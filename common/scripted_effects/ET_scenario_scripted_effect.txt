@@ -21,30 +21,45 @@ ET_clr_modifiers_effect = {
 ET_set_new_focus_tree_effect = {
     custom_effect_tooltip = ET_set_new_focus_tree_effect_tt
     hidden_effect = {
-        if = {
-            limit = { original_tag = USA }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying Senario 1 focus tree" }
-            if = {
+        if = {      # ET_flag_global_scenario_1
+            limit = { has_global_flag = ET_flag_global_scenario_1 }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying scenario 1 focus tree" }
+
+            # Apply focus tree
+            if = {      # USA
                 limit = { original_tag = USA }
                 if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to USA" }
                 load_focus_tree = { tree = ET_Generic keep_completed = yes }
             }
-            else_if = {
+            else_if = { # ENG
                 limit = { original_tag = ENG }   
                 if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to ENG" }
                 load_focus_tree = { tree = ET_Generic keep_completed = yes }
             }
-            else_if = {
+            else_if = { # FRA
                 limit = { original_tag = GER }   
-                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to FRA" }
                 load_focus_tree = { tree = ET_Generic keep_completed = yes }
             }
-            else = {
+            else = {    # Other
                 if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
                 load_focus_tree = { tree = ET_Generic keep_completed = yes }
             }
         }
-        else = {
+        else_if = { # ET_flag_global_scenario_2
+            limit = { has_global_flag = ET_flag_global_scenario_1 }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying scenario 2 focus tree" }
+            if = {      # GER
+                limit = { original_tag = GER }
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
+                load_focus_tree = { tree = ET_Generic keep_completed = yes }
+            }
+            else = {    # Other
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
+                load_focus_tree = { tree = ET_Generic keep_completed = yes }
+            }
+        }
+        else = {    # ET_flag_global_scenario_0
             if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
             load_focus_tree = { tree = ET_Generic keep_completed = yes }
         }
