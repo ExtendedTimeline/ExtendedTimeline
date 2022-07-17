@@ -1,0 +1,156 @@
+add_namespace = ET_Scenario_1 # Cold War
+add_namespace = ET_Scenario_2 # German Victory or Allies surrender
+
+news_event = { # Senario 1 - News Event
+    id = ET_Scenario_1.0
+    title = ET_Scenario_1.0.t
+    desc = ET_Scenario_1.0.desc
+
+    picture = GFX_ET_news_event_peaceinworld
+
+    is_triggered_only = yes
+
+    immediate = {}
+    
+    option = {
+        name = ET_Scenario_1.0.a
+        trigger = {
+            NOT = { has_government = fascism }
+        }
+
+        add_war_support = -0.25
+
+        add_popularity = {
+            ideology = fascism
+            popularity = -0.10
+        }
+        add_popularity = {
+            ideology = communism
+            popularity = 0.05
+        }
+        add_popularity = {
+            ideology = democratic
+            popularity = 0.05
+        }
+
+        ai_chance = {
+            factor = 1
+        }
+    }
+    option = {
+        name = ET_Scenario_1.0.b
+        trigger = {
+            has_government = fascism
+        }
+
+        add_war_support = -0.25
+        add_stability = -0.10
+
+        add_popularity = {
+            ideology = fascism
+            popularity = -0.10
+        }
+        add_popularity = {
+            ideology = communism
+            popularity = 0.05
+        }
+        add_popularity = {
+            ideology = democratic
+            popularity = 0.05
+        }
+
+        ai_chance = {
+            factor = 1
+        }
+    }
+}
+
+news_event = { # Senario 2 - News Event
+    id = ET_Scenario_2.0
+    title = ET_Scenario_2.0.t
+    desc = ET_Scenario_2.0.desc
+
+    picture = GFX_news_event_german_soldiers
+
+    is_triggered_only = yes
+
+    immediate = {}
+    
+    option = {
+        name = ET_Scenario_2.0.a
+        trigger = { has_government = fascism }
+
+        add_stability = 0.10
+        add_war_support = -0.25
+
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.10
+        }
+        add_popularity = {
+            ideology = communism
+            popularity = -0.05
+        }
+        add_popularity = {
+            ideology = democratic
+            popularity = -0.05
+        }
+
+        ai_chance = {
+            factor = 1
+        }
+    }
+    option = {
+        name = ET_Scenario_2.0.b
+        trigger = { has_government = communism }
+
+        add_war_support = -0.25
+        add_stability = -0.10
+
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.10
+        }
+        add_popularity = {
+            ideology = communism
+            popularity = -0.05
+        }
+        add_popularity = {
+            ideology = democratic
+            popularity = -0.05
+        }
+        
+        ai_chance = {
+            factor = 1
+        }
+    }
+    option = {
+        name = ET_Scenario_2.0.c
+        trigger = {
+            OR ={
+                has_government = democratic
+                has_government = neutrality
+            }
+        }
+
+        add_war_support = -0.25
+        add_stability = -0.10
+
+        add_popularity = {
+            ideology = fascism
+            popularity = -0.10
+        }
+        add_popularity = {
+            ideology = communism
+            popularity = -0.05
+        }
+        add_popularity = {
+            ideology = democratic
+            popularity = -0.05
+        }
+        
+        ai_chance = {
+            factor = 1
+        }
+    }
+}

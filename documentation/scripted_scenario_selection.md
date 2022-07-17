@@ -14,7 +14,7 @@ The scenario picker is triggered on a peace conference when its triggered passed
     | on_actions                   | >>> | decisions                  |
     | on_peaceconference_ended     |     | ET_getNextEraFocusTree     |
     |   ET_flag_global_newera      |     |    Effect:                 |
-    |   ET_set_post_war_scenario   |     |    ET_set_new_era_effect   | >>> | scripted_effects                | 
+    |   ET_set_scenario            |     |    ET_set_new_era_effect   | >>> | scripted_effects                | 
                                                                             | ET_set_new_focus_tree_effect    |
                                                                             | ET_clr_modifiers_effect         |
 

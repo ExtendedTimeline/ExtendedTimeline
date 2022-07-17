@@ -1,10 +1,29 @@
+
 # SCOPE: TARGET
+ET_set_new_era_effect = {
+    if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying new era effects" }
+    hidden_effect = {
+        # Set new focustree
+        ET_set_new_focus_tree_effect = yes
+        ET_clr_modifiers_effect = yes
+        
+        if = {
+            limit = { has_idea = civilian_economy }
+            set_country_flag = ET_flag_country_HasDemobalizedEconomy
+        }
+
+        set_country_flag = ET_flag_country_newera
+    }
+}
+ET_clr_modifiers_effect = {
+    if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Clearing National Focus Modifiers" }
+}
 ET_set_new_focus_tree_effect = {
     custom_effect_tooltip = ET_set_new_focus_tree_effect_tt
     hidden_effect = {
         if = {
             limit = { original_tag = USA }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying Senario 1 focus tree" }              
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying Senario 1 focus tree" }
             if = {
                 limit = { original_tag = USA }
                 if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to USA" }
@@ -32,31 +51,11 @@ ET_set_new_focus_tree_effect = {
     }
 }
 
-ET_clr_modifiers_effect = {
-    if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Clearing National Focus Modifiers" }
-}
-
 # SCOPE: TARGET
-ET_set_new_era_effect = {
-    if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying new era effects" }
-    hidden_effect = {
-        # Set new focustree
-        ET_set_new_focus_tree_effect = yes
-        ET_clr_modifiers_effect = yes
-        
-        if = {
-            limit = { has_idea = civilian_economy }
-            set_country_flag = ET_flag_country_HasDemobalizedEconomy
-        }
-
-        set_country_flag = ET_flag_country_newera
-    }
-}
-
-# SCOPE: TARGET
-ET_set_post_war_scenario = {
-    if = {     # A Cold War         [ET_flag_global_scenario_1]
+ET_set_scenario = {
+    if = {      # Cold War                [ET_flag_global_scenario_1]
         limit = {
+            NOT = { has_global_flag = ET_flag_global_allies_surrender }
             country_exists = USA
             country_exists = ENG
             country_exists = FRA
@@ -65,14 +64,13 @@ ET_set_post_war_scenario = {
             ENG = { has_government = democratic }
             FRA = { has_government = democratic }
             SOV = { has_government = communism }
-
         }
         
         set_global_flag = ET_flag_global_scenario_1
         every_country = {
             limit = { always = yes }
             news_event = {
-                id = ET_News_Scenario_1.0
+                id = ET_Scenario_1.0
                 days = 1
             }
             country_event = {
@@ -81,7 +79,32 @@ ET_set_post_war_scenario = {
             }
         }
     }
-    else = {   # Unknown World      [ET_flag_global_scenario_0]
+    else_if = { # Fascist World           [ET_flag_global_scenario_2]
+        limit = {
+            OR = {
+                has_global_flag = ET_flag_global_allies_surrender
+
+                NOT = { country_exists = ENG }
+                ENG = { NOT = { has_government = democratic } }
+
+                NOT = { country_exists = SOV }
+                SOV = { NOT = { has_government = communism } }
+            }
+
+            country_exists = GER
+            GER = { has_government = fascism }
+        }
+        
+        set_global_flag = ET_flag_global_scenario_2
+        every_country = {
+            limit = { always = yes }
+            news_event = {
+                id = ET_Scenario_2.0
+                days = 3
+            }
+        }
+    }
+    else = {    # Unknown World           [ET_flag_global_scenario_0]
         set_global_flag = ET_flag_global_scenario_0
     }
 }

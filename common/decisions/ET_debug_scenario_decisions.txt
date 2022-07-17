@@ -15,7 +15,7 @@ ET_debug_decisions = {
 		cost = 0
 
 		complete_effect = {
-			ET_set_post_war_scenario = yes
+			ET_set_scenario = yes
 		}
 
 		ai_will_do = {
