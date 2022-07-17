@@ -1,3 +1,60 @@
+# SCOPE: TARGET
+ET_set_scenario = {
+    if = {      # Cold War                [ET_flag_global_scenario_1]
+        limit = {
+            NOT = { has_global_flag = ET_flag_global_allies_surrender }
+            country_exists = USA
+            country_exists = ENG
+            country_exists = FRA
+            country_exists = SOV
+            USA = { has_government = democratic }
+            ENG = { has_government = democratic }
+            FRA = { has_government = democratic }
+            SOV = { has_government = communism }
+        }
+        
+        set_global_flag = ET_flag_global_scenario_1
+        every_country = {
+            limit = { always = yes }
+            news_event = {
+                id = ET_Scenario_1.0
+                days = 1
+            }
+            country_event = {
+                id = ET_S1_Division_Init.0
+                days = 3
+            }
+        }
+    }
+    else_if = { # Fascist World           [ET_flag_global_scenario_2]
+        limit = {
+            OR = {
+                has_global_flag = ET_flag_global_allies_surrender
+
+                NOT = { country_exists = ENG }
+                ENG = { NOT = { has_government = democratic } }
+
+                NOT = { country_exists = SOV }
+                SOV = { NOT = { has_government = communism } }
+            }
+
+            country_exists = GER
+            GER = { has_government = fascism }
+        }
+        
+        set_global_flag = ET_flag_global_scenario_2
+        every_country = {
+            limit = { always = yes }
+            news_event = {
+                id = ET_Scenario_2.0
+                days = 3
+            }
+        }
+    }
+    else = {    # Unknown World           [ET_flag_global_scenario_0]
+        set_global_flag = ET_flag_global_scenario_0
+    }
+}
 
 # SCOPE: TARGET
 ET_set_new_era_effect = {
@@ -63,63 +120,5 @@ ET_set_new_focus_tree_effect = {
             if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
             load_focus_tree = { tree = ET_Generic keep_completed = yes }
         }
-    }
-}
-
-# SCOPE: TARGET
-ET_set_scenario = {
-    if = {      # Cold War                [ET_flag_global_scenario_1]
-        limit = {
-            NOT = { has_global_flag = ET_flag_global_allies_surrender }
-            country_exists = USA
-            country_exists = ENG
-            country_exists = FRA
-            country_exists = SOV
-            USA = { has_government = democratic }
-            ENG = { has_government = democratic }
-            FRA = { has_government = democratic }
-            SOV = { has_government = communism }
-        }
-        
-        set_global_flag = ET_flag_global_scenario_1
-        every_country = {
-            limit = { always = yes }
-            news_event = {
-                id = ET_Scenario_1.0
-                days = 1
-            }
-            country_event = {
-                id = ET_S1_Division_Init.0
-                days = 3
-            }
-        }
-    }
-    else_if = { # Fascist World           [ET_flag_global_scenario_2]
-        limit = {
-            OR = {
-                has_global_flag = ET_flag_global_allies_surrender
-
-                NOT = { country_exists = ENG }
-                ENG = { NOT = { has_government = democratic } }
-
-                NOT = { country_exists = SOV }
-                SOV = { NOT = { has_government = communism } }
-            }
-
-            country_exists = GER
-            GER = { has_government = fascism }
-        }
-        
-        set_global_flag = ET_flag_global_scenario_2
-        every_country = {
-            limit = { always = yes }
-            news_event = {
-                id = ET_Scenario_2.0
-                days = 3
-            }
-        }
-    }
-    else = {    # Unknown World           [ET_flag_global_scenario_0]
-        set_global_flag = ET_flag_global_scenario_0
     }
 }
