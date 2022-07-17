@@ -53,6 +53,13 @@ ET_set_scenario = {
     }
     else = {    # Unknown World           [ET_flag_global_scenario_0]
         set_global_flag = ET_flag_global_scenario_0
+        #every_country = {
+        #    limit = { always = yes }
+        #    news_event = {
+        #        id = ET_Scenario_0.0
+        #        days = 3
+        #    }
+        #}
     }
 }
 
