@@ -4,7 +4,7 @@ tags={
 }
 name="Extended Timeline DevBuild"
 dependencies={
-	"UTNH"
+	"UTNH_DEV"
 }
 supported_version="1.11.*"
 path="mod/ExtendedTimeline"

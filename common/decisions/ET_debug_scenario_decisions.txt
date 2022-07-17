@@ -1,6 +1,6 @@
 ET_debug_decisions = {
 		
-	ET_get_scenario = {
+	ET_debug_get_scenario = {
 		icon = generic_decision
 
 		available = {
@@ -23,7 +23,7 @@ ET_debug_decisions = {
 		}
 	}
 
-	ET_set_scenario_1 = {
+	ET_debug_set_scenario_1 = {
 		icon = generic_decision
 
 		available = {

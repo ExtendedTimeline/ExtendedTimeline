@@ -24,6 +24,7 @@ done
 echo "Writing descriptor.mod"
 sed -i "s/0.0.0/${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/descriptor.mod
 sed -i "s/ DevBuild//" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/descriptor.mod
+sed -i "s/UTNH/Ultimate Tech Tree : New Horizon/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/descriptor.mod
 
 [ -f "$PROJECT_ROOT_DIR/release/$PROJECT_NAME/README.md" ] && echo "Writing README.md"
 [ -f "$PROJECT_ROOT_DIR/release/$PROJECT_NAME/README.md" ] && sed -i "s/# EXTENDED TIMELINE/# EXTENDED TIMELINE v${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/README.md
