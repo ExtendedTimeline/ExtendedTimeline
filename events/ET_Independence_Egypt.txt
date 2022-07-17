@@ -383,7 +383,7 @@ country_event = { #40: [1952.07.23] Coup d'état # https://en.wikipedia.org/wiki
         }
     }
     immediate = {
-        ET_Init_Country_EGY = yes
+        ET_EGY_Set_New_Government = yes
         hidden_effect = {
             FRA = { news_event = { id = ET_Independence_Egypt.41 } }
             USA = { news_event = { id = ET_Independence_Egypt.41 } }
@@ -507,7 +507,7 @@ country_event = { #100: INIT REPUBLIC OF EGYPT
     hidden = yes
 
     immediate = {
-        ET_Init_Country_EGY_obb = yes
+        ET_EGY_Setup_Obb = yes
     }
 
     option = {}

@@ -1061,8 +1061,6 @@ country_event = { # Releases
                 OR = {
                     controls_state = 671
                     controls_state = 286
-                    controls_state = 670 # Laos
-                    controls_state = 741 # Cambodia
                 }
             }
             ET_init_countrys_firstIndochinaWar = yes
@@ -1076,8 +1074,6 @@ country_event = { # Releases
                 days = 19
             }
         }
-        # Laos - Handled by Vietnam
-        # Cambodia - Handled by Vietnam
     }
 
     option = {}
