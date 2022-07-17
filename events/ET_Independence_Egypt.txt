@@ -404,7 +404,7 @@ news_event = {    #41
     title = ET_Independence_Egypt.41.t
     desc = ET_Independence_Egypt.41.desc
 
-    picture = GFX_ET_news_egypt_revolution
+    picture = GFX_ET_news_event_egypt_revolution
 
     is_triggered_only = yes
     

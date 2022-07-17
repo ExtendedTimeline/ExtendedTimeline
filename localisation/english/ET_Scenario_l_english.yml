@@ -1,0 +1,11 @@
+﻿l_english:
+ET_Scenario_1.0.t:0 "PEACE!"          # Cold War - Scenario 1 
+ET_Scenario_1.0.desc:0 "After years of war, destruction and thousands of deaths and millions of displaced people the world is finally at peace.\n\nPeople are celebrating in every major city and every little town and on the former battlegrounds, while in backrooms the maps of the new world are being drawn by the victorious powers. Peace at last! \n\nNow it is up to the victorius powers to shape the new world order, one that hopefully leads to long lasting peace."
+ET_Scenario_1.0.a:0 "Finally peace! The fascist are defeated!"
+ET_Scenario_1.0.b:0 "Finally peace! But what will this leave us?!"
+
+ET_Scenario_2.0.t:0 "A bitter peace!" # Fascist World - Scenario 2
+ET_Scenario_2.0.desc:0 "After years of war, destruction and thousands of deaths and millions of displaced people the world is at peace.\n\n[GER.GetName] stand victorious in europe lest be hopefully this leads to long lasting peace."
+ET_Scenario_2.0.a:0 "Victory for our people!"
+ET_Scenario_2.0.b:0 "A sad day for workers of the world"
+ET_Scenario_2.0.c:0 "This is how liberty dies"
