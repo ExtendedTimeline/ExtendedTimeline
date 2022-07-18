@@ -14,7 +14,7 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 1000
-			has_global_flag = ET_flag_global_newera
+			ET_in_new_era_country = yes
 		}
 	}
 
@@ -988,8 +988,8 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
-	focus = { #United Nation
-		id = ET_Generic_united_nation
+	focus = { #Join United Nation
+		id = ET_Generic_join_united_nation
 		icon = GFX_goal_generic_national_unity
 		x = 16
 		y = 9
@@ -999,6 +999,16 @@ focus_tree = {
 		}
 		prerequisite = { focus = ET_Generic_global_political_effort  }
 		ai_will_do = { factor = 1 }
+		
+		allow_branch = {
+			OR = {
+				ET_has_senario_1 = yes
+			}
+		}
+
+		available = {
+			NOT = { original_tag = USA }
+		}
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -1014,6 +1024,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = ET_Generic_global_political_effort  }
 		mutually_exclusive = { focus = ET_Generic_decolonization  }
+
+		available = {
+			has_government = fascism
+		}
+	
 		completion_reward = {
 			add_political_power = 100
 		}

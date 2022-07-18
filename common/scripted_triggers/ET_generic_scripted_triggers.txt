@@ -1,6 +1,7 @@
+# SCOPE: Country and Allies
 ET_has_any_land_in_mainland_europe = {
-	custom_trigger_tooltip = {
-		tooltip = ET_has_any_land_in_mainland_europe_tt
+    custom_trigger_tooltip = {
+        tooltip = ET_has_any_land_in_mainland_europe_tt
         OR = {
             2   = { has_ROOT_at_least_1_div_in_current_state_scope = no }
             3   = { has_ROOT_at_least_1_div_in_current_state_scope = no }
@@ -148,5 +149,5 @@ ET_has_any_land_in_mainland_europe = {
             805 = { is_controlled_by_ROOT_or_ally = no }
             806 = { is_controlled_by_ROOT_or_ally = no }
         }
-	}
+    }
 }

@@ -1,9 +1,4 @@
 ﻿l_english: 
-ET_flag_country_newera:0 "Focusing on the future"
-ET_flag_global_newera:0 "Finally reached peace in the world"
-ET_flag_global_scenario_0:0 "Unknown World"
-ET_flag_global_scenario_1:0 "A Cold War"
-
 ET_Surrender_to_GER_tt:0 "We surrender to §Y[GER.GetNameWithFlag]§! and its §Y[GER.GetFactionName]§! allies.\nAny §Ycontrolled§! or §Ycore§! states beloning to §Y[GER.GetNameWithFlag]§! or its §Y[GER.GetFactionName]§! allies will be seized."
 ET_Surrender_to_GER_noFaction_tt:0 "We surrender to §Y[GER.GetNameWithFlag]§!\nAny §Ycontrolled§! or §Ycore§! state held by §Y[GER.GetNameWithFlag]§! will be seized."
 

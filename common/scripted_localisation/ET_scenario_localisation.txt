@@ -1,0 +1,61 @@
+defined_text = { # ET_newera_decisions_scripted_desc
+    name = ET_newera_decisions_scripted_desc
+    text = { # ET_flag_global_scenario_1
+        trigger = { has_global_flag = ET_flag_global_scenario_1 }
+        localization_key = ET_era_decisions_desc_scenario_1
+    }
+    text = { # ET_flag_global_scenario_2
+        trigger = { has_global_flag = ET_flag_global_scenario_2 }
+        localization_key = ET_era_decisions_desc_scenario_2
+    }
+    text = { # ET_flag_global_scenario_0
+        localization_key = ET_era_decisions_desc_scenario_0
+    }
+}
+
+# #
+# Scenario
+# #
+defined_text = { # ET_getCurrentScenarioName
+    name = ET_getCurrentScenarioName
+    text = { # ET_Scenario_0_name
+        trigger = { ET_has_senario_0 = yes }
+        localization_key = ET_Scenario_0_name
+    }
+    text = { # ET_Scenario_1_name
+        trigger = { ET_has_senario_1 = yes }
+        localization_key = ET_Scenario_1_name
+    }
+    text = { # ET_Scenario_2_name
+        trigger = { ET_has_senario_2 = yes }
+        localization_key = ET_Scenario_2_name
+    }
+    text = { # ET_Scenario_None_name
+        localization_key = ET_Scenario_None_name
+    }
+}
+
+defined_text = { # ET_Scenario_None_Name
+    name = ET_Scenario_None_Name
+    text = {
+        localization_key = ET_Scenario_None_name
+    }
+}
+defined_text = { # ET_Scenario_0_Name
+    name = ET_Scenario_0_Name
+    text = {
+        localization_key = ET_Scenario_0_name
+    }
+}
+defined_text = { # ET_Scenario_1_Name
+    name = ET_Scenario_1_Name
+    text = {
+        localization_key = ET_Scenario_1_name
+    }
+}
+defined_text = { # ET_Scenario_2_Name
+    name = ET_Scenario_2_Name
+    text = {
+        localization_key = ET_Scenario_2_name
+    }
+}

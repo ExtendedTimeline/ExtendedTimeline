@@ -3,7 +3,7 @@ ET_debug_decisions = {
 		icon = generic_decision
 
         available = {
-            NOT = { has_global_flag = ET_flag_global_newera }
+            ET_in_new_era = no
         }
 
         visible = {
@@ -14,7 +14,7 @@ ET_debug_decisions = {
         cost = 0
 
         complete_effect = {
-            set_global_flag = ET_flag_global_newera
+            ET_set_new_era = yes
         }
 
         ai_will_do = {
@@ -26,7 +26,7 @@ ET_debug_decisions = {
         icon = generic_decision
 
         available = {
-            has_global_flag = ET_flag_global_newera
+            ET_in_new_era = yes
         }
 
         visible = {
@@ -37,7 +37,7 @@ ET_debug_decisions = {
         cost = 0
 
         complete_effect = {
-            clr_global_flag = ET_flag_global_newera
+            ET_set_new_era = yes
         }
 
         ai_will_do = {
@@ -45,11 +45,11 @@ ET_debug_decisions = {
         }
     }
 
-    ET_remove_newera_flags = {
+    ET_remove_newera_country = {
         icon = generic_decision
 
         available = {
-            has_country_flag = ET_flag_country_newera
+            ET_in_new_era_country = yes
         }
 
         visible = {
@@ -60,7 +60,7 @@ ET_debug_decisions = {
         cost = 0
         
         complete_effect = {
-            clr_country_flag = ET_flag_country_newera
+            ET_remove_new_era_country = yes
         }
 
         ai_will_do = {

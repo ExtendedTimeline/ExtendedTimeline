@@ -1,4 +1,42 @@
 ﻿l_english:
+#
+# Era and scenario
+#
+ET_Scenario_0_name:0 "Unknown World"
+ET_Scenario_1_name:0 "The Cold War"
+ET_Scenario_2_name:0 "A Fachist World"
+ET_Scenario_none_name:0 "No scenario"
+
+ET_has_Scenario_any_tt:0 "Has §Yany§! scenario"
+ET_has_Scenario_none_tt:0 "Has scenario §Y[ET_Scenario_None_Name]§!"
+ET_has_Scenario_0_tt:0 "Has scenario §Y[ET_Scenario_0_Name]§!"
+ET_has_Scenario_1_tt:0 "Has scenario §Y[ET_Scenario_1_Name]§!"
+ET_has_Scenario_2_tt:0 "Has scenario §Y[ET_Scenario_2_Name]§!"
+
+# Scenario flags
+ET_flag_global_scenario_0:0 "[ET_Scenario_0_Name]"
+ET_flag_global_scenario_1:0 "[ET_Scenario_1_Name]"
+ET_flag_global_scenario_2:0 "[ET_Scenario_2_Name]"
+
+# Era Effect and trigger tooltips
+ET_in_new_era:0 "In new era"
+ET_in_new_era_country:0 "World"
+ET_is_era_avalible_country:0 "has new era possible for country"
+
+ET_set_new_era:0 "Enable new era for the world"
+ET_remove_new_era:0 "Disable new era for the world (May lead to unwanted consequences)"
+
+ET_set_new_era_country:0 "Enable new era for country"
+ET_remove_new_era_country:0 "Disable new era for the [this.GetName] (May lead to unwanted consequences)"
+
+# Era Flags 
+ET_flag_country_newera:0 "[this.GetName] in a new era"
+ET_flag_global_newera:0 "World in a new era"
+
+
+#
+# Events
+#
 ET_Scenario_1.0.t:0 "PEACE!"          # Cold War - Scenario 1 
 ET_Scenario_1.0.desc:0 "After years of war, destruction and thousands of deaths and millions of displaced people the world is finally at peace.\n\nPeople are celebrating in every major city and every little town and on the former battlegrounds, while in backrooms the maps of the new world are being drawn by the victorious powers. Peace at last! \n\nNow it is up to the victorius powers to shape the new world order, one that hopefully leads to long lasting peace."
 ET_Scenario_1.0.a:0 "Finally peace! The fascist are defeated!"

@@ -6,12 +6,11 @@ ET_era_decisions = {
 
         available = {
             date > 1945.01.01
-            has_global_flag = ET_flag_global_newera
+            ET_in_new_era = yes
         }
 
         visible = {
-            has_global_flag = ET_flag_global_newera
-            NOT = { has_country_flag = ET_flag_country_newera }
+            ET_is_era_avalible_country = yes
         }
 
         fire_only_once = no
@@ -71,7 +70,8 @@ political_actions = {
 
         visible = {
             date > 1941.01.01 # Show 41
-            NOT = { has_country_flag = ET_flag_country_newera }
+            
+            ET_in_new_era = no
             has_war_with = GER
             is_faction_leader = yes
 
@@ -101,7 +101,7 @@ political_actions = {
                     }
                 }
                 white_peace = GER
-                set_global_flag = ET_flag_global_newera
+                ET_set_new_era = yes
                 ET_set_scenario = yes
             }
         }
