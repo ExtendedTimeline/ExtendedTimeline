@@ -20,7 +20,7 @@ ET_flag_global_scenario_2:0 "[ET_Scenario_2_Name]"
 
 # Era Effect and trigger tooltips
 ET_in_new_era:0 "In new era"
-ET_in_new_era_country:0 "World"
+ET_in_new_era_country:0 "[this.getName] in new era"
 ET_is_era_avalible_country:0 "has new era possible for country"
 
 ET_set_new_era:0 "Enable new era for the world"
