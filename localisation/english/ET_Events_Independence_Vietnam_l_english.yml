@@ -1,6 +1,6 @@
 ﻿l_english:
-ET_Independence_Vietnam.1.t:0 "Indochina upprising"
-ET_Independence_Vietnam.1.desc:0 "Anti-[Root.GetAdjectiveCap] terrorit groups have taken controll over several of our states in Indochina. The groups name are [VIN.GetCommunistParty], [CAM.GetCommunistParty] and [LAO.GetCommunistParty]"
-ET_Independence_Vietnam.1.a:0 "This is not acceptable send the troops!"
-ET_Independence_Vietnam.1.b:0 "Withdrawl from Indochina"
+ET_Independence_Vietnam.1.t:0 "The Indochinese Urising"
+ET_Independence_Vietnam.1.desc:0 "Anti-[Root.GetAdjectiveCap] terrorist groups have seemed to have taken control over several of our major states in Indochina. The names of these groups are [VIN.GetCommunistParty], [CAM.GetCommunistParty] and [LAO.GetCommunistParty]"
+ET_Independence_Vietnam.1.a:0 "This cannot be acceptable send our forces!"
+ET_Independence_Vietnam.1.b:0 "We must withdrawl our forces"
 ET_Independence_Vietnam.1.c:0 "(Play as [VIN.GetFlag])"

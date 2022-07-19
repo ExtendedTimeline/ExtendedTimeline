@@ -151,3 +151,16 @@ ET_has_any_land_in_mainland_europe = {
         }
     }
 }
+
+ET_UnitedNation_Exists = {
+    custom_trigger_tooltip = {
+        tooltip = ET_UnitedNation_Exists
+        has_global_flag = ET_flag_global_UnitedNation
+    }
+}
+ET_NATO_Exists = {
+    custom_trigger_tooltip = {
+        tooltip = ET_NATO_Exists
+        has_global_flag = ET_flag_global_NATO
+    }
+}
