@@ -1,0 +1,74 @@
+
+# #
+# New Era Triggers
+# #
+
+# Scope: GLOBAL
+ET_in_new_era = {
+    custom_trigger_tooltip = {
+        tooltip = ET_in_new_era
+        has_global_flag = ET_flag_global_newera
+    }
+}
+# Scope: Country
+ET_in_new_era_country = {
+    custom_trigger_tooltip = {
+        tooltip = ET_in_new_era_country
+        ET_in_new_era = yes
+        has_country_flag = ET_flag_country_newera
+    }
+}
+# Scope: Country
+ET_is_era_avalible_country = {
+    custom_trigger_tooltip = {
+        tooltip = ET_is_era_avalible_country
+        ET_in_new_era = yes
+        NOT = { has_country_flag = ET_flag_country_newera }
+    }
+}
+
+
+# # 
+# Scenario Triggers
+# #
+
+# Scope: GLOBAL
+ET_has_scenario = {
+    custom_trigger_tooltip = {
+        tooltip = ET_has_Scenario_any_tt
+        OR = {
+            ET_has_scenario_0 = Yes
+            ET_has_scenario_1 = Yes
+            ET_has_scenario_2 = Yes
+        }
+    }
+}
+
+# Scope: GLOBAL
+ET_has_scenario_none = {
+    custom_trigger_tooltip = {
+        tooltip = ET_has_Scenario_None_tt
+        ET_has_scenario = No
+    }
+}
+# Scope: GLOBAL
+ET_has_scenario_0 = {
+    custom_trigger_tooltip = {
+        tooltip = ET_has_Scenario_0_tt
+        has_global_flag = ET_flag_global_scenario_0
+    }
+}
+# Scope: GLOBAL
+ET_has_scenario_1 = {
+    custom_trigger_tooltip = {
+        tooltip = ET_has_Scenario_1_tt
+        has_global_flag = ET_flag_global_scenario_1
+    }
+}
+# Scope: GLOBAL
+ET_has_scenario_2 = {
+    custom_trigger_tooltip = {
+        tooltip = ET_has_Scenario_2_tt
+        has_global_flag = ET_flag_global_scenario_1
+    }
+}

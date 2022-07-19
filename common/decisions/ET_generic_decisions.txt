@@ -6,12 +6,11 @@ ET_era_decisions = {
 
         available = {
             date > 1945.01.01
-            has_global_flag = ET_flag_global_newera
+            ET_in_new_era = yes
         }
 
         visible = {
-            has_global_flag = ET_flag_global_newera
-            NOT = { has_country_flag = ET_flag_country_newera }
+            ET_is_era_avalible_country = yes
         }
 
         fire_only_once = no
@@ -71,7 +70,8 @@ political_actions = {
 
         visible = {
             date > 1941.01.01 # Show 41
-            NOT = { has_country_flag = ET_flag_country_newera }
+            
+            ET_in_new_era = no
             has_war_with = GER
             is_faction_leader = yes
 
@@ -101,7 +101,7 @@ political_actions = {
                     }
                 }
                 white_peace = GER
-                set_global_flag = ET_flag_global_newera
+                ET_set_new_era = yes
                 ET_set_scenario = yes
             }
         }
@@ -109,9 +109,118 @@ political_actions = {
         ai_will_do = {
             base = 0
             modifier = {
-                date > 1950.01.01
+                date > 1952.06.01
                 add = 100
             }
         }
+    }
+
+    ET_hold_elections = {
+        icon = generic_political_discourse
+
+        #priority = 10
+
+        available = {
+            OR = {
+                AND = {
+                    has_government = democratic
+                    democratic < 0.25
+                }
+                AND = {
+                    has_government = neutrality
+                    neutrality < 0.25
+                }
+                AND = {
+                    has_government = communism
+                    communism < 0.25
+                }
+            }
+            has_stability < 0.30
+        }
+
+        visible = {
+            has_elections = yes
+            at_war = no
+            OR = {
+                AND = {
+                    has_government = democratic
+                    democratic < 0.40
+                }
+                AND = {
+                    has_government = neutrality
+                    neutrality < 0.40
+                }
+                AND = {
+                    has_government = communism
+                    communism < 0.40
+                }
+            }
+            has_stability < 0.50
+        }
+
+        fire_only_once = no
+		days_remove = 14
+        cost = 200
+
+        complete_effect = {
+            add_stability = 0.10
+        }
+
+        ai_will_do = { base = 0 }
+    }
+
+    ET_allow_elections = {
+        icon = generic_political_discourse
+
+        #priority = 10
+
+        available = {
+            OR = {
+                AND = {
+                    has_government = democratic
+                    democratic < 0.25
+                }
+                AND = {
+                    has_government = neutrality
+                    neutrality < 0.25
+                }
+                AND = {
+                    has_government = communism
+                    communism < 0.25
+                }
+            }
+            has_stability < 0.30
+        }
+
+        visible = {
+            at_war = no
+            OR = {
+                AND = {
+                    has_government = democratic
+                    democratic < 0.40
+                }
+                AND = {
+                    has_government = neutrality
+                    neutrality < 0.40
+                }
+                AND = {
+                    has_government = communism
+                    communism < 0.40
+                }
+            }
+            has_elections = no
+            has_stability < 0.50
+        }
+
+        fire_only_once = no
+		days_remove = 30
+        cost = 200
+
+        complete_effect = {
+            add_stability = 0.10
+            has_elections = yes
+        }
+
+        ai_will_do = { base = 0 }
     }
 }

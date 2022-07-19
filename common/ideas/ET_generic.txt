@@ -1,0 +1,23 @@
+ideas = {
+
+	country = {
+		ET_generic_domino_theory_idea = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_acceptance = -25
+				drift_defence_factor = 0.10
+			}
+		}
+	}
+}
