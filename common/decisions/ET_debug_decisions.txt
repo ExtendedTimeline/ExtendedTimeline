@@ -83,7 +83,6 @@ ET_debug_decisions = {
         cost = 0
 
         complete_effect = {
-            set_variable = { ET_var_current_date = date }
         }
 
         ai_will_do = {

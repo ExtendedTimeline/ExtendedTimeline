@@ -1,1057 +1,1289 @@
 add_namespace = ET_S1_Division_Init
 add_namespace = ET_S1_Division_Europe
 add_namespace = ET_S1_Division_Europe_State
+add_namespace = ET_S1_Division_Europe_Special
+
 add_namespace = ET_S1_Division_Asia
 add_namespace = ET_S1_Division_Asia_State
 
 country_event = { # Init Checks
-	id = ET_S1_Division_Init.0
+    id = ET_S1_Division_Init.0
 
-	is_triggered_only = yes
-	hidden = yes
+    is_triggered_only = yes
+    hidden = yes
 
-	immediate = {
-		# 1 POLAND
-		if = {
-			limit = {
-				AND = {
-					NOT = { original_tag = SOV }
-					NOT = { original_tag = POL }
-					OR = {
-						controls_state = 10
-						controls_state = 63
-						controls_state = 66
-						controls_state = 67
-						controls_state = 68
-						controls_state = 762
-						controls_state = 807
-						controls_state = 86
-						controls_state = 87
-						controls_state = 88
-						controls_state = 92
-						controls_state = 97
-						controls_state = 98
-						controls_state = 98
-						controls_state = 98
-					}
-				}
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking Poland..." }
-			country_event = { id = ET_S1_Division_Europe.1 }
-		}
-		# 3 WESTERN POLAND
-		if = {
-			limit = {
-				NOT = { original_tag = POL }
-				OR = {
-					controls_state = 63
-					controls_state = 66
-					controls_state = 67
-					controls_state = 68
-					controls_state = 762
-				}
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking West Poland..." }
-			country_event = { id = ET_S1_Division_Europe.3 }
-		}
-		# 4 EAST GERMANY
-		if = {
-			limit = {
-				NOT = { original_tag = DDR }
-				OR = {
-					controls_state = 62
-					controls_state = 61
-					controls_state = 64
-					controls_state = 65
-					controls_state = 60
-				}
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking East Germany..." }
-			country_event = { id = ET_S1_Division_Europe.4 }
-		}
-		# 5 CZECHSLOVAKIA
-		if = {
-			limit = {
-				NOT = { original_tag =  SOV }
-				NOT = { original_tag =  CZE }
-				NOT = { original_tag =  SLO }
-				country_exists = SLO
-				OR = {
-					controls_state = 69
-					controls_state = 9 
-					controls_state = 75
-					controls_state = 74
-					controls_state = 62
+    immediate = {
+        # 1 POLAND
+        if = {
+            limit = {
+                AND = {
+                    NOT = { original_tag = SOV }
+                    NOT = { original_tag = POL }
+                    OR = {
+                        controls_state = 10
+                        controls_state = 63
+                        controls_state = 66
+                        controls_state = 67
+                        controls_state = 68
+                        controls_state = 762
+                        controls_state = 807
+                        controls_state = 86
+                        controls_state = 87
+                        controls_state = 88
+                        controls_state = 92
+                        controls_state = 97
+                        controls_state = 98
+                    }
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking Poland..." }
+            country_event = { id = ET_S1_Division_Europe.1 }
+        }
+        # 3 WESTERN POLAND
+        if = {
+            limit = {
+                NOT = { original_tag = POL }
+                OR = {
+                    controls_state = 63
+                    controls_state = 66
+                    controls_state = 67
+                    controls_state = 68
+                    controls_state = 762
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking West Poland..." }
+            country_event = { id = ET_S1_Division_Europe.3 }
+        }
+        # 4 EAST GERMANY
+        if = {
+            limit = {
+                NOT = { original_tag = DDR }
+                OR = {
+                    controls_state = 62
+                    controls_state = 61
+                    controls_state = 64
+                    controls_state = 65
+                    controls_state = 60
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking East Germany..." }
+            country_event = { id = ET_S1_Division_Europe.4 }
+        }
+        # 5 CZECHSLOVAKIA
+        if = {
+            limit = {
+                NOT = { original_tag =  SOV }
+                NOT = { original_tag =  CZE }
+                NOT = { original_tag =  SLO }
+                country_exists = SLO
+                OR = {
+                    controls_state = 69
+                    controls_state = 9 
+                    controls_state = 75
+                    controls_state = 74
+                    controls_state = 62
 
-					controls_state = 70
-					controls_state = 664
-					controls_state = 71
-				}
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking Czechslovakia..." }
-			country_event = { id = ET_S1_Division_Europe.5 }
-		}
-		# 7 AUSTRIA
-		if = {
-			limit = {
-				OR = {
-					controls_state = 4
-					controls_state = 152
-					controls_state = 153
-				}
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking Austria..." }
-			country_event = { id = ET_S1_Division_Europe.7 }
-		}
-		# 8 WEST GERMANY
-		if = {
-			limit = {
-				OR = {
-					controls_state = 58
-					controls_state = 59
-					controls_state = 56
-					controls_state = 57
-					controls_state = 51
-					controls_state = 42
-					controls_state = 55
-					controls_state = 54
-					controls_state = 50
-					controls_state = 52
-					controls_state = 53
-				}
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking West Germany..." }
-			country_event = { id = ET_S1_Division_Europe.8 }
-		}
+                    controls_state = 70
+                    controls_state = 664
+                    controls_state = 71
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking Czechslovakia..." }
+            country_event = { id = ET_S1_Division_Europe.5 }
+        }
+        # 7 EAST AUSTRIA
+        if = {
+            limit = {
+                NOT = { original_tag = AUS }
+                NOT = { original_tag = SOV }
+                controls_state = 4
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking East Austria..." }
+            country_event = { id = ET_S1_Division_Europe.7 }
+        }
+        #   EAST AUSTRIA - Special case
+        if = {
+            limit = {
+                original_tag = SOV
+                controls_state = 4
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking East Austria..." }
+            country_event = { id = ET_S1_Division_Europe_Special.2 }
+        }
+        # 8 WEST AUSTRIA
+        if = {
+            limit = {
+                OR = {
+                    controls_state = 152
+                    controls_state = 153
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking West Austria..." }
+            country_event = { id = ET_S1_Division_Europe.8 }
+        }
+        # 9 WEST GERMANY
+        if = {
+            limit = {
+                OR = {
+                    controls_state = 58
+                    controls_state = 59
+                    controls_state = 56
+                    controls_state = 57
+                    controls_state = 51
+                    controls_state = 42
+                    controls_state = 55
+                    controls_state = 54
+                    controls_state = 50
+                    controls_state = 52
+                    controls_state = 53
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking West Germany..." }
+            country_event = { id = ET_S1_Division_Europe.9 }
+        }
 
 
 
-		# 1 STATE: Ermland-Masuren
-		if = {
-			limit = {
-				NOT = { original_tag =  POL }
-				controls_state = 5
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: Ermland-Masuren state is not controlled by Soviet Union." }
-			country_event = { id = ET_S1_Division_Europe_State.1 }
-		}
-		# 2 STATE: Wilno
-		if = {
-			limit = {
-				NOT = { original_tag =  SOV }
-				controls_state = 784
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: Wilno state is not controlled by Soviet Union." }
-			country_event = { id = ET_S1_Division_Europe_State.2 }
-		}
-		# 3 STATE: Köninsberg
-		if = {
-			limit = {
-				NOT = { original_tag =  SOV }
-				controls_state = 763
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: Köninsberg state is not controlled by Soviet Union." }
-			country_event = { id = ET_S1_Division_Europe_State.3 }
-		}
-		# 4 STATE: Carpathian Ruthenia
-		if = {
-			limit = {
-				NOT = { original_tag =  SOV }
-				controls_state = 73
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: Carpathian Ruthenia state is not controlled by Soviet Union." }
-			country_event = { id = ET_S1_Division_Europe_State.5 }
-		}
-		# 5 STATE: Memel
-		if = {
-			limit = {
-				NOT = { original_tag =  SOV }
-				NOT = { original_tag =  LIT }
-				controls_state = 188
-			}
-			if = { limit = { is_debug = yes } log = "[GetDateText]: Memel state is not controlled correct controll" }
-			country_event= { id = ET_S1_Division_Europe_State.6 }
-		}
+        # 1 STATE: Ermland-Masuren
+        if = {
+            limit = {
+                NOT = { original_tag =  POL }
+                controls_state = 5
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: Ermland-Masuren state is not controlled by Soviet Union." }
+            country_event = { id = ET_S1_Division_Europe_State.1 }
+        }
+        # 2 STATE: Wilno
+        if = {
+            limit = {
+                NOT = { original_tag =  SOV }
+                controls_state = 784
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: Wilno state is not controlled by Soviet Union." }
+            country_event = { id = ET_S1_Division_Europe_State.2 }
+        }
+        # 3 STATE: Köninsberg
+        if = {
+            limit = {
+                NOT = { original_tag =  SOV }
+                controls_state = 763
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: Köninsberg state is not controlled by Soviet Union." }
+            country_event = { id = ET_S1_Division_Europe_State.3 }
+        }
+        # 4 STATE: Carpathian Ruthenia
+        if = {
+            limit = {
+                NOT = { original_tag =  SOV }
+                controls_state = 73
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: Carpathian Ruthenia state is not controlled by Soviet Union." }
+            country_event = { id = ET_S1_Division_Europe_State.5 }
+        }
+        # 5 STATE: Memel
+        if = {
+            limit = {
+                NOT = { original_tag =  SOV }
+                NOT = { original_tag =  LIT }
+                controls_state = 188
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: Memel state is not controlled correct controll" }
+            country_event= { id = ET_S1_Division_Europe_State.6 }
+        }
 
-		#
-		#	ASIA
-		#
-		
+        #
+        #    ASIA
+        #
+        
 
-	}
+    }
 
-	option = {
-	}
+    option = { }
 }
 
 country_event = { # 1 POLAND
-	id = ET_S1_Division_Europe.1
-	title = ET_S1_Division_Europe.1.t
-	desc = ET_S1_Division_Europe.1.desc
+    id = ET_S1_Division_Europe.1
+    title = ET_S1_Division_Europe.1.t
+    desc = ET_S1_Division_Europe.1.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = { # A: Give States to Poland
-		name = ET_S1_Division_Europe.1.a
-		trigger = {
-			country_exists = POL
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Polish states to Poland and make a Puppet of Poland." }
-			POL = {
-				add_state_core = 10
-				add_state_core = 807
-				add_state_core = 85
-				add_state_core = 88
-				add_state_core = 90
-				add_state_core = 92
-				add_state_core = 97
-				add_state_core = 98
-			
-				remove_state_core = 784
-				remove_state_core = 89
-				remove_state_core = 91
-				remove_state_core = 93
-				remove_state_core = 94
-				remove_state_core = 95
-				remove_state_core = 96
-			}
-			SOV = {
-				add_state_core = 784
-				add_state_core = 89 
-				add_state_core = 91 
-				add_state_core = 93 
-				add_state_core = 94 
-				add_state_core = 95 
-				add_state_core = 96
-			}
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+    option = { # A: Give States to Poland *
+        name = ET_S1_Division_Europe.1.a
+        trigger = {
+            country_exists = POL
+        }
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Polish states to Poland and make a Puppet of Poland." }
+            POL = {
+                add_state_core = 10
+                add_state_core = 807
+                add_state_core = 85
+                add_state_core = 88
+                add_state_core = 90
+                add_state_core = 92
+                add_state_core = 97
+                add_state_core = 98
+            
+                remove_state_core = 784
+                remove_state_core = 89
+                remove_state_core = 91
+                remove_state_core = 93
+                remove_state_core = 94
+                remove_state_core = 95
+                remove_state_core = 96
+            }
+            SOV = {
+                add_state_core = 784
+                add_state_core = 89 
+                add_state_core = 91 
+                add_state_core = 93 
+                add_state_core = 94 
+                add_state_core = 95 
+                add_state_core = 96
+            }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
-		if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 85  } 85 =  { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 88  } 88 =  { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 90  } 90 =  { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 92  } 92 =  { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 97  } 97 =  { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 98  } 98 =  { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 85  } 85 =  { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 88  } 88 =  { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 90  } 90 =  { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 92  } 92 =  { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 97  } 97 =  { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 98  } 98 =  { transfer_state_to  = POL } }
 
-		POL = { annex_country = { target = KSH transfer_troops = yes } }
+        POL = { annex_country = { target = KSH transfer_troops = yes } }
 
-		if = { limit = { controls_state = 89  } 89 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 91  } 91 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 93  } 93 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 94  } 94 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 95  } 95 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 96  } 96 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 89  } 89 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 91  } 91 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 93  } 93 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 94  } 94 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 95  } 95 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 96  } 96 =  { transfer_state_to  = SOV } } # POL core provinces
 
-		if = {
-			limit = { POL = { NOT = { is_puppet_of = SOV } } }
-			SOV = { puppet = POL }
-		}
-	}
-	option = { # A: Give States to Soviet
-		name = ET_S1_Division_Europe.1.b
-		trigger = {
-			NOT = { original_tag =  SOV }
-			NOT = { country_exists = POL }
-		}
-		ai_chance = {
-			factor = 0
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Polish states to Soviet Union..." }
-			POL = {
-				add_state_core = 10
-				add_state_core = 807
-				add_state_core = 85
-				add_state_core = 88
-				add_state_core = 90
-				add_state_core = 92
-				add_state_core = 97
-				add_state_core = 98
-			
-				remove_state_core = 784
-				remove_state_core = 89
-				remove_state_core = 91
-				remove_state_core = 93
-				remove_state_core = 94
-				remove_state_core = 95
-				remove_state_core = 96
-			}
-			SOV = {
-				add_state_core = 784
-				add_state_core = 89 
-				add_state_core = 91 
-				add_state_core = 93 
-				add_state_core = 94 
-				add_state_core = 95 
-				add_state_core = 96
-			}
-		}
-		
-		if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 85  } 85 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 88  } 88 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 90  } 90 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 92  } 92 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 97  } 97 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 98  } 98 =  { transfer_state_to  = SOV } }
+        if = {
+            limit = { POL = { NOT = { is_puppet_of = SOV } } }
+            SOV = { puppet = POL }
+        }
 
-		if = { limit = { controls_state = 89  } 89 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 91  } 91 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 93  } 93 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 94  } 94 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 95  } 95 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 96  } 96 =  { transfer_state_to  = SOV } } # POL core provinces
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Give States to Soviet
+        name = ET_S1_Division_Europe.1.b
+        trigger = {
+            NOT = { original_tag =  SOV }
+            NOT = { country_exists = POL }
+        }
 
-		SOV = { country_event = { id = ET_S1_Division_Europe.2 days = 1 } }
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Polish states to Soviet Union..." }
+            POL = {
+                add_state_core = 10
+                add_state_core = 807
+                add_state_core = 85
+                add_state_core = 88
+                add_state_core = 90
+                add_state_core = 92
+                add_state_core = 97
+                add_state_core = 98
+            
+                remove_state_core = 784
+                remove_state_core = 89
+                remove_state_core = 91
+                remove_state_core = 93
+                remove_state_core = 94
+                remove_state_core = 95
+                remove_state_core = 96
+            }
+            SOV = {
+                add_state_core = 784
+                add_state_core = 89 
+                add_state_core = 91 
+                add_state_core = 93 
+                add_state_core = 94 
+                add_state_core = 95 
+                add_state_core = 96
+            }
+        }
+        if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 85  } 85 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 88  } 88 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 90  } 90 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 92  } 92 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 97  } 97 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 98  } 98 =  { transfer_state_to  = SOV } }
 
-	}
-	option = { # C: Refuce (DISABLED)
-		name = ET_S1_Division_Europe.1.c
-		ai_chance = {
-			factor = 0
-		}
-		trigger = { always = no }
-	}
+        if = { limit = { controls_state = 89  } 89 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 91  } 91 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 93  } 93 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 94  } 94 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 95  } 95 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 96  } 96 =  { transfer_state_to  = SOV } } # POL core provinces
+
+        SOV = { country_event = { id = ET_S1_Division_Europe.2 days = 1 } }
+
+        ai_chance = { factor = 0 }
+    }
+    option = { # C: Refuce
+        name = ET_S1_Division_Europe.1.c
+
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
 country_event = { # 2 POLAND - Puppet
-	id = ET_S1_Division_Europe.2
-	title = ET_S1_Division_Europe.2.t
-	desc = ET_S1_Division_Europe.2.desc
+    id = ET_S1_Division_Europe.2
+    title = ET_S1_Division_Europe.2.t
+    desc = ET_S1_Division_Europe.2.desc
 
-	is_triggered_only = yes
-	fire_only_once = yes
+    is_triggered_only = yes
+    fire_only_once = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = { # A: Release Poland as a puppet
-		name = ET_S1_Division_Europe.2.a
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Releases Poland as Puppet" }
-			SOV = {
-				add_state_core = 784
-				add_state_core = 89
-				add_state_core = 91
-				add_state_core = 93
-				add_state_core = 94
-				add_state_core = 95
-				add_state_core = 96
-			}
-			POL = {
-				remove_state_core = 784
-				remove_state_core = 89
-				remove_state_core = 91
-				remove_state_core = 93
-				remove_state_core = 94
-				remove_state_core = 95
-				remove_state_core = 96
-			}
-			SOV = { country_event = { id = ET_S1_Division_Europe_State.3 days = 3 } }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 85  } 85 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 88  } 88 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 90  } 90 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 92  } 92 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 97  } 97 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 98  } 98 =  { transfer_state_to  = SOV } }
+    option = { # A: Release Poland as a puppet
+        name = ET_S1_Division_Europe.2.a
 
-		if = { limit = { controls_state = 89  } 89 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 91  } 91 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 93  } 93 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 94  } 94 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 95  } 95 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 96  } 96 =  { transfer_state_to  = SOV } } # POL core provinces
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Releases Poland as Puppet" }
+            SOV = {
+                add_state_core = 784
+                add_state_core = 89
+                add_state_core = 91
+                add_state_core = 93
+                add_state_core = 94
+                add_state_core = 95
+                add_state_core = 96
+            }
+            POL = {
+                remove_state_core = 784
+                remove_state_core = 89
+                remove_state_core = 91
+                remove_state_core = 93
+                remove_state_core = 94
+                remove_state_core = 95
+                remove_state_core = 96
+            }
+            SOV = { country_event = { id = ET_S1_Division_Europe_State.3 days = 3 } }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 85  } 85 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 88  } 88 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 90  } 90 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 92  } 92 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 97  } 97 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 98  } 98 =  { transfer_state_to  = SOV } }
 
-		release_puppet = POL
-	}
-	option = { # B: Keep it under our occupation
-		name = ET_S1_Division_Europe.2.b
-		ai_chance = {
-			factor = 0
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] keeping the states under occupation" }
-			SOV = {
-				add_state_core = 784
-				add_state_core = 89 
-				add_state_core = 91 
-				add_state_core = 93 
-				add_state_core = 94 
-				add_state_core = 95 
-				add_state_core = 96
-			}
-			POL = {
-				remove_state_core = 784
-				remove_state_core = 89
-				remove_state_core = 91
-				remove_state_core = 93
-				remove_state_core = 94
-				remove_state_core = 95
-				remove_state_core = 96
-			}
-		}
+        if = { limit = { controls_state = 89  } 89 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 91  } 91 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 93  } 93 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 94  } 94 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 95  } 95 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 96  } 96 =  { transfer_state_to  = SOV } } # POL core provinces
 
-		if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 85  } 85 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 88  } 88 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 90  } 90 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 92  } 92 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 97  } 97 =  { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 98  } 98 =  { transfer_state_to  = SOV } }
+        release_puppet = POL
+        
+        ai_chance = { factor = 0 }
+    }
+    option = { # B: Keep it under our occupation
+        name = ET_S1_Division_Europe.2.b
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] keeping the states under occupation" }
+            SOV = {
+                add_state_core = 784
+                add_state_core = 89 
+                add_state_core = 91 
+                add_state_core = 93 
+                add_state_core = 94 
+                add_state_core = 95 
+                add_state_core = 96
+            }
+            POL = {
+                remove_state_core = 784
+                remove_state_core = 89
+                remove_state_core = 91
+                remove_state_core = 93
+                remove_state_core = 94
+                remove_state_core = 95
+                remove_state_core = 96
+            }
+        }
 
-		if = { limit = { controls_state = 89  } 89 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 91  } 91 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 93  } 93 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 94  } 94 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 95  } 95 =  { transfer_state_to  = SOV } } # POL core provinces
-		if = { limit = { controls_state = 96  } 96 =  { transfer_state_to  = SOV } } # POL core provinces
-	}
+        if = { limit = { controls_state = 10  } 10 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 807 } 807 = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 85  } 85 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 88  } 88 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 90  } 90 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 92  } 92 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 97  } 97 =  { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 98  } 98 =  { transfer_state_to  = SOV } }
+
+        if = { limit = { controls_state = 89  } 89 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 91  } 91 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 93  } 93 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 94  } 94 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 95  } 95 =  { transfer_state_to  = SOV } } # POL core provinces
+        if = { limit = { controls_state = 96  } 96 =  { transfer_state_to  = SOV } } # POL core provinces
+
+        reverse_add_opinion_modifier = {
+            target = USA
+            modifier = ET_broke_agreements
+        }
+        reverse_add_opinion_modifier = {
+            target = ENG
+            modifier = ET_broke_agreements
+        }
+        reverse_add_opinion_modifier = {
+            target = FRA
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
 
 country_event = { # 3 WESTERN POLAND
-	id = ET_S1_Division_Europe.3
-	title = ET_S1_Division_Europe.3.t
-	desc = ET_S1_Division_Europe.3.desc
+    id = ET_S1_Division_Europe.3
+    title = ET_S1_Division_Europe.3.t
+    desc = ET_S1_Division_Europe.3.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = { # A: Transfer Western Poland to the Soviet Union
-		name = ET_S1_Division_Europe.3.a
-		trigger = {
-			NOT = { country_exists = POL }
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Western Poland states to the Soviet Union" }
-			GER = {
-				remove_state_core = 762
-				remove_state_core = 784
-				remove_state_core = 67
-				remove_state_core = 66
-				remove_state_core = 5
-				remove_state_core = 63
-				remove_state_core = 66
-				remove_state_core = 67
-				remove_state_core = 68
-			}
-			DDR = {
-				remove_state_core = 762
-				remove_state_core = 784
-				remove_state_core = 67
-				remove_state_core = 66
-				remove_state_core = 5
-				remove_state_core = 63
-				remove_state_core = 66
-				remove_state_core = 67
-				remove_state_core = 68
-			}
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		if = { limit = { controls_state = 63  } 63  = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 68  } 68  = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 67  } 67  = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 762 } 762 = { transfer_state_to  = SOV } }
-	}
-	option = { # B: Transfer Western Poland to Poland
-		name = ET_S1_Division_Europe.3.b
-		trigger = {
-			country_exists = POL
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Western Poland states to Poland" }
-			GER = {
-				remove_state_core = 762
-				remove_state_core = 784
-				remove_state_core = 67
-				remove_state_core = 66
-				remove_state_core = 5
-				remove_state_core = 63
-				remove_state_core = 66
-				remove_state_core = 67
-				remove_state_core = 68
-			}
-			DDR = {
-				remove_state_core = 762
-				remove_state_core = 784
-				remove_state_core = 67
-				remove_state_core = 66
-				remove_state_core = 5
-				remove_state_core = 63
-				remove_state_core = 66
-				remove_state_core = 67
-				remove_state_core = 68
-			}
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		if = { limit = { controls_state = 63  } 63  = { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 68  } 68  = { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 67  } 67  = { transfer_state_to  = POL } }
-		if = { limit = { controls_state = 762 } 762 = { transfer_state_to  = POL } }
-	}
-	option = { # C: Refuce (DISABLED)
-		name = ET_S1_Division_Europe.3.b
-		ai_chance = {
-			factor = 0
-		}
-		trigger = { always = no }
-	}
+    option = { # A: Transfer Western Poland to the Soviet Union
+        name = ET_S1_Division_Europe.3.a
+        trigger = {
+            NOT = { country_exists = POL }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Western Poland states to the Soviet Union" }
+            GER = {
+                remove_state_core = 762
+                remove_state_core = 784
+                remove_state_core = 67
+                remove_state_core = 66
+                remove_state_core = 5
+                remove_state_core = 63
+                remove_state_core = 66
+                remove_state_core = 67
+                remove_state_core = 68
+            }
+            DDR = {
+                remove_state_core = 762
+                remove_state_core = 784
+                remove_state_core = 67
+                remove_state_core = 66
+                remove_state_core = 5
+                remove_state_core = 63
+                remove_state_core = 66
+                remove_state_core = 67
+                remove_state_core = 68
+            }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        if = { limit = { controls_state = 63  } 63  = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 68  } 68  = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 67  } 67  = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 762 } 762 = { transfer_state_to  = SOV } }
+    }
+    option = { # B: Transfer Western Poland to Poland
+        name = ET_S1_Division_Europe.3.b
+        trigger = {
+            country_exists = POL
+        }
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Western Poland states to Poland" }
+            GER = {
+                remove_state_core = 762
+                remove_state_core = 784
+                remove_state_core = 67
+                remove_state_core = 66
+                remove_state_core = 5
+                remove_state_core = 63
+                remove_state_core = 66
+                remove_state_core = 67
+                remove_state_core = 68
+            }
+            DDR = {
+                remove_state_core = 762
+                remove_state_core = 784
+                remove_state_core = 67
+                remove_state_core = 66
+                remove_state_core = 5
+                remove_state_core = 63
+                remove_state_core = 66
+                remove_state_core = 67
+                remove_state_core = 68
+            }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        if = { limit = { controls_state = 63  } 63  = { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 68  } 68  = { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 67  } 67  = { transfer_state_to  = POL } }
+        if = { limit = { controls_state = 762 } 762 = { transfer_state_to  = POL } }
+        
+        ai_chance = { factor = 1 }
+    }
+    option = { # C: Refuce
+        name = ET_S1_Division_Europe.3.c
+
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
 country_event = { # 4 EASTERN GERMANY
-	id = ET_S1_Division_Europe.4
-	title = ET_S1_Division_Europe.4.t
-	desc = ET_S1_Division_Europe.4.desc
+    id = ET_S1_Division_Europe.4
+    title = ET_S1_Division_Europe.4.t
+    desc = ET_S1_Division_Europe.4.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = { # A: Transfer East Germany to the Soviet Union
-		name = ET_S1_Division_Europe.4.a
-		trigger = {
-			NOT = { country_exists = POL }
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering East Germany states to the Soviet Union" }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		if = { limit = { controls_state = 61  } 61  = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 62  } 62  = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 64  } 64  = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 65  } 65  = { transfer_state_to  = SOV } }
-		if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = SOV } }
-	}
-	option = { # B: Transfer East Germany to DDR
-		name = ET_S1_Division_Europe.4.b
-		trigger = {
-			country_exists = DDR
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering East Germany states to DDR" }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		if = { limit = { controls_state = 61  } 61  = { transfer_state_to  = DDR } }
-		if = { limit = { controls_state = 62  } 62  = { transfer_state_to  = DDR } }
-		if = { limit = { controls_state = 64  } 64  = { transfer_state_to  = DDR } }
-		if = { limit = { controls_state = 65  } 65  = { transfer_state_to  = DDR } }
-		if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = DDR } }
+    option = { # A: Transfer East Germany to the Soviet Union
+        name = ET_S1_Division_Europe.4.a
+        trigger = {
+            NOT = { country_exists = POL }
+        }
+        ai_chance = {
+            factor = 1
+        }
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering East Germany states to the Soviet Union" }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        if = { limit = { controls_state = 61  } 61  = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 62  } 62  = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 64  } 64  = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 65  } 65  = { transfer_state_to  = SOV } }
+        if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = SOV } }
+        SOV = {
+            country_event = {
+                id = ET_S1_Division_Europe_Special.1
+                days = 1
+            }
+        }
+    }
+    option = { # B: Transfer East Germany to DDR
+        name = ET_S1_Division_Europe.4.b
+        trigger = {
+            country_exists = DDR
+        }
+        ai_chance = {
+            factor = 1
+        }
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering East Germany states to DDR" }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        if = { limit = { controls_state = 61  } 61  = { transfer_state_to  = DDR } }
+        if = { limit = { controls_state = 62  } 62  = { transfer_state_to  = DDR } }
+        if = { limit = { controls_state = 64  } 64  = { transfer_state_to  = DDR } }
+        if = { limit = { controls_state = 65  } 65  = { transfer_state_to  = DDR } }
+        if = { limit = { controls_state = 66  } 66  = { transfer_state_to  = DDR } }
 
-		SOV = { puppet = DDR }
-	}
-	option = { # C: Refuce (DISABLED)
-		name = ET_S1_Division_Europe.4.b
-		ai_chance = {
-			factor = 0
-		}
-		trigger = { always = no }
-	}
+        SOV = { puppet = DDR }
+        DDR = {
+            country_event = {
+                id = ET_S1_Division_Europe_Special.1
+                days = 1
+            }
+        }
+    }
+    option = { # C: Refuce
+        name = ET_S1_Division_Europe.4.b
+
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
 
 country_event = { # 5 CZECHSLOVAKIA
-	id = ET_S1_Division_Europe.5
-	title = ET_S1_Division_Europe.5.t
-	desc = ET_S1_Division_Europe.5.desc
+    id = ET_S1_Division_Europe.5
+    title = ET_S1_Division_Europe.5.t
+    desc = ET_S1_Division_Europe.5.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = { # A: No CZE && No SLO give to Soviet
-		name = ET_S1_Division_Europe.5.a
-		trigger = {
-			NOT = { country_exists = CZE }
-			NOT = { country_exists = SLO }
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = SOV } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 74  } 74  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 72  } 72  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
+    option = { # A: No CZE && No SLO give to Soviet
+        name = ET_S1_Division_Europe.5.a
+        trigger = {
+            NOT = { country_exists = CZE }
+            NOT = { country_exists = SLO }
+        }
+        
+        hidden_effect = {
+            SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = SOV } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 74  } 74  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 72  } 72  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
 
-		if = { limit = { controls_state = 70  } 70  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 664 } 664 = { transfer_state_to  = SOV } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 70  } 70  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 664 } 664 = { transfer_state_to  = SOV } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = SOV } } # Czechslovakia core provinces
 
-		country_event = { id = ET_S1_Division_Europe.6 days = 1 }
-	}
-	option = { # B: SLO give to SLO
-		name = ET_S1_Division_Europe.5.b
-		trigger = {
-			NOT = { country_exists = CZE }
-			country_exists = SLO
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = SLO } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 74  } 74  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 72  } 72  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
+        country_event = { id = ET_S1_Division_Europe.6 days = 1 }
+        
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: SLO give to SLO
+        name = ET_S1_Division_Europe.5.b
+        trigger = {
+            NOT = { country_exists = CZE }
+            country_exists = SLO
+        }
 
-		if = { limit = { controls_state = 70  } 70  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 664 } 664 = { transfer_state_to  = SLO } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
+        hidden_effect = {
+            SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = SLO } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 74  } 74  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 72  } 72  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
 
-	}
-	option = { # C: CZE give to CZE
-		name = ET_S1_Division_Europe.5.c
-		trigger = {
-			country_exists = CZE
-			NOT = { country_exists = SLO }
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 74  } 74  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 72  } 72  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 70  } 70  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 664 } 664 = { transfer_state_to  = SLO } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = SLO } } # Czechslovakia core provinces
 
-		if = { limit = { controls_state = 70  } 70  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 664 } 664 = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-	}
-	option = { # D: SLO give to CZE
-		name = ET_S1_Division_Europe.5.d
-		trigger = {
-			country_exists = CZE
-			country_exists = SLO
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 74  } 74  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 72  } 72  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        ai_chance = { factor = 1 }
+    }
+    option = { # C: CZE give to CZE
+        name = ET_S1_Division_Europe.5.c
+        trigger = {
+            country_exists = CZE
+            NOT = { country_exists = SLO }
+        }
 
-		if = { limit = { controls_state = 70  } 70  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 664 } 664 = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-		if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
-	}
+        hidden_effect = {
+            SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 74  } 74  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 72  } 72  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+
+        if = { limit = { controls_state = 70  } 70  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 664 } 664 = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # D: SLO give to CZE
+        name = ET_S1_Division_Europe.5.d
+        trigger = {
+            country_exists = CZE
+            country_exists = SLO
+        }
+        
+        hidden_effect = {
+            SOV = { country_event = { id = ET_S1_Division_Europe.6 days = 1 } }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        if = { limit = { controls_state = 69  } 69  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 9   } 9   = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 75  } 75  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 74  } 74  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 72  } 72  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+
+        if = { limit = { controls_state = 70  } 70  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 664 } 664 = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+        if = { limit = { controls_state = 71  } 71  = { transfer_state_to  = CZE } } # Czechslovakia core provinces
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # E: Refuce
+        name = ET_S1_Division_Europe.5.e
+
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+    
+        ai_chance = { factor = 0 }
+    }
 }
 country_event = { # 6 CZECHSLOVAKIA - Puppet
-	id = ET_S1_Division_Europe.6
-	title = ET_S1_Division_Europe.6.t
-	desc = ET_S1_Division_Europe.6.desc
+    id = ET_S1_Division_Europe.6
+    title = ET_S1_Division_Europe.6.t
+    desc = ET_S1_Division_Europe.6.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = { # A: Release Czechslovakia as a puppet
-		name = ET_S1_Division_Europe.6.a
-		trigger = {
-			NOT = { country_exists = CZE }
-			NOT = { country_exists = SLO }
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			CZE = { remove_state_core = 73 }
-			HUN = { remove_state_core = 73 }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+    option = { # A: Release Czechslovakia as a puppet
+        name = ET_S1_Division_Europe.6.a
+        trigger = {
+            NOT = { country_exists = CZE }
+            NOT = { country_exists = SLO }
+        }
+        hidden_effect = {
+            CZE = { remove_state_core = 73 }
+            HUN = { remove_state_core = 73 }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
-		SOV = { release_puppet = CZE }
-	}
-	option = { # B: Create a unified Czechslovakian puppet state
-		name = ET_S1_Division_Europe.6.b
-		trigger = {
-			NOT = { country_exists = CZE }
-			country_exists = SLO
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			CZE = { remove_state_core = 73 }
-			HUN = { remove_state_core = 73 }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        SOV = { release_puppet = CZE }
 
-		SOV = { release_puppet = CZE }
-		CZE = { annex_country = { target = SLO transfer_troops = yes } }
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Create a unified Czechslovakian puppet state
+        name = ET_S1_Division_Europe.6.b
+        trigger = {
+            NOT = { country_exists = CZE }
+            country_exists = SLO
+        }
+        hidden_effect = {
+            CZE = { remove_state_core = 73 }
+            HUN = { remove_state_core = 73 }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
-		69  = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		9   = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		75  = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		74  = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		72  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        SOV = { release_puppet = CZE }
+        CZE = { annex_country = { target = SLO transfer_troops = yes } }
 
-		70  = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		664 = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		71  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        69  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        9   = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        75  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        74  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        72  = { transfer_state_to  = CZE } # Czechslovakia core provinces
 
-		CZE = { set_capital = { state = 9 } }
-	}
-	option = { # C: Create a unified Czechslovakian puppet state
-		name = ET_S1_Division_Europe.6.c
-		trigger = {
-			country_exists = CZE
-			NOT = { country_exists = SLO }
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			CZE = { remove_state_core = 73 }
-			HUN = { remove_state_core = 73 }
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        70  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        664 = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        71  = { transfer_state_to  = CZE } # Czechslovakia core provinces
 
-		69  = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		9   = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		75  = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		74  = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		72  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        CZE = { set_capital = { state = 9 } }
 
-		70  = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		664 = { transfer_state_to  = CZE } # Czechslovakia core provinces
-		71  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        ai_chance = { factor = 1 }
+    }
+    option = { # C: Create a unified Czechslovakian puppet state
+        name = ET_S1_Division_Europe.6.c
+        trigger = {
+            country_exists = CZE
+            NOT = { country_exists = SLO }
+        }
+        hidden_effect = {
+            CZE = { remove_state_core = 73 }
+            HUN = { remove_state_core = 73 }
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
-		SOV = { puppet = CZE }
-	}
+        69  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        9   = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        75  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        74  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        72  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+
+        70  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        664 = { transfer_state_to  = CZE } # Czechslovakia core provinces
+        71  = { transfer_state_to  = CZE } # Czechslovakia core provinces
+
+        SOV = { puppet = CZE }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # D: Keep the current state
+        name = ET_S1_Division_Europe.6.d
+    
+        reverse_add_opinion_modifier = {
+            target = USA
+            modifier = ET_broke_agreements
+        }
+        reverse_add_opinion_modifier = {
+            target = ENG
+            modifier = ET_broke_agreements
+        }
+        reverse_add_opinion_modifier = {
+            target = FRA
+            modifier = ET_broke_agreements
+        }
+    }
 }
-country_event = { # 7 AUSTRIA
-	id = ET_S1_Division_Europe.7
-	title = ET_S1_Division_Europe.7.t
-	desc = ET_S1_Division_Europe.7.desc
 
-	is_triggered_only = yes
+country_event = { # 7 AUSTRIA EAST
+    id = ET_S1_Division_Europe.7
+    title = ET_S1_Division_Europe.7.t
+    desc = ET_S1_Division_Europe.7.desc
 
-	immediate = {
-	}
+    is_triggered_only = yes
 
-	option = { # A: Give States to Austria if exist
-		name = ET_S1_Division_Europe.7.a
-		trigger = {
-			country_exists = AUS
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to Austria." }
-		}
-		
-		if = { limit = { controls_state = 4    } 4   =  { transfer_state_to  = AUS } } # Austria core provinces
-		if = { limit = { controls_state = 152  } 152 =  { transfer_state_to  = AUS } } # Austria core provinces
-		if = { limit = { controls_state = 153  } 4   =  { transfer_state_to  = AUS } } # Austria core provinces
-	}
+    immediate = { }
 
-	option = { # B: Give States to Occupyer if exist
-		name = ET_S1_Division_Europe.7.a
-		trigger = {
-			NOT = { country_exists = AUS }
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to occupying force." }
-		}
-		if = { limit = { controls_state = 4    } 4   =  { transfer_state_to  = SOV } } # Austria core provinces
-		if = { limit = { controls_state = 152  } 152 =  { transfer_state_to  = USA } } # Austria core provinces
-		if = { limit = { controls_state = 153  } 4   =  { transfer_state_to  = FRA } } # Austria core provinces
-	}
+    option = { # A: Give States to Austria (If Austria exist)
+        name = ET_S1_Division_Europe.7.a
+        trigger = {
+            country_exists = AUS
+        }
+
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to Austria." }
+        }
+        if = { limit = { controls_state = 4    } 4   =  { transfer_state_to  = AUS } } # Austria core provinces
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Give States to Occupyer (If Astria does not exist)
+        name = ET_S1_Division_Europe.7.b
+        trigger = {
+            NOT = { country_exists = AUS }
+        }
+        
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to occupying force." }
+        }
+        if = { limit = { controls_state = 4    } 4   =  { transfer_state_to  = SOV } } # Austria core provinces
+
+        SOV = {
+            country_event = {
+                id = ET_S1_Division_Europe_Special.2
+                days = 1
+            }
+        }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # C: Refuce
+        name = ET_S1_Division_Europe.5.c
+
+        if = {
+            limit = { controls_state = 152 }
+            reverse_add_opinion_modifier = {
+                target = USA
+                modifier = ET_broke_agreements
+            }
+        }
+        if = {
+            limit = { controls_state = 153 }
+            reverse_add_opinion_modifier = {
+                target = FRA
+                modifier = ET_broke_agreements
+            }
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
-country_event = { # 8 WEST GERMANY
-	id = ET_S1_Division_Europe.8
-	title = ET_S1_Division_Europe.8.t
-	desc = ET_S1_Division_Europe.8.desc
+country_event = { # 8 AUSTRIA WEST
+    id = ET_S1_Division_Europe.8
+    title = ET_S1_Division_Europe.8.t
+    desc = ET_S1_Division_Europe.8.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = { # A: Give States to West Germany if exist
-		name = ET_S1_Division_Europe.8.a
-		trigger = {
-			country_exists = WGR
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to West Germany." }
-		}
-		
-		if = { limit = { controls_state = 58 } 58  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 59 } 59  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 56 } 56  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 57 } 57  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 51 } 51  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 42 } 42  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 55 } 55  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 54 } 54  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 50 } 50  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 52 } 52  =  { transfer_state_to  = WGR } } # german core provinces
-		if = { limit = { controls_state = 53 } 53  =  { transfer_state_to  = WGR } } # german core provinces
-	}
+    option = { # A: Give States to Austria (If Austria exist)
+        name = ET_S1_Division_Europe.8.a
+        trigger = {
+            country_exists = AUS
+        }
 
-	option = { # B: Give States to Occupyer if exist
-		name = ET_S1_Division_Europe.7.b
-		trigger = {
-			NOT = { country_exists = WGR }
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering West Germany states to occupying force." }
-		}
-		if = { limit = { controls_state = 58 } 58  =  { transfer_state_to  = ENG } } # german core provinces
-		if = { limit = { controls_state = 59 } 59  =  { transfer_state_to  = ENG } } # german core provinces
-		if = { limit = { controls_state = 56 } 56  =  { transfer_state_to  = ENG } } # german core provinces
-		if = { limit = { controls_state = 57 } 57  =  { transfer_state_to  = ENG } } # german core provinces
-		if = { limit = { controls_state = 51 } 51  =  { transfer_state_to  = ENG } } # german core provinces
-		if = { limit = { controls_state = 42 } 42  =  { transfer_state_to  = FRA } } # german core provinces
-		if = { limit = { controls_state = 55 } 55  =  { transfer_state_to  = USA } } # german core provinces
-		if = { limit = { controls_state = 54 } 54  =  { transfer_state_to  = USA } } # german core provinces
-		if = { limit = { controls_state = 50 } 50  =  { transfer_state_to  = FRA } } # german core provinces
-		if = { limit = { controls_state = 52 } 52  =  { transfer_state_to  = USA } } # german core provinces
-		if = { limit = { controls_state = 53 } 53  =  { transfer_state_to  = USA } } # german core provinces
-	}
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to Austria." }
+        }
+        if = { limit = { controls_state = 152  } 152 =  { transfer_state_to  = AUS } } # Austria core provinces
+        if = { limit = { controls_state = 153  } 153 =  { transfer_state_to  = AUS } } # Austria core provinces
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Give States to Occupyer (If Astria does not exist)
+        name = ET_S1_Division_Europe.8.b
+        trigger = {
+            NOT = { country_exists = AUS }
+        }
+        
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to occupying force." }
+        }
+        if = { limit = { controls_state = 152  } 152 =  { transfer_state_to  = USA } } # Austria core provinces
+        if = { limit = { controls_state = 153  } 153 =  { transfer_state_to  = FRA } } # Austria core provinces
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # C: Refuce
+        name = ET_S1_Division_Europe.8.c
+
+        if = {
+            limit = { controls_state = 152 }
+            reverse_add_opinion_modifier = {
+                target = USA
+                modifier = ET_broke_agreements
+            }
+        }
+        if = {
+            limit = { controls_state = 153 }
+            reverse_add_opinion_modifier = {
+                target = FRA
+                modifier = ET_broke_agreements
+            }
+        }
+
+        ai_chance = { factor = 0 }
+    }
+}
+
+country_event = { # 9 WEST GERMANY
+    id = ET_S1_Division_Europe.9
+    title = ET_S1_Division_Europe.9.t
+    desc = ET_S1_Division_Europe.9.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # A: Give States to West Germany if exist
+        name = ET_S1_Division_Europe.9.a
+        trigger = {
+            country_exists = WGR
+        }
+
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to West Germany." }
+        }
+        
+        if = { limit = { controls_state = 58 } 58  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 59 } 59  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 56 } 56  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 57 } 57  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 51 } 51  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 42 } 42  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 55 } 55  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 54 } 54  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 50 } 50  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 52 } 52  =  { transfer_state_to  = WGR } } # german core provinces
+        if = { limit = { controls_state = 53 } 53  =  { transfer_state_to  = WGR } } # german core provinces
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Give States to Occupyer if exist
+        name = ET_S1_Division_Europe.9.b
+        trigger = {
+            NOT = { country_exists = WGR }
+        }
+
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering West Germany states to occupying force." }
+        }
+        if = { limit = { controls_state = 58 } 58  =  { transfer_state_to  = ENG } } # german core provinces
+        if = { limit = { controls_state = 59 } 59  =  { transfer_state_to  = ENG } } # german core provinces
+        if = { limit = { controls_state = 56 } 56  =  { transfer_state_to  = ENG } } # german core provinces
+        if = { limit = { controls_state = 57 } 57  =  { transfer_state_to  = ENG } } # german core provinces
+        if = { limit = { controls_state = 51 } 51  =  { transfer_state_to  = ENG } } # german core provinces
+        if = { limit = { controls_state = 42 } 42  =  { transfer_state_to  = FRA } } # german core provinces
+        if = { limit = { controls_state = 55 } 55  =  { transfer_state_to  = USA } } # german core provinces
+        if = { limit = { controls_state = 54 } 54  =  { transfer_state_to  = USA } } # german core provinces
+        if = { limit = { controls_state = 50 } 50  =  { transfer_state_to  = FRA } } # german core provinces
+        if = { limit = { controls_state = 52 } 52  =  { transfer_state_to  = USA } } # german core provinces
+        if = { limit = { controls_state = 53 } 53  =  { transfer_state_to  = USA } } # german core provinces
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # C: Refuce
+        name = ET_S1_Division_Europe_State.9.c
+
+        hidden_effect = {
+            POL = { add_state_core = 5 }
+            GER = { remove_state_core = 5 }
+        }
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
 
 country_event = { # 1 STATE: Ermland-Masuren
-	id = ET_S1_Division_Europe_State.1
-	title = ET_S1_Division_Europe_State.1.t
-	desc = ET_S1_Division_Europe_State.1.desc
+    id = ET_S1_Division_Europe_State.1
+    title = ET_S1_Division_Europe_State.1.t
+    desc = ET_S1_Division_Europe_State.1.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = { # A: Transfer Ermland-Masuren to Poland
-		name = ET_S1_Division_Europe_State.1.a
-		trigger = {
-			country_exists = POL
-		}
-		ai_chance = {
-			factor = 1
-		}
-		hidden_effect = {
-			POL = { add_state_core = 5 }
-			GER = { remove_state_core = 5 }
-		}
+    option = { # A: Transfer Ermland-Masuren to Poland
+        name = ET_S1_Division_Europe_State.1.a
+        trigger = {
+            country_exists = POL
+        }
 
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		5 =  { transfer_state_to  = POL } # German core provinces
+        hidden_effect = {
+            POL = { add_state_core = 5 }
+            GER = { remove_state_core = 5 }
+        }
 
-	}
-	option = { # B: Transfer Ermland-Masuren to Soviet Union
-		name = ET_S1_Division_Europe_State.1.a
-		trigger = {
-			NOT = { country_exists = POL }
-		}
-		ai_chance = {
-			factor = 0
-		}
-		hidden_effect = {
-			POL = { add_state_core = 5 }
-			GER = { remove_state_core = 5 }
-		}
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        5 =  { transfer_state_to  = POL } # German core provinces
 
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		5 =  { transfer_state_to  = SOV } # German core provinces
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Transfer Ermland-Masuren to Soviet Union
+        name = ET_S1_Division_Europe_State.1.a
+        trigger = {
+            NOT = { country_exists = POL }
+        }
+        
+        hidden_effect = {
+            POL = { add_state_core = 5 }
+            GER = { remove_state_core = 5 }
+        }
 
-	}
-	option = { # C: Refuce
-		name = ET_S1_Division_Europe_State.1.c
-		ai_chance = {
-			factor = 0
-		}
-		hidden_effect = {
-			POL = { add_state_core = 5 }
-			GER = { remove_state_core = 5 }
-		}
-	}
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        5 =  { transfer_state_to  = SOV } # German core provinces
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # C: Refuce
+        name = ET_S1_Division_Europe_State.1.c
+        hidden_effect = {
+            POL = { add_state_core = 5 }
+            GER = { remove_state_core = 5 }
+        }
+
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
 country_event = { # 2 STATE: Wilno
-	id = ET_S1_Division_Europe_State.2
-	title = ET_S1_Division_Europe_State.2.t
-	desc = ET_S1_Division_Europe_State.2.desc
+    id = ET_S1_Division_Europe_State.2
+    title = ET_S1_Division_Europe_State.2.t
+    desc = ET_S1_Division_Europe_State.2.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = {
-		name = ET_S1_Division_Europe_State.2.a
-		ai_chance = {
-			factor = 1
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		784 =  { transfer_state_to  = SOV } # POL & LIT core provinces
-		SOV = { add_state_core = 784 }
-	}
+    option = { # A: Transfer Wilno to the Soviet Union
+        name = ET_S1_Division_Europe_State.2.a
+        ai_chance = {
+            factor = 1
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        784 =  { transfer_state_to = SOV } # POL & LIT core provinces
+        SOV = { add_state_core = 784 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Europe_State.2.b
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
 country_event = { # 3 STATE: Köningsberg
-	id = ET_S1_Division_Europe_State.3
-	title = ET_S1_Division_Europe_State.3.t
-	desc = ET_S1_Division_Europe_State.3.desc
+    id = ET_S1_Division_Europe_State.3
+    title = ET_S1_Division_Europe_State.3.t
+    desc = ET_S1_Division_Europe_State.3.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = { # A: Transfer Köningsberg to the Soviet Union
-		name = ET_S1_Division_Europe_State.3.a
-		ai_chance = {
-			factor = 1
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-		763 =  { transfer_state_to  = SOV } # Köningsberg
-		SOV = { add_state_core = 763 }
+    option = { # A: Transfer Köningsberg to the Soviet Union
+        name = ET_S1_Division_Europe_State.3.a
+        ai_chance = {
+            factor = 1
+        }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        763 =  { transfer_state_to  = SOV } # Köningsberg
+        SOV = { add_state_core = 763 }
 
-		hidden_effect = {
-			GER = { remove_state_core = 763 }
-			SOV = {
-				if = {
-					limit = { has_government = communism }
-					country_event = { id = ET_SovietUnion_Renaming_Renaming.1 days = 30 }
-				}
-			}
-		}
-	}
-	option = { # B: Refuce
-		name = ET_S1_Division_Europe_State.3.b
-		ai_chance = {
-			factor = 0
-		}
-	}
+        hidden_effect = {
+            GER = { remove_state_core = 763 }
+            SOV = {
+                if = {
+                    limit = { has_government = communism }
+                    country_event = { id = ET_SovietUnion_Renaming_Renaming.1 days = 30 }
+                }
+            }
+        }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Europe_State.3.b
+
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
-country_event = { # 4 STATE: Carpathian Ruthenia
-	id = ET_S1_Division_Europe_State.5
-	title = ET_S1_Division_Europe_State.5.t
-	desc = ET_S1_Division_Europe_State.5.desc
+country_event = { # 5 STATE: Carpathian Ruthenia
+    id = ET_S1_Division_Europe_State.5
+    title = ET_S1_Division_Europe_State.5.t
+    desc = ET_S1_Division_Europe_State.5.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = {
-		name = ET_S1_Division_Europe_State.5.a
-		ai_chance = {
-			factor = 1
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+    option = {
+        name = ET_S1_Division_Europe_State.5.a
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
-		73 = { transfer_state_to  = SOV } # CZE core provinces
-		SOV = { add_state_core = 73 }
+        73 = { transfer_state_to  = SOV } # CZE core provinces
+        SOV = { add_state_core = 73 }
 
-		hidden_effect = {
-			CZE = { remove_state_core = 73 }
-			HUN = { remove_state_core = 73 }
-		}
-	}
+        hidden_effect = {
+            CZE = { remove_state_core = 73 }
+            HUN = { remove_state_core = 73 }
+        }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Europe_State.5.b
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
 }
 country_event = { # 5 STATE: Memel
-	id = ET_S1_Division_Europe_State.6
-	title = ET_S1_Division_Europe_State.6.t
-	desc = ET_S1_Division_Europe_State.6.desc
+    id = ET_S1_Division_Europe_State.6
+    title = ET_S1_Division_Europe_State.6.t
+    desc = ET_S1_Division_Europe_State.6.desc
 
-	is_triggered_only = yes
+    is_triggered_only = yes
 
-	immediate = {
-	}
+    immediate = { }
 
-	option = {
-		name = ET_S1_Division_Europe_State.6.a
-		trigger = { NOT = { country_exists = LIT } }
-		ai_chance = {
-			factor = 1
-		}
-		custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+    option = {
+        name = ET_S1_Division_Europe_State.6.a
+        trigger = { NOT = { country_exists = LIT } }
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
-		188 = { transfer_state_to  = SOV }
-		SOV = { add_state_core = 188 }
-		hidden_effect = {
-			GER = { remove_state_core = 188 }
-		}
-	}
-	option = {
-		name = ET_S1_Division_Europe_State.6.b
-		trigger = { country_exists = LIT }
-		ai_chance = {
-			factor = 2
-		}
-		
-		188 = { transfer_state_to  = LIT }
-		hidden_effect = {
-			GER = { remove_state_core = 188 }
-		}
-	}
-	option = { # Refuce
-		name = ET_S1_Division_Europe_State.6.c
-		ai_chance = {
-			factor = 0
-		}
-	}
+        188 = { transfer_state_to  = SOV }
+        SOV = { add_state_core = 188 }
+        hidden_effect = {
+            GER = { remove_state_core = 188 }
+        }
+
+        ai_chance = { factor = 1 }
+    }
+    option = {
+        name = ET_S1_Division_Europe_State.6.b
+        trigger = { country_exists = LIT }
+
+        188 = { transfer_state_to  = LIT }
+        hidden_effect = {
+            GER = { remove_state_core = 188 }
+        }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # Refuce
+        name = ET_S1_Division_Europe_State.6.c
+
+        reverse_add_opinion_modifier = {
+            target = SOV
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0}
+    }
+}
+
+country_event = { # 1 SPECIAL: Divide Berlin
+    id = ET_S1_Division_Europe_Special.1
+    title = ET_S1_Division_Europe_Special.1.t
+    desc = ET_S1_Division_Europe_Special.1.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # A: Add devided city modifier
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+        name = ET_S1_Division_Europe_Special.1.a
+
+        66 = {
+            add_province_modifier = {
+                static_modifiers = { ET_divided_city }
+                province = 9570
+            }
+        }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce (DISABLED)
+        name = ET_S1_Division_Europe_Special.1.b
+        trigger = { always = no }
+        ai_chance = { factor = 0 }
+    }
+}
+country_event = { # 2 SPECIAL: Divide Vienna
+    id = ET_S1_Division_Europe_Special.2
+    title = ET_S1_Division_Europe_Special.2.t
+    desc = ET_S1_Division_Europe_Special.2.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # A: Add devided city modifier
+        name = ET_S1_Division_Europe_Special.2.a
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+
+        4 = {
+            add_province_modifier = {
+                static_modifiers = { ET_divided_city }
+                province = 11666
+            }
+        }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Europe_Special.2.b
+        trigger = { always = no }
+
+        ai_chance = { factor = 0 }
+    }
 }

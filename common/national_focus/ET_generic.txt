@@ -1224,8 +1224,8 @@ focus_tree = {
                 ET_has_senario_2 = yes
             }
             OR = {
-                is_on_continent = europe
-                is_on_continent = north_america
+                capital_scope = { is_on_continent = europe }
+                capital_scope = { is_on_continent = north_america }
             }
         }
 
@@ -1233,8 +1233,8 @@ focus_tree = {
             NOT = { has_government = communism }
             ET_NATO_Exists = yes
             OR = {
-                is_on_continent = europe
-                is_on_continent = north_america
+                capital_scope = { is_on_continent = europe }
+                capital_scope = { is_on_continent = north_america }
             }
         }
     
@@ -1280,6 +1280,10 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL }
         prerequisite = { focus = ET_Generic_International_political_effort  }
         mutually_exclusive = { focus = ET_Generic_neocolonialism  }
+
+        bypass = {
+            has_completed_focus = my_focus
+        }
 
         completion_reward = {
             add_stability = 0.10

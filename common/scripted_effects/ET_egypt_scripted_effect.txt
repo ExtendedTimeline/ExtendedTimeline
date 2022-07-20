@@ -8,7 +8,7 @@ ET_EGY_INIT = {
 }
 
 ET_EGY_Set_New_Government = {
-    set_variable = { ET_var_current_date = date }
+    set_temp_variable = { ET_var_current_date = date }
     EGY = {
         hidden_effect = {
             set_politics = {
