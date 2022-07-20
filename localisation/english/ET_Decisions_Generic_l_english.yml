@@ -1,13 +1,3 @@
 ﻿l_english:
-ET_era_decisions:0 "A New Era!"
-
-ET_era_decisions_desc:0 "[ET_newera_decisions_scripted_desc]"
-ET_era_decisions_desc_scenario_0:0 "After the years of war, destruction and the hundreds thousands of deaths and the millions of displaced people the world is finally at peace.\n\nPeople are celebrating in every major city and every little town and even on the former battlegrounds, however in cold backrooms the maps of this new world are being drawn by the victorious powers. Peace at last! \n\nNow the victorius powers will shape the new world order, one that will hopefully lead to a long lasting peace."
-ET_era_decisions_desc_scenario_1:0 "After the years of war, destruction and the hundreds thousands of deaths and the millions of displaced people the world is finally at peace.\n\nPeople are celebrating in every major city and every little town and even on the former battlegrounds, however in cold backrooms the maps of this new world are being drawn by the victorious powers. Peace at last! \n\nNow the victorius powers will shape the new world order, one that will hopefully lead to a long lasting peace."
-ET_era_decisions_desc_scenario_2:0 "After the years of war, destruction and the hundreds thousands of deaths and the millions of displaced people the world is finally at peace.\n\nPeople are celebrating in every major city and every little town and even on the former battlegrounds, however in cold backrooms the maps of this new world are being drawn by the victorious powers. Peace at last! \n\nNow the victorius powers will shape the new world order, one that will hopefully lead to a long lasting peace."
-
-ET_getNextEraFocusTree:0 "We must move into the new era"
-ET_getNextEraFocusTree_desc:0 "Changes focus tree to the 1950s path."
-
 ET_surrender_to_germany:0 "Surrender to [GER.GetNameDef]"
 ET_surrender_to_germany_desc:0 "We must now accept our defeat and surrender to [GER.GetNameDef]"

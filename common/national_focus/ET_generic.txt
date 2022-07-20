@@ -22,7 +22,7 @@ focus_tree = {
 
     focus = { #Army
         id = ET_Generic_army
-        icon = GFX_goal_generic_army_tanks
+        icon = GFX_goal_generic_army_doctrines
         x = 1
         y = 0
         cost = 10
@@ -32,7 +32,7 @@ focus_tree = {
 
     focus = { #Mechanized
         id = ET_Generic_mechanized
-        icon = GFX_goal_generic_army_tanks
+        icon = GFX_focus_generic_army_tanks2
         x = 0
         y = 1
         cost = 10
@@ -205,7 +205,14 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_RESEARCH }
         prerequisite = { focus = ET_Generic_naval  }
         mutually_exclusive = { focus = ET_Generic_open_sea_navy  }
-        ai_will_do = { factor = 1 }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                add = -10
+                num_of_naval_factories > 30
+            }
+        }
     }
 
     focus = { #Destroyers
@@ -216,7 +223,7 @@ focus_tree = {
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
         prerequisite = { focus = ET_Generic_coastal_navy  }
-        ai_will_do = { factor = 1 }
+
         completion_reward = {
             add_tech_bonus = {
                 uses = 1
@@ -224,6 +231,8 @@ focus_tree = {
                 category = dd_tech
             }        
         }
+
+        ai_will_do = { factor = 1 }
     }
     focus = { #Destroyers II
         id = ET_Generic_destroyers_ii
@@ -269,6 +278,14 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_RESEARCH }
         prerequisite = { focus = ET_Generic_naval  }
         mutually_exclusive = { focus = ET_Generic_coastal_navy  }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 10
+                num_of_naval_factories > 30
+            }
+        }
     }
 
     focus = { #Frigates
@@ -279,6 +296,7 @@ focus_tree = {
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
         prerequisite = { focus = ET_Generic_open_sea_navy  }
+
         completion_reward = {
             add_tech_bonus = {
                 uses = 1
@@ -286,6 +304,7 @@ focus_tree = {
                 category = bb_tech
             }
         }
+        ai_will_do = { factor = 1 }
     }
     focus = { #Frigates II
         id = ET_Generic_frigates_ii
@@ -295,7 +314,7 @@ focus_tree = {
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
         prerequisite = { focus = ET_Generic_frigates  }
-        ai_will_do = { factor = 1 }
+
         completion_reward = {
             add_tech_bonus = {
                 uses = 1
@@ -303,6 +322,8 @@ focus_tree = {
                 category = cl_tech
             }    
         }
+
+        ai_will_do = { factor = 1 }
     }
 
     focus = { #Modern Carrier
@@ -313,7 +334,7 @@ focus_tree = {
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
         prerequisite = { focus = ET_Generic_open_sea_navy  }
-        ai_will_do = { factor = 1 }
+
         completion_reward = {
             add_tech_bonus = {
                 uses = 1
@@ -321,6 +342,8 @@ focus_tree = {
                 category = cv_tech
             }
         }
+
+        ai_will_do = { factor = 1 }
     }
     
     focus = { #Nuclear Powered
@@ -445,10 +468,42 @@ focus_tree = {
         prerequisite = { focus = ET_Generic_air_force  }
         ai_will_do = { factor = 1 }
         completion_reward = {
-            add_tech_bonus = {
-                uses = 1
-                bonus = 1.0
-                category = jet_technology
+            if = {
+                limit = { NOT = { has_tech = experimental_rockets } }
+                add_tech_bonus = {
+                    uses = 2
+                    bonus = 1.0
+                    category = rocketry
+                }
+            }
+            if = {
+                limit = { NOT = { has_tech = rocket_engines } }
+                add_tech_bonus = {
+                    uses = 1
+                    bonus = 1.0
+                    category = rocketry
+                }
+                add_tech_bonus = {
+                    uses = 1
+                    bonus = 1.0
+                    category = jet_technology
+                }
+            }
+            if = {
+                limit = { NOT = { has_tech = jet_engines } }
+                add_tech_bonus = {
+                    uses = 3
+                    bonus = 1.0
+                    category = jet_technology
+                }
+            }
+            if = {
+                limit = { NOT = { has_tech = heli_engines } }
+                add_tech_bonus = {
+                    uses = 2
+                    bonus = 1.0
+                    category = jet_technology
+                }
             }
         }
     }
@@ -554,7 +609,7 @@ focus_tree = {
             add_tech_bonus = {
                 uses = 1
                 bonus = 1.0
-                category = cv_tech
+                category = jet_technology
             }
         }
     }
@@ -980,8 +1035,62 @@ focus_tree = {
     }
     focus = { #Strengthen Our Territorial Claims
         id = ET_Generic_strengthen_our_territorial_claims
-        icon = GFX_goal_generic_more_territorial_claims
-        x = 9
+        icon = GFX_goal_fortify_the_westwall
+        x = 8
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_Generic_national_seal }
+        mutually_exclusive = { focus = ET_Generic_modern_expansionism }
+
+        available = {
+            has_government = fascism
+            has_war = no
+        }
+
+        completion_reward = {
+            every_country = {
+                limit = { always = yes }
+                every_controlled_state = {
+                    limit = { is_controlled_by = PREV }
+                    set_state_owner_to = PREV
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Modern Expansionism
+        id = ET_Generic_modern_expansionism
+        icon = GFX_goal_generic_demand_territory
+        x = 10
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_Generic_national_seal  }
+        mutually_exclusive = { focus = ET_Generic_strengthen_our_territorial_claims }
+
+        available = {
+            has_government = fascism
+            has_war = no
+        }
+
+        completion_reward = {
+            every_country = {
+                limit = { always = yes }
+                every_controlled_state = {
+                    limit = { is_controlled_by = PREV }
+                    set_state_owner_to = PREV
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Modern Fascism
+        id = ET_Generic_modern_fascism
+        icon = GFX_goal_generic_national_unity
+        x = 12
         y = 9
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1005,10 +1114,11 @@ focus_tree = {
         ai_will_do = { factor = 1 }
     }
 
+
     focus = { #Communism
         id = ET_Generic_communism
         icon = GFX_goal_support_communism
-        x = 14
+        x = 15
         y = 8
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1077,11 +1187,11 @@ focus_tree = {
     focus = { #Join United Nation
         id = ET_Generic_join_united_nation
         icon = GFX_goal_generic_national_unity
-        x = 18
+        x = 22
         y = 9
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = ET_Generic_global_political_effort  }
+        prerequisite = { focus = ET_Generic_International_political_effort  }
         
         allow_branch = {
             ET_has_senario_1 = yes
@@ -1101,17 +1211,22 @@ focus_tree = {
 
     focus = { #Join NATO
         id = ET_Generic_aspire_to_join_NATO
-        icon = GFX_goal_generic_national_unity
-        x = 20
+        icon = GFX_goal_generic_alliance
+        x = 24
         y = 9
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = ET_Generic_global_political_effort  }
+        prerequisite = { focus = ET_Generic_International_political_effort  }
         
         allow_branch = {
-            ET_has_senario_1 = yes
-            is_on_continent = europe
-            is_on_continent = north_america
+            OR = {
+                ET_has_senario_1 = yes
+                ET_has_senario_2 = yes
+            }
+            OR = {
+                is_on_continent = europe
+                is_on_continent = north_america
+            }
         }
 
         available = {
@@ -1132,12 +1247,12 @@ focus_tree = {
 
     focus = { #Neocolonialism
         id = ET_Generic_neocolonialism
-        icon = GFX_goal_generic_more_territorial_claims
-        x = 22
+        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+        x = 18
         y = 9
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = ET_Generic_global_political_effort  }
+        prerequisite = { focus = ET_Generic_International_political_effort  }
         mutually_exclusive = { focus = ET_Generic_decolonization  }
 
         available = {
@@ -1158,12 +1273,12 @@ focus_tree = {
     }
     focus = { #Decolonization
         id = ET_Generic_decolonization
-        icon = GFX_goal_generic_positive_trade_relations
-        x = 24
+        icon = GFX_goal_generic_more_territorial_claims
+        x = 20
         y = 9
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = ET_Generic_global_political_effort  }
+        prerequisite = { focus = ET_Generic_International_political_effort  }
         mutually_exclusive = { focus = ET_Generic_neocolonialism  }
 
         completion_reward = {
