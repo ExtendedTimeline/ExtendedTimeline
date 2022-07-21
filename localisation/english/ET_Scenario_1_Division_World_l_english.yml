@@ -95,3 +95,18 @@ ET_S1_Division_Europe_Special.2.t:0 "Yalta Conference - Vienna"
 ET_S1_Division_Europe_Special.2.desc:0 "You as a occupying power of Vienna as have been dicussed during the Yalta Conference are to allow the Allied Occupation Authority access and to be able to occupie West Vienna"
 ET_S1_Division_Europe_Special.2.a:0 "Allow access to West Vienna"
 ET_S1_Division_Europe_Special.2.b:0 "Refuse"
+
+ET_S1_Division_Asia.1.t:0 "State of North Korea"
+ET_S1_Division_Asia.1.desc:0 "You as a occupying power of North Korea there has been talks to give it to the Soviet Union for occupation. They will decide on a Korean unified state later."
+ET_S1_Division_Asia.1.a:0 "Transfer state to Soviet Union"
+ET_S1_Division_Asia.1.b:0 "Refuse"
+ 
+ET_S1_Division_Asia.2.t:0 "State of South Korea"
+ET_S1_Division_Asia.2.desc:0 "You as a occupying power of South Korea there has been talks to give it to the United States for occupation. They will decide on a Korean unified state later."
+ET_S1_Division_Asia.2.a:0 "Transfer state to the United States"
+ET_S1_Division_Asia.2.b:0 "Refuse"
+
+ET_S1_Division_Asia.3.t:0 "Japan"
+ET_S1_Division_Asia.3.desc:0 "As  you are an occupying power of a state in Japan you have heard that the US have been voicing their concern for occupying Japan, should give the United States the right of occupation?."
+ET_S1_Division_Asia.3.a:0 "Transfer states to United States"
+ET_S1_Division_Asia.3.b:0 "Refuse" 

@@ -16,8 +16,8 @@ ET_EGY_Set_New_Government = {
                 elections_allowed = no
                 last_election = var:ET_var_current_date
                 election_frequency = 48
-                name = EGY_Republic_democratic_party_long
-                long_name = EGY_Republic_democratic_party
+                name = EGY_Republic_democratic_party
+                long_name = EGY_Republic_democratic_party_long
             }
 
             set_popularities = {

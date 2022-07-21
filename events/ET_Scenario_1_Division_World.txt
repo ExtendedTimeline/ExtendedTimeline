@@ -13,6 +13,10 @@ country_event = { # Init Checks
     hidden = yes
 
     immediate = {
+        # # 
+        # EUROPE
+        # #
+
         # 1 POLAND
         if = {
             limit = {
@@ -222,16 +226,65 @@ country_event = { # Init Checks
             country_event= { id = ET_S1_Division_Europe_State.6 }
         }
 
-        #
-        #    ASIA
-        #
-        
 
+        # # 
+        # ASIA
+        # #
+
+        # 1 North KOREA
+        if = {
+            limit = {
+                NOT = { original_tag = DPR } # Democratic Peoples Republik [of Korea]
+                NOT = { original_tag = SOV }
+                controls_state = 527
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking North Korea..." }
+            country_event = { id = ET_S1_Division_Asia.1 }
+        }
+        # 2 SOUTH KOREA
+        if = {
+            limit = {
+                NOT = { original_tag = KOR } # Korea
+                NOT = { original_tag = USA }
+                controls_state = 525
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking South Korea..." }
+            country_event = { id = ET_S1_Division_Asia.2 }
+        }
+        # 3 JAPAN
+        if = {
+            limit = {
+                NOT = { original_tag = JAP }
+                OR = {
+                    controls_state = 555
+                    controls_state = 536
+                    controls_state = 533
+                    controls_state = 534
+                    controls_state = 282
+                    controls_state = 535
+                    controls_state = 532
+                    controls_state = 531
+                    controls_state = 529
+                    controls_state = 530
+                    controls_state = 526
+                    controls_state = 526
+                    controls_state = 645
+                    controls_state = 649
+                    controls_state = 646
+                    controls_state = 638
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking Japan..." }
+            country_event = { id = ET_S1_Division_Asia.3 }
+        }
     }
 
     option = { }
 }
 
+# # 
+# EUROPE
+# #
 country_event = { # 1 POLAND
     id = ET_S1_Division_Europe.1
     title = ET_S1_Division_Europe.1.t
@@ -1403,6 +1456,101 @@ country_event = { # 2 SPECIAL: Divide Vienna
     option = { # B: Refuce
         name = ET_S1_Division_Europe_Special.2.b
         trigger = { always = no }
+
+        ai_chance = { factor = 0 }
+    }
+}
+
+
+
+# # 
+# ASIA
+# #
+country_event = { # 1 NORTH KOREA
+    id = ET_S1_Division_Asia.1
+    title = ET_S1_Division_Asia.1.t
+    desc = ET_S1_Division_Asia.1.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # A: Give States to Soviet Union
+        name = ET_S1_Division_Asia.1.a
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering North Korea to Soviet Union." }
+
+        if = { limit = { controls_state = 527 } 527 = { transfer_state_to  = SOV } }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Asia.2.b
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] does not transfer North Korea state to Soviet Union" }
+
+        ai_chance = { factor = 0 }
+    }
+}
+country_event = { # 2 SOUTH KOREA
+    id = ET_S1_Division_Asia.2
+    title = ET_S1_Division_Asia.2.t
+    desc = ET_S1_Division_Asia.2.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # A: Give States to USA
+        name = ET_S1_Division_Asia.2.a
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering South Korea to USA." }
+
+        if = { limit = { controls_state = 525 } 525 = { transfer_state_to  = USA } }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Asia.2.b
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] does not transfer South Korea state to USA" }
+
+        ai_chance = { factor = 0 }
+    }
+}
+country_event = { # 3 JAPAN
+    id = ET_S1_Division_Asia.3
+    title = ET_S1_Division_Asia.3.t
+    desc = ET_S1_Division_Asia.3.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # A: Give States to United States
+        name = ET_S1_Division_Asia.3.a
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Japanese states to USA." }
+
+        if = { limit = { controls_state = 555 } 555 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 536 } 536 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 533 } 533 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 534 } 534 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 282 } 282 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 535 } 535 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 532 } 532 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 531 } 531 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 529 } 529 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 530 } 530 = { transfer_state_to  = USA } } # Main land
+        if = { limit = { controls_state = 526 } 526 = { transfer_state_to  = USA } } # Main land
+
+        if = { limit = { controls_state = 526 } 526 = { transfer_state_to  = USA } } # Island
+
+        if = { limit = { controls_state = 645 } 645 = { transfer_state_to  = USA } }
+        if = { limit = { controls_state = 649 } 649 = { transfer_state_to  = USA } }
+        if = { limit = { controls_state = 646 } 646 = { transfer_state_to  = USA } }
+        if = { limit = { controls_state = 638 } 638 = { transfer_state_to  = USA } }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Asia.3.b
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Does not transfer Japanese states to USA." }
 
         ai_chance = { factor = 0 }
     }
