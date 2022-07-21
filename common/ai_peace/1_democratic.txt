@@ -267,6 +267,7 @@ democratic_peace = {
 					tag = GER
 					tag = SIL
 					tag = KSH
+					tag = TRA
 				}
 			}
 		}
@@ -551,6 +552,17 @@ democratic_peace = {
 						is_claimed_by = ROOT
 						is_core_of = ROOT
 					}
+				}
+			}
+		}
+
+		# ET
+		# Weighting towards the option. (ROOT is taker, FROM is giver)
+		modifier = { # Eat up germany
+			add = 1000
+			FROM = {
+				controller = { 
+					tag = GER
 				}
 			}
 		}
