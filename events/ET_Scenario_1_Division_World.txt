@@ -69,6 +69,15 @@ country_event = { # Init Checks
             if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking East Germany..." }
             country_event = { id = ET_S1_Division_Europe.4 }
         }
+        #   EAST GERMANY - Special case
+        if = {
+            limit = {
+                original_tag = SOV
+                controls_state = 64
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Soviet Own East Germany check add trait..." }
+            country_event = { id = ET_S1_Division_Europe_Special.1 }
+        }
         # 5 CZECHSLOVAKIA
         if = {
             limit = {
@@ -107,7 +116,7 @@ country_event = { # Init Checks
                 original_tag = SOV
                 controls_state = 4
             }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking East Austria..." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Soviet Own East Austria check add trait..." }
             country_event = { id = ET_S1_Division_Europe_Special.2 }
         }
         # 8 WEST AUSTRIA
@@ -1243,11 +1252,14 @@ country_event = { # 1 SPECIAL: Divide Berlin
         custom_effect_tooltip = ET_S1_Division_World_Historical_TT
         name = ET_S1_Division_Europe_Special.1.a
 
-        66 = {
-            add_province_modifier = {
-                static_modifiers = { ET_divided_city }
-                province = 9570
-            }
+        add_province_modifier = {
+            static_modifiers = { ET_divided_city }
+            province = 6521
+        }
+
+        set_province_name = {
+            id = 11666
+            name = ET_S1_Division_CityName_Berlin
         }
 
         ai_chance = { factor = 1 }
@@ -1255,6 +1267,7 @@ country_event = { # 1 SPECIAL: Divide Berlin
     option = { # B: Refuce (DISABLED)
         name = ET_S1_Division_Europe_Special.1.b
         trigger = { always = no }
+
         ai_chance = { factor = 0 }
     }
 }
@@ -1271,11 +1284,14 @@ country_event = { # 2 SPECIAL: Divide Vienna
         name = ET_S1_Division_Europe_Special.2.a
         custom_effect_tooltip = ET_S1_Division_World_Historical_TT
 
-        4 = {
-            add_province_modifier = {
-                static_modifiers = { ET_divided_city }
-                province = 11666
-            }
+        add_province_modifier = {
+            static_modifiers = { ET_divided_city }
+            province = 11666
+        }
+
+        set_province_name = {
+            id = 11666
+            name = ET_S1_Division_CityName_Vienna
         }
 
         ai_chance = { factor = 1 }

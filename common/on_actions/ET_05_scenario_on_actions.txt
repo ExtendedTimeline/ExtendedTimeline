@@ -1,4 +1,5 @@
 on_actions = {
+    # Scenario 1
     #ROOT - country that just went to peace
     on_peaceconference_ended = {
         effect = {
@@ -32,7 +33,6 @@ on_actions = {
         }
     }
 
-    #used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
     #ROOT = nation being released, FROM = overlord
     on_release_as_puppet = {
         effect = {

@@ -13,23 +13,19 @@ country_event = { # Rename Köningsberg > Kaliningrad
 
 	option = {
 		name = ET_SovietUnion_Renaming.1.a
-		ai_chance = {
-			factor = 1
-		}
-		THIS = {
-			763 = {
-				set_state_name = "Kaliningrad"
-				set_province_name = {
-					id = 6332
-					name = "Kaliningrad"
-				}
+		763 = {
+			set_state_name = "Kaliningrad"
+			set_province_name = {
+				id = 6332
+				name = "Kaliningrad"
 			}
 		}
+
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = ET_SovietUnion_Renaming.1.b
-		ai_chance = {
-			factor = 0
-		}
+
+		ai_chance = { factor = 0 }
 	}
 }

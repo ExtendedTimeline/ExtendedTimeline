@@ -1,5 +1,5 @@
 ET_debug_decisions = {
-	ET_next_era = {
+	ET_debug_next_era = {
 		icon = generic_decision
 
         available = {
@@ -22,7 +22,7 @@ ET_debug_decisions = {
         }
     }
 
-    ET_remove_era = {
+    ET_debug_remove_era = {
         icon = generic_decision
 
         available = {
@@ -45,7 +45,7 @@ ET_debug_decisions = {
         }
     }
 
-    ET_remove_newera_country = {
+    ET_debug_remove_newera_country = {
         icon = generic_decision
 
         available = {
@@ -68,11 +68,12 @@ ET_debug_decisions = {
         }
     }
 
-    ET_other_test = {
+    ET_debug_other_test = {
 
         icon = generic_research
 
         available = {
+            
         }
 
         visible = {
@@ -84,6 +85,7 @@ ET_debug_decisions = {
 
         complete_effect = {
         }
+
 
         ai_will_do = {
             base = 0

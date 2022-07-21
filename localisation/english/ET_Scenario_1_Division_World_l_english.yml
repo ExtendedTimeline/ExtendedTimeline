@@ -1,5 +1,7 @@
 ﻿l_english:
 ET_S1_Division_World_Historical_TT:0 "§LWill lead to a historical outcome§!"
+ET_S1_Division_CityName_Berlin:0 "West & East Berlin"
+ET_S1_Division_CityName_Vienna:0 "West & East Vienna"
 
 ET_S1_Division_Europe.1.t:0 "Potsdam Agreement - Poland"
 ET_S1_Division_Europe.1.desc:0 "As the Soviet Union currently occupies poland, the Yalta Conference has decided that poland will be transferred to the Soviet Union."

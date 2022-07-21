@@ -112,6 +112,11 @@ political_actions = {
                 date > 1952.06.01
                 add = 100
             }
+            modifier = {
+                date > 1945.06.01
+                has_war_support < 0.25
+                add = 50
+            }
         }
     }
 

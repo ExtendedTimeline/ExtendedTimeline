@@ -138,10 +138,16 @@ democratic_peace = {
 			factor = 0
 			FROM = { tag = DDR }
 		}
+
 		modifier = { # ET dont relase nations override
 			factor = 0
-			date > 1940.01.01
-			date < 1955.01.01
+			OR = {
+				AND = {
+					date > 1940.01.01
+					date < 1955.01.01
+				}
+				has_global_flag = ET_Flag_Global_DEBUG_Scenario_Ignore_Dates
+			}
 		}
 	}
 
@@ -302,10 +308,15 @@ democratic_peace = {
 		#	}
 		#}
 
-		modifier = { # ET dont puppet nations override
+		modifier = { # ET dont relase nations override
 			factor = 0
-			date > 1940.01.01
-			date < 1955.01.01
+			OR = {
+				AND = {
+					date > 1940.01.01
+					date < 1955.01.01
+				}
+				has_global_flag = ET_Flag_Global_DEBUG_Scenario_Ignore_Dates
+			}
 		}
 	}
 
