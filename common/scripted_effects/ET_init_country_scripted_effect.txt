@@ -24,16 +24,16 @@ ET_set_generic_tech = {
 
 ET_set_generic_1940_tech = { # FIXME
     hidden_effect = {
-        set_technology = {
-            popup = no
-        }
+        #set_technology = {
+        #    popup = no
+        #}
     }
 }
 ET_set_generic_1945_tech = { # FIXME
     hidden_effect = {
-        set_technology = {
-            popup = no
-        }
+        #set_technology = {
+        #    popup = no
+        #}
     }
 }
 ET_set_generic_1950_tech = { # FIXME
@@ -156,16 +156,16 @@ ET_set_generic_1950_tech = { # FIXME
 }
 ET_set_generic_1955_tech = { # FIXME
     hidden_effect = {
-        set_technology = {
-            popup = no
-        }
+        #set_technology = {
+        #    popup = no
+        #}
     }
 }
 ET_set_generic_1960_tech = { # FIXME
     hidden_effect = {
-        set_technology = {
-            popup = no
-        }
+        #set_technology = {
+        #    popup = no
+        #}
     }
 }
 

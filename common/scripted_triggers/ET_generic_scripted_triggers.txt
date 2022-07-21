@@ -152,9 +152,9 @@ ET_has_any_land_in_mainland_europe = {
     }
 }
 
-ET_UnitedNation_Exists = {
+ET_UnitedNations_Exists = {
     custom_trigger_tooltip = {
-        tooltip = ET_UnitedNation_Exists
+        tooltip = ET_UnitedNations_Exists
         has_global_flag = ET_flag_global_UnitedNation
     }
 }

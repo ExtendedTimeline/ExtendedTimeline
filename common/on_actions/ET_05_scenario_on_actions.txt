@@ -1,9 +1,11 @@
 on_actions = {
+    # Scenario 1
     #ROOT - country that just went to peace
     on_peaceconference_ended = {
         effect = {
             if = {
                 limit = {
+                    has_global_flag = had_yalta_conference
                     NOT = { has_global_flag = ET_flag_global_newera }
                     NOT = { has_global_flag = ET_flag_global_allies_surrender }
                     any_country = {
@@ -31,7 +33,6 @@ on_actions = {
         }
     }
 
-    #used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
     #ROOT = nation being released, FROM = overlord
     on_release_as_puppet = {
         effect = {

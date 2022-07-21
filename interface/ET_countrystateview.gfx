@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ET_province_modifier_divided_city_icon"
+		textureFile = "gfx/interface/province_modifier_divided_city_icon.dds"
+	}
+}

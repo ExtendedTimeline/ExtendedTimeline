@@ -8,7 +8,7 @@ ET_EGY_INIT = {
 }
 
 ET_EGY_Set_New_Government = {
-    set_variable = { ET_var_current_date = date }
+    set_temp_variable = { ET_var_current_date = date }
     EGY = {
         hidden_effect = {
             set_politics = {
@@ -16,8 +16,8 @@ ET_EGY_Set_New_Government = {
                 elections_allowed = no
                 last_election = var:ET_var_current_date
                 election_frequency = 48
-                name = EGY_Republic_democratic_party_long
-                long_name = EGY_Republic_democratic_party
+                name = EGY_Republic_democratic_party
+                long_name = EGY_Republic_democratic_party_long
             }
 
             set_popularities = {

@@ -285,7 +285,10 @@ country_event = { #34: [1952.01.24] Guerilla attacks again
             has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Egypt
         }
     }
-    immediate = {}
+    immediate = {
+        446 = { set_demilitarized_zone = no }
+        453 = { set_demilitarized_zone = no }
+    }
     
     option = {
         name = ET_Independence_Egypt.34.a

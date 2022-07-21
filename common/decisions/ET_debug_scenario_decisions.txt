@@ -1,5 +1,5 @@
 ET_debug_decisions = {
-		
+
 	ET_debug_get_scenario = {
 		icon = generic_decision
 
@@ -23,6 +23,30 @@ ET_debug_decisions = {
 		}
 	}
 
+    ET_debug_scenario_ignore_dates = {
+
+        icon = generic_civil_support
+
+        available = {
+            NOT = { has_global_flag = ET_Flag_Global_DEBUG_Scenario_Ignore_Dates }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        cost = 0
+
+        complete_effect = {
+            set_global_flag = ET_Flag_Global_DEBUG_Scenario_Ignore_Dates
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+
 	ET_debug_set_scenario_1 = {
 		icon = generic_decision
 
@@ -42,7 +66,7 @@ ET_debug_decisions = {
 			every_country = {
 				limit = { always = yes }
 				news_event = {
-					id = ET_News_Scenario_1.0
+					id = ET_Scenario_1.0
 					days = 1
 				}
 				country_event = {
@@ -57,7 +81,37 @@ ET_debug_decisions = {
 		}
 	}
 
-	ET_debug_border_DefaultColdWar = {
+	ET_debug_set_scenario_2 = {
+		icon = generic_decision
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			set_global_flag = ET_flag_global_scenario_2
+			every_country = {
+				limit = { always = yes }
+				news_event = {
+					id = ET_Scenario_2.0
+					days = 3
+				}
+			}		
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	ET_debug_border_ClassicalColdWarBorders = {
 		icon = border_war
 
 		available = {
@@ -311,6 +365,8 @@ ET_debug_decisions = {
 					target = POL  
 					type = annex_everything
 				}
+				set_war_support = 0
+				set_stability = 0
 			}
 			SOV = {
 				declare_war_on = {
@@ -477,4 +533,5 @@ ET_debug_decisions = {
 			base = 0
 		}
 	}
+
 }

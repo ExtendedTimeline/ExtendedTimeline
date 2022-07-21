@@ -1,6 +1,6 @@
 ET_debug_decisions = {
 
-    ET_decolonization_ignore_dates = {
+    ET_debug_decolonization_ignore_dates = {
 
         icon = generic_civil_support
 
@@ -23,7 +23,7 @@ ET_debug_decisions = {
             base = 0
         }
     }
-    ET_decolonization_eqypt = {
+    ET_debug_decolonization_eqypt = {
 
         icon = generic_civil_support
 
@@ -51,7 +51,7 @@ ET_debug_decisions = {
             base = 0
         }
     }
-    ET_decolonization_vietnam = {
+    ET_debug_decolonization_vietnam = {
 
         icon = generic_civil_support
 
@@ -74,4 +74,5 @@ ET_debug_decisions = {
             base = 0
         }
     }
+
 }

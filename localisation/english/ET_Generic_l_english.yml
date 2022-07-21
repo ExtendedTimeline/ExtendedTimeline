@@ -15,3 +15,8 @@ ET_has_any_land_in_mainland_europe_tt:0 "Have any land in mainland europe"
 
 ET_NATO_Exists:0 "NATO has been formed"
 ET_UnitedNation_Exists:0 "United Nation has been formed"
+
+ET_broke_agreements:0 "Broken Agreement"
+
+ET_divided_city:0 "Divided City"
+ET_divided_city_desc:0 "The city have been divided between ideological lines in a West and East part."

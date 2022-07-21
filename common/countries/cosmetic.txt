@@ -807,6 +807,15 @@ VIN_North = {
 	graphical_culture = asian_gfx
 	graphical_culture_2d = asian_2d
 
-	color = rgb { 125  13  24 }
-	color_ui = rgb { 125  13  24 }
+	color 		= rgb { 125  13  24 }
+	color_ui 	= rgb { 125  13  24 }
+}
+
+DPR_North = {
+	color 		= rgb { 173  14  40 }
+	color_ui 	= rgb { 173  14  40 }
+}
+KOR_South = {
+	color 		= rgb { 255 240 195 }
+	color_ui 	= rgb { 255 240 195 }
 }
