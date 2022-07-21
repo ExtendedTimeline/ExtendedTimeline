@@ -36,7 +36,7 @@ country_event = { # Init Checks
                     }
                 }
             }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking Poland..." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking Poland..." }
             country_event = { id = ET_S1_Division_Europe.1 }
         }
         # 3 WESTERN POLAND
@@ -51,7 +51,7 @@ country_event = { # Init Checks
                     controls_state = 762
                 }
             }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking West Poland..." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking West Poland..." }
             country_event = { id = ET_S1_Division_Europe.3 }
         }
         # 4 EAST GERMANY
@@ -66,7 +66,7 @@ country_event = { # Init Checks
                     controls_state = 60
                 }
             }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking East Germany..." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking East Germany..." }
             country_event = { id = ET_S1_Division_Europe.4 }
         }
         #   EAST GERMANY - Special case
@@ -97,7 +97,7 @@ country_event = { # Init Checks
                     controls_state = 71
                 }
             }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking Czechslovakia..." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking Czechslovakia..." }
             country_event = { id = ET_S1_Division_Europe.5 }
         }
         # 7 EAST AUSTRIA
@@ -107,7 +107,7 @@ country_event = { # Init Checks
                 NOT = { original_tag = SOV }
                 controls_state = 4
             }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking East Austria..." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking East Austria..." }
             country_event = { id = ET_S1_Division_Europe.7 }
         }
         #   EAST AUSTRIA - Special case
@@ -127,7 +127,7 @@ country_event = { # Init Checks
                     controls_state = 153
                 }
             }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking West Austria..." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking West Austria..." }
             country_event = { id = ET_S1_Division_Europe.8 }
         }
         # 9 WEST GERMANY
@@ -147,10 +147,32 @@ country_event = { # Init Checks
                     controls_state = 53
                 }
             }
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Checking West Germany..." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking West Germany..." }
             country_event = { id = ET_S1_Division_Europe.9 }
         }
 
+        # 20 YUGOSLAVIA
+        if = {
+            limit = {
+                NOT = { original_tag = YGO }
+                OR = {
+                    controls_state = 102
+                    controls_state = 103
+                    controls_state = 103
+                    controls_state = 106
+                    controls_state = 107
+                    controls_state = 108
+                    controls_state = 109
+                    controls_state = 109
+                    controls_state = 163
+                    controls_state = 736 # Trieste
+                    controls_state = 802
+                    controls_state = 804
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking Yugoslavia..." }
+            country_event = { id = ET_S1_Division_Europe.7 }
+        }
 
 
         # 1 STATE: Ermland-Masuren
@@ -225,7 +247,7 @@ country_event = { # 1 POLAND
             country_exists = POL
         }
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Polish states to Poland and make a Puppet of Poland." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Polish states to Poland and make a Puppet of Poland." }
             POL = {
                 add_state_core = 10
                 add_state_core = 807
@@ -289,7 +311,7 @@ country_event = { # 1 POLAND
         }
 
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Polish states to Soviet Union..." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Polish states to Soviet Union..." }
             POL = {
                 add_state_core = 10
                 add_state_core = 807
@@ -363,7 +385,7 @@ country_event = { # 2 POLAND - Puppet
         name = ET_S1_Division_Europe.2.a
 
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Releases Poland as Puppet" }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Releases Poland as Puppet" }
             SOV = {
                 add_state_core = 784
                 add_state_core = 89
@@ -408,7 +430,7 @@ country_event = { # 2 POLAND - Puppet
     option = { # B: Keep it under our occupation
         name = ET_S1_Division_Europe.2.b
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] keeping the states under occupation" }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] keeping the states under occupation" }
             SOV = {
                 add_state_core = 784
                 add_state_core = 89 
@@ -480,7 +502,7 @@ country_event = { # 3 WESTERN POLAND
             factor = 1
         }
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Western Poland states to the Soviet Union" }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Western Poland states to the Soviet Union" }
             GER = {
                 remove_state_core = 762
                 remove_state_core = 784
@@ -517,7 +539,7 @@ country_event = { # 3 WESTERN POLAND
             country_exists = POL
         }
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Western Poland states to Poland" }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Western Poland states to Poland" }
             GER = {
                 remove_state_core = 762
                 remove_state_core = 784
@@ -579,7 +601,7 @@ country_event = { # 4 EASTERN GERMANY
             factor = 1
         }
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering East Germany states to the Soviet Union" }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering East Germany states to the Soviet Union" }
         }
         custom_effect_tooltip = ET_S1_Division_World_Historical_TT
         if = { limit = { controls_state = 61  } 61  = { transfer_state_to  = SOV } }
@@ -603,7 +625,7 @@ country_event = { # 4 EASTERN GERMANY
             factor = 1
         }
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering East Germany states to DDR" }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering East Germany states to DDR" }
         }
         custom_effect_tooltip = ET_S1_Division_World_Historical_TT
         if = { limit = { controls_state = 61  } 61  = { transfer_state_to  = DDR } }
@@ -860,7 +882,7 @@ country_event = { # 7 AUSTRIA EAST
         }
 
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to Austria." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Austrian states to Austria." }
         }
         if = { limit = { controls_state = 4    } 4   =  { transfer_state_to  = AUS } } # Austria core provinces
 
@@ -873,7 +895,7 @@ country_event = { # 7 AUSTRIA EAST
         }
         
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to occupying force." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Austrian states to occupying force." }
         }
         if = { limit = { controls_state = 4    } 4   =  { transfer_state_to  = SOV } } # Austria core provinces
 
@@ -923,7 +945,7 @@ country_event = { # 8 AUSTRIA WEST
         }
 
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to Austria." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Austrian states to Austria." }
         }
         if = { limit = { controls_state = 152  } 152 =  { transfer_state_to  = AUS } } # Austria core provinces
         if = { limit = { controls_state = 153  } 153 =  { transfer_state_to  = AUS } } # Austria core provinces
@@ -937,7 +959,7 @@ country_event = { # 8 AUSTRIA WEST
         }
         
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to occupying force." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Austrian states to occupying force." }
         }
         if = { limit = { controls_state = 152  } 152 =  { transfer_state_to  = USA } } # Austria core provinces
         if = { limit = { controls_state = 153  } 153 =  { transfer_state_to  = FRA } } # Austria core provinces
@@ -982,7 +1004,7 @@ country_event = { # 9 WEST GERMANY
         }
 
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering Austrian states to West Germany." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering Austrian states to West Germany." }
         }
         
         if = { limit = { controls_state = 58 } 58  =  { transfer_state_to  = WGR } } # german core provinces
@@ -1006,7 +1028,7 @@ country_event = { # 9 WEST GERMANY
         }
 
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] transfering West Germany states to occupying force." }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering West Germany states to occupying force." }
         }
         if = { limit = { controls_state = 58 } 58  =  { transfer_state_to  = ENG } } # german core provinces
         if = { limit = { controls_state = 59 } 59  =  { transfer_state_to  = ENG } } # german core provinces
@@ -1033,6 +1055,88 @@ country_event = { # 9 WEST GERMANY
             target = SOV
             modifier = ET_broke_agreements
         }
+
+        ai_chance = { factor = 0 }
+    }
+}
+
+
+country_event = { # 20 YUGOSLAVIA
+    id = ET_S1_Division_Europe.20
+    title = ET_S1_Division_Europe.20.t
+    desc = ET_S1_Division_Europe.20.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # A: Give terretory to Yugoslavia
+        name = ET_S1_Division_Europe.20.a
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+
+        hidden_effect = {
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Transfer terretory to Yugoslavia" }
+            YUG = {
+                add_state_core = 102
+                add_state_core = 103
+                add_state_core = 103
+                add_state_core = 106
+                add_state_core = 107
+                add_state_core = 108
+                add_state_core = 109
+                add_state_core = 109
+                add_state_core = 163
+                add_state_core = 736
+                add_state_core = 802
+                add_state_core = 804
+
+                add_state_core = 102
+                add_state_core = 103
+                add_state_core = 103
+                add_state_core = 106
+                add_state_core = 107
+                add_state_core = 108
+                add_state_core = 109
+                add_state_core = 109
+                add_state_core = 163
+                add_state_core = 736
+                add_state_core = 802
+                add_state_core = 804
+            }
+        }
+
+        if = { limit = { NOT = { country_exists = YGO } } release_on_controlled = YGO }
+    
+        if = { limit = { controls_state = 102  } 102  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 103  } 103  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 103  } 103  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 106  } 106  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 107  } 107  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 108  } 108  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 109  } 109  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 109  } 109  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 163  } 163  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 736  } 736  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 802  } 802  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 804  } 804  = { transfer_state_to = YGO } }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Europe_State.20.b
+
+        if = { limit = { controls_state = 102  } 102  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 103  } 103  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 103  } 103  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 106  } 106  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 107  } 107  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 108  } 108  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 109  } 109  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 109  } 109  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 163  } 163  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 736  } 736  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 802  } 802  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 804  } 804  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
 
         ai_chance = { factor = 0 }
     }

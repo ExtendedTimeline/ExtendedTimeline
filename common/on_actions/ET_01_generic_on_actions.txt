@@ -48,25 +48,23 @@ on_actions = {
 					}
 				}
 				# Berlin
-				66 = {
-					reset_province_name = 6521
-					remove_province_modifier = {
-						static_modifiers = { ET_divided_city }
-						province = 6521
-					}
+				reset_province_name = 6521
+				remove_province_modifier = {
+					static_modifiers = { ET_divided_city }
+					province = 6521
 				}
 
 				# Vienna
-				4 = {
-					reset_province_name = 11666
-					remove_province_modifier = {
-						static_modifiers = { ET_divided_city }
-						province = 11666
-					}
+				reset_province_name = 11666
+				remove_province_modifier = {
+					static_modifiers = { ET_divided_city }
+					province = 11666
 				}
 			}
 		}
 	}
+
+	# Reset province name when united
 	on_release_as_free = {
 		effect = {
 			if = {
@@ -75,11 +73,41 @@ on_actions = {
 					has_government = democratic
 				}
 				reset_province_name = 11666
-				4 = {
-					remove_province_modifier = {
-						static_modifiers = { ET_divided_city }
-						province = 11666
-					}
+				remove_province_modifier = {
+					static_modifiers = { ET_divided_city }
+					province = 11666
+				}
+			}
+		}
+	}
+
+	on_annex = {
+		effect = {
+			# WRG Annex DDR
+			if = {
+				limit = {
+					original_tag = WRG
+					FROM = { original_tag = DDR }
+				}
+				set_capital = { state = 64 }
+	
+				reset_province_name = 11666
+				remove_province_modifier = {
+					static_modifiers = { ET_divided_city }
+					province = 11666
+				}
+			}
+			# DDR Annex WGR
+			if = {
+				limit = {
+					original_tag = DDR
+					FROM = { original_tag = WRG }
+				}
+	
+				reset_province_name = 11666
+				remove_province_modifier = {
+					static_modifiers = { ET_divided_city }
+					province = 11666
 				}
 			}
 		}
