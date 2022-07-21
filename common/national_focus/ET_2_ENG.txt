@@ -685,6 +685,7 @@ focus_tree = {
     }
 
 
+
     #Still Not Defeated
     focus = { # We Still Stand
         id = ET_S2_ENG_still_not_defeated
@@ -754,7 +755,6 @@ focus_tree = {
 
         ai_will_do = { factor = 1 }
     }
-
 
 
     focus = { # Last Beacon of a Free Europe
