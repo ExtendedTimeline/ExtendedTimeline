@@ -1,0 +1,843 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+
+focus_tree = {
+    id = ET_S2_ENG
+    continuous_focus_position = { x = 0 y = 1500 }
+    default = no
+    country = {
+        factor = 0
+        modifier = {
+            add = 2000
+
+            original_tag = ENG
+            ET_has_scenario_2 = yes
+            ET_in_new_era_country = yes
+        }
+    }
+
+
+
+    focus = { #Army
+        id = ET_S2_ENG_army
+        icon = GFX_goal_generic_army_doctrines
+        x = 1
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = { #Mechanized
+        id = ET_S2_ENG_mechanized
+        icon = GFX_focus_generic_army_tanks2
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_army  }
+        mutually_exclusive = { focus = ET_S2_ENG_infantry  }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = cat_mechanized_equipment
+            }
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = motorized_equipment
+            }
+        }
+    }
+    focus = { #Main Battle Tank
+        id = ET_S2_ENG_main_battle_tank
+        icon = GFX_goal_generic_army_tanks
+        x = 0
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_mechanized  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = armor
+            }    
+        }
+    }
+    focus = { #Main Battle Tank II
+        id = ET_S2_ENG_main_battle_tank_ii
+        icon = GFX_goal_generic_army_tanks
+        x = 0
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_main_battle_tank  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = armor
+            }    
+        }
+    }
+
+    focus = { #Infantry
+        id = ET_S2_ENG_infantry
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 2
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_army  }
+        mutually_exclusive = { focus = ET_S2_ENG_mechanized  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = infantry_weapons
+            }
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = night_vision
+            }
+        }
+    }
+    focus = { #Man-portable AT and AA Effort
+        id = ET_S2_ENG_manportable_at_and_aa_effort
+        icon = GFX_goal_generic_special_forces
+        x = 2
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_infantry  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = infantry_launchers
+            }
+        }
+    }
+    focus = { #Man-portable AT and AA Effort II
+        id = ET_S2_ENG_manportable_at_and_aa_effort_ii
+        icon = GFX_goal_generic_special_forces
+        x = 2
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_manportable_at_and_aa_effort  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = infantry_launchers
+            }
+        }
+    }
+
+    focus = { #Infantry Fighting Vehicle
+        id = ET_S2_ENG_infantry_fighting_vehicle
+        icon = GFX_goal_generic_army_motorized
+        x = 1
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_mechanized  focus = ET_S2_ENG_infantry  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = cat_mechanized_equipment
+            }
+        }
+    }
+    focus = { #Infantry Fighting Vehicle II
+        id = ET_S2_ENG_infantry_fighting_vehicle_ii
+        icon = GFX_goal_generic_army_motorized
+        x = 1
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_infantry_fighting_vehicle  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = cat_mechanized_equipment
+            }
+        }
+    }
+
+
+
+    focus = { #Naval
+        id = ET_S2_ENG_naval
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = 6
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        available = {
+            any_state = {
+                is_coastal = yes
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Coastal Navy
+        id = ET_S2_ENG_coastal_navy
+        icon = GFX_goal_generic_navy_cruiser
+        x = 5
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_naval  }
+        mutually_exclusive = { focus = ET_S2_ENG_open_sea_navy  }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                add = -10
+                num_of_naval_factories > 30
+            }
+        }
+    }
+
+    focus = { #Destroyers
+        id = ET_S2_ENG_destroyers
+        icon = GFX_focus_generic_destroyer
+        x = 5
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_coastal_navy  }
+
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = dd_tech
+            }        
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Destroyers II
+        id = ET_S2_ENG_destroyers_ii
+        icon = GFX_focus_generic_destroyer
+        x = 5
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_destroyers  }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = dd_tech
+            }        
+        }
+    }
+
+    focus = { #Coastal Submarines
+        id = ET_S2_ENG_coastal_submarines
+        icon = GFX_goal_generic_navy_submarine
+        x = 6
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_coastal_navy  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = ss_tech
+            }
+        }
+    }
+
+    focus = { #Open Sea Navy
+        id = ET_S2_ENG_open_sea_navy
+        icon = GFX_goal_generic_navy_battleship
+        x = 8
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_naval  }
+        mutually_exclusive = { focus = ET_S2_ENG_coastal_navy  }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 10
+                num_of_naval_factories > 30
+            }
+        }
+    }
+
+    focus = { #Frigates
+        id = ET_S2_ENG_frigates
+        icon = GFX_focus_generic_cruiser2
+        x = 7
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_open_sea_navy  }
+
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = bb_tech
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Frigates II
+        id = ET_S2_ENG_frigates_ii
+        icon = GFX_focus_generic_cruiser2
+        x = 7
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_frigates  }
+
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = cl_tech
+            }    
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = { #Modern Carrier
+        id = ET_S2_ENG_modern_carrier
+        icon = GFX_goal_generic_navy_carrier
+        x = 9
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_open_sea_navy  }
+
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = cv_tech
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+    
+    focus = { #Nuclear Powered
+        id = ET_S2_ENG_nuclear_powered
+        icon = GFX_focus_wonderweapons
+        x = 8
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_open_sea_navy  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = nuclear
+            }
+        }
+    }
+    focus = { #Nuclear Submarines
+        id = ET_S2_ENG_nuclear_submarines
+        icon = GFX_goal_generic_navy_submarine
+        x = 8
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_nuclear_powered  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = ss_tech
+            }    
+        }
+    }
+    focus = { #Nuclear Carrier
+        id = ET_S2_ENG_nuclear_carrier
+        icon = GFX_goal_generic_navy_carrier
+        x = 9
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_modern_carrier  focus = ET_S2_ENG_nuclear_powered  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = cv_tech
+            }    
+        }
+    }
+
+
+    
+    focus = { #Air Force
+        id = ET_S2_ENG_air_force
+        icon = GFX_goal_generic_build_airforce
+        x = 13
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        available = {
+            #any_state = {
+            #    has_built = {
+            #        type = air_base
+            #        value > 1
+            #    }
+            #}
+        }
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Air Logistics
+        id = ET_S2_ENG_air_logistics
+        icon = GFX_goal_generic_air_fighter2
+        x = 14
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_air_force  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = air_equipment
+            }
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = logistics_tech
+            }    
+        }
+    }
+
+    focus = { #Helicopter Effort
+        id = ET_S2_ENG_helicopter_effort
+        icon = GFX_goal_generic_air_fighter2
+        x = 14
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_jet_effort  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = cat_air_helicopters
+            }    
+        }
+    }
+
+    focus = { #Jet Effort
+        id = ET_S2_ENG_jet_effort
+        icon = GFX_focus_rocketry
+        x = 12
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_air_force  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            if = {
+                limit = { NOT = { has_tech = experimental_rockets } }
+                add_tech_bonus = {
+                    uses = 2
+                    bonus = 1.0
+                    category = rocketry
+                }
+            }
+            if = {
+                limit = { NOT = { has_tech = rocket_engines } }
+                add_tech_bonus = {
+                    uses = 1
+                    bonus = 1.0
+                    category = rocketry
+                }
+                add_tech_bonus = {
+                    uses = 1
+                    bonus = 1.0
+                    category = jet_technology
+                }
+            }
+            if = {
+                limit = { NOT = { has_tech = jet_engines } }
+                add_tech_bonus = {
+                    uses = 3
+                    bonus = 1.0
+                    category = jet_technology
+                }
+            }
+            if = {
+                limit = { NOT = { has_tech = heli_engines } }
+                add_tech_bonus = {
+                    uses = 2
+                    bonus = 1.0
+                    category = jet_technology
+                }
+            }
+        }
+    }
+    focus = { #Jet Fighters
+        id = ET_S2_ENG_jet_fighters
+        icon = GFX_goal_generic_air_fighter2
+        x = 12
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_jet_effort  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = jet_technology
+            }
+        }
+    }
+    focus = { #Jet Fighters II
+        id = ET_S2_ENG_jet_fighters_ii
+        icon = GFX_goal_generic_air_fighter2
+        x = 12
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_jet_fighters  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = jet_technology
+            }
+        }
+    }
+
+    focus = { #Modern Close Air Support
+        id = ET_S2_ENG_modern_close_air_support
+        icon = GFX_goal_generic_CAS
+        x = 14
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_jet_fighters  } prerequisite = { focus = ET_S2_ENG_helicopter_effort  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = cas_bomber
+            }
+        }
+    }
+    focus = { #Modern Close Air Support II
+        id = ET_S2_ENG_modern_close_air_support_ii
+        icon = GFX_goal_generic_CAS
+        x = 14
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_modern_close_air_support  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = cas_bomber
+            }
+        }
+    }
+
+
+    focus = { #Carrier Aircraft
+        id = ET_S2_ENG_carrier_aircraft
+        icon = GFX_goal_generic_navy_carrier
+        x = 11
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_modern_carrier  }
+        prerequisite = { focus = ET_S2_ENG_jet_fighters  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = jet_technology
+            }
+        }
+    }
+    focus = { #Carrier Aircraft II
+        id = ET_S2_ENG_carrier_aircraft_ii
+        icon = GFX_goal_generic_navy_carrier
+        x = 11
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_carrier_aircraft  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                uses = 1
+                bonus = 1.0
+                category = jet_technology
+            }
+        }
+    }
+
+
+
+    #Under Occupation Line
+    focus = { #We Stand Defeated
+        id = ET_S2_ENG_defeated
+        icon = GFX_focus_CZE_german_puppet
+        x = 3
+        y = 7
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        mutually_exclusive = { focus = ET_S2_ENG_still_not_defeated  }
+        bypass = {
+            OR = {
+                is_puppet = yes
+                has_government = fascism
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = { #England a _NATION_ Colony
+        id = ET_S2_ENG_a_colony
+        icon = GFX_focus_ger_reichskommisariats
+        x = 1
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_S2_ENG_defeated }
+        mutually_exclusive = {
+            focus = ET_S2_ENG_british_anti_colonial_sentiment
+            focus = ET_S2_ENG_a_colony
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #British Anti-Colonial Sentiment
+        id = ET_S2_ENG_british_anti_colonial_sentiment
+        icon = GFX_focus_focus_fra_fascist_threat
+        x = 3
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_S2_ENG_defeated }
+        mutually_exclusive = {
+            focus = ET_S2_ENG_a_colony
+            focus = ET_S2_ENG_fight_against_tyranny
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Fight Against Tyranny
+        id = ET_S2_ENG_fight_against_tyranny
+        icon = GFX_focus_focus_fra_revolution_utmost
+        x = 5
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_S2_ENG_defeated }
+        mutually_exclusive = {
+            focus = ET_S2_ENG_a_colony
+            focus = ET_S2_ENG_british_anti_colonial_sentiment
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+
+    #Still Not Defeated
+    focus = { # We Still Stand
+        id = ET_S2_ENG_still_not_defeated
+        icon = GFX_focus_eng_the_sun_never_sets
+        x = 11
+        y = 7
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        mutually_exclusive = { focus = ET_S2_ENG_defeated }
+        bypass = {
+            OR = {
+                is_puppet = no
+                not = { has_government = fascism }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = { # Empower the King
+        id = ET_S2_ENG_power_to_the_king
+        icon = GFX_focus_eng_the_kings_party
+        x = 8
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_S2_ENG_still_not_defeated }
+        mutually_exclusive = { focus = ET_S2_ENG_the_last_beacon_of_freedom }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { # Absolute monarchy
+        id = ET_S2_ENG_absolute_monarchy
+        icon = GFX_focus_eng_god_save_the_king
+        x = 8
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_S2_ENG_power_to_the_king }
+
+        ai_will_do = { factor = 1 }
+    }
+
+
+    focus = { # British Fortress
+        id = ET_S2_ENG_british_fortress
+        icon = GFX_focus_generic_coastal_fort
+        x = 11
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = {
+            focus = ET_S2_ENG_power_to_the_king
+            focus = ET_S2_ENG_last_beacon_of_a_free_europe
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { # British Fortress II
+        id = ET_S2_ENG_british_fortress_ii
+        icon = GFX_focus_generic_coastal_fort
+        x = 11
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_S2_ENG_british_fortress }
+
+        ai_will_do = { factor = 1 }
+    }
+
+
+
+    focus = { # Last Beacon of a Free Europe
+        id = ET_S2_ENG_last_beacon_of_a_free_europe
+        icon = GFX_goal_support_democracy
+        x = 15
+        y = 8
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_still_not_defeated }
+        mutually_exclusive = { focus = ET_S2_ENG_power_to_the_king }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = { # Strengthen our Democracy
+        id = ET_S2_ENG_strengthen_our_democracy
+        icon = GFX_goal_generic_political_pressure
+        x = 14
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_last_beacon_of_a_free_europe }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { # Abolish The Monarchy
+        id = ET_S2_ENG_abolish_the_monarchy
+        icon = GFX_focus_generic_monarchy_1
+        x = 14
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_strengthen_our_democracy }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { # Adopt Republic
+        id = ET_S2_ENG_adopt_republic
+        icon = GFX_goal_support_democracy
+        x = 14
+        y = 11
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_abolish_the_monarchy }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { # More Freedom
+        id = ET_S2_ENG_more_freedom
+        icon = GFX_focus_generic_support_the_left_right
+        x = 14
+        y = 12
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_abolish_the_monarchy }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = { # Keep Close Ties to USA
+        id = ET_S2_ENG_keep_close_ties_to_usa
+        icon = GFX_focus_eng_unite_the_anglosphere
+        x = 16
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_last_beacon_of_a_free_europe }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { # Reform Allies to Nato
+        id = ET_S2_ENG_reform_allies_to_nato
+        icon = GFX_goal_generic_major_alliance
+        x = 16
+        y = 10
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S2_ENG_keep_close_ties_to_usa }
+
+        completion_reward = {
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+}
