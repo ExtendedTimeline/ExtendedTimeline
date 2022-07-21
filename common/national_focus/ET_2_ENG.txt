@@ -41,7 +41,7 @@ focus_tree = {
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
         prerequisite = { focus = ET_S2_ENG_army  }
-        mutually_exclusive = { focus = ET_S2_ENG_infantry  }
+        mutually_exclusive = { focus = ET_S2_ENG_infantry }
         completion_reward = {
             add_tech_bonus = {
                 uses = 1
