@@ -546,9 +546,9 @@ demobilization = {
 				limit = {
 					ET_in_new_era_country = yes
 					NOT = { has_country_flag = ET_flag_country_HasDemobalizedEconomy }
-					NOT = { has_idea = ET_modern_civilian_economy }
+					NOT = { has_idea = civilian_economy }
 				}
-				add_ideas = ET_modern_civilian_economy
+				add_ideas = civilian_economy
 				set_country_flag = ET_flag_country_HasDemobalizedEconomy
 			}
 			else = {
