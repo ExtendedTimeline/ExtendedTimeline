@@ -2,11 +2,11 @@
 # This on_action are used to add to all country history files without actually touching them.
 
 on_actions = {
-	on_startup = {
-		effect = {
-			EGY = {
-				recruit_character = ET_EGY_Gamal_Abdel_Nasser
-			}
-		}
-	}
+    on_startup = {
+        effect = {
+            EGY = {
+                recruit_character = ET_EGY_Gamal_Abdel_Nasser
+            }
+        }
+    }
 }
