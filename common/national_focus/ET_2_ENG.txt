@@ -40,7 +40,7 @@ focus_tree = {
         y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S2_ENG_army  }
+        prerequisite = { focus = ET_S2_ENG_army }
         mutually_exclusive = { focus = ET_S2_ENG_infantry }
         completion_reward = {
             add_tech_bonus = {
@@ -62,7 +62,7 @@ focus_tree = {
         y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S2_ENG_mechanized  }
+        prerequisite = { focus = ET_S2_ENG_mechanized }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -79,7 +79,7 @@ focus_tree = {
         y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S2_ENG_main_battle_tank  }
+        prerequisite = { focus = ET_S2_ENG_main_battle_tank }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -98,7 +98,7 @@ focus_tree = {
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
         prerequisite = { focus = ET_S2_ENG_army  }
-        mutually_exclusive = { focus = ET_S2_ENG_mechanized  }
+        mutually_exclusive = { focus = ET_S2_ENG_mechanized }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -120,7 +120,7 @@ focus_tree = {
         y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S2_ENG_infantry  }
+        prerequisite = { focus = ET_S2_ENG_infantry }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -137,7 +137,7 @@ focus_tree = {
         y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S2_ENG_manportable_at_and_aa_effort  }
+        prerequisite = { focus = ET_S2_ENG_manportable_at_and_aa_effort }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -155,7 +155,10 @@ focus_tree = {
         y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S2_ENG_mechanized  focus = ET_S2_ENG_infantry  }
+        prerequisite = {
+            focus = ET_S2_ENG_mechanized
+            focus = ET_S2_ENG_infantry
+        }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -172,7 +175,7 @@ focus_tree = {
         y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S2_ENG_infantry_fighting_vehicle  }
+        prerequisite = { focus = ET_S2_ENG_infantry_fighting_vehicle }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
