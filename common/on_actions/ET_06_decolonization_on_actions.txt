@@ -1,18 +1,18 @@
 on_actions = {
-	on_monthly = { 
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						date > 1945.01.01
-						has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
-					}
-					date < 1980.01.01
-				}
-				country_event = {
-					id = ET_Decolonization_Init.0
-				}
-			}
-		}
-	}
+    on_monthly = { 
+        effect = {
+            if = {
+                limit = {
+                    OR = {
+                        date > 1945.01.01
+                        has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+                    }
+                    date < 1980.01.01
+                }
+                country_event = {
+                    id = ET_Decolonization_Init.0
+                }
+            }
+        }
+    }
 }
