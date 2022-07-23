@@ -5,6 +5,7 @@ ET_Generic_Peace = {
             has_government = communism
             has_government = democratic
         }
+        NOT = { has_global_flag = ET_flag_global_newera }
     }
 
     annex_randomness = 0 #200
@@ -51,54 +52,56 @@ ET_Generic_Peace = {
                 }
             }
         }
-		modifier = { # prefer not to take from humans in our own faction
-			factor = 0.5
-			NOT = { 
-				FROM = { 
-					OR = {
-						is_claimed_by = ROOT
-						is_core_of = ROOT
-					}
-				} 
-			}
-			FROM = {
-				controller = { 
-					is_ai = no 
-					has_capitulated = no 
-					is_puppet = no 
-					is_in_faction_with = ROOT
-				}
-			}
-		}
-		modifier = { # Don't steal claims and cores from faction members unless we also have a right to that clay unless they are puppets
-			factor = 0
-			NOT = { 
-				FROM = { 
-					OR = {
-						is_claimed_by = ROOT
-						is_core_of = ROOT
-					}
-				} 
-			}
-			any_country = {
-				is_in_faction_with = ROOT
-				is_puppet = no
-				FROM = {
-					OR = {
-						is_claimed_by = PREV
-						is_core_of = PREV
-					}
-				}
-			}
-		}
+        modifier = { # prefer not to take from humans in our own faction
+            factor = 0.5
+            NOT = { 
+                FROM = { 
+                    OR = {
+                        is_claimed_by = ROOT
+                        is_core_of = ROOT
+                    }
+                } 
+            }
+            FROM = {
+                controller = { 
+                    is_ai = no 
+                    has_capitulated = no 
+                    is_puppet = no 
+                    is_in_faction_with = ROOT
+                }
+            }
+        }
+        modifier = { # Don't steal claims and cores from faction members unless we also have a right to that clay unless they are puppets
+            factor = 0
+            NOT = { 
+                FROM = { 
+                    OR = {
+                        is_claimed_by = ROOT
+                        is_core_of = ROOT
+                    }
+                } 
+            }
+            any_country = {
+                is_in_faction_with = ROOT
+                is_puppet = no
+                FROM = {
+                    OR = {
+                        is_claimed_by = PREV
+                        is_core_of = PREV
+                    }
+                }
+            }
+        }
 
-		modifier = { # Soviet does not take african colonies.
-			factor = 0
-			original_tag = SOV
-			FROM = {
-				is_on_continent = africa
-			}
-		}
+        modifier = { # Soviet does not take african colonies.
+            factor = 0
+            OR = {
+                original_tag = SOV
+                FROM = {
+                    is_on_continent = africa
+                }
+            }
+        }
     }
 
     # ROOT = Taker, FROM = Giver

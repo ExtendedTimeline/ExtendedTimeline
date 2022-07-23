@@ -20,3 +20,8 @@ ET_broke_agreements:0 "Broken Agreement"
 
 ET_divided_city:0 "Divided City"
 ET_divided_city_desc:0 "The city have been divided between ideological lines in a West and East part."
+
+ET_infantry_launchers_bonus:0 "Infantry Launchers bonus"
+ET_night_vision_bonus:0 "Night Fighting Equipment bonus"
+ET_logistical_bonus:0 "Logistical Equipment bonus"
+ET_helicopter_bonus:0 "Helicopter Equipment bonus"

@@ -41,11 +41,13 @@ focus_tree = {
         mutually_exclusive = { focus = ET_Generic_infantry  }
         completion_reward = {
             add_tech_bonus = {
+                name = motorized_bonus
                 uses = 1
                 bonus = 1.0
                 category = cat_mechanized_equipment
             }
             add_tech_bonus = {
+                name = motorized_bonus
                 uses = 1
                 bonus = 1.0
                 category = motorized_equipment
@@ -63,6 +65,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = armor_bonus
                 uses = 1
                 bonus = 1.0
                 category = armor
@@ -80,6 +83,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = armor_bonus
                 uses = 1
                 bonus = 1.0
                 category = armor
@@ -99,11 +103,13 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = infantry_weapons_bonus
                 uses = 1
                 bonus = 1.0
                 category = infantry_weapons
             }
             add_tech_bonus = {
+                name = ET_night_vision_bonus
                 uses = 1
                 bonus = 1.0
                 category = night_vision
@@ -121,6 +127,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = ET_infantry_launchers_bonus
                 uses = 1
                 bonus = 1.0
                 category = infantry_launchers
@@ -138,6 +145,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = ET_infantry_launchers_bonus
                 uses = 1
                 bonus = 1.0
                 category = infantry_launchers
@@ -156,6 +164,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = mech_army_bonus
                 uses = 1
                 bonus = 1.0
                 category = cat_mechanized_equipment
@@ -173,6 +182,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = mech_army_bonus
                 uses = 1
                 bonus = 1.0
                 category = cat_mechanized_equipment
@@ -209,7 +219,7 @@ focus_tree = {
         ai_will_do = {
             factor = 1
             modifier = {
-                add = -10
+                factor = 0
                 num_of_naval_factories > 30
             }
         }
@@ -226,6 +236,7 @@ focus_tree = {
 
         completion_reward = {
             add_tech_bonus = {
+                name = dd_bonus
                 uses = 1
                 bonus = 1.0
                 category = dd_tech
@@ -244,6 +255,7 @@ focus_tree = {
         prerequisite = { focus = ET_Generic_destroyers  }
         completion_reward = {
             add_tech_bonus = {
+                name = dd_bonus
                 uses = 1
                 bonus = 1.0
                 category = dd_tech
@@ -262,6 +274,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = ss_bonus
                 uses = 1
                 bonus = 1.0
                 category = ss_tech
@@ -282,7 +295,7 @@ focus_tree = {
         ai_will_do = {
             factor = 0
             modifier = {
-                add = 10
+                factor = 1
                 num_of_naval_factories > 30
             }
         }
@@ -299,6 +312,7 @@ focus_tree = {
 
         completion_reward = {
             add_tech_bonus = {
+                name = bb_bonus
                 uses = 1
                 bonus = 1.0
                 category = bb_tech
@@ -317,6 +331,7 @@ focus_tree = {
 
         completion_reward = {
             add_tech_bonus = {
+                name = cr_bonus
                 uses = 1
                 bonus = 1.0
                 category = cl_tech
@@ -337,6 +352,7 @@ focus_tree = {
 
         completion_reward = {
             add_tech_bonus = {
+                name = cv_bonus
                 uses = 1
                 bonus = 1.0
                 category = cv_tech
@@ -357,6 +373,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = nuclear_bonus
                 uses = 1
                 bonus = 1.0
                 category = nuclear
@@ -374,6 +391,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = ss_bonus
                 uses = 1
                 bonus = 1.0
                 category = ss_tech
@@ -391,6 +409,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = sv_bonus
                 uses = 1
                 bonus = 1.0
                 category = cv_tech
@@ -428,11 +447,13 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = air_bonus
                 uses = 1
                 bonus = 1.0
                 category = air_equipment
             }
             add_tech_bonus = {
+                name = ET_logistical_bonus
                 uses = 1
                 bonus = 1.0
                 category = logistics_tech
@@ -451,6 +472,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = ET_helicopter_bonus
                 uses = 1
                 bonus = 1.0
                 category = cat_air_helicopters
@@ -471,6 +493,7 @@ focus_tree = {
             if = {
                 limit = { NOT = { has_tech = experimental_rockets } }
                 add_tech_bonus = {
+                    name = jet_rocket_bonus
                     uses = 2
                     bonus = 1.0
                     category = rocketry
@@ -479,11 +502,13 @@ focus_tree = {
             if = {
                 limit = { NOT = { has_tech = rocket_engines } }
                 add_tech_bonus = {
+                    name = jet_rocket_bonus
                     uses = 1
                     bonus = 1.0
                     category = rocketry
                 }
                 add_tech_bonus = {
+                    name = jet_bonus
                     uses = 1
                     bonus = 1.0
                     category = jet_technology
@@ -492,6 +517,7 @@ focus_tree = {
             if = {
                 limit = { NOT = { has_tech = jet_engines } }
                 add_tech_bonus = {
+                    name = jet_bonus
                     uses = 3
                     bonus = 1.0
                     category = jet_technology
@@ -500,6 +526,7 @@ focus_tree = {
             if = {
                 limit = { NOT = { has_tech = heli_engines } }
                 add_tech_bonus = {
+                    name = jet_bonus
                     uses = 2
                     bonus = 1.0
                     category = jet_technology
@@ -518,6 +545,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = jet_bonus
                 uses = 1
                 bonus = 1.0
                 category = jet_technology
@@ -535,6 +563,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = jet_bonus
                 uses = 1
                 bonus = 1.0
                 category = jet_technology
@@ -553,6 +582,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = CAS_bonus
                 uses = 1
                 bonus = 1.0
                 category = cas_bomber
@@ -570,6 +600,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = CAS_bonus
                 uses = 1
                 bonus = 1.0
                 category = cas_bomber
@@ -590,6 +621,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = jet_bonus
                 uses = 1
                 bonus = 1.0
                 category = jet_technology
@@ -607,6 +639,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = jet_bonus
                 uses = 1
                 bonus = 1.0
                 category = jet_technology
@@ -636,6 +669,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = industrial_bonus
                 uses = 1
                 bonus = 1.0
                 category = industry
@@ -653,6 +687,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = industrial_bonus
                 uses = 1
                 bonus = 1.0
                 category = industry
@@ -670,6 +705,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = industrial_bonus
                 uses = 1
                 bonus = 1.0
                 category = industry
@@ -688,6 +724,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = industrial_bonus
                 uses = 1
                 bonus = 1.0
                 category = construction_tech
@@ -705,6 +742,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = construction_tech_bonus
                 uses = 1
                 bonus = 1.0
                 category = construction_tech
@@ -723,6 +761,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = electronics_bonus
                 uses = 1
                 bonus = 1.0
                 category = electronics
@@ -740,6 +779,7 @@ focus_tree = {
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
+                name = electronics_bonus
                 uses = 1
                 bonus = 1.0
                 category = electronics
