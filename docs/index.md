@@ -1,4 +1,3 @@
+# Hello World
 
-welcome
-
-[[development guidelines]]
+[development guidelines](development_guidelines)
