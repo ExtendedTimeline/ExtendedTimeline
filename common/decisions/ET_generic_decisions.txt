@@ -91,7 +91,7 @@ political_actions = {
             }
 
             hidden_effect = {
-                set_global_flag = ET_flag_global_allies_surrender
+                set_global_flag = ET_flag_global_allies_surrender_to_ger
 
                 every_country = {
                     limit = { is_in_faction_with = GER }
@@ -101,8 +101,6 @@ political_actions = {
                     }
                 }
                 white_peace = GER
-                ET_set_new_era = yes
-                ET_set_scenario = yes
             }
         }
 

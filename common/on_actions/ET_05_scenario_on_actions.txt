@@ -1,13 +1,12 @@
 on_actions = {
-    # Scenario 1
+
     #ROOT - country that just went to peace
     on_peaceconference_ended = {
         effect = {
-            if = {
+            if = { # Trigger new era system if everyone is at peace
                 limit = {
-                    has_global_flag = had_yalta_conference
-                    NOT = { has_global_flag = ET_flag_global_newera }
-                    NOT = { has_global_flag = ET_flag_global_allies_surrender }
+                    ET_in_new_era = no
+
                     all_country = { has_war = no }
                     date > 1945.01.01
                 }
@@ -25,15 +24,13 @@ on_actions = {
                 }
 
                 if = { limit = { is_debug = yes } log = "[GetDateText]: NewEra inizialized." }
-
-                set_global_flag = ET_flag_global_newera
-                
-                # Determin Scenario
+                ET_set_new_era = yes
                 ET_set_scenario = yes
             }
         }
     }
 
+    # New era exist add tree to new nations
     #ROOT = nation being released, FROM = overlord
     on_release_as_puppet = {
         effect = {
