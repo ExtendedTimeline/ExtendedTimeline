@@ -3,7 +3,7 @@ set -e
 
 VERSION=$*
 PROJECT_NAME="ExtendedTimeline" 
-PROJECT_FILES=("common" "events" "gfx" "interface" "localisation" "ExtendedTimeline.mod" "LICENSE" "README.md", "thumbnail.png")
+PROJECT_FILES=("common" "events" "gfx" "interface" "localisation" "descriptor.mod" "LICENSE" "README.md", "thumbnail.png")
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 PROJECT_ROOT_DIR="$(dirname "$SCRIPT_DIR")"
@@ -21,9 +21,10 @@ do
   [ -d "$I" ] || [ -f "$I" ] && cp -Rp "$I" "$PROJECT_ROOT_DIR/release/$PROJECT_NAME/."
 done
 
-echo "Writing ExtendedTimeline.mod"
-sed -i "s/0.0.0/${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/ExtendedTimeline.mod
-sed -i "s/ DevBuild//" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/ExtendedTimeline.mod
+echo "Writing descriptor.mod"
+sed -i "s/0.0.0/${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/descriptor.mod
+sed -i "s/ DevBuild//" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/descriptor.mod
+sed -i "s/UTNH/Ultimate Tech Tree : New Horizon/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/descriptor.mod
 
 [ -f "$PROJECT_ROOT_DIR/release/$PROJECT_NAME/README.md" ] && echo "Writing README.md"
 [ -f "$PROJECT_ROOT_DIR/release/$PROJECT_NAME/README.md" ] && sed -i "s/# EXTENDED TIMELINE/# EXTENDED TIMELINE v${VERSION}/" $PROJECT_ROOT_DIR/release/$PROJECT_NAME/README.md

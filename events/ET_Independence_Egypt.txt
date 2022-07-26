@@ -1,0 +1,517 @@
+add_namespace = ET_Independence_Egypt # EGY
+
+country_event = { #0: Check if eqypt is independet
+    id = ET_Independence_Egypt.0
+
+    is_triggered_only = yes
+    hidden = yes
+
+    immediate = {
+        if = {          # Egypt is not a puppet and not democratic
+            limit = {
+                original_tag = EGY
+                NOT = { has_government = democratic }
+                is_puppet = no
+            }
+            #country_event = { id = ET_Independence_Egypt.10 } # TODO: this event chain
+            log = "WIP Event ET Independence_Egypt.10 is supposed to run but don't exist..."
+        }
+        else_if = {     # Egypt exist and is puppet
+            limit = {
+                original_tag = EGY
+                is_puppet = yes
+            }
+            #country_event = { id = ET_Independence_Egypt.20 } # TODO: this event chain
+            log = "WIP Event ET Independence_Egypt.20 is supposed to run but don't exist..."
+        }
+        else = {        # The "historical" and expected path
+            country_event = { id = ET_Independence_Egypt.30 }
+            446 = { force_enable_resistance = EGY }
+            447 = { force_enable_resistance = EGY }
+            452 = { force_enable_resistance = EGY }
+            453 = { force_enable_resistance = EGY }
+            456 = { force_enable_resistance = EGY }
+            457 = { force_enable_resistance = EGY }
+        }
+    }
+    
+    option = {}
+}
+
+country_event = { #30: Anti-colonial sentiment grow
+    id = ET_Independence_Egypt.30
+    title = ET_Independence_Egypt.30.t
+    desc = ET_Independence_Egypt.30.desc
+    
+    picture = GFX_ET_event_egypt_revolution_british
+
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            country_event = {
+                id = ET_Independence_Egypt.31
+                days = 14
+            }
+            446 = { add_resistance = 1 }
+            447 = { add_resistance = 1 }
+            452 = { add_resistance = 1 }
+            453 = { add_resistance = 1 }
+            456 = { add_resistance = 1 }
+            457 = { add_resistance = 1 }
+            
+            446 = { add_compliance = -1 }
+            447 = { add_compliance = -1 }
+            452 = { add_compliance = -1 }
+            453 = { add_compliance = -1 }
+            456 = { add_compliance = -1 }
+            457 = { add_compliance = -1 }
+        }
+    }
+    
+    option = {
+        name = ET_Independence_Egypt.30.a
+    }
+}
+country_event = { #31: [1950.01.03] election # https://en.wikipedia.org/wiki/1950_Egyptian_parliamentary_election
+    id = ET_Independence_Egypt.31
+    title = ET_Independence_Egypt.31.t
+    desc = ET_Independence_Egypt.31.desc
+    
+    picture = GFX_report_event_election_vote
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            date > 1950.01.02
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Egypt
+        }
+    }
+
+    immediate = {
+        hidden_effect = {
+            country_event = {
+                id = ET_Independence_Egypt.32
+                days = 14
+            }
+            446 = { add_resistance = 1 }
+            447 = { add_resistance = 1 }
+            452 = { add_resistance = 1 }
+            453 = { add_resistance = 1 }
+            456 = { add_resistance = 1 }
+            457 = { add_resistance = 1 }
+            
+            446 = { add_compliance = -1 }
+            447 = { add_compliance = -1 }
+            452 = { add_compliance = -1 }
+            453 = { add_compliance = -1 }
+            456 = { add_compliance = -1 }
+            457 = { add_compliance = -1 }
+        }
+    }
+    
+    option = {
+        name = ET_Independence_Egypt.31.a
+    }
+}
+country_event = { #32: [1951.10.01] Egyptian Withdrewal from the Anglo-Egyptian Treaty # https://en.wikipedia.org/wiki/Anglo-Egyptian_treaty_of_1936
+    id = ET_Independence_Egypt.32
+    title = ET_Independence_Egypt.32.t
+    desc = ET_Independence_Egypt.32.desc
+    
+    picture = GFX_report_event_generic_sign_treaty1
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            date > 1951.09.30 # 1951.10.01
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Egypt
+        }
+    }
+    immediate = {}
+    
+    option = { # Refuce
+        name = ET_Independence_Egypt.32.a
+        custom_effect_tooltip = ET_Independence_Egypt_Damage_Prevention_tt
+        hidden_effect = {
+            country_event = {
+                id = ET_Independence_Egypt.33
+                days = 30
+            }
+        }
+    }
+    option = { # Comply
+        name = ET_Independence_Egypt.32.b
+        446 = { set_demilitarized_zone = yes }
+        453 = { set_demilitarized_zone = yes }
+        country_event = {
+            id = ET_Independence_Egypt.34
+            days = 30
+        }
+    }
+}
+country_event = { #33: [1951.10.01] Refused to leave, gets attacked - https://en.wikipedia.org/wiki/Kingdom_of_Egypt#Suez_Emergency
+    id = ET_Independence_Egypt.33
+    title = ET_Independence_Egypt.33.t
+    desc = ET_Independence_Egypt.33.desc
+    
+    picture = GFX_ET_event_egypt_revolution_british
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            date > 1951.10.01
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Egypt
+        }
+    }
+    
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    divisions_in_state = {
+                        size > 0
+                        state = 446
+                    }
+                    divisions_in_state = {
+                        size > 0
+                        state = 453
+                    }
+                }
+                OR = {
+                    divisions_in_state = {
+                        size < 4
+                        state = 446
+                    }
+                    divisions_in_state = {
+                        size < 4
+                        state = 453
+                    }
+                }
+            }
+            custom_effect_tooltip = ET_Independence_Egypt_Div_Damaged_tt
+            hidden_effect = {
+                damage_units = {
+                    state = 446
+                    org_damage = 0.30
+                    str_damage = 0.10
+                    ratio = yes
+                    army = yes
+                }
+                damage_units = {
+                    state = 453
+                    org_damage = 0.30
+                    str_damage = 0.10
+                    ratio = yes
+                    army = yes
+                }
+            }
+        }
+
+        custom_effect_tooltip = ET_Independence_Egypt_Inf_Damaged_tt
+        hidden_effect = {
+            if = {
+                limit = {
+                    OR = {
+                        divisions_in_state = {
+                            size > 4
+                            state = 446
+                        }
+                        divisions_in_state = {
+                            size > 4
+                            state = 453
+                        }
+                    }
+                }
+                453 = {
+                    damage_building = {
+                        type = infrastructure
+                        damage = 0.3
+                    }
+                }
+                446 = {
+                    damage_building = {
+                        type = infrastructure
+                        damage = 0.3
+                    }
+                }
+            }
+            else = {
+                453 = {
+                    damage_building = {
+                        type = infrastructure
+                        damage = 0.6
+                    }
+                }
+                446 = {
+                    damage_building = {
+                        type = infrastructure
+                        damage = 0.6
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = ET_Independence_Egypt.33.a
+        hidden_effect = {
+            country_event = {
+                id = ET_Independence_Egypt.34
+                days = 60
+            }
+        }
+    }
+}
+country_event = { #34: [1952.01.24] Guerilla attacks again 
+    id = ET_Independence_Egypt.34
+    title = ET_Independence_Egypt.34.t
+    desc = ET_Independence_Egypt.34.desc
+    
+    picture = GFX_ET_event_egypt_revolution_british
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            date > 1952.01.23 # 1952.01.24
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Egypt
+        }
+    }
+    immediate = {
+        446 = { set_demilitarized_zone = no }
+        453 = { set_demilitarized_zone = no }
+    }
+    
+    option = {
+        name = ET_Independence_Egypt.34.a
+        country_event = {
+            id = ET_Independence_Egypt.35
+            days = 1
+        }
+    }
+}
+country_event = { #35: [1952.01.25] Retalliation battle results
+    id = ET_Independence_Egypt.35
+    title = ET_Independence_Egypt.35.t
+    desc = ET_Independence_Egypt.35.desc
+    
+    picture = GFX_ET_event_egypt_revolution_british
+
+    is_triggered_only = yes
+
+    immediate = {}
+    
+    option = {
+        name = ET_Independence_Egypt.35.a
+        country_event = {
+            id = ET_Independence_Egypt.36
+            days = 1
+        }
+    }
+}
+country_event = { #36: [1952.01.26] Black Saterday
+    id = ET_Independence_Egypt.36
+    title = ET_Independence_Egypt.36.t
+    desc = ET_Independence_Egypt.36.desc
+    
+    picture = GFX_ET_event_egypt_revolution_cairofires
+
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            446 = { add_resistance = 3 }
+            447 = { add_resistance = 3 }
+            452 = { add_resistance = 3 }
+            453 = { add_resistance = 3 }
+            456 = { add_resistance = 3 }
+            457 = { add_resistance = 3 }
+            
+            446 = { add_compliance = -3 }
+            447 = { add_compliance = -3 }
+            452 = { add_compliance = -3 }
+            453 = { add_compliance = -3 }
+            456 = { add_compliance = -3 }
+            457 = { add_compliance = -3 }
+    
+            446 = {
+                damage_building = {
+                    type = infrastructure
+                    damage = 0.1
+                }
+                damage_building = {
+                    type = industrial_complex
+                    damage = 0.05
+                }
+                damage_building = {
+                    type = arms_factory
+                    damage = 0.05
+                }
+            }
+        }
+    }
+    
+    option = {
+        name = ET_Independence_Egypt.36.a
+        country_event = {
+            id = ET_Independence_Egypt.40
+            days = 30
+        }
+    }
+}
+
+
+country_event = { #40: [1952.07.23] Coup d'état # https://en.wikipedia.org/wiki/Kingdom_of_Egypt#Dissolution
+    id = ET_Independence_Egypt.40
+    title = ET_Independence_Egypt.40.t
+    desc = ET_Independence_Egypt.40.desc
+    
+    picture = GFX_ET_event_egypt_revolution_coup
+
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            date > 1952.07.22 #1952.07.23
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+            has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Egypt
+        }
+    }
+    immediate = {
+        ET_EGY_Set_New_Government = yes
+        hidden_effect = {
+            FRA = { news_event = { id = ET_Independence_Egypt.41 } }
+            USA = { news_event = { id = ET_Independence_Egypt.41 } }
+            SOV = { news_event = { id = ET_Independence_Egypt.41 } }
+        }
+    }
+    
+    option = {
+        name = ET_Independence_Egypt.40.a
+        country_event = {
+            id = ET_Independence_Egypt.50
+            days = 3
+        }
+    }
+}
+news_event = {    #41
+    id = ET_Independence_Egypt.41
+    title = ET_Independence_Egypt.41.t
+    desc = ET_Independence_Egypt.41.desc
+
+    picture = GFX_ET_news_event_egypt_revolution
+
+    is_triggered_only = yes
+    
+    trigger = {}
+
+    immediate = {
+    }
+
+    option = {
+        name = ET_Independence_Egypt.41.a
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+
+country_event = { #50: Independence
+    id = ET_Independence_Egypt.50
+    title = ET_Independence_Egypt.50.t
+    desc = ET_Independence_Egypt.50.desc
+    
+    picture = GFX_ET_event_egypt_revolution_nasser
+
+    is_triggered_only = yes
+    
+    immediate = {
+        release = EGY
+        hidden_effect = {
+            EGY = {
+                country_event = {
+                    id = ET_Independence_Egypt.100
+                    days = 1
+                }
+            }
+        }
+    }
+
+    option = { # Withdrawl
+        name = ET_Independence_Egypt.50.a
+        ai_chance = {
+            base = 1
+        }
+        add_stability = -0.025
+    }
+    option = { # Declare war
+        name = ET_Independence_Egypt.50.b
+        ai_chance = {
+            base = 0
+        }
+        trigger = {
+            has_stability > 0.25
+            has_war_support > 0.10
+        }
+        add_stability = -0.025
+        add_political_power = -25
+
+        declare_war_on = {
+            target = EGY
+            type = topple_government
+        }
+    }
+    option = { # Withdrawl - Play as 
+        name = ET_Independence_Egypt.50.c
+        ai_chance = {
+            base = 0
+        }
+        add_stability = -0.025
+
+        custom_effect_tooltip = ET_play_as_nation_effect_tt
+        hidden_effect = { EGY = { change_tag_from = ROOT } }
+    }
+    option = { # Declare war - Play as 
+        name = ET_Independence_Egypt.50.d
+        trigger = {
+            has_stability > 0.25
+            has_war_support > 0.10
+        }
+        ai_chance = {
+            base = 0
+        }
+        add_stability = -0.025
+        add_political_power = -25
+
+        declare_war_on = {
+            target = EGY
+            type = topple_government
+        }
+
+        custom_effect_tooltip = ET_play_as_nation_effect_tt
+        hidden_effect = { EGY = { change_tag_from = ROOT } }
+    }
+}
+
+country_event = { #100: INIT REPUBLIC OF EGYPT 
+    id = ET_Independence_Egypt.100
+
+    is_triggered_only = yes
+    fire_only_once = no
+    hidden = yes
+
+    immediate = {
+        ET_EGY_Setup_Obb = yes
+    }
+
+    option = {}
+}

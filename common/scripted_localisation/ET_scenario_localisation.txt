@@ -1,0 +1,197 @@
+defined_text = { # ET_newera_decisions_scripted_desc
+    name = ET_newera_decisions_scripted_desc
+    text = { # ET_flag_global_scenario_1
+        trigger = { has_global_flag = ET_flag_global_scenario_1 }
+        localization_key = ET_era_decisions_desc_scenario_1
+    }
+    text = { # ET_flag_global_scenario_2
+        trigger = { has_global_flag = ET_flag_global_scenario_2 }
+        localization_key = ET_era_decisions_desc_scenario_2
+    }
+    text = { # ET_flag_global_scenario_3
+        trigger = { has_global_flag = ET_flag_global_scenario_3 }
+        localization_key = ET_era_decisions_desc_scenario_3
+    }
+    text = { # ET_flag_global_scenario_4
+        trigger = { has_global_flag = ET_flag_global_scenario_3 }
+        localization_key = ET_era_decisions_desc_scenario_3
+    }
+    text = { # ET_flag_global_scenario_5
+        trigger = { has_global_flag = ET_flag_global_scenario_5 }
+        localization_key = ET_era_decisions_desc_scenario_5
+    }
+    text = { # ET_flag_global_scenario_6
+        trigger = { has_global_flag = ET_flag_global_scenario_6 }
+        localization_key = ET_era_decisions_desc_scenario_6
+    }
+    text = { # ET_flag_global_scenario_7
+        trigger = { has_global_flag = ET_flag_global_scenario_7 }
+        localization_key = ET_era_decisions_desc_scenario_7
+    }
+    text = { # ET_flag_global_scenario_8
+        trigger = { has_global_flag = ET_flag_global_scenario_8 }
+        localization_key = ET_era_decisions_desc_scenario_8
+    }
+    text = { # ET_flag_global_scenario_9
+        trigger = { has_global_flag = ET_flag_global_scenario_9 }
+        localization_key = ET_era_decisions_desc_scenario_9
+    }
+    text = { # ET_flag_global_scenario_10
+        trigger = { has_global_flag = ET_flag_global_scenario_10 }
+        localization_key = ET_era_decisions_desc_scenario_10
+    }
+    text = { # ET_flag_global_scenario_11
+        trigger = { has_global_flag = ET_flag_global_scenario_11 }
+        localization_key = ET_era_decisions_desc_scenario_11
+    }
+    text = { # ET_flag_global_scenario_0
+        localization_key = ET_era_decisions_desc_scenario_0
+    }
+}
+
+# #
+# Scenario
+# #
+defined_text = { # ET_getCurrentScenarioName
+    name = ET_getCurrentScenarioName
+    text = { # ET_Scenario_0_name
+        trigger = { ET_has_senario_0 = yes }
+        localization_key = ET_Scenario_0_name
+    }
+    text = { # ET_Scenario_1_name
+        trigger = { ET_has_senario_1 = yes }
+        localization_key = ET_Scenario_1_name
+    }
+    text = { # ET_Scenario_2_name
+        trigger = { ET_has_senario_2 = yes }
+        localization_key = ET_Scenario_2_name
+    }
+    text = { # ET_Scenario_3_name
+        trigger = { ET_has_senario_3 = yes }
+        localization_key = ET_Scenario_3_name
+    }
+    text = { # ET_Scenario_4_name
+        trigger = { ET_has_senario_4 = yes }
+        localization_key = ET_Scenario_4_name
+    }
+    text = { # ET_Scenario_5_name
+        trigger = { ET_has_senario_5 = yes }
+        localization_key = ET_Scenario_5_name
+    }
+    text = { # ET_Scenario_6_name
+        trigger = { ET_has_senario_6 = yes }
+        localization_key = ET_Scenario_6_name
+    }
+    text = { # ET_Scenario_7_name
+        trigger = { ET_has_senario_7 = yes }
+        localization_key = ET_Scenario_7_name
+    }
+    text = { # ET_Scenario_8_name
+        trigger = { ET_has_senario_8 = yes }
+        localization_key = ET_Scenario_8_name
+    }
+    text = { # ET_Scenario_9_name
+        trigger = { ET_has_senario_9 = yes }
+        localization_key = ET_Scenario_9_name
+    }
+    text = { # ET_Scenario_10_name
+        trigger = { ET_has_senario_10 = yes }
+        localization_key = ET_Scenario_10_name
+    }
+    text = { # ET_Scenario_11_name
+        trigger = { ET_has_senario_11 = yes }
+        localization_key = ET_Scenario_11_name
+    }
+    text = { # ET_Scenario_12_name
+        trigger = { ET_has_senario_12 = yes }
+        localization_key = ET_Scenario_12_name
+    }
+    text = { # ET_Scenario_None_name
+        localization_key = ET_Scenario_None_name
+    }
+}
+
+defined_text = { # ET_Scenario_None_Name
+    name = ET_Scenario_None_Name
+    text = {
+        localization_key = ET_Scenario_None_name
+    }
+}
+defined_text = { # ET_Scenario_0_Name
+    name = ET_Scenario_0_Name
+    text = {
+        localization_key = ET_Scenario_0_name
+    }
+}
+defined_text = { # ET_Scenario_1_Name
+    name = ET_Scenario_1_Name
+    text = {
+        localization_key = ET_Scenario_1_name
+    }
+}
+defined_text = { # ET_Scenario_2_Name
+    name = ET_Scenario_2_Name
+    text = {
+        localization_key = ET_Scenario_2_name
+    }
+}
+defined_text = { # ET_Scenario_3_Name
+    name = ET_Scenario_3_Name
+    text = {
+        localization_key = ET_Scenario_3_name
+    }
+}
+defined_text = { # ET_Scenario_4_Name
+    name = ET_Scenario_4_Name
+    text = {
+        localization_key = ET_Scenario_4_name
+    }
+}
+defined_text = { # ET_Scenario_5_Name
+    name = ET_Scenario_5_Name
+    text = {
+        localization_key = ET_Scenario_5_name
+    }
+}
+defined_text = { # ET_Scenario_6_Name
+    name = ET_Scenario_6_Name
+    text = {
+        localization_key = ET_Scenario_6_name
+    }
+}
+defined_text = { # ET_Scenario_7_Name
+    name = ET_Scenario_7_Name
+    text = {
+        localization_key = ET_Scenario_7_name
+    }
+}
+defined_text = { # ET_Scenario_8_Name
+    name = ET_Scenario_8_Name
+    text = {
+        localization_key = ET_Scenario_8_name
+    }
+}
+defined_text = { # ET_Scenario_9_Name
+    name = ET_Scenario_9_Name
+    text = {
+        localization_key = ET_Scenario_9_name
+    }
+}
+defined_text = { # ET_Scenario_10_Name
+    name = ET_Scenario_10_Name
+    text = {
+        localization_key = ET_Scenario_10_name
+    }
+}
+defined_text = { # ET_Scenario_11_Name
+    name = ET_Scenario_11_Name
+    text = {
+        localization_key = ET_Scenario_11_name
+    }
+}
+defined_text = { # ET_Scenario_12_Name
+    name = ET_Scenario_12_Name
+    text = {
+        localization_key = ET_Scenario_12_name
+    }
+}

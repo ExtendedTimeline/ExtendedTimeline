@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	ET_broke_agreements = {
+		value = -50
+	}
+}

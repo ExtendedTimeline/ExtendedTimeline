@@ -1,0 +1,59 @@
+
+# EGY - Egypt
+ET_EGY_INIT = {
+    EGY = {
+        hidden_effect = {
+        }
+    }
+}
+
+ET_EGY_Set_New_Government = {
+    set_temp_variable = { ET_var_current_date = date }
+    EGY = {
+        hidden_effect = {
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = no
+                last_election = var:ET_var_current_date
+                election_frequency = 48
+                name = EGY_Republic_democratic_party
+                long_name = EGY_Republic_democratic_party_long
+            }
+
+            set_popularities = {
+                democratic = 55
+                neutrality = 10
+                fascism = 10
+                communism = 25
+            }
+
+            set_rule = {
+                can_declare_war_on_same_ideology = yes
+            }
+
+            ET_set_generic_tech = yes
+        }
+    }
+}
+ET_EGY_Setup_OBB = {
+    EGY = {
+        # Remove default templates
+        delete_unit_template_and_units = {
+            division_template = "Cavalry Division"
+        }
+        delete_unit_template_and_units = {
+            division_template = "Infantry Division"
+        }
+        delete_unit_template_and_units = {
+            division_template = "Motorised Division"
+        }
+        delete_unit_template_and_units = {
+            division_template = "Tank Brigade"
+        }
+        delete_unit_template_and_units = {
+            division_template = "Colonial Garrison"
+        }
+
+        load_oob = "EGY_1952"
+    }
+}

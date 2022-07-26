@@ -1,0 +1,537 @@
+ET_debug_decisions = {
+
+	ET_debug_get_scenario = {
+		icon = generic_decision
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			ET_set_scenario = yes
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+    ET_debug_scenario_ignore_dates = {
+
+        icon = generic_civil_support
+
+        available = {
+            NOT = { has_global_flag = ET_Flag_Global_DEBUG_Scenario_Ignore_Dates }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        cost = 0
+
+        complete_effect = {
+            set_global_flag = ET_Flag_Global_DEBUG_Scenario_Ignore_Dates
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+	ET_debug_set_scenario_1 = {
+		icon = generic_decision
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			set_global_flag = ET_flag_global_scenario_1
+			every_country = {
+				limit = { always = yes }
+				news_event = {
+					id = ET_Scenario_1.0
+					days = 1
+				}
+				country_event = {
+					id = ET_S1_Division_Init.0
+					days = 3
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	ET_debug_set_scenario_2 = {
+		icon = generic_decision
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			set_global_flag = ET_flag_global_scenario_2
+			every_country = {
+				limit = { always = yes }
+				news_event = {
+					id = ET_Scenario_2.0
+					days = 3
+				}
+			}		
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	ET_debug_border_ClassicalColdWarBorders = {
+		icon = border_war
+
+		available = {
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			# Polen
+			POL = {
+				5 =  { transfer_state_to  = POL } # German core provinces
+				63 = { transfer_state_to  = POL } # German core provinces
+				66 = { transfer_state_to  = POL } # German core provinces
+				67 = { transfer_state_to  = POL } # German core provinces
+				68 = { transfer_state_to  = POL } # German core provinces
+				add_state_core = 5
+				add_state_core = 63
+				add_state_core = 66
+				add_state_core = 67
+				add_state_core = 68
+
+				10 =  { transfer_state_to  = POL }
+				807 = { transfer_state_to  = POL }
+				85 =  { transfer_state_to  = POL }
+				88 =  { transfer_state_to  = POL }
+				90 =  { transfer_state_to  = POL }
+				92 =  { transfer_state_to  = POL }
+				97 =  { transfer_state_to  = POL }
+				98 =  { transfer_state_to  = POL }
+				add_state_core = 10
+				add_state_core = 807
+				add_state_core = 85
+				add_state_core = 88
+				add_state_core = 90
+				add_state_core = 92
+				add_state_core = 97
+				add_state_core = 98
+			}
+			SOV = {
+				784 = { transfer_state_to  = SOV } # LIT core provinces
+				89 =  { transfer_state_to  = SOV } # POL core provinces
+				91 =  { transfer_state_to  = SOV } # POL core provinces
+				93 =  { transfer_state_to  = SOV } # POL core provinces
+				94 =  { transfer_state_to  = SOV } # POL core provinces
+				95 =  { transfer_state_to  = SOV } # POL core provinces
+				96 =  { transfer_state_to  = SOV } # POL core provinces
+				add_state_core = 784
+				add_state_core = 89 
+				add_state_core = 91 
+				add_state_core = 93 
+				add_state_core = 94 
+				add_state_core = 95 
+				add_state_core = 96
+
+				73 = { transfer_state_to  = SOV } # CZE core provinces
+				add_state_core = 73
+				
+				80  = { transfer_state_to  = SOV } # ROM core provinces
+				78  = { transfer_state_to  = SOV } # ROM core provinces
+				766 = { transfer_state_to  = SOV } # ROM core provinces
+				add_state_core = 80
+				add_state_core = 78
+				add_state_core = 766
+			}
+			
+			# Köningsberg/Kaliningrad
+			SOV = {
+				763 = {
+					transfer_state_to  = SOV	
+					set_state_name = "Kaliningrad"
+					set_province_name = {
+						id = 6332
+						name = "Kaliningrad"
+					}
+				} 
+				add_state_core = 763
+			}
+
+			# Occupation zone Germany
+			ENG = {
+				58 = { transfer_state_to  = ENG }
+				59 = { transfer_state_to  = ENG }
+				56 = { transfer_state_to  = ENG }
+				57 = { transfer_state_to  = ENG }
+				51 = { transfer_state_to  = ENG }
+			}
+			FRA = {
+				42 = { transfer_state_to  = FRA }
+				50 = { transfer_state_to  = FRA }
+			}
+			USA = {
+				54 = { transfer_state_to  = USA }
+				53 = { transfer_state_to  = USA }
+				52 = { transfer_state_to  = USA }
+				55 = { transfer_state_to  = USA }
+			}
+			SOV = {
+				60 = { transfer_state_to  = SOV }
+				61 = { transfer_state_to  = SOV }
+				62 = { transfer_state_to  = SOV }
+				64 = { transfer_state_to  = SOV }
+				65 = { transfer_state_to  = SOV }
+			}
+
+			# Occupation zone Austria
+			SOV = {
+				4 = { transfer_state_to  = SOV }
+			}
+			USA = {
+				152 = { transfer_state_to  = USA }
+			}
+			FRA = {
+				153 = { transfer_state_to  = FRA }
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	ET_debug_border_SovAllieOccupation = {
+		icon = border_war
+
+		available = {
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+
+			# Cores
+			SLO = {
+				add_state_core = 664
+				add_state_core = 70
+				add_state_core = 71
+			}
+			SOV = {
+				add_state_core = 784
+				add_state_core = 95
+				add_state_core = 96
+				add_state_core = 94
+				add_state_core = 93
+				add_state_core = 91
+				add_state_core = 89
+				add_state_core = 73
+			}
+
+			# Politics
+			ENG = {
+				add_to_faction = POL
+				add_to_faction = USA
+				add_to_faction = BEL
+				add_to_faction = LUX
+				add_to_faction = HOL
+				add_to_faction = FRA
+				add_to_faction = GRE
+				add_to_faction = DEN
+				add_to_faction = NOR
+			}
+			GER = {
+				add_to_faction = ROM
+				add_to_faction = HUN
+				add_to_faction = SLO
+				add_to_faction = BUL
+				add_to_faction = ITA
+
+				annex_country = {
+					target = AUS
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = CZE
+					transfer_troops = no
+				}
+				annex_country = {
+					target = YUG
+					transfer_troops = no
+				}
+				release_puppet_on_controlled = SLO
+				release_puppet_on_controlled = CRO
+			}
+			ITA = {
+				annex_country = {
+					target = ALB
+					transfer_troops = no
+				}
+				annex_country = {
+					target = ETH
+					transfer_troops = no
+				}
+			}
+			SOV = {
+				annex_country = {
+					target = EST
+					transfer_troops = no
+				}
+				annex_country = {
+					target = LAT
+					transfer_troops = no
+				}
+				annex_country = {
+					target = LIT
+					transfer_troops = no
+				}
+			}
+
+
+			# states
+			SOV = {
+				set_state_owner = 784
+				set_state_owner = 95
+				set_state_owner = 96
+				set_state_owner = 94
+				set_state_owner = 93
+				set_state_owner = 91
+				set_state_owner = 89
+				set_state_owner = 73
+
+				set_state_owner = 78
+				set_state_owner = 80
+				set_state_owner = 766
+			}
+			GER = {
+				set_state_owner = 67
+				set_state_owner = 99
+				set_state_owner = 37
+
+				set_state_owner = 110
+				set_state_owner = 142
+				set_state_owner = 143
+				set_state_owner = 144
+			}
+			ITA = {
+				set_state_owner = 103
+			}
+			
+			# WAR!!!
+			GER = {
+				declare_war_on = {
+					target = POL  
+					type = annex_everything
+				}
+				set_war_support = 0
+				set_stability = 0
+			}
+			SOV = {
+				declare_war_on = {
+					target = GER  
+					type = annex_everything
+				}
+			}
+			# OCCUPATION IN WAR
+			SOV = {
+				# Polen
+				set_state_controller = 5
+				set_state_controller = 97
+				set_state_controller = 763
+				set_state_controller = 98
+				set_state_controller = 10
+				set_state_controller = 92
+				set_state_controller = 88
+				set_state_controller = 90
+				set_state_controller = 87
+				set_state_controller = 86
+				set_state_controller = 807
+				set_state_controller = 85
+
+				# GERMANY
+				set_state_controller = 63
+				set_state_controller = 62
+				set_state_controller = 61
+				set_state_controller = 64
+				set_state_controller = 60
+				set_state_controller = 65
+				set_state_controller = 69
+				set_state_controller = 9
+				set_state_controller = 74
+				set_state_controller = 762
+				set_state_controller = 75
+				set_state_controller = 72
+				set_state_controller = 67
+				set_state_controller = 66
+				set_state_controller = 68
+				set_state_controller = 85
+				set_state_controller = 54
+
+				set_state_controller = 79
+				set_state_controller = 76
+				set_state_controller = 84
+				set_state_controller = 83
+				set_state_controller = 46
+				set_state_controller = 211
+				set_state_controller = 801
+				set_state_controller = 48
+				set_state_controller = 212
+				set_state_controller = 184
+				set_state_controller = 108
+				set_state_controller = 107
+				set_state_controller = 45
+				set_state_controller = 104
+				set_state_controller = 804
+				set_state_controller = 105
+				set_state_controller = 44
+				set_state_controller = 106
+				set_state_controller = 803
+				set_state_controller = 802
+				set_state_controller = 731
+				set_state_controller = 77
+				set_state_controller = 81
+				set_state_controller = 82
+				set_state_controller = 764
+				set_state_controller = 109
+				set_state_controller = 154
+				set_state_controller = 43
+				set_state_controller = 155
+
+				set_state_controller = 71
+				set_state_controller = 664
+				set_state_controller = 70
+
+				set_state_controller = 102
+				set_state_controller = 736
+				set_state_controller = 103
+				set_state_controller = 163
+
+				set_state_controller = 4
+
+			}
+			USA = {
+				set_state_controller = 14
+				set_state_controller = 15
+				set_state_controller = 16
+				set_state_controller = 24
+				set_state_controller = 23
+				set_state_controller = 30
+				set_state_controller = 33
+				set_state_controller = 25
+				set_state_controller = 19
+				set_state_controller = 806
+				set_state_controller = 31
+				set_state_controller = 22
+				set_state_controller = 26
+				set_state_controller = 20
+				set_state_controller = 785
+				set_state_controller = 29
+				set_state_controller = 6
+				set_state_controller = 34
+				set_state_controller = 51
+				set_state_controller = 42
+				set_state_controller = 28
+				set_state_controller = 17
+				set_state_controller = 27
+				set_state_controller = 18
+				set_state_controller = 8
+				set_state_controller = 56
+				set_state_controller = 57
+				set_state_controller = 55
+				set_state_controller = 59
+				set_state_controller = 58
+				set_state_controller = 50
+				set_state_controller = 52
+				set_state_controller = 53
+				set_state_controller = 99
+				set_state_controller = 37
+
+				set_state_controller = 32
+				set_state_controller = 735
+			}
+			ENG = {
+				set_state_controller = 7
+				set_state_controller = 36
+				set_state_controller = 35
+				set_state_controller = 56
+
+				set_state_controller = 1
+				set_state_controller = 21
+
+				set_state_controller = 115
+				set_state_controller = 116
+				set_state_controller = 117
+				set_state_controller = 156
+				set_state_controller = 157
+				set_state_controller = 2
+				set_state_controller = 162
+				set_state_controller = 161
+
+				set_state_controller = 805
+				set_state_controller = 185
+				set_state_controller = 47
+				set_state_controller = 186
+				set_state_controller = 187
+				set_state_controller = 182
+				set_state_controller = 158
+				set_state_controller = 159
+				set_state_controller = 160
+				set_state_controller = 39
+				set_state_controller = 152
+				set_state_controller = 153
+
+				set_state_controller = 142
+				set_state_controller = 110
+				set_state_controller = 143
+				set_state_controller = 144
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+}

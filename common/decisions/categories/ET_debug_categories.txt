@@ -1,5 +1,5 @@
 ET_debug_decisions = {
-	icon = generic_research
+	icon = generic
 	visible = {
 		is_debug = yes
 	}

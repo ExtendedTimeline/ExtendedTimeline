@@ -1,0 +1,193 @@
+
+# This on_action are used to add to all country history files without actually touching them.
+
+on_actions = {
+     # Reset Berlin and Vienna name and remove trate if USSR and Allies are at war
+    on_declare_war = {
+        effect = {
+            if = { # Reset Berlin and Vienna name and remove trate if USSR and Allies are at war
+                limit = {
+                    OR = {
+                        AND = {
+                            ROOT = { original_tag = SOV }
+                            OR = {
+                                FROM = { original_tag = ENG }
+                                FROM = { original_tag = USA }
+                                FROM = { original_tag = WGR }
+                            }
+                        }
+                        AND = {
+                            ROOT = { original_tag = DDR }
+                            OR = {
+                                FROM = { original_tag = ENG }
+                                FROM = { original_tag = USA }
+                                FROM = { original_tag = WGR }
+                            }
+                        }
+                        AND = {
+                            ROOT = { original_tag = ENG }
+                            OR = {
+                                FROM = { original_tag = SOV }
+                                FROM = { original_tag = DDR }
+                            }
+                        }
+                        AND = {
+                            ROOT = { original_tag = USA }
+                            OR = {
+                                FROM = { original_tag = SOV }
+                                FROM = { original_tag = DDR }
+                            }
+                        }
+                        AND = {
+                            ROOT = { original_tag = WGR }
+                            OR = {
+                                FROM = { original_tag = SOV }
+                                FROM = { original_tag = DDR }
+                            }
+                        }
+                    }
+                }
+                # Berlin
+                reset_province_name = 6521
+                remove_province_modifier = {
+                    static_modifiers = { ET_divided_city }
+                    province = 6521
+                }
+
+                # Vienna
+                reset_province_name = 11666
+                remove_province_modifier = {
+                    static_modifiers = { ET_divided_city }
+                    province = 11666
+                }
+            }
+        }
+    }
+    
+	# ROOT is the nation being liberated, FROM is the leader of the liberators.
+    on_liberate = {
+        effect = {
+
+            if = { # Reset province name when Austria is united
+                limit = {
+                    ROOT = { original_tag = AUS }
+                    has_government = democratic
+                }
+                reset_province_name = 11666
+                remove_province_modifier = {
+                    static_modifiers = { ET_divided_city }
+                    province = 11666
+                }
+            }
+
+
+            if = { # Apply cosmetic tag for both Korea if South Exist
+                limit = {
+                    country_exists = KOR
+                    ROOT = { original_tag = DPR }
+                }
+                DPR = { if = { limit = { NOT = { has_cosmetic_tag = DPR_North } } set_cosmetic_tag = DPR_North } }
+                KOR = { if = { limit = { NOT = { has_cosmetic_tag = KOR_South } } set_cosmetic_tag = KOR_South } }
+            }
+            if = { # Apply cosmetic tag for both Korea if North Exist
+                limit = {
+                    country_exists = DPR
+                    ROOT = { original_tag = KOR }
+                }
+                DPR = { if = { limit = { NOT = { has_cosmetic_tag = DPR_North } } set_cosmetic_tag = DPR_North } }
+                KOR = { if = { limit = { NOT = { has_cosmetic_tag = KOR_South } } set_cosmetic_tag = KOR_South } }
+            }
+        }
+    }
+
+    # ROOT is free nation FROM is releaser.
+    on_release_as_free = {
+        effect = {
+
+            if = { # Reset province name when Austria is united
+                limit = {
+                    ROOT = { original_tag = AUS }
+                    has_government = democratic
+                }
+                reset_province_name = 11666
+                remove_province_modifier = {
+                    static_modifiers = { ET_divided_city }
+                    province = 11666
+                }
+            }
+
+
+            if = { # Apply cosmetic tag for both Korea if South Exist
+                limit = {
+                    country_exists = KOR
+                    ROOT = { original_tag = DPR }
+                }
+                DPR = { if = { limit = { NOT = { has_cosmetic_tag = DPR_North } } set_cosmetic_tag = DPR_North } }
+                KOR = { if = { limit = { NOT = { has_cosmetic_tag = KOR_South } } set_cosmetic_tag = KOR_South } }
+            }
+            if = { # Apply cosmetic tag for both Korea if North Exist
+                limit = {
+                    country_exists = DPR
+                    ROOT = { original_tag = KOR }
+                }
+                DPR = { if = { limit = { NOT = { has_cosmetic_tag = DPR_North } } set_cosmetic_tag = DPR_North } }
+                KOR = { if = { limit = { NOT = { has_cosmetic_tag = KOR_South } } set_cosmetic_tag = KOR_South } }
+            }
+        }
+    }
+
+    # ROOT is the nation being released, FROM is the overlord.
+    on_release_as_puppet = {
+        effect = {
+            if = { # Apply cosmetic tag for both Korea if South Exist
+                limit = {
+                    country_exists = KOR
+                    ROOT = { original_tag = DPR }
+                }
+                DPR = { if = { limit = { NOT = { has_cosmetic_tag = DPR_North } } set_cosmetic_tag = DPR_North } }
+                KOR = { if = { limit = { NOT = { has_cosmetic_tag = KOR_South } } set_cosmetic_tag = KOR_South } }
+            }
+            if = { # Apply cosmetic tag for both Korea if North Exist
+                limit = {
+                    country_exists = DPR
+                    ROOT = { original_tag = KOR }
+                }
+                DPR = { if = { limit = { NOT = { has_cosmetic_tag = DPR_North } } set_cosmetic_tag = DPR_North } }
+                KOR = { if = { limit = { NOT = { has_cosmetic_tag = KOR_South } } set_cosmetic_tag = KOR_South } }
+            }
+        }
+    }
+
+	# ROOT is winner, FROM gets annexed.
+    on_annex = {
+        effect = {
+            # WRG Annex DDR
+            if = {
+                limit = {
+                    original_tag = WRG
+                    FROM = { original_tag = DDR }
+                }
+                set_capital = { state = 64 }
+    
+                reset_province_name = 11666
+                remove_province_modifier = {
+                    static_modifiers = { ET_divided_city }
+                    province = 11666
+                }
+            }
+            # DDR Annex WGR
+            if = {
+                limit = {
+                    original_tag = DDR
+                    FROM = { original_tag = WRG }
+                }
+    
+                reset_province_name = 11666
+                remove_province_modifier = {
+                    static_modifiers = { ET_divided_city }
+                    province = 11666
+                }
+            }
+        }
+    }
+}
