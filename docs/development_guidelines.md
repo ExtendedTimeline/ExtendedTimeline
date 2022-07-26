@@ -1,7 +1,4 @@
-# Development Guidelines
-To make this project readable and easy to be maintained we have some common rules.
-
-## Naming
+# Naming
 Use prefix `ET_` for all mod content. 
 Can be scripted in som GFX.
 A suffixe for type of file may be used on some files.
@@ -14,13 +11,13 @@ A suffixe for type of file may be used on some files.
 The name structure for mod files are `[TAG]_[WhatEverItIsSupposeToBeDoing](_[TYPE]).txt`
 (*`_[TYPE]` is optional were it is not pressent on other files.*)
 
-### flags
+## flags
 **Global Flags:** `ET_flag_global_[NAME]`
 
 **Country Flags:** `ET_flag_country_[NAME]`
 
 
-### Scripted
+## Scripted
 Scripts effects and triggers should be named what they do and be generic.
 
 **Bad:**
