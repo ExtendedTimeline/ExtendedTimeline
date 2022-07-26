@@ -1,13 +1,3 @@
----
-title: Scenarios
-description: The scenario system
-parent: index
-version:
-  major: 3
-  minor: 12
-  patch: 0
----
-
 # Scenarios
 *[back to home](index)*
 
