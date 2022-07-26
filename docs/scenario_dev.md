@@ -1,4 +1,6 @@
 # Scenario framework
+*[back](index)*
+
 - **Unknown World** *(Scenario_ID: 0)*
 - **The Cold War** *(Scenario_ID: 1)*
 - **A Fascist World** *(Scenario_ID: 2)*
