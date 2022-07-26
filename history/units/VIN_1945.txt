@@ -1,0 +1,80 @@
+﻿# https://en.wikipedia.org/wiki/Viet_Minh
+
+instant_effect = {
+    set_equipment_fraction = 0
+
+    # Add FRA equipment
+    FRA = { ET_add_colonial_power_infantry_equipment = yes }
+    FRA = { ET_add_colonial_power_support_equipment = yes }
+    FRA = { ET_add_colonial_power_motorized_equipment = yes }
+    FRA = { ET_add_colonial_power_armored_car_equipment = yes }
+
+    FRA = { ET_add_colonial_power_artillery_equipment = yes }
+    FRA = { ET_add_colonial_power_anti_tank_equipment = yes }
+    FRA = { ET_add_colonial_power_anti_air_equipment = yes }
+    FRA = { ET_add_colonial_power_rocket_artillery_equipment = yes }
+
+    # Add JAP equipment
+    JAP = { ET_add_colonial_power_infantry_equipment = yes }
+    JAP = { ET_add_colonial_power_support_equipment = yes }
+    JAP = { ET_add_colonial_power_motorized_equipment = yes }
+    JAP = { ET_add_colonial_power_armored_car_equipment = yes }
+
+    JAP = { ET_add_colonial_power_artillery_equipment = yes }
+    JAP = { ET_add_colonial_power_anti_tank_equipment = yes }
+    JAP = { ET_add_colonial_power_anti_air_equipment = yes }
+    JAP = { ET_add_colonial_power_rocket_artillery_equipment = yes }
+
+    add_equipment_to_stockpile = {
+        type = train_equipment_2
+        amount = 25
+        producer = FRA
+    }
+    add_equipment_to_stockpile = {
+        type = train_equipment_2
+        amount = 15
+        producer = JAP
+    }
+
+    add_equipment_to_stockpile = {
+        type = convoy
+        amount = 60
+        producer = FRA
+    }
+    add_equipment_to_stockpile = {
+        type = convoy
+        amount = 30
+        producer = JAP
+    }
+}
+
+division_template = {
+    name = "Viet Minh Militia"
+    priority = 1
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+    }
+    support = { 
+        artillery = { x = 0 y = 0 }
+        anti_tank = { x = 0 y = 1 }
+    } 
+}
+
+units = { # TODO more units
+    division = {
+        name = "Viet Minh"
+        location = 9989 
+        division_template = "Viet Minh Militia"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.95
+    }
+}

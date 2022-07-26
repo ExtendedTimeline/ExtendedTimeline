@@ -1,0 +1,10 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_ET_decision_NewEra"
+		texturefile = "gfx/interface/decisions/decision_generic_political_discourse.dds"
+	}
+	spriteType = {
+		name = "GFX_ET_decision_Surrender"
+		texturefile = "gfx/interface/decisions/decision_generic_form_nation.dds"
+	}
+}

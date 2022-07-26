@@ -1,0 +1,181 @@
+﻿# https://en.wikipedia.org/wiki/Egyptian_Army#After_the_Egyptian_Revolution_of_1952
+
+instant_effect = {
+    set_equipment_fraction = 0
+
+    ENG = { ET_add_colonial_power_infantry_equipment = yes }
+    ENG = { ET_add_colonial_power_support_equipment = yes }
+    ENG = { ET_add_colonial_power_motorized_equipment = yes }
+    ENG = { ET_add_colonial_power_armored_car_equipment = yes }
+
+    ENG = { ET_add_colonial_power_artillery_equipment = yes }
+    ENG = { ET_add_colonial_power_anti_tank_equipment = yes }
+    ENG = { ET_add_colonial_power_anti_air_equipment = yes }
+    ENG = { ET_add_colonial_power_rocket_artillery_equipment = yes }
+
+    add_equipment_to_stockpile = {
+        type = train_equipment_2
+        amount = 25
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = convoy
+        amount = 60
+        producer = ENG
+    }
+
+
+    add_equipment_to_stockpile = {
+        type = armored_car_equipment_1 # Humber
+        amount = 250
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = armored_car_equipment_2 # AEC
+        amount = 300
+        producer = ENG
+    }
+
+    add_equipment_to_stockpile = {
+        type = light_tank_chassis_3 #
+        amount = 600
+        producer = ENG
+    }
+    add_equipment_to_stockpile = {
+        type = medium_tank_chassis_3
+        amount = 300
+        producer = ENG
+    }
+}
+
+division_template = {
+    name = "Infantry Division"
+    priority = 1
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 0 y = 3 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 1 y = 3 }
+    }
+    support = { 
+        artillery = { x = 0 y = 0 }
+        anti_tank = { x = 0 y = 1 }
+        engineer = { x = 0 y = 2 }
+    } 
+}
+division_template = {
+    name = "Armored Division"
+    priority = 1
+    regiments = {
+        infantry        = { x = 0 y = 0 }
+        infantry        = { x = 0 y = 1 }
+        motorized       = { x = 1 y = 1 }
+        armored_car     = { x = 1 y = 1 }
+        medium_armor    = { x = 2 y = 0 }
+    }
+    support = {
+        light_tank_recon = { x = 0 y = 0 }
+        engineer         = { x = 0 y = 1 }
+    }
+}
+division_template = {
+    name = "National Police"
+    priority = 0
+    template_counter = 0
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        cavalry  = { x = 0 y = 1 }
+        cavalry  = { x = 1 y = 0 }
+    }
+    support = {
+        military_police = { x = 0 y = 0 }
+    }
+}
+
+units = {
+    division = {
+        name = "National Police"
+        location = 9989 
+        division_template = "National Police"
+        start_experience_factor = 0.5
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.95
+    }
+    division = {
+        name = "National Police"
+        location = 7011
+        division_template = "National Police"
+        start_experience_factor = 0.35
+        start_equipment_factor = 0.001
+        start_manpower_factor = 1.0
+    }
+    division = {
+        name = "National Police"
+        location = 4073
+        division_template = "National Police"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.001
+        start_manpower_factor = 1.0
+    }
+    division = {
+        name = "National Police"
+        location = 12071
+        division_template = "National Police"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.001
+        start_manpower_factor = 1.0
+    }
+
+    division = {
+        name = "Infantry Division"
+        location = 12002
+        division_template = "Infantry Division"
+        start_experience_factor = 0.6
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.8
+    }
+    division = {
+        name = "Infantry Division"
+        location = 4161
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.5
+    }
+    division = {
+        name = "Infantry Division"
+        location = 1071
+        division_template = "Infantry Division"
+        start_experience_factor = 0.25
+        start_equipment_factor = 0.001
+        start_manpower_factor = 1.0
+    }
+    division = {
+        name = "Infantry Division"
+        location = 3996
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.001
+        start_manpower_factor = 1.0
+    }
+    division = {
+        name = "Infantry Division"
+        location = 7011
+        division_template = "Infantry Division"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.9
+    }
+    division = {
+        name = "Armored Division"
+        location = 12049
+        division_template = "Armored Division"
+        start_experience_factor = 0.15
+        start_equipment_factor = 0.001
+        start_manpower_factor = 0.4
+    }
+}

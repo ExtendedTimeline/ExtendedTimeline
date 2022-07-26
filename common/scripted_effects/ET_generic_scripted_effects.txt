@@ -1,0 +1,9 @@
+# Scope: GLOBAL
+ET_Create_UnitedNations = {
+	add_global_flag = ET_flag_global_UnitedNations
+}
+
+# Scope: GLOBAL
+ET_Create_NATO = {
+	add_global_flag = ET_flag_global_NATO
+}

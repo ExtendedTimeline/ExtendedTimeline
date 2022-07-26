@@ -1,94 +1,94 @@
 ET_debug_decisions = {
-	ET_next_era = {
-		icon = generic_research
+	ET_debug_next_era = {
+		icon = generic_decision
 
-		available = {
-			NOT = { has_global_flag = ET_flag_global_newera_1 }
-		}
+        available = {
+            ET_in_new_era = no
+        }
 
-		visible = {
-			always = yes
-		}
+        visible = {
+            always = yes
+        }
 
-		fire_only_once = no
-		cost = 0
+        fire_only_once = no
+        cost = 0
 
-		complete_effect = {
-			set_global_flag = ET_flag_global_newera_1
-			set_global_flag = ET_flag_global_neweconomic_1
-		}
+        complete_effect = {
+            ET_set_new_era = yes
+        }
 
-		ai_will_do = {
-			base = 0
-		}
-	}
+        ai_will_do = {
+            base = 0
+        }
+    }
 
-	ET_remove_era = {
-		icon = generic_research
+    ET_debug_remove_era = {
+        icon = generic_decision
 
-		available = {
-			has_global_flag = ET_flag_global_newera_1
-		}
+        available = {
+            ET_in_new_era = yes
+        }
 
-		visible = {
-			always = yes
-		}
+        visible = {
+            always = yes
+        }
 
-		fire_only_once = no
-		cost = 0
+        fire_only_once = no
+        cost = 0
 
-		complete_effect = {
-			clr_global_flag = ET_flag_global_newera_1
-			clr_global_flag = ET_flag_global_neweconomic_1
-		}
+        complete_effect = {
+            ET_set_new_era = yes
+        }
 
-		ai_will_do = {
-			base = 0
-		}
-	}
+        ai_will_do = {
+            base = 0
+        }
+    }
 
-	ET_remove_newera_flags = {
-		icon = generic_research
+    ET_debug_remove_newera_country = {
+        icon = generic_decision
 
-		available = {
-			has_country_flag = ET_flag_country_newera_1
-		}
+        available = {
+            ET_in_new_era_country = yes
+        }
 
-		visible = {
-			always = yes
-		}
+        visible = {
+            always = yes
+        }
 
-		fire_only_once = no
-		cost = 0
+        fire_only_once = no
+        cost = 0
+        
+        complete_effect = {
+            ET_remove_new_era_country = yes
+        }
 
-		complete_effect = {
-			clr_country_flag = ET_flag_country_newera_1
-		}
+        ai_will_do = {
+            base = 0
+        }
+    }
 
-		ai_will_do = {
-			base = 0
-		}
-	}
+    ET_debug_other_test = {
 
-	ET_other_test = {
+        icon = generic_research
 
-		icon = generic_research
+        available = {
+            
+        }
 
-		available = {
-		}
+        visible = {
+            always = yes
+        }
 
-		visible = {
-			always = yes
-		}
+        fire_only_once = no
+        cost = 0
 
-		fire_only_once = no
-		cost = 0
+        complete_effect = {
+        }
 
-		complete_effect = {
-		}
 
-		ai_will_do = {
-			base = 0
-		}
-	}
+        ai_will_do = {
+            base = 0
+        }
+    }
 }

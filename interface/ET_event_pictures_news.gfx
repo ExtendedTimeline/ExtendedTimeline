@@ -1,0 +1,22 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ET_event_egypt_revolution_nasser"
+		texturefile = "gfx/event_pictures/ET_event_Egypt_revolution_nasser.dds"
+	}
+	spriteType = {
+		name = "GFX_ET_event_egypt_revolution_celebrations"
+		texturefile = "gfx/event_pictures/ET_event_Egypt_revolution_1953_Celebrations.dds"
+	}
+	spriteType = {
+		name = "GFX_ET_event_egypt_revolution_cairofires"
+		texturefile = "gfx/event_pictures/ET_event_Egypt_revolution_cairofires.dds"
+	}
+	spriteType = {
+		name = "GFX_ET_event_egypt_revolution_coup"
+		texturefile = "gfx/event_pictures/ET_event_Egypt_revolution_Coup.dds"
+	}
+	spriteType = {
+		name = "GFX_ET_event_egypt_revolution_british"
+		texturefile = "gfx/event_pictures/ET_event_Egypt_revolution_tank_crew.dds"
+	}
+}

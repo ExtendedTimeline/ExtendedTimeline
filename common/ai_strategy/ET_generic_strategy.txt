@@ -1,0 +1,35 @@
+
+ET_Generic_Avoid_WorldWar_Continuation_War = {
+	allowed = {
+		NOT = { original_tag = GER }
+	}
+	enable = {
+        date > 1942.01.01
+	}
+
+	abort = {
+        date < 1955.01.01
+    }
+
+	ai_strategy = {
+		type = declare_war
+		id = SOV
+		value = -5000
+	}
+
+	ai_strategy = {
+		type = declare_war
+		id = USA
+		value = -5000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = ENG
+		value = -5000
+	}
+	ai_strategy = {
+		type = declare_war
+		id = FRA
+		value = -5000
+	}
+}

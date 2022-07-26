@@ -1,0 +1,16 @@
+characters = {
+    ET_EGY_Gamal_Abdel_Nasser = {
+        name = ET_EGY_Gamal_Abdel_Nasser
+        country_leader = {
+            ideology = ET_dem_arab_socialism
+            expire = "1970.9.28"
+            id = -1
+        }
+
+        portraits = {
+            civilian = {
+                large = GFX_leader_unknown
+            }
+        }
+    }
+}

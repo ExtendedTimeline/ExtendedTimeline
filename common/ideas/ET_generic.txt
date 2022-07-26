@@ -1,8 +1,9 @@
 ideas = {
-	country = {
-		ET_generic_modern_economics = {
-			picture = generic_goods_red_bonus
 
+	country = {
+		ET_generic_domino_theory_idea = {
+			picture = usa_great_depression_3
+			
 			allowed = {
 				always = no
 			}
@@ -14,13 +15,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.20
-				production_speed_industrial_complex_factor = -0.4
-				production_speed_arms_factory_factor = -0.4
-				conversion_cost_civ_to_mil_factor= -0.3
-				conversion_cost_mil_to_civ_factor = 0.3
-
-				economy_cost_factor = 3
+				communism_acceptance = -25
+				drift_defence_factor = 0.10
 			}
 		}
 	}

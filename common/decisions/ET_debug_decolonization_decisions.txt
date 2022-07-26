@@ -1,0 +1,78 @@
+ET_debug_decisions = {
+
+    ET_debug_decolonization_ignore_dates = {
+
+        icon = generic_civil_support
+
+        available = {
+            NOT = { has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        cost = 0
+
+        complete_effect = {
+            set_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+    ET_debug_decolonization_eqypt = {
+
+        icon = generic_civil_support
+
+        available = {
+            NOT = { has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Egypt }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        cost = 0
+
+        complete_effect = {
+            set_global_flag = ET_Flag_Global_DEBUG_Decolonization_Egypt
+            set_global_flag = ET_flag_global_free_EGY
+            country_event = {
+                id = ET_Independence_Egypt.0
+                days = 18
+            }
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+    ET_debug_decolonization_vietnam = {
+
+        icon = generic_civil_support
+
+        available = {
+            NOT = { has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Vietnam }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        fire_only_once = no
+        cost = 0
+
+        complete_effect = {
+            set_global_flag = ET_Flag_Global_DEBUG_Decolonization_Vietnam
+        }
+
+        ai_will_do = {
+            base = 0
+        }
+    }
+
+}

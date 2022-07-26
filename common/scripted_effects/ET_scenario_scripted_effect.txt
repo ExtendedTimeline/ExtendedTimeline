@@ -1,0 +1,266 @@
+# #
+# Era
+# #
+
+# SCOPE: GLOBAL
+ET_set_new_era = {
+    custom_effect_tooltip = ET_set_new_era_tt
+    hidden_effect = {
+        set_global_flag = ET_flag_global_newera
+    }
+}
+# SCOPE: GLOBAL
+ET_remove_new_era = {
+    custom_effect_tooltip = ET_remove_new_era_tt
+    hidden_effect = {
+        clr_global_flag = ET_flag_global_newera
+    }
+}
+
+# SCOPE: TARGET
+ET_set_new_era_country = {
+    custom_effect_tooltip = ET_set_new_era_country_tt
+    hidden_effect = {
+        set_country_flag = ET_flag_country_newera
+    }
+}
+# SCOPE: TARGET
+ET_remove_new_era_country = {
+    custom_effect_tooltip = ET_remove_new_era_country_tt
+    hidden_effect = {
+        clr_country_flag = ET_flag_country_newera
+    }
+}
+
+# #
+# Scenario
+# #
+
+# SCOPE: TARGET
+ET_set_scenario = {
+    if = {      # Cold War                [ET_flag_global_scenario_1]
+        limit = {
+            NOT = { has_global_flag = ET_flag_global_allies_surrender_to_ger }
+            NOT = { has_global_flag = ET_flag_global_eng_abandon_pasific }
+            NOT = { has_global_flag = ET_flag_global_usa_surrender_to_jap }
+            
+            has_global_flag = had_yalta_conference
+            
+            country_exists = USA
+            country_exists = ENG
+            country_exists = FRA
+            country_exists = SOV
+            USA = { has_government = democratic }
+            ENG = { has_government = democratic }
+            FRA = { has_government = democratic }
+            SOV = { has_government = communism }
+        }
+        
+        set_global_flag = ET_flag_global_scenario_1
+        every_country = {
+            limit = { always = yes }
+            news_event = {
+                id = ET_Scenario_1.0
+                days = 1
+            }
+            country_event = {
+                id = ET_S1_Division_Init.0
+                days = 3
+            }
+        }
+    }
+    else_if = { # Fascist World           [ET_flag_global_scenario_2]
+        limit = {
+            NOT = { has_global_flag = ET_flag_global_usa_surrender_to_jap }
+
+            has_global_flag = ET_flag_global_allies_surrender_to_ger
+            
+            OR = {
+                NOT = { country_exists = ENG }
+                ENG = { NOT = { has_government = democratic } }
+            }
+
+            OR = {
+                NOT = { country_exists = SOV }
+                SOV = { NOT = { has_government = communism } }
+            }
+
+            country_exists = GER
+            GER = { has_government = fascism }
+
+            country_exists = USA
+            USA = { has_government = democratic }
+        }
+        
+        set_global_flag = ET_flag_global_scenario_2
+        every_country = {
+            limit = { always = yes }
+            news_event = {
+                id = ET_Scenario_2.0
+                days = 3
+            }
+        }
+    }
+    else_if = { # Asian Giant             [ET_flag_global_scenario_3]
+        limit = {
+            NOT = { has_global_flag = ET_flag_global_allies_surrender_to_ger }
+
+            has_global_flag = ET_flag_global_usa_surrender_to_jap
+            has_global_flag = ET_flag_global_eng_abandon_pasific
+            #has_global_flag = ET_flag_global_fra_abandon_pasific
+
+            OR = {
+                NOT = { country_exists = GER }
+                GER = { NOT = { has_government = fascism } }
+            }
+
+            country_exists = USA
+            USA = { has_government = democratic }
+
+            country_exists = ENG
+            ENG = { has_government = democratic }
+
+        }
+        
+        set_global_flag = ET_flag_global_scenario_3
+        #every_country = {
+        #    limit = { always = yes }
+        #    news_event = {
+        #        id = ET_Scenario_3.0
+        #        days = 3
+        #    }
+        #}
+    }
+    #else_if = { # Unused                  [ET_flag_global_scenario_4]
+    #}
+    #else_if = { # Unused                  [ET_flag_global_scenario_5]
+    #}
+    #else_if = { # Unused                  [ET_flag_global_scenario_6]
+    #}
+    #else_if = { # Unused                  [ET_flag_global_scenario_7]
+    #}
+    #else_if = { # Unused                  [ET_flag_global_scenario_8]
+    #}
+    #else_if = { # Unused                  [ET_flag_global_scenario_9]
+    #}
+    #else_if = { # Unused                  [ET_flag_global_scenario_10]
+    #}
+    #else_if = { # Unused                  [ET_flag_global_scenario_11]
+    #}
+    #else_if = { # Unused                  [ET_flag_global_scenario_12]
+    #}
+    else = {    # Unknown World           [ET_flag_global_scenario_0]
+        set_global_flag = ET_flag_global_scenario_0
+        #every_country = {
+        #    limit = { always = yes }
+        #    news_event = {
+        #        id = ET_Scenario_0.0
+        #        days = 3
+        #    }
+        #}
+    }
+}
+
+# SCOPE: TARGET
+ET_set_new_era_effect = {
+    if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying new era effects" }
+    hidden_effect = {
+        # Set new focustree
+        ET_set_new_focus_tree_effect = yes
+        ET_clr_modifiers_effect = yes
+        
+        if = {
+            limit = { has_idea = civilian_economy }
+            set_country_flag = ET_flag_country_HasDemobalizedEconomy
+        }
+
+        ET_set_new_era_country = yes
+    }
+}
+# SCOPE: TARGET
+ET_clr_modifiers_effect = {
+    if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Clearing National Focus Modifiers" }
+}
+# SCOPE: TARGET
+ET_set_new_focus_tree_effect = {
+    custom_effect_tooltip = ET_set_new_focus_tree_effect_tt
+    hidden_effect = {
+        if = {      # ET_flag_global_scenario_1
+            limit = { has_global_flag = ET_flag_global_scenario_1 }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying scenario 1 focus tree" }
+
+            # Apply focus tree
+            if = { # ENG
+                limit = { original_tag = ENG }   
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to ENG" }
+                load_focus_tree = { tree = ET_S1_ENG keep_completed = yes }
+            }
+            else_if = { # FRA
+                limit = { original_tag = GER }   
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to FRA" }
+                load_focus_tree = { tree = ET_S1_FRA keep_completed = yes }
+            }
+            else_if = {      # USA
+                limit = { original_tag = USA }
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to USA" }
+                load_focus_tree = { tree = ET_S1_USA keep_completed = yes }
+            }
+            else = {    # Other
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
+                load_focus_tree = { tree = ET_Generic keep_completed = yes }
+            }
+        }
+        else_if = { # ET_flag_global_scenario_2
+            limit = { has_global_flag = ET_flag_global_scenario_2 }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying scenario 2 focus tree" }
+            if = {      # ENG
+                limit = { original_tag = ENG }
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to ENG" }
+                load_focus_tree = { tree = ET_S2_ENG keep_completed = yes }
+            }
+            else_if = { # GER
+                limit = { original_tag = GER }   
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GER" }
+                load_focus_tree = { tree = ET_S1_GER keep_completed = yes }
+            }
+            else = {    # Other
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
+                load_focus_tree = { tree = ET_Generic keep_completed = yes }
+            }
+        }
+        else_if = { # ET_flag_global_scenario_3
+            limit = { has_global_flag = ET_flag_global_scenario_3 }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Applying scenario 3 focus tree" }
+            if = {      # JAP
+                limit = { original_tag = JAP }
+                load_focus_tree = { tree = ET_S3_JAP keep_completed = yes }
+            }
+            else = {    # Other
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
+                load_focus_tree = { tree = ET_Generic keep_completed = yes }
+            }
+        }
+        #else_if = { # ET_flag_global_scenario_4
+        #}
+        #else_if = { # ET_flag_global_scenario_5
+        #}
+        #else_if = { # ET_flag_global_scenario_6
+        #}
+        #else_if = { # ET_flag_global_scenario_7
+        #}
+        #else_if = { # ET_flag_global_scenario_8
+        #}
+        #else_if = { # ET_flag_global_scenario_9
+        #}
+        #else_if = { # ET_flag_global_scenario_10
+        #}
+        #else_if = { # ET_flag_global_scenario_11
+        #}
+        #else_if = { # ET_flag_global_scenario_12
+        #}
+        else = {    # ET_flag_global_scenario_0
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
+            load_focus_tree = { tree = ET_Generic keep_completed = yes }
+        }
+    }
+}

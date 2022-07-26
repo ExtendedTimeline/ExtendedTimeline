@@ -1,0 +1,42 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+
+focus_tree = {
+    id = ET_S1_USA
+    continuous_focus_position = { x = 0 y = 600 }
+    default = no
+    country = {
+        factor = 0
+        modifier = {
+            add = 2000
+
+            original_tag = USA
+            ET_has_scenario_1 = yes
+            ET_in_new_era_country = yes
+        }
+    }
+
+
+
+    focus = { # United Nations
+        # https://en.wikipedia.org/wiki/United_Nations#Declarations_by_the_Allies_of_World_War_II
+        id = ET_S1_USA_united_nations
+        icon = GFX_focus_generic_treaty
+        x = 1
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        completion_reward = {
+            ET_Create_UnitedNations = yes
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+}

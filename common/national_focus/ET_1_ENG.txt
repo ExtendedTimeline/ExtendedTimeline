@@ -1,0 +1,63 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+
+focus_tree = {
+    id = ET_S1_ENG
+    continuous_focus_position = { x = 0 y = 600 }
+    default = no
+    country = {
+        factor = 0
+        modifier = {
+            add = 2000
+
+            original_tag = ENG
+            ET_has_scenario_1 = yes
+            ET_in_new_era_country = yes
+        }
+    }
+
+
+
+    focus = { # Treaty of Dunkirk
+        id = ET_S1_ENG_treaty_of_dunkirk
+        icon = GFX_focus_generic_treaty
+        x = 1
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { # Treaty of Brussels
+        id = ET_S1_ENG_treaty_of_brussels
+        icon = GFX_focus_generic_treaty
+        x = 1
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_S1_ENG_treaty_of_dunkirk  }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { # North Atlantic Treaty
+        id = ET_S1_ENG_north_atlantic_treaty
+        icon = GFX_focus_generic_treaty
+        x = 1
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_S1_ENG_treaty_of_brussels  }
+
+        completion_reward = {
+            ET_Create_NATO = yes
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+}

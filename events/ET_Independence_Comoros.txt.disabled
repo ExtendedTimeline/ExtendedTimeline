@@ -1,0 +1,42 @@
+add_namespace = ET_Independence_Comoros # CMS
+
+country_event = { 
+    id = ET_Independence_Comoros.0
+
+    is_triggered_only = yes
+    
+    immediate = {}
+
+    option = { # Release
+        ai_chance = {
+            base = 10
+            
+            modifier = {
+                factor = 0
+                OR = {
+                    has_war = no
+                    is_puppet = no
+                    is_subject = no
+                    threat < 0.30
+                }
+            }
+        }
+
+        release_on_controlled = CMS
+    }
+
+    option = { # Dont Release
+        ai_chance = {
+            base = 0
+            modifier = {
+                add = 10
+                OR = {
+                    has_war = yes
+                    is_puppet = yes
+                    is_subject = yes
+                    threat > 0.30
+                }
+            }
+        }
+    }
+}
