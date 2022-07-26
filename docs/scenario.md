@@ -1,7 +1,6 @@
 ---
-layout: wiki
-title: ACE Arsenal Framework
-description: Explains how to interact with the ACE Arsenal API.
+title: Scenarios
+description: The scenario system
 parent: index
 version:
   major: 3
