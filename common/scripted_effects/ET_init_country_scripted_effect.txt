@@ -1,0 +1,868 @@
+ET_set_generic_tech = {
+    if = {
+        limit = { date > 1959.06.01 }
+        ET_set_generic_1960_tech = yes
+    }
+    else_if = {
+        limit = { date > 1954.06.01 }
+        ET_set_generic_1955_tech = yes
+    }
+    else_if = {
+        limit = { date > 1949.06.01 }
+        ET_set_generic_1950_tech = yes
+    }
+    else_if = {
+        limit = { date > 1944.06.01 }
+        ET_set_generic_1945_tech = yes
+    }
+    else_if = {
+        limit = { date > 1939.06.01 }
+        ET_set_generic_1940_tech = yes
+    }
+    else = {}
+}
+
+ET_set_generic_1940_tech = { # FIXME
+    hidden_effect = {
+        #set_technology = {
+        #    popup = no
+        #}
+    }
+}
+ET_set_generic_1945_tech = { # FIXME
+    hidden_effect = {
+        #set_technology = {
+        #    popup = no
+        #}
+    }
+}
+ET_set_generic_1950_tech = { # FIXME
+    hidden_effect = {
+        set_technology = {
+            popup = no
+            advanced_infantry_weapons = 1
+            advanced_line_production = 1
+            advanced_machine_tools = 1
+            amphibious_tank_chassis = 1
+            antiair1 = 1
+            antiair2 = 1
+            antitank1 = 1
+            antitank2 = 1
+            armor_tech_1 = 1
+            armor_tech_2 = 1
+            armor_tech_3 = 1
+            armored_car1 = 1
+            armored_car2 = 1
+            artillery1 = 1
+            artillery2 = 1
+            assembly_line_production = 1
+            atomic_research = 1
+            basic_depth_charges = 1
+            basic_heavy_tank_chassis = 1
+            basic_light_tank_chassis = 1
+            basic_machine_tools = 1
+            basic_medium_tank_chassis = 1
+            basic_train = 1
+            CAS1 = 1
+            CAS2 = 1
+            computing_machine = 1
+            concentrated_industry = 1
+            concentrated_industry2 = 1
+            concentrated_industry3 = 1
+            concentrated_industry4 = 1
+            construction1 = 1
+            construction2 = 1
+            construction3 = 1
+            construction4 = 1
+            decimetric_radar = 1
+            desertis = 1
+            desertis2 = 1
+            early_bomber = 1
+            early_fighter = 1
+            early_ship_hull_light = 1
+            electronic_mechanical_engineering = 1
+            engine_tech_1 = 1
+            engine_tech_2 = 1
+            excavation1 = 1
+            excavation2 = 1
+            excavation3 = 1
+            experimental_rockets = 1
+            fighter1 = 1
+            fighter2 = 1
+            flexible_line = 1
+            fuel_refining = 1
+            fuel_refining2 = 1
+            fuel_refining3 = 1
+            gw_artillery = 1
+            gwtank_chassis = 1
+            gwtank = 1
+            improved_computing_machine = 1
+            improved_fire_control_system = 1
+            improved_heavy_tank_chassis = 1
+            improved_infantry_weapons_2 = 1
+            improved_infantry_weapons = 1
+            improved_light_tank_chassis = 1
+            improved_machine_tools = 1
+            improved_medium_tank_chassis = 1
+            infantry_weapons = 1
+            infantry_weapons1 = 1
+            infantry_weapons2 = 1
+            interwar_antiair = 1
+            interwar_antitank = 1
+            interwar_artillery = 1
+            mechanical_computing = 1
+            mechanised_infantry = 1
+            motorised_infantry = 1
+            radio_detection = 1
+            radio = 1
+            rocket_artillery = 1
+            scout_plane1 = 1
+            smoke_generator = 1
+            sonar = 1
+            supplyhub_1 = 1
+            support_weapons = 1
+            support_weapons2 = 1
+            support_weapons3 = 1
+            support_weapons4 = 1
+            tactical_bomber1 = 1
+            tactical_bomber2 = 1
+            tech_engineers = 1
+            tech_engineers2 = 1
+            tech_engineers3 = 1
+            tech_field_hospital = 1
+            tech_field_hospital2 = 1
+            tech_logistics_company = 1
+            tech_logistics_company2 = 1
+            tech_logistics_company3 = 1
+            tech_maintenance_company = 1
+            tech_maintenance_company2 = 1
+            tech_maintenance_company3 = 1
+            tech_military_police = 1
+            tech_military_police2 = 1
+            tech_military_police3 = 1
+            tech_recon = 1
+            tech_recon2 = 1
+            tech_recon3 = 1
+            tech_signal_company = 1
+            tech_signal_company2 = 1
+            tech_signal_company3 = 1
+            tech_special_forces = 1
+            tech_support = 1
+            transport_plane1 = 1
+            transport_plane2 = 1
+            wartime_train = 1
+        }
+    }
+}
+ET_set_generic_1955_tech = { # FIXME
+    hidden_effect = {
+        #set_technology = {
+        #    popup = no
+        #}
+    }
+}
+ET_set_generic_1960_tech = { # FIXME
+    hidden_effect = {
+        #set_technology = {
+        #    popup = no
+        #}
+    }
+}
+
+# Add non-secret super tech based on FROM naton
+# SCOPE: FROM to PREV
+#
+# Exsample usage:
+# if = {
+#     limit = { original_tag = EGY }
+#     ENG = { ET_inherit_technology = yes }
+# }
+ET_inherit_technology = { # FIXME
+    if = {
+        limit = {
+            has_tech = my_technology
+            not = { can_research = my_tech }
+        }
+    
+    }
+}
+
+
+# Add FROM manifactured equipment to TARGET
+# SCOPE: FROM to PREV
+#
+# Example usage:
+#  if = {
+#      limit = { original_tag = EGY }
+#      ENG = { ET_add_colonial_power_infantry_equipment = yes }
+#  }
+ET_add_colonial_power_infantry_equipment = { # add 1500
+    set_temp_variable = { ET_VAR_colonial_power_infantry_equipment = 1500 }
+    if = { # infantry_equipment_1
+        limit = {
+            THIS = {
+                has_equipment = { infantry_equipment_1 > 2000 }
+                NOT = { has_tech = advanced_infantry_weapons } # infantry_equipment_3
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = var:ET_VAR_colonial_power_infantry_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # infantry_equipment_2
+        limit = {
+            THIS = {
+                has_equipment = { infantry_equipment_2 > 2000 }
+                has_equipment = { infantry_equipment_3 > 500 }
+                NOT = { has_tech = infantry_cw1 } # infantry_equipment_4
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_2
+                amount = var:ET_VAR_colonial_power_infantry_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # infantry_equipment_3
+        limit = {
+            THIS = {
+                has_equipment = { infantry_equipment_3 > 2000 }
+                has_equipment = { infantry_equipment_4 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_3
+                amount = var:ET_VAR_colonial_power_infantry_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # infantry_equipment_4
+        limit = {
+            THIS = {
+                has_equipment = { infantry_equipment_4 > 2000 }
+                has_equipment = { infantry_equipment_5 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_4
+                amount = var:ET_VAR_colonial_power_infantry_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # infantry_equipment_5
+        limit = {
+            THIS = {
+                has_equipment = { infantry_equipment_5 > 2000 }
+                has_equipment = { infantry_equipment_6 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_5
+                amount = var:ET_VAR_colonial_power_infantry_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # infantry_equipment_6
+        limit = {
+            THIS = {
+                has_equipment = { infantry_equipment_6 > 2000 }
+                has_equipment = { infantry_equipment_7 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_6
+                amount = var:ET_VAR_colonial_power_infantry_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # infantry_equipment_7
+        limit = {
+            THIS = {
+                has_equipment = { infantry_equipment_7 > 2000 }
+                has_equipment = { infantry_equipment_8 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_8
+                amount = var:ET_VAR_colonial_power_infantry_equipment
+                producer = FROM
+            }
+        }
+    }
+}
+ET_add_colonial_power_support_equipment = { # add 1000
+    set_temp_variable = { ET_VAR_colonial_power_support_equipment = 1000 }
+    if = {
+        limit = { THIS = { has_equipment = { support_equipment > 500 } } }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = var:ET_VAR_colonial_power_infantry_equipment
+                producer = FROM
+            }
+        }
+    }
+}
+ET_add_colonial_power_motorized_equipment = { # add 1000
+    set_temp_variable = { ET_VAR_colonial_power_motorized_equipment = 1000 }
+    if = { # motorized_equipment_1
+        limit = {
+            THIS = {
+                has_equipment = { motorized_equipment_1 > 2000 }
+                NOT = { has_tech = motorised_infantry4 } # motorized_equipment_4
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = motorized_equipment_1
+                amount = var:ET_VAR_colonial_power_motorized_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # motorized_equipment_2
+        limit = {
+            THIS = {
+                has_equipment = { motorized_equipment_2 > 2000 }
+                has_equipment = { motorized_equipment_3 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = motorized_equipment_2
+                amount = var:ET_VAR_colonial_power_motorized_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # motorized_equipment_3
+        limit = {
+            THIS = {
+                has_equipment = { motorized_equipment_3 > 2000 }
+                has_equipment = { motorized_equipment_4 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = motorized_equipment_3
+                amount = var:ET_VAR_colonial_power_motorized_equipment
+                producer = FROM
+            }
+        }
+    }
+}
+ET_add_colonial_power_armored_car_equipment = { # add 500
+    set_temp_variable = { ET_VAR_colonial_power_armored_car_equipment = 500 }
+    if = { # armored_car_equipment_1
+        limit = {
+            THIS = {
+                has_equipment = { armored_car_equipment_1 > 1000 }
+                NOT = { has_tech = motorised_infantry4 } # armored_car_equipment_4
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = armored_car_equipment_1
+                amount = var:ET_VAR_colonial_power_armored_car_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # armored_car_equipment_2
+        limit = {
+            THIS = {
+                has_equipment = { rmored_car_equipment_2 > 1000 }
+                has_equipment = { rmored_car_equipment_3 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = armored_car_equipment_2
+                amount = var:ET_VAR_colonial_power_armored_car_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # armored_car_equipment_3
+        limit = {
+            THIS = {
+                has_equipment = { armored_car_equipment_3 > 1000 }
+                has_equipment = { armored_car_equipment_4 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = armored_car_equipment_3
+                amount = var:ET_VAR_colonial_power_armored_car_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # armored_car_equipment_4
+        limit = {
+            THIS = {
+                has_equipment = { armored_car_equipment_4 > 1000 }
+                has_equipment = { armored_car_equipment_5 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = armored_car_equipment_4
+                amount = var:ET_VAR_colonial_power_armored_car_equipment
+                producer = FROM
+            }
+        }
+    }
+}
+
+ET_add_colonial_power_artillery_equipment = { # add 500
+    set_temp_variable = { ET_VAR_colonial_power_artillery_equipment = 500 }
+    if = { # artillery_equipment_1
+        limit = {
+            THIS = {
+                has_equipment = { artillery_equipment_1 > 2000 }
+                NOT = { has_tech = artillery4 } # artillery_equipment_3
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_1
+                amount = var:ET_VAR_colonial_power_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # artillery_equipment_2
+        limit = {
+            THIS = {
+                has_equipment = { artillery_equipment_2 > 2000 }
+                has_equipment = { artillery_equipment_3 > 500 }
+                NOT = { has_tech = cwart1 } # artillery_equipment_4
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_2
+                amount = var:ET_VAR_colonial_power_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # artillery_equipment_3
+        limit = {
+            THIS = {
+                has_equipment = { artillery_equipment_3 > 2000 }
+                has_equipment = { artillery_equipment_4 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_3
+                amount = var:ET_VAR_colonial_power_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # artillery_equipment_4
+        limit = {
+            THIS = {
+                has_equipment = { artillery_equipment_4 > 2000 }
+                has_equipment = { artillery_equipment_5 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_4
+                amount = var:ET_VAR_colonial_power_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # artillery_equipment_5
+        limit = {
+            THIS = {
+                has_equipment = { artillery_equipment_5 > 2000 }
+                has_equipment = { artillery_equipment_6 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_5
+                amount = var:ET_VAR_colonial_power_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # artillery_equipment_6
+        limit = {
+            THIS = {
+                has_equipment = { artillery_equipment_6 > 2000}
+                has_equipment = { artillery_equipment_7 > 500}
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_6
+                amount = var:ET_VAR_colonial_power_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # artillery_equipment_7
+        limit = {
+            THIS = {
+                has_equipment = { artillery_equipment_7 > 2000 }
+                has_equipment = { artillery_equipment_8 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment_7
+                amount = var:ET_VAR_colonial_power_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+}
+ET_add_colonial_power_anti_tank_equipment = { # add 500
+    set_temp_variable = { ET_VAR_colonial_power_anti_tank_equipment = 500 }
+    if = { # anti_tank_equipment_1
+        limit = {
+            THIS = {
+                has_equipment = { anti_tank_equipment_1 > 1000 }
+                NOT = { has_tech = antitank5 } # anti_tank_equipment_3
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_tank_equipment_1
+                amount = var:ET_VAR_colonial_power_anti_tank_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_tank_equipment_2
+        limit = {
+            THIS = {
+                has_equipment = { anti_tank_equipment_2 > 1000 }
+                has_equipment = { anti_tank_equipment_3 > 500 }
+                NOT = { has_tech = antitank6 } # anti_tank_equipment_4
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_tank_equipment_2
+                amount = var:ET_VAR_colonial_power_anti_tank_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_tank_equipment_3
+        limit = {
+            THIS = {
+                has_equipment = { anti_tank_equipment_3 > 1000 }
+                has_equipment = { anti_tank_equipment_4 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_tank_equipment_3
+                amount = var:ET_VAR_colonial_power_anti_tank_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_tank_equipment_4
+        limit = {
+            THIS = {
+                has_equipment = { anti_tank_equipment_4 > 1000 }
+                has_equipment = { anti_tank_equipment_5 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_tank_equipment_4
+                amount = var:ET_VAR_colonial_power_anti_tank_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_tank_equipment_5
+        limit = {
+            THIS = {
+                has_equipment = { anti_tank_equipment_5 > 1000 }
+                has_equipment = { anti_tank_equipment_6 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_tank_equipment_5
+                amount = var:ET_VAR_colonial_power_anti_tank_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_tank_equipment_6
+        limit = {
+            THIS = {
+                has_equipment = { anti_tank_equipment_6 > 1000 }
+                has_equipment = { anti_tank_equipment_7 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_tank_equipment_6
+                amount = var:ET_VAR_colonial_power_anti_tank_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_tank_equipment_7
+        limit = {
+            THIS = {
+                has_equipment = { anti_tank_equipment_7 > 1000 }
+                has_equipment = { anti_tank_equipment_8 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_tank_equipment_7
+                amount = var:ET_VAR_colonial_power_anti_tank_equipment
+                producer = FROM
+            }
+        }
+    }
+}
+ET_add_colonial_power_anti_air_equipment = { # add 500
+    set_temp_variable = { ET_VAR_colonial_power_anti_air_equipment = 500 }
+    if = { # anti_air_equipment_1
+        limit = {
+            THIS = {
+                has_equipment = { anti_air_equipment_1 > 1000 }
+                NOT = { has_tech = antiair5 } # anti_air_equipment_3
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_air_equipment_1
+                amount = var:ET_VAR_colonial_power_anti_air_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_air_equipment_2
+        limit = {
+            THIS = {
+                has_equipment = { anti_air_equipment_2 > 1000 }
+                has_equipment = { anti_air_equipment_3 > 500 }
+                NOT = { has_tech = antiair6 } # anti_air_equipment_4
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_air_equipment_2
+                amount = var:ET_VAR_colonial_power_anti_air_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_air_equipment_3
+        limit = {
+            THIS = {
+                has_equipment = { anti_air_equipment_3 > 1000 }
+                has_equipment = { anti_air_equipment_4 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_air_equipment_3
+                amount = var:ET_VAR_colonial_power_anti_air_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_air_equipment_4
+        limit = {
+            THIS = {
+                has_equipment = { anti_air_equipment_4 > 1000 }
+                has_equipment = { anti_air_equipment_5 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_air_equipment_4
+                amount = var:ET_VAR_colonial_power_anti_air_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_air_equipment_5
+        limit = {
+            THIS = {
+                has_equipment = { anti_air_equipment_5 > 1000 }
+                has_equipment = { anti_air_equipment_6 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_air_equipment_5
+                amount = var:ET_VAR_colonial_power_anti_air_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_air_equipment_6
+        limit = {
+            THIS = {
+                has_equipment = { anti_air_equipment_6 > 1000 }
+                has_equipment = { anti_air_equipment_7 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_air_equipment_6
+                amount = var:ET_VAR_colonial_power_anti_air_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # anti_air_equipment_7
+        limit = {
+            THIS = {
+                has_equipment = { anti_air_equipment_7 > 1000 }
+                has_equipment = { anti_air_equipment_8 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = anti_air_equipment_7
+                amount = var:ET_VAR_colonial_power_anti_air_equipment
+                producer = FROM
+            }
+        }
+    }
+}
+ET_add_colonial_power_rocket_artillery_equipment = { # add 500
+    set_temp_variable = { ET_VAR_colonial_power_rocket_rocket_artillery_equipment = 500 }
+    if = { # rocket_rocket_artillery_equipment_1
+        limit = {
+            THIS = {
+                has_equipment = { rocket_rocket_artillery_equipment_1 > 1000 }
+                NOT = { has_tech = rocket_artillery6 } # rocket_rocket_artillery_equipment_4
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = rocket_rocket_artillery_equipment_1
+                amount = var:ET_VAR_colonial_power_rocket_rocket_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # rocket_artillery_equipment_2
+        limit = {
+            THIS = {
+                has_equipment = { rocket_artillery_equipment_2 > 1000 }
+                has_equipment = { rocket_artillery_equipment_3 > 500 }
+                NOT = { has_tech = rocket_artillery7 } # rocket_artillery_equipment_5
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = rocket_artillery_equipment_2
+                amount = var:ET_VAR_colonial_power_rocket_rocket_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # rocket_artillery_equipment_3
+        limit = {
+            THIS = {
+                has_equipment = { rocket_artillery_equipment_3 > 1000 }
+                has_equipment = { rocket_artillery_equipment_4 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = rocket_artillery_equipment_3
+                amount = var:ET_VAR_colonial_power_rocket_rocket_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # rocket_artillery_equipment_4
+        limit = {
+            THIS = {
+                has_equipment = { rocket_artillery_equipment_4 > 1000 }
+                has_equipment = { rocket_artillery_equipment_5 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = rocket_artillery_equipment_4
+                amount = var:ET_VAR_colonial_power_rocket_rocket_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # rocket_artillery_equipment_5
+        limit = {
+            THIS = {
+                has_equipment = { rocket_artillery_equipment_5 > 1000 }
+                has_equipment = { rocket_artillery_equipment_6 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = rocket_artillery_equipment_5
+                amount = var:ET_VAR_colonial_power_rocket_rocket_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # rocket_artillery_equipment_6
+        limit = {
+            THIS = {
+                has_equipment = { rocket_artillery_equipment_6 > 1000 }
+                has_equipment = { rocket_artillery_equipment_7 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = rocket_artillery_equipment_6
+                amount = var:ET_VAR_colonial_power_rocket_rocket_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+    if = { # rocket_artillery_equipment_7
+        limit = {
+            THIS = {
+                has_equipment = { rocket_artillery_equipment_7 > 1000 }
+                has_equipment = { rocket_artillery_equipment_8 > 500 }
+            }
+        }
+        FROM = {
+            add_equipment_to_stockpile = {
+                type = rocket_artillery_equipment_7
+                amount = var:ET_VAR_colonial_power_rocket_rocket_artillery_equipment
+                producer = FROM
+            }
+        }
+    }
+}
