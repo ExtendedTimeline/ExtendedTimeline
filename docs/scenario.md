@@ -1,3 +1,14 @@
+---
+layout: wiki
+title: ACE Arsenal Framework
+description: Explains how to interact with the ACE Arsenal API.
+parent: index
+version:
+  major: 3
+  minor: 12
+  patch: 0
+---
+
 # Scenarios
 *[back to home](index)*
 
