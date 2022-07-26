@@ -1,5 +1,5 @@
 # Scenarios
-*[back](index)*
+*[back to home](index)*
 
 ## Avalible Scenarios
 Scenarios is the corner stone of this mod. When the war is comming to a close a scenario will be selected for you. This is based on sertain parameters if nations exist hwo got defeated as well as what government countries have.

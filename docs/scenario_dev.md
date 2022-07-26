@@ -1,5 +1,5 @@
 # Scenario framework
-*[back](index)*
+*[back to home](index)*
 
 - **Unknown World** *(Scenario_ID: 0)*
 - **The Cold War** *(Scenario_ID: 1)*
