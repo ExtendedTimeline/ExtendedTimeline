@@ -3,8 +3,8 @@
 
 - **Unknown World** *(Scenario_ID: 0)*
 - **The Cold War** *(Scenario_ID: 1)*
-- **A Fascist World** *(Scenario_ID: 2)*
-- **A Asian Giant** *(Scenario_ID: 3)*
+- **A Eagle World** *(Scenario_ID: 2)*
+- **The Asian Draggon** *(Scenario_ID: 3)*
 
 ## Effetcs Triggers, Flags, Localization
 

@@ -12,6 +12,68 @@ country_event = { # Releases
         # #
         #  Europe
         # #
+        if = { # West Germany        [23 May 1949] WGR*
+            limit = {
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_WGR }
+                OR = {
+                    date > 1949.04.01
+                    has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+                }
+                NOT = { original_tag = WGR }
+                NOT = { original_tag = GER }
+                OR = {
+                    controls_state = 42
+                    controls_state = 50
+                    controls_state = 51
+                    controls_state = 52
+                    controls_state = 53
+                    controls_state = 54
+                    controls_state = 56
+                    controls_state = 57
+                    controls_state = 58
+                    controls_state = 59
+                }
+            }
+            set_country_flag = {
+                flag = ET_flag_country_free_WGR
+                days = 90
+            }
+            country_event = {
+                id = ET_Independence_WestGermany.0
+                days = 23
+            }
+        }
+        if = { # EAST Germany        [7 October 1949] DDR*
+            limit = {
+                is_ai = yes
+                NOT = { has_country_flag = ET_flag_country_free_DDR }
+                country_exists = WGR
+                OR = {
+                    date > 1949.04.01
+                    has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+                }
+                NOT = { original_tag = DDR }
+                NOT = { original_tag = GER }
+                OR = {
+                    controls_state = 41
+                    controls_state = 60
+                    controls_state = 62
+                    controls_state = 63
+                    controls_state = 64
+                    controls_state = 65
+                    controls_state = 68
+                }
+            }
+            set_country_flag = {
+                flag = ET_flag_country_free_DDR
+                days = 90
+            }
+            country_event = {
+                id = ET_Independence_EastGermany.0
+                days = 3
+            }
+        }
 
         # #
         #  North America

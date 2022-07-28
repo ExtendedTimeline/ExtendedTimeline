@@ -1224,6 +1224,55 @@ focus_tree = {
         ai_will_do = { factor = 1 }
     }
 
+
+    focus = { #Neocolonialism
+        id = ET_Generic_neocolonialism
+        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+        x = 18
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_Generic_International_political_effort  }
+        mutually_exclusive = { focus = ET_Generic_decolonization  }
+
+        available = {
+            has_government = fascism
+        }
+    
+        completion_reward = {
+            add_political_power = 100
+        }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 1
+                is_historical_focus_on = no
+            }
+        }
+    }
+
+    focus = { #Decolonization
+        id = ET_Generic_decolonization
+        icon = GFX_goal_generic_more_territorial_claims
+        x = 20
+        y = 9
+        cost = 10
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = { focus = ET_Generic_International_political_effort  }
+        mutually_exclusive = { focus = ET_Generic_neocolonialism  }
+
+        bypass = {
+            has_completed_focus = my_focus
+        }
+
+        completion_reward = {
+            add_stability = 0.10
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
     focus = { #Join United Nation
         id = ET_Generic_join_united_nation
         icon = GFX_goal_generic_national_unity
@@ -1270,63 +1319,19 @@ focus_tree = {
         }
 
         available = {
+            ET_NATO_Exists = no
+
             NOT = { has_government = communism }
-            ET_NATO_Exists = yes
+            NOT = { original_tag = SOV }
+            
             OR = {
                 capital_scope = { is_on_continent = europe }
                 capital_scope = { is_on_continent = north_america }
             }
         }
-    
+
         completion_reward = {
             add_political_power = 100
-        }
-    
-        ai_will_do = { factor = 1 }
-    }
-
-    focus = { #Neocolonialism
-        id = ET_Generic_neocolonialism
-        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-        x = 18
-        y = 9
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = ET_Generic_International_political_effort  }
-        mutually_exclusive = { focus = ET_Generic_decolonization  }
-
-        available = {
-            has_government = fascism
-        }
-    
-        completion_reward = {
-            add_political_power = 100
-        }
-
-        ai_will_do = {
-            factor = 0
-            modifier = {
-                add = 1
-                is_historical_focus_on = no
-            }
-        }
-    }
-    focus = { #Decolonization
-        id = ET_Generic_decolonization
-        icon = GFX_goal_generic_more_territorial_claims
-        x = 20
-        y = 9
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = ET_Generic_International_political_effort  }
-        mutually_exclusive = { focus = ET_Generic_neocolonialism  }
-
-        bypass = {
-            has_completed_focus = my_focus
-        }
-
-        completion_reward = {
-            add_stability = 0.10
         }
 
         ai_will_do = { factor = 1 }

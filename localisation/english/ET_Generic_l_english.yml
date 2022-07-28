@@ -25,3 +25,6 @@ ET_infantry_launchers_bonus:0 "Infantry Launchers bonus"
 ET_night_vision_bonus:0 "Night Fighting Equipment bonus"
 ET_logistical_bonus:0 "Logistical Equipment bonus"
 ET_helicopter_bonus:0 "Helicopter Equipment bonus"
+
+# Added victory points
+VICTORY_POINTS_6570:0 "Bonn"

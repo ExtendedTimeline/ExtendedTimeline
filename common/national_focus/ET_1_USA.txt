@@ -8,14 +8,14 @@
 
 focus_tree = {
     id = ET_S1_USA
-    continuous_focus_position = { x = 0 y = 600 }
+    continuous_focus_position = { x = 0 y = 800 }
     default = no
     country = {
         factor = 0
         modifier = {
             add = 2000
 
-            original_tag = USA
+            original_tag = SOV
             ET_has_scenario_1 = yes
             ET_in_new_era_country = yes
         }
@@ -23,12 +23,641 @@ focus_tree = {
 
 
 
+    focus = { #Army
+        id = ET_S1_USA_army
+        icon = GFX_goal_generic_army_doctrines
+        x = 1
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = { #Mechanized
+        id = ET_S1_USA_mechanized
+        icon = GFX_focus_generic_army_tanks2
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_army }
+        mutually_exclusive = { focus = ET_S1_USA_infantry }
+        completion_reward = {
+            add_tech_bonus = {
+                name = mech_army_bonus
+                uses = 1
+                bonus = 1.0
+                category = cat_mechanized_equipment
+            }
+            add_tech_bonus = {
+                name = mech_army_bonus
+                uses = 1
+                bonus = 1.0
+                category = motorized_equipment
+            }
+        }
+    }
+    focus = { #Main Battle Tank
+        id = ET_S1_USA_main_battle_tank
+        icon = GFX_goal_generic_army_tanks
+        x = 0
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_mechanized }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = armor_bonus
+                uses = 1
+                bonus = 1.0
+                category = armor
+            }    
+        }
+    }
+    focus = { #Main Battle Tank II
+        id = ET_S1_USA_main_battle_tank_ii
+        icon = GFX_goal_generic_army_tanks
+        x = 0
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_main_battle_tank }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = armor_bonus
+                uses = 1
+                bonus = 1.0
+                category = armor
+            }    
+        }
+    }
+
+    focus = { #Infantry
+        id = ET_S1_USA_infantry
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 2
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_army  }
+        mutually_exclusive = { focus = ET_S1_USA_mechanized }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = infantry_weapons_bonus
+                uses = 1
+                bonus = 1.0
+                category = infantry_weapons
+            }
+            add_tech_bonus = {
+                name = ET_night_vision_bonus
+                uses = 1
+                bonus = 1.0
+                category = night_vision
+            }
+        }
+    }
+    focus = { #Man-portable AT and AA Effort
+        id = ET_S1_USA_manportable_at_and_aa_effort
+        icon = GFX_goal_generic_special_forces
+        x = 2
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_infantry }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ET_infantry_launchers_bonus
+                uses = 1
+                bonus = 1.0
+                category = infantry_launchers
+            }
+        }
+    }
+    focus = { #Man-portable AT and AA Effort II
+        id = ET_S1_USA_manportable_at_and_aa_effort_ii
+        icon = GFX_goal_generic_special_forces
+        x = 2
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_manportable_at_and_aa_effort }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ET_infantry_launchers_bonus
+                uses = 1
+                bonus = 1.0
+                category = infantry_launchers
+            }
+        }
+    }
+
+    focus = { #Infantry Fighting Vehicle
+        id = ET_S1_USA_infantry_fighting_vehicle
+        icon = GFX_goal_generic_army_motorized
+        x = 1
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = {
+            focus = ET_S1_USA_mechanized
+            focus = ET_S1_USA_infantry
+        }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = mech_army_bonus
+                uses = 1
+                bonus = 1.0
+                category = cat_mechanized_equipment
+            }
+        }
+    }
+    focus = { #Infantry Fighting Vehicle II
+        id = ET_S1_USA_infantry_fighting_vehicle_ii
+        icon = GFX_goal_generic_army_motorized
+        x = 1
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_infantry_fighting_vehicle }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = mech_army_bonus
+                uses = 1
+                bonus = 1.0
+                category = cat_mechanized_equipment
+            }
+        }
+    }
+
+
+
+    focus = { #Naval
+        id = ET_S1_USA_naval
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = 6
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        available = {
+            any_state = {
+                is_coastal = yes
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Coastal Navy
+        id = ET_S1_USA_coastal_navy
+        icon = GFX_goal_generic_navy_cruiser
+        x = 5
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_naval  }
+        mutually_exclusive = { focus = ET_S1_USA_open_sea_navy  }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                add = -10
+                num_of_naval_factories > 30
+            }
+        }
+    }
+
+    focus = { #Destroyers
+        id = ET_S1_USA_destroyers
+        icon = GFX_focus_generic_destroyer
+        x = 5
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_coastal_navy  }
+
+        completion_reward = {
+            add_tech_bonus = {
+                name = dd_bonus
+                uses = 1
+                bonus = 1.0
+                category = dd_tech
+            }        
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Destroyers II
+        id = ET_S1_USA_destroyers_ii
+        icon = GFX_focus_generic_destroyer
+        x = 5
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_destroyers  }
+        completion_reward = {
+            add_tech_bonus = {
+                name = dd_bonus
+                uses = 1
+                bonus = 1.0
+                category = dd_tech
+            }        
+        }
+    }
+
+    focus = { #Coastal Submarines
+        id = ET_S1_USA_coastal_submarines
+        icon = GFX_goal_generic_navy_submarine
+        x = 6
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_coastal_navy  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ss_bonus
+                uses = 1
+                bonus = 1.0
+                category = ss_tech
+            }
+        }
+    }
+
+    focus = { #Open Sea Navy
+        id = ET_S1_USA_open_sea_navy
+        icon = GFX_goal_generic_navy_battleship
+        x = 8
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_naval  }
+        mutually_exclusive = { focus = ET_S1_USA_coastal_navy  }
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                add = 10
+                num_of_naval_factories > 30
+            }
+        }
+    }
+
+    focus = { #Frigates
+        id = ET_S1_USA_frigates
+        icon = GFX_focus_generic_cruiser2
+        x = 7
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_open_sea_navy  }
+
+        completion_reward = {
+            add_tech_bonus = {
+                name = cr_bonus
+                uses = 1
+                bonus = 1.0
+                category = bb_tech
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Frigates II
+        id = ET_S1_USA_frigates_ii
+        icon = GFX_focus_generic_cruiser2
+        x = 7
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_frigates  }
+
+        completion_reward = {
+            add_tech_bonus = {
+                name = cr_bonus
+                uses = 1
+                bonus = 1.0
+                category = cl_tech
+            }    
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    focus = { #Modern Carrier
+        id = ET_S1_USA_modern_carrier
+        icon = GFX_goal_generic_navy_carrier
+        x = 9
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_open_sea_navy  }
+
+        completion_reward = {
+            add_tech_bonus = {
+                name = cv_bonus
+                uses = 1
+                bonus = 1.0
+                category = cv_tech
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+    
+    focus = { #Nuclear Powered
+        id = ET_S1_USA_nuclear_powered
+        icon = GFX_focus_wonderweapons
+        x = 8
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_open_sea_navy  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = nuclear_bonus
+                uses = 1
+                bonus = 1.0
+                category = nuclear
+            }
+        }
+    }
+    focus = { #Nuclear Submarines
+        id = ET_S1_USA_nuclear_submarines
+        icon = GFX_goal_generic_navy_submarine
+        x = 8
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_nuclear_powered  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ss_bonus
+                uses = 1
+                bonus = 1.0
+                category = ss_tech
+            }    
+        }
+    }
+    focus = { #Nuclear Carrier
+        id = ET_S1_USA_nuclear_carrier
+        icon = GFX_goal_generic_navy_carrier
+        x = 9
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_modern_carrier  focus = ET_S1_USA_nuclear_powered  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = cv_bonus
+                uses = 1
+                bonus = 1.0
+                category = cv_tech
+            }    
+        }
+    }
+
+
+    
+    focus = { #Air Force
+        id = ET_S1_USA_air_force
+        icon = GFX_goal_generic_build_airforce
+        x = 13
+        y = 0
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        available = {
+            has_built = {
+                type = air_base
+                value > 1
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+    focus = { #Air Logistics
+        id = ET_S1_USA_air_logistics
+        icon = GFX_goal_generic_air_fighter2
+        x = 14
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_air_force  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = air_bonus
+                uses = 1
+                bonus = 1.0
+                category = air_equipment
+            }
+            add_tech_bonus = {
+                name = ET_logistical_bonus
+                uses = 1
+                bonus = 1.0
+                category = logistics_tech
+            }    
+        }
+    }
+
+    focus = { #Helicopter Effort
+        id = ET_S1_USA_helicopter_effort
+        icon = GFX_goal_generic_air_fighter2
+        x = 14
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_jet_effort  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = ET_helicopter_bonus
+                uses = 1
+                bonus = 1.0
+                category = cat_air_helicopters
+            }    
+        }
+    }
+
+    focus = { #Jet Effort
+        id = ET_S1_USA_jet_effort
+        icon = GFX_focus_rocketry
+        x = 12
+        y = 1
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_air_force  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            if = {
+                limit = { NOT = { has_tech = experimental_rockets } }
+                add_tech_bonus = {
+                    name = jet_rocket_bonus
+                    uses = 2
+                    bonus = 1.0
+                    category = rocketry
+                }
+            }
+            if = {
+                limit = { NOT = { has_tech = rocket_engines } }
+                add_tech_bonus = {
+                    name = jet_rocket_bonus
+                    uses = 1
+                    bonus = 1.0
+                    category = rocketry
+                }
+                add_tech_bonus = {
+                    name = jet_bonus
+                    uses = 1
+                    bonus = 1.0
+                    category = jet_technology
+                }
+            }
+            if = {
+                limit = { NOT = { has_tech = jet_engines } }
+                add_tech_bonus = {
+                    name = jet_bonus
+                    uses = 3
+                    bonus = 1.0
+                    category = jet_technology
+                }
+            }
+            if = {
+                limit = { NOT = { has_tech = heli_engines } }
+                add_tech_bonus = {
+                    name = jet_bonus
+                    uses = 2
+                    bonus = 1.0
+                    category = jet_technology
+                }
+            }
+        }
+    }
+    focus = { #Jet Fighters
+        id = ET_S1_USA_jet_fighters
+        icon = GFX_goal_generic_air_fighter2
+        x = 12
+        y = 2
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_jet_effort  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = jet_bonus
+                uses = 1
+                bonus = 1.0
+                category = jet_technology
+            }
+        }
+    }
+    focus = { #Jet Fighters II
+        id = ET_S1_USA_jet_fighters_ii
+        icon = GFX_goal_generic_air_fighter2
+        x = 12
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_jet_fighters  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = jet_bonus
+                uses = 1
+                bonus = 1.0
+                category = jet_technology
+            }
+        }
+    }
+
+    focus = { #Modern Close Air Support
+        id = ET_S1_USA_modern_close_air_support
+        icon = GFX_goal_generic_CAS
+        x = 14
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_jet_fighters  } prerequisite = { focus = ET_S1_USA_helicopter_effort  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = CAS_bonus
+                uses = 1
+                bonus = 1.0
+                category = cas_bomber
+            }
+        }
+    }
+    focus = { #Modern Close Air Support II
+        id = ET_S1_USA_modern_close_air_support_ii
+        icon = GFX_goal_generic_CAS
+        x = 14
+        y = 4
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_modern_close_air_support  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = CAS_bonus
+                uses = 1
+                bonus = 1.0
+                category = cas_bomber
+            }
+        }
+    }
+
+
+    focus = { #Carrier Aircraft
+        id = ET_S1_USA_carrier_aircraft
+        icon = GFX_goal_generic_navy_carrier
+        x = 11
+        y = 3
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_modern_carrier  }
+        prerequisite = { focus = ET_S1_USA_jet_fighters  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = jet_bonus
+                uses = 1
+                bonus = 1.0
+                category = jet_technology
+            }
+        }
+    }
+    focus = { #Carrier Aircraft II
+        id = ET_S1_USA_carrier_aircraft_ii
+        icon = GFX_goal_generic_navy_carrier
+        x = 11
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        prerequisite = { focus = ET_S1_USA_carrier_aircraft  }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = jet_bonus
+                uses = 1
+                bonus = 1.0
+                category = jet_technology
+            }
+        }
+    }
+
+
     focus = { # United Nations
         # https://en.wikipedia.org/wiki/United_Nations#Declarations_by_the_Allies_of_World_War_II
         id = ET_S1_USA_united_nations
         icon = GFX_focus_generic_treaty
-        x = 1
-        y = 0
+        x = 8
+        y = 7
         cost = 10
         search_filters = { FOCUS_FILTER_POLITICAL }
 

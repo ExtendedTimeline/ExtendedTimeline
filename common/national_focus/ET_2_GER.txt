@@ -7,16 +7,16 @@
 ### search_filters = { FOCUS_FILTER_ANNEXATION }
 
 focus_tree = {
-    id = ET_S1_ENG
-    continuous_focus_position = { x = 0 y = 800 }
+    id = ET_S2_GER
+    continuous_focus_position = { x = 0 y = 850 }
     default = no
     country = {
         factor = 0
         modifier = {
             add = 2000
 
-            original_tag = ENG
-            ET_has_scenario_1 = yes
+            original_tag = GER
+            ET_has_scenario_2 = yes
             ET_in_new_era_country = yes
         }
     }
@@ -24,7 +24,7 @@ focus_tree = {
 
 
     focus = { #Army
-        id = ET_S1_ENG_army
+        id = ET_S2_GER_army
         icon = GFX_goal_generic_army_doctrines
         x = 1
         y = 0
@@ -34,14 +34,14 @@ focus_tree = {
     }
 
     focus = { #Mechanized
-        id = ET_S1_ENG_mechanized
+        id = ET_S2_GER_mechanized
         icon = GFX_focus_generic_army_tanks2
         x = 0
         y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_army }
-        mutually_exclusive = { focus = ET_S1_ENG_infantry }
+        prerequisite = { focus = ET_S2_GER_army }
+        mutually_exclusive = { focus = ET_S2_GER_infantry }
         completion_reward = {
             add_tech_bonus = {
                 name = mech_army_bonus
@@ -58,13 +58,13 @@ focus_tree = {
         }
     }
     focus = { #Main Battle Tank
-        id = ET_S1_ENG_main_battle_tank
+        id = ET_S2_GER_main_battle_tank
         icon = GFX_goal_generic_army_tanks
         x = 0
         y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_mechanized }
+        prerequisite = { focus = ET_S2_GER_mechanized }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -76,13 +76,13 @@ focus_tree = {
         }
     }
     focus = { #Main Battle Tank II
-        id = ET_S1_ENG_main_battle_tank_ii
+        id = ET_S2_GER_main_battle_tank_ii
         icon = GFX_goal_generic_army_tanks
         x = 0
         y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_main_battle_tank }
+        prerequisite = { focus = ET_S2_GER_main_battle_tank }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -95,14 +95,14 @@ focus_tree = {
     }
 
     focus = { #Infantry
-        id = ET_S1_ENG_infantry
+        id = ET_S2_GER_infantry
         icon = GFX_goal_generic_allies_build_infantry
         x = 2
         y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_army  }
-        mutually_exclusive = { focus = ET_S1_ENG_mechanized }
+        prerequisite = { focus = ET_S2_GER_army  }
+        mutually_exclusive = { focus = ET_S2_GER_mechanized }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -120,13 +120,13 @@ focus_tree = {
         }
     }
     focus = { #Man-portable AT and AA Effort
-        id = ET_S1_ENG_manportable_at_and_aa_effort
+        id = ET_S2_GER_manportable_at_and_aa_effort
         icon = GFX_goal_generic_special_forces
         x = 2
         y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_infantry }
+        prerequisite = { focus = ET_S2_GER_infantry }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -138,13 +138,13 @@ focus_tree = {
         }
     }
     focus = { #Man-portable AT and AA Effort II
-        id = ET_S1_ENG_manportable_at_and_aa_effort_ii
+        id = ET_S2_GER_manportable_at_and_aa_effort_ii
         icon = GFX_goal_generic_special_forces
         x = 2
         y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_manportable_at_and_aa_effort }
+        prerequisite = { focus = ET_S2_GER_manportable_at_and_aa_effort }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -157,15 +157,15 @@ focus_tree = {
     }
 
     focus = { #Infantry Fighting Vehicle
-        id = ET_S1_ENG_infantry_fighting_vehicle
+        id = ET_S2_GER_infantry_fighting_vehicle
         icon = GFX_goal_generic_army_motorized
         x = 1
         y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
         prerequisite = {
-            focus = ET_S1_ENG_mechanized
-            focus = ET_S1_ENG_infantry
+            focus = ET_S2_GER_mechanized
+            focus = ET_S2_GER_infantry
         }
         ai_will_do = { factor = 1 }
         completion_reward = {
@@ -178,13 +178,13 @@ focus_tree = {
         }
     }
     focus = { #Infantry Fighting Vehicle II
-        id = ET_S1_ENG_infantry_fighting_vehicle_ii
+        id = ET_S2_GER_infantry_fighting_vehicle_ii
         icon = GFX_goal_generic_army_motorized
         x = 1
         y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_infantry_fighting_vehicle }
+        prerequisite = { focus = ET_S2_GER_infantry_fighting_vehicle }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -199,7 +199,7 @@ focus_tree = {
 
 
     focus = { #Naval
-        id = ET_S1_ENG_naval
+        id = ET_S2_GER_naval
         icon = GFX_goal_generic_construct_naval_dockyard
         x = 6
         y = 0
@@ -213,14 +213,14 @@ focus_tree = {
         ai_will_do = { factor = 1 }
     }
     focus = { #Coastal Navy
-        id = ET_S1_ENG_coastal_navy
+        id = ET_S2_GER_coastal_navy
         icon = GFX_goal_generic_navy_cruiser
         x = 5
         y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_naval  }
-        mutually_exclusive = { focus = ET_S1_ENG_open_sea_navy  }
+        prerequisite = { focus = ET_S2_GER_naval  }
+        mutually_exclusive = { focus = ET_S2_GER_open_sea_navy  }
 
         ai_will_do = {
             factor = 1
@@ -232,13 +232,13 @@ focus_tree = {
     }
 
     focus = { #Destroyers
-        id = ET_S1_ENG_destroyers
+        id = ET_S2_GER_destroyers
         icon = GFX_focus_generic_destroyer
         x = 5
         y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_coastal_navy  }
+        prerequisite = { focus = ET_S2_GER_coastal_navy  }
 
         completion_reward = {
             add_tech_bonus = {
@@ -252,13 +252,13 @@ focus_tree = {
         ai_will_do = { factor = 1 }
     }
     focus = { #Destroyers II
-        id = ET_S1_ENG_destroyers_ii
+        id = ET_S2_GER_destroyers_ii
         icon = GFX_focus_generic_destroyer
         x = 5
         y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_destroyers  }
+        prerequisite = { focus = ET_S2_GER_destroyers  }
         completion_reward = {
             add_tech_bonus = {
                 name = dd_bonus
@@ -270,13 +270,13 @@ focus_tree = {
     }
 
     focus = { #Coastal Submarines
-        id = ET_S1_ENG_coastal_submarines
+        id = ET_S2_GER_coastal_submarines
         icon = GFX_goal_generic_navy_submarine
         x = 6
         y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_coastal_navy  }
+        prerequisite = { focus = ET_S2_GER_coastal_navy  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -289,14 +289,14 @@ focus_tree = {
     }
 
     focus = { #Open Sea Navy
-        id = ET_S1_ENG_open_sea_navy
+        id = ET_S2_GER_open_sea_navy
         icon = GFX_goal_generic_navy_battleship
         x = 8
         y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_naval  }
-        mutually_exclusive = { focus = ET_S1_ENG_coastal_navy  }
+        prerequisite = { focus = ET_S2_GER_naval  }
+        mutually_exclusive = { focus = ET_S2_GER_coastal_navy  }
 
         ai_will_do = {
             factor = 0
@@ -308,13 +308,13 @@ focus_tree = {
     }
 
     focus = { #Frigates
-        id = ET_S1_ENG_frigates
+        id = ET_S2_GER_frigates
         icon = GFX_focus_generic_cruiser2
         x = 7
         y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_open_sea_navy  }
+        prerequisite = { focus = ET_S2_GER_open_sea_navy  }
 
         completion_reward = {
             add_tech_bonus = {
@@ -327,13 +327,13 @@ focus_tree = {
         ai_will_do = { factor = 1 }
     }
     focus = { #Frigates II
-        id = ET_S1_ENG_frigates_ii
+        id = ET_S2_GER_frigates_ii
         icon = GFX_focus_generic_cruiser2
         x = 7
         y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_frigates  }
+        prerequisite = { focus = ET_S2_GER_frigates  }
 
         completion_reward = {
             add_tech_bonus = {
@@ -348,13 +348,13 @@ focus_tree = {
     }
 
     focus = { #Modern Carrier
-        id = ET_S1_ENG_modern_carrier
+        id = ET_S2_GER_modern_carrier
         icon = GFX_goal_generic_navy_carrier
         x = 9
         y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_open_sea_navy  }
+        prerequisite = { focus = ET_S2_GER_open_sea_navy  }
 
         completion_reward = {
             add_tech_bonus = {
@@ -369,13 +369,13 @@ focus_tree = {
     }
     
     focus = { #Nuclear Powered
-        id = ET_S1_ENG_nuclear_powered
+        id = ET_S2_GER_nuclear_powered
         icon = GFX_focus_wonderweapons
         x = 8
         y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_open_sea_navy  }
+        prerequisite = { focus = ET_S2_GER_open_sea_navy  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -387,13 +387,13 @@ focus_tree = {
         }
     }
     focus = { #Nuclear Submarines
-        id = ET_S1_ENG_nuclear_submarines
+        id = ET_S2_GER_nuclear_submarines
         icon = GFX_goal_generic_navy_submarine
         x = 8
         y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_nuclear_powered  }
+        prerequisite = { focus = ET_S2_GER_nuclear_powered  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -405,13 +405,13 @@ focus_tree = {
         }
     }
     focus = { #Nuclear Carrier
-        id = ET_S1_ENG_nuclear_carrier
+        id = ET_S2_GER_nuclear_carrier
         icon = GFX_goal_generic_navy_carrier
         x = 9
         y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_modern_carrier  focus = ET_S1_ENG_nuclear_powered  }
+        prerequisite = { focus = ET_S2_GER_modern_carrier  focus = ET_S2_GER_nuclear_powered  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -426,7 +426,7 @@ focus_tree = {
 
     
     focus = { #Air Force
-        id = ET_S1_ENG_air_force
+        id = ET_S2_GER_air_force
         icon = GFX_goal_generic_build_airforce
         x = 13
         y = 0
@@ -441,13 +441,13 @@ focus_tree = {
         ai_will_do = { factor = 1 }
     }
     focus = { #Air Logistics
-        id = ET_S1_ENG_air_logistics
+        id = ET_S2_GER_air_logistics
         icon = GFX_goal_generic_air_fighter2
         x = 14
         y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_air_force  }
+        prerequisite = { focus = ET_S2_GER_air_force  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -466,13 +466,13 @@ focus_tree = {
     }
 
     focus = { #Helicopter Effort
-        id = ET_S1_ENG_helicopter_effort
+        id = ET_S2_GER_helicopter_effort
         icon = GFX_goal_generic_air_fighter2
         x = 14
         y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_jet_effort  }
+        prerequisite = { focus = ET_S2_GER_jet_effort  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -485,13 +485,13 @@ focus_tree = {
     }
 
     focus = { #Jet Effort
-        id = ET_S1_ENG_jet_effort
+        id = ET_S2_GER_jet_effort
         icon = GFX_focus_rocketry
         x = 12
         y = 1
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_air_force  }
+        prerequisite = { focus = ET_S2_GER_air_force  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             if = {
@@ -539,13 +539,13 @@ focus_tree = {
         }
     }
     focus = { #Jet Fighters
-        id = ET_S1_ENG_jet_fighters
+        id = ET_S2_GER_jet_fighters
         icon = GFX_goal_generic_air_fighter2
         x = 12
         y = 2
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_jet_effort  }
+        prerequisite = { focus = ET_S2_GER_jet_effort  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -557,13 +557,13 @@ focus_tree = {
         }
     }
     focus = { #Jet Fighters II
-        id = ET_S1_ENG_jet_fighters_ii
+        id = ET_S2_GER_jet_fighters_ii
         icon = GFX_goal_generic_air_fighter2
         x = 12
         y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_jet_fighters  }
+        prerequisite = { focus = ET_S2_GER_jet_fighters  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -576,13 +576,13 @@ focus_tree = {
     }
 
     focus = { #Modern Close Air Support
-        id = ET_S1_ENG_modern_close_air_support
+        id = ET_S2_GER_modern_close_air_support
         icon = GFX_goal_generic_CAS
         x = 14
         y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_jet_fighters  } prerequisite = { focus = ET_S1_ENG_helicopter_effort  }
+        prerequisite = { focus = ET_S2_GER_jet_fighters  } prerequisite = { focus = ET_S2_GER_helicopter_effort  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -594,13 +594,13 @@ focus_tree = {
         }
     }
     focus = { #Modern Close Air Support II
-        id = ET_S1_ENG_modern_close_air_support_ii
+        id = ET_S2_GER_modern_close_air_support_ii
         icon = GFX_goal_generic_CAS
         x = 14
         y = 4
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_modern_close_air_support  }
+        prerequisite = { focus = ET_S2_GER_modern_close_air_support  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -614,14 +614,14 @@ focus_tree = {
 
 
     focus = { #Carrier Aircraft
-        id = ET_S1_ENG_carrier_aircraft
+        id = ET_S2_GER_carrier_aircraft
         icon = GFX_goal_generic_navy_carrier
         x = 11
         y = 3
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_modern_carrier  }
-        prerequisite = { focus = ET_S1_ENG_jet_fighters  }
+        prerequisite = { focus = ET_S2_GER_modern_carrier  }
+        prerequisite = { focus = ET_S2_GER_jet_fighters  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -633,13 +633,13 @@ focus_tree = {
         }
     }
     focus = { #Carrier Aircraft II
-        id = ET_S1_ENG_carrier_aircraft_ii
+        id = ET_S2_GER_carrier_aircraft_ii
         icon = GFX_goal_generic_navy_carrier
         x = 11
         y = 5
         cost = 10
         search_filters = { FOCUS_FILTER_RESEARCH }
-        prerequisite = { focus = ET_S1_ENG_carrier_aircraft  }
+        prerequisite = { focus = ET_S2_GER_carrier_aircraft  }
         ai_will_do = { factor = 1 }
         completion_reward = {
             add_tech_bonus = {
@@ -650,44 +650,4 @@ focus_tree = {
             }
         }
     }
-
-
-
-    focus = { # Treaty of Dunkirk
-        id = ET_S1_ENG_treaty_of_dunkirk
-        icon = GFX_focus_generic_treaty
-        x = 8
-        y = 6
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-
-        ai_will_do = { factor = 1 }
-    }
-    focus = { # Treaty of Brussels
-        id = ET_S1_ENG_treaty_of_brussels
-        icon = GFX_focus_generic_treaty
-        x = 8
-        y = 7
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = ET_S1_ENG_treaty_of_dunkirk  }
-
-        ai_will_do = { factor = 1 }
-    }
-    focus = { # North Atlantic Treaty
-        id = ET_S1_ENG_north_atlantic_treaty
-        icon = GFX_focus_generic_treaty
-        x = 8
-        y = 8
-        cost = 10
-        search_filters = { FOCUS_FILTER_POLITICAL }
-        prerequisite = { focus = ET_S1_ENG_treaty_of_brussels  }
-
-        completion_reward = {
-            ET_Create_NATO = yes
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
 }
