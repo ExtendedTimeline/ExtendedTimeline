@@ -158,7 +158,7 @@ country_event = { # Init Checks
         # 20 YUGOSLAVIA
         if = {
             limit = {
-                NOT = { original_tag = YGO }
+                NOT = { original_tag = YUG }
                 OR = {
                     controls_state = 102
                     controls_state = 103
@@ -175,8 +175,77 @@ country_event = { # Init Checks
                 }
             }
             if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking Yugoslavia..." }
-            country_event = { id = ET_S1_Division_Europe.7 }
+            country_event = { id = ET_S1_Division_Europe.20 }
         }
+
+        # 25 FRANCE
+        if = {
+            limit = {
+                NOT = { original_tag = FRA }
+                OR = {
+                    controls_state = 1
+                    controls_state = 14
+                    controls_state = 15
+                    controls_state = 16
+                    controls_state = 17
+                    controls_state = 18
+                    controls_state = 19
+                    controls_state = 20
+                    controls_state = 21
+                    controls_state = 22
+                    controls_state = 23
+                    controls_state = 24
+                    controls_state = 25
+                    controls_state = 27
+                    controls_state = 28
+                    controls_state = 29
+                    controls_state = 30
+                    controls_state = 31
+                    controls_state = 32
+                    controls_state = 33
+                    controls_state = 735
+                    controls_state = 785
+                    controls_state = 806
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking France..." }
+            country_event = { id = ET_S1_Division_Europe.25 }
+        }
+        # 26 SPAIN
+        if = {
+            limit = {
+                NOT = { original_tag = SPA }
+                OR = {
+                    controls_state = 165
+                    controls_state = 166
+                    controls_state = 167
+                    controls_state = 168
+                    controls_state = 169
+                    controls_state = 170
+                    controls_state = 171
+                    controls_state = 172
+                    controls_state = 173
+                    controls_state = 174
+                    controls_state = 175
+                    controls_state = 176
+                    controls_state = 190
+                    controls_state = 41 
+                    controls_state = 788
+                    controls_state = 789
+                    controls_state = 791
+                    controls_state = 792
+                    controls_state = 793
+                    controls_state = 794
+
+                    controls_state = 177
+                    controls_state = 178
+                    controls_state = 290
+                }
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Checking Spain..." }
+            country_event = { id = ET_S1_Division_Europe.26 }
+        }
+
 
 
         # 1 STATE: Ermland-Masuren
@@ -206,7 +275,8 @@ country_event = { # Init Checks
             if = { limit = { is_debug = yes } log = "[GetDateText]: Köninsberg state is not controlled by Soviet Union." }
             country_event = { id = ET_S1_Division_Europe_State.3 }
         }
-        # 4 STATE: Carpathian Ruthenia
+
+        # 5 STATE: Carpathian Ruthenia
         if = {
             limit = {
                 NOT = { original_tag =  SOV }
@@ -215,7 +285,7 @@ country_event = { # Init Checks
             if = { limit = { is_debug = yes } log = "[GetDateText]: Carpathian Ruthenia state is not controlled by Soviet Union." }
             country_event = { id = ET_S1_Division_Europe_State.5 }
         }
-        # 5 STATE: Memel
+        # 6 STATE: Memel
         if = {
             limit = {
                 NOT = { original_tag =  SOV }
@@ -224,6 +294,16 @@ country_event = { # Init Checks
             }
             if = { limit = { is_debug = yes } log = "[GetDateText]: Memel state is not controlled correct controll" }
             country_event= { id = ET_S1_Division_Europe_State.6 }
+        }
+
+        # 26 STATE: GIBRALTAR
+        if = {
+            limit = {
+                NOT = { original_tag =  ENG }
+                controls_state = 118
+            }
+            if = { limit = { is_debug = yes } log = "[GetDateText]: Gibraltar state is not controlled correct controll" }
+            country_event= { id = ET_S1_Division_Europe_State.26 }
         }
 
 
@@ -1100,15 +1180,6 @@ country_event = { # 9 WEST GERMANY
     option = { # C: Refuce
         name = ET_S1_Division_Europe_State.9.c
 
-        hidden_effect = {
-            POL = { add_state_core = 5 }
-            GER = { remove_state_core = 5 }
-        }
-        reverse_add_opinion_modifier = {
-            target = SOV
-            modifier = ET_broke_agreements
-        }
-
         ai_chance = { factor = 0 }
     }
 }
@@ -1121,14 +1192,8 @@ country_event = { # 20 YUGOSLAVIA
 
     is_triggered_only = yes
 
-    immediate = { }
-
-    option = { # A: Give terretory to Yugoslavia
-        name = ET_S1_Division_Europe.20.a
-        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
-
+    immediate = { 
         hidden_effect = {
-            if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Transfer terretory to Yugoslavia" }
             YUG = {
                 add_state_core = 102
                 add_state_core = 103
@@ -1138,7 +1203,7 @@ country_event = { # 20 YUGOSLAVIA
                 add_state_core = 108
                 add_state_core = 109
                 add_state_core = 109
-                add_state_core = 163
+                add_state_core = 163 # Zara
                 add_state_core = 736
                 add_state_core = 802
                 add_state_core = 804
@@ -1151,50 +1216,210 @@ country_event = { # 20 YUGOSLAVIA
                 add_state_core = 108
                 add_state_core = 109
                 add_state_core = 109
-                add_state_core = 163
+                add_state_core = 163 # Zara
                 add_state_core = 736
                 add_state_core = 802
                 add_state_core = 804
             }
         }
+    }
 
-        if = { limit = { NOT = { country_exists = YGO } } release_on_controlled = YGO }
+    option = { # A: Give terretory to Yugoslavia
+        name = ET_S1_Division_Europe.20.a
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Transfer terretory to [YUG.GetName] Yugoslavia" }
+        if = { limit = { NOT = { country_exists = YUG } } release_on_controlled = YUG }
     
-        if = { limit = { controls_state = 102  } 102  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 103  } 103  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 103  } 103  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 106  } 106  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 107  } 107  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 108  } 108  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 109  } 109  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 109  } 109  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 163  } 163  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 736  } 736  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 802  } 802  = { transfer_state_to = YGO } }
-        if = { limit = { controls_state = 804  } 804  = { transfer_state_to = YGO } }
+        if = { limit = { controls_state = 102  } 102  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 103  } 103  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 103  } 103  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 106  } 106  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 107  } 107  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 108  } 108  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 109  } 109  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 109  } 109  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 163  } 163  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 736  } 736  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 802  } 802  = { transfer_state_to = YUG } }
+        if = { limit = { controls_state = 804  } 804  = { transfer_state_to = YUG } }
 
         ai_chance = { factor = 1 }
     }
     option = { # B: Refuce
         name = ET_S1_Division_Europe_State.20.b
 
-        if = { limit = { controls_state = 102  } 102  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 103  } 103  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 103  } 103  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 106  } 106  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 107  } 107  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 108  } 108  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 109  } 109  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 109  } 109  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 163  } 163  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 736  } 736  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 802  } 802  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
-        if = { limit = { controls_state = 804  } 804  = { force_enable_resistance = { occupier = THIS occupied = YGO } } }
+        if = { limit = { controls_state = 102  } 102  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 103  } 103  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 103  } 103  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 106  } 106  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 107  } 107  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 108  } 108  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 109  } 109  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 109  } 109  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 163  } 163  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 736  } 736  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 802  } 802  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
+        if = { limit = { controls_state = 804  } 804  = { force_enable_resistance = { occupier = THIS occupied = YUG } } }
 
         ai_chance = { factor = 0 }
     }
 }
 
+country_event = { # 25 FRANCE
+    id = ET_S1_Division_Europe.25
+    title = ET_S1_Division_Europe.25.t
+    desc = ET_S1_Division_Europe.25.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # A: Give terretory to France
+        name = ET_S1_Division_Europe.25.a
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Transfer terretory to France" }
+
+        if = { limit = { NOT = { country_exists = FRA } } release_on_controlled = FRA }
+        if = { limit = { controls_state = 1    } 1   = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 14   } 14  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 15   } 15  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 16   } 16  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 17   } 17  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 18   } 18  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 19   } 19  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 20   } 20  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 21   } 21  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 22   } 22  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 23   } 23  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 24   } 24  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 25   } 25  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 27   } 27  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 28   } 28  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 29   } 29  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 30   } 30  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 31   } 31  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 32   } 32  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 33   } 33  = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 735  } 735 = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 785  } 785 = { transfer_state_to = FRA } }
+        if = { limit = { controls_state = 806  } 806 = { transfer_state_to = FRA } }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Europe_State.25.b
+
+        reverse_add_opinion_modifier = {
+            target = FRA
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0 }
+    }
+}
+
+# Spain joins war handlers 
+country_event = { # 26 SPAIN Occupation
+    id = ET_S1_Division_Europe.26
+    title = ET_S1_Division_Europe.26.t
+    desc = ET_S1_Division_Europe.26.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # B: Give States to Occupyer if exist
+        name = ET_S1_Division_Europe.26.a
+
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering spanish states to occupying force." }
+
+        if = { limit = { controls_state = 166  } 166 =  { transfer_state_to  = FRA } }
+        if = { limit = { controls_state = 172  } 172 =  { transfer_state_to  = FRA } }
+        if = { limit = { controls_state = 176  } 176 =  { transfer_state_to  = FRA } }
+        if = { limit = { controls_state = 792  } 792 =  { transfer_state_to  = FRA } }
+        if = { limit = { controls_state = 165  } 165 =  { transfer_state_to  = FRA } }
+        if = { limit = { controls_state = 167  } 167 =  { transfer_state_to  = FRA } }
+
+        if = { limit = { controls_state = 168  } 168 =  { transfer_state_to  = USA } }
+        if = { limit = { controls_state = 169  } 169 =  { transfer_state_to  = USA } }
+        if = { limit = { controls_state = 170  } 170 =  { transfer_state_to  = USA } }
+        if = { limit = { controls_state = 173  } 173 =  { transfer_state_to  = USA } }
+        if = { limit = { controls_state = 175  } 175 =  { transfer_state_to  = USA } }
+        if = { limit = { controls_state = 789  } 789 =  { transfer_state_to  = USA } }
+
+        if = { limit = { controls_state = 41   } 41  =  { transfer_state_to  = ENG } }
+        if = { limit = { controls_state = 171  } 171 =  { transfer_state_to  = ENG } }
+        if = { limit = { controls_state = 174  } 174 =  { transfer_state_to  = ENG } }
+        if = { limit = { controls_state = 788  } 788 =  { transfer_state_to  = ENG } }
+        if = { limit = { controls_state = 791  } 791 =  { transfer_state_to  = ENG } }
+        if = { limit = { controls_state = 793  } 793 =  { transfer_state_to  = ENG } }
+        if = { limit = { controls_state = 794  } 794 =  { transfer_state_to  = ENG } }
+
+        if = { limit = { controls_state = 177  } 177 =  { transfer_state_to  = FRA } } # Islas Baleares
+        if = { limit = { controls_state = 178  } 178 =  { transfer_state_to  = FRA } } # Islas Canarias
+        if = { limit = { controls_state = 290  } 290 =  { transfer_state_to  = ENG } } # Spanish Africa
+        
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Europe_State.26.b
+
+        if = { # Have French States
+            limit = {
+                controls_state = 166
+                controls_state = 172
+                controls_state = 176
+                controls_state = 792
+                controls_state = 165
+                controls_state = 167
+
+                controls_state = 177 # Islas Baleares
+                controls_state = 178 # Islas Canarias
+            }
+            reverse_add_opinion_modifier = {
+                target = FRA
+                modifier = ET_broke_agreements
+            }
+        }
+        if = { # Have USA States
+            limit = {
+                controls_state = 168
+                controls_state = 169
+                controls_state = 170
+                controls_state = 173
+                controls_state = 175
+                controls_state = 789
+            }
+            reverse_add_opinion_modifier = {
+                target = USA
+                modifier = ET_broke_agreements
+            }
+        }
+        if = { # Have UK States
+            limit = {
+                controls_state = 41
+                controls_state = 171
+                controls_state = 174
+                controls_state = 788
+                controls_state = 791
+                controls_state = 793
+                controls_state = 794
+
+                controls_state = 290 # Spanish Africa
+            }
+            reverse_add_opinion_modifier = {
+                target = ENG
+                modifier = ET_broke_agreements
+            }
+        }
+        ai_chance = { factor = 0 }
+    }
+}
+
+
+# States
 country_event = { # 1 STATE: Ermland-Masuren
     id = ET_S1_Division_Europe_State.1
     title = ET_S1_Division_Europe_State.1.t
@@ -1351,7 +1576,7 @@ country_event = { # 5 STATE: Carpathian Ruthenia
         ai_chance = { factor = 0 }
     }
 }
-country_event = { # 5 STATE: Memel
+country_event = { # 6 STATE: Memel
     id = ET_S1_Division_Europe_State.6
     title = ET_S1_Division_Europe_State.6.t
     desc = ET_S1_Division_Europe_State.6.desc
@@ -1396,6 +1621,41 @@ country_event = { # 5 STATE: Memel
     }
 }
 
+country_event = { # 26 STATE: Gibraltar
+    id = ET_S1_Division_Europe_State.26
+    title = ET_S1_Division_Europe_State.26.t
+    desc = ET_S1_Division_Europe_State.26.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = {
+        name = ET_S1_Division_Europe_State.26.a
+        custom_effect_tooltip = ET_S1_Division_World_Historical_TT
+
+        118 = { transfer_state_to  = ENG }
+
+        hidden_effect = {
+            SPA = { remove_state_core = 118 }
+        }
+
+        ai_chance = { factor = 1 }
+    }
+    option = { # Refuce
+        name = ET_S1_Division_Europe_State.26.c
+
+        reverse_add_opinion_modifier = {
+            target = ENG
+            modifier = ET_broke_agreements
+        }
+
+        ai_chance = { factor = 0}
+    }
+}
+
+
+# Special
 country_event = { # 1 SPECIAL: Divide Berlin
     id = ET_S1_Division_Europe_Special.1
     title = ET_S1_Division_Europe_Special.1.t
@@ -1421,9 +1681,8 @@ country_event = { # 1 SPECIAL: Divide Berlin
 
         ai_chance = { factor = 1 }
     }
-    option = { # B: Refuce (DISABLED)
+    option = { # B: Refuce
         name = ET_S1_Division_Europe_Special.1.b
-        trigger = { always = no }
 
         ai_chance = { factor = 0 }
     }
@@ -1455,12 +1714,10 @@ country_event = { # 2 SPECIAL: Divide Vienna
     }
     option = { # B: Refuce
         name = ET_S1_Division_Europe_Special.2.b
-        trigger = { always = no }
 
         ai_chance = { factor = 0 }
     }
 }
-
 
 
 # # 
@@ -1551,6 +1808,32 @@ country_event = { # 3 JAPAN
     option = { # B: Refuce
         name = ET_S1_Division_Asia.3.b
         if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] Does not transfer Japanese states to USA." }
+
+        ai_chance = { factor = 0 }
+    }
+}
+country_event = { # 4 FRENCH INDOCHINA (Colonies)
+    id = ET_S1_Division_Asia.4
+    title = ET_S1_Division_Asia.3.t
+    desc = ET_S1_Division_Asia.3.desc
+
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = { # A: Give States to United States
+        name = ET_S1_Division_Asia.3.a
+        if = { limit = { is_debug = yes } log = "[GetDateText]: [This.GetTag] transfering French Colonies back to Franse" }
+
+        if = { limit = { controls_state = 671 } 671 = { transfer_state_to  = FRA } }
+        if = { limit = { controls_state = 670 } 670 = { transfer_state_to  = FRA } }
+        if = { limit = { controls_state = 741 } 741 = { transfer_state_to  = FRA } }
+        if = { limit = { controls_state = 286 } 286 = { transfer_state_to  = FRA } }
+ 
+        ai_chance = { factor = 1 }
+    }
+    option = { # B: Refuce
+        name = ET_S1_Division_Asia.3.b
 
         ai_chance = { factor = 0 }
     }
