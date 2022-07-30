@@ -16,7 +16,7 @@ The world have beaten the axis and it is time to divide Europe between the victo
 
 *Scenario_ID: 1*
 
-### A Fascist World (WIP)
+### A Eagles World (WIP)
 Germany stand victorious against the allied powers proving the superiority of the German Rich. Germany have manage to extend it self from the Atlantic to the North Pacific. But a looming succession crisis is rising. Hitler is getting sicker and Germany now needs to decide on what way it should go.
 
 The allied powers is broken. Following the surrender of United Kingdom the island nation have gone in to isolation. The United States and Canada in the Americas stands as the last bastions of democracy and freedom in the world. But a opportunity might soon present it self.
@@ -25,7 +25,7 @@ The allied powers is broken. Following the surrender of United Kingdom the islan
 
 *Scenario_ID: 2*
 
-### A Asian Giant (WIP)
+### A Dragon Empire (WIP)
 Japan stands victories in the Pasific theatre and germany is defeated.
 
 **How do I get this scenario?** USA and UK need to abandon the Asian theatre.

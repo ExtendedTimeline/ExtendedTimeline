@@ -4,7 +4,7 @@
 - **Unknown World** *(Scenario_ID: 0)*
 - **The Cold War** *(Scenario_ID: 1)*
 - **A Eagle World** *(Scenario_ID: 2)* (WIP)
-- **The Asian Draggon** *(Scenario_ID: 3)* (WIP)
+- **A Draggon Empire** *(Scenario_ID: 3)* (WIP)
 
 ## Effects Triggers, Flags, Localization
 
@@ -39,7 +39,15 @@
 | `ET_has_scenario_1`               | Check if you have scenario 1                                | Global   |
 | `ET_has_scenario_2`               | Check if you have scenario 2                                | Global   |
 | `ET_has_scenario_3`               | Check if you have scenario 3                                | Global   |
-
+| `ET_has_scenario_4`               | Check if you have scenario 4                                | Global   |
+| `ET_has_scenario_5`               | Check if you have scenario 5                                | Global   |
+| `ET_has_scenario_6`               | Check if you have scenario 6                                | Global   |
+| `ET_has_scenario_7`               | Check if you have scenario 7                                | Global   |
+| `ET_has_scenario_8`               | Check if you have scenario 8                                | Global   |
+| `ET_has_scenario_9`               | Check if you have scenario 9                                | Global   |
+| `ET_has_scenario_10`              | Check if you have scenario 10                               | Global   |
+| `ET_has_scenario_11`              | Check if you have scenario 11                               | Global   |
+| `ET_has_scenario_12`              | Check if you have scenario 12                               | Global   |
 ### Localization
 
 | Localization                      | Description                                                                   | Scope    |
@@ -50,7 +58,15 @@
 | `ET_Scenario_1_Name`              | Writes scenaro name                                                           | Global   |
 | `ET_Scenario_2_Name`              | Writes scenaro name                                                           | Global   |
 | `ET_Scenario_3_Name`              | Writes scenaro name                                                           | Global   |
-
+| `ET_Scenario_4_Name`              | Writes scenaro name                                                           | Global   |
+| `ET_Scenario_5_Name`              | Writes scenaro name                                                           | Global   |
+| `ET_Scenario_6_Name`              | Writes scenaro name                                                           | Global   |
+| `ET_Scenario_7_Name`              | Writes scenaro name                                                           | Global   |
+| `ET_Scenario_8_Name`              | Writes scenaro name                                                           | Global   |
+| `ET_Scenario_9_Name`              | Writes scenaro name                                                           | Global   |
+| `ET_Scenario_10_Name`             | Writes scenaro name                                                           | Global   |
+| `ET_Scenario_11_Name`             | Writes scenaro name                                                           | Global   |
+| `ET_Scenario_12_Name`             | Writes scenaro name                                                           | Global   |
 ### Flags
 
 | Flags                             | Description                                                                   |
@@ -61,3 +77,12 @@
 | `ET_flag_global_scenario_1`       | Is a scenario flag                                                            |
 | `ET_flag_global_scenario_2`       | Is a scenario flag                                                            |
 | `ET_flag_global_scenario_3`       | Is a scenario flag                                                            |
+| `ET_flag_global_scenario_4`       | Is a scenario flag                                                            |
+| `ET_flag_global_scenario_5`       | Is a scenario flag                                                            |
+| `ET_flag_global_scenario_6`       | Is a scenario flag                                                            |
+| `ET_flag_global_scenario_7`       | Is a scenario flag                                                            |
+| `ET_flag_global_scenario_8`       | Is a scenario flag                                                            |
+| `ET_flag_global_scenario_9`       | Is a scenario flag                                                            |
+| `ET_flag_global_scenario_10`      | Is a scenario flag                                                            |
+| `ET_flag_global_scenario_11`      | Is a scenario flag                                                            |
+| `ET_flag_global_scenario_12`      | Is a scenario flag                                                            |
