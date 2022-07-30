@@ -33,6 +33,7 @@ Then copy the `descriptor.mod` to the mod folder and rename it to the same name 
 [Download the main branch](https://github.com/AndreasBrostrom/ExtendedTimeline/archive/refs/heads/main.zip) or clone the repo in to your mods folder (see above for path).
 
 ```bash
+cd "~/Documents/Paradox Interactive/Hearts of Iron IV/mod"
 git clone https://github.com/AndreasBrostrom/ExtendedTimeline.git
 cp ExtendedTimeline/descriptor.mod ExtendedTimeline.mod
 ```
