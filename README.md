@@ -19,11 +19,11 @@ Scenarios are applied based on how the world state is at the end of the World Wa
 Unpack the mod in your mods folder;
 
 Windows:
-`%userprofile%\Documents\Paradox Interactive\Hearts of Iron IV\mods` or powershell `$env:userprofile\Documents\Paradox Interactive\Hearts of Iron IV\mods`
+`%userprofile%\Documents\Paradox Interactive\Hearts of Iron IV\mod` or powershell `$env:userprofile\Documents\Paradox Interactive\Hearts of Iron IV\mod`
 
-Mac OS: `~/Documents/Paradox Interactive/Hearts of Iron IV/mods`
+Mac OS: `~/Documents/Paradox Interactive/Hearts of Iron IV/mod`
 
-Linux: `~/.local/share/Paradox Interactive/Hearts of Iron IV/mods`
+Linux: `~/.local/share/Paradox Interactive/Hearts of Iron IV/mod`
 
 Then copy the `descriptor.mod` to the mod folder and rename it to the same name as the mod. *Example: `ExtendedTimeline.mod`*
 
