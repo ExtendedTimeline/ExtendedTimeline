@@ -3,17 +3,16 @@
 
 - **Unknown World** *(Scenario_ID: 0)*
 - **The Cold War** *(Scenario_ID: 1)*
-- **A Eagles World** *(Scenario_ID: 2)*
-- **A Draggon Empire** *(Scenario_ID: 3)*
+- **A Eagle World** *(Scenario_ID: 2)* (WIP)
+- **A Draggon Empire** *(Scenario_ID: 3)* (WIP)
 
 ## Effects Triggers, Flags, Localization
 
 ### Adding a Scenaro
-1. Have a idea on what the scenario should be and be about.
-2. Create the trigger for the scenario to be triggerd. This can be a a specific event or if a nation exist not.
-   The Cold War scenario requires the wolrd to be at peace and that germany and japan is annexed or poppeted the yalta conference to have been taken place.
-3. TBD
-
+1. Figure out a possible scenario World War 2 ending scenario that you've seen or experienced your self.
+1. Select a Scenario ID
+1. Setup the trigger this is done under [`ET_set_scenario`](https://github.com/ExtendedTimeline/ExtendedTimeline/blob/main/common/scripted_effects/ET_scenario_scripted_effect.txt#L40) in [common/scripted_effects/ET_scenario_scripted_effect.txt](https://github.com/ExtendedTimeline/ExtendedTimeline/blob/main/common/scripted_effects/ET_scenario_scripted_effect.txt). Make sure this triggers are specific but general enought to be missed or get caught.
+1. You can add focus trees for your scenario. Scenario specific effects should use a id prefix. *Exsample: `ET_S2_MyScenarioSpecificEvents.txt`*
 ### Effects
 
 | Effect                            | Description                                                                   | Scope    |
