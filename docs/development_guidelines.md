@@ -47,8 +47,6 @@ ET_give_political_power_to_nation = { add_political_power = 10 }
 ET_add_political_power_10 = { add_political_power = 10 }
 ```
 
-For some systems that require some sort of initzialisation a `ET_Init_Something` can be used this functions can do allot of things.
-`ET_Init_Egypt`
 ## Logging
 Logging is good and usefull to se when and if something is done or done correctly.
 Tho writing to external files ussaly have a tiny performence impact. There for all logs should be wrapped in a if.
