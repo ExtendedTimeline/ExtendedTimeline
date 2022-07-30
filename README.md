@@ -25,6 +25,7 @@ Mac OS: `~/Documents/Paradox Interactive/Hearts of Iron IV/mods`
 
 Linux: `~/.local/share/Paradox Interactive/Hearts of Iron IV/mods`
 
+Then copy the `descriptor.mod` to the mod folder and rename it to the same name as the mod folder. *Example: `ExtendedTimeline.mod`*
 
 ### Source
 [Download the main branch](https://github.com/AndreasBrostrom/ExtendedTimeline/archive/refs/heads/main.zip) or clone the repo in to your mods folder (see above for path).
