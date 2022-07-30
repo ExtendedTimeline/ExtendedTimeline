@@ -28,6 +28,6 @@ The allied powers is broken. Following the surrender of United Kingdom the islan
 ### A Dragon Empire (WIP)
 Japan stands victories in the Pasific theatre and germany is defeated.
 
-**How do I get this scenario?** USA and UK need to abandon the Asian theatre.
+**How do I get this scenario?** USA and UK need to abandon the Asian theatre. And Germany needs to have capitulated.
 
 *Scenario_ID: 3*
