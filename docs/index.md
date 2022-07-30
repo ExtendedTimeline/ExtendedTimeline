@@ -8,5 +8,5 @@ Extended Timeline aims to extend the playable time in vanilla Hearts of Iron 4 w
 - [Scenario modding](scenario_dev)
 
 ### Contribute
-This modare a open source project and you are free to help out the development.
+This mod are a open source project and you are free to help out the development.
 - [Development Guidelines](development_guidelines)
