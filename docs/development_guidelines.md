@@ -23,7 +23,7 @@ Added code inside still use the `ET_` prefix rule
 - `ET_00_on_actions.txt` > adds new on actions effects.
 - `00_ideologies.txt` > replaces vanilla ideologies.
 
-The name structure for mod files are `[TAG]_[WhatEverItIsSupposeToBeDoing](_[TYPE]).txt`
+The name structure for mod files are `ET_[WhatEverItIsSupposeToBeDoing](_[TYPE]).txt`
 (*`_[TYPE]` is optional were it is not pressent on other files.*)
 
 ### flags
