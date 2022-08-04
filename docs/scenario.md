@@ -12,11 +12,11 @@ When you there are no fitting scenario this senario is selected.
 ### The Cold War
 The world have beaten the axis and it is time to divide Europe between the victories powers. Soviet to the East and the Allies to the West. Navigate the Cold War in a authentic Hoi4 style avoid the inevitable looming war or throw your self and defend the right of your existence in a full scale war.
 
-**How do I get this scenario?** Try play historically and make sure Germany and Japan are defeated. The scenario gets enabled after the final peace conference. 
+**How do I get this scenario?** Try play historically and make sure Germany and Japan are defeated. The scenario gets enabled after the final peace conference.
 
 *Scenario_ID: 1*
 
-### A Eagle World (WIP)
+### A Eagle World (WIP & Disabled)
 Germany stand victorious against the allied powers proving the superiority of the German Rich. Germany have manage to extend it self from the Atlantic to the North Pacific. But a looming succession crisis is rising. Hitler is getting sicker and Germany now needs to decide on what way it should go.
 
 The allied powers is broken. Following the surrender of United Kingdom the island nation have gone in to isolation. The United States and Canada in the Americas stands as the last bastions of democracy and freedom in the world. But a opportunity might soon present it self.
@@ -25,7 +25,7 @@ The allied powers is broken. Following the surrender of United Kingdom the islan
 
 *Scenario_ID: 2*
 
-### A Dragon Empire (WIP)
+### A Dragon Empire (WIP & Disabled)
 Japan stands victories in the Pasific theatre and germany is defeated.
 
 **How do I get this scenario?** USA and UK need to abandon the Asian theatre. And Germany needs to have capitulated.

@@ -45,7 +45,15 @@ ET_set_scenario = {
             NOT = { has_global_flag = ET_flag_global_usa_surrender_to_jap }
             
             has_global_flag = had_yalta_conference
-            
+
+            # Focuses
+            USA = { NOT = { has_completed_focus = USA_america_first } }
+            ENG = { has_completed_focus = uk_empire_focus }
+            ENG = { has_completed_focus = ENG_steady_as_she_goes }
+            GER = { has_completed_focus = GER_rhineland }
+            SOV = { has_completed_focus = SOV_the_centre }
+
+            # Nations
             country_exists = USA
             country_exists = ENG
             country_exists = FRA
@@ -54,9 +62,12 @@ ET_set_scenario = {
             ENG = { has_government = democratic }
             FRA = { has_government = democratic }
             SOV = { has_government = communism }
+
+
         }
-        
         set_global_flag = ET_flag_global_scenario_1
+        ET_scenario_allow_decolonization = yes
+
         every_country = {
             limit = { always = yes }
             news_event = {
@@ -69,18 +80,21 @@ ET_set_scenario = {
             }
         }
     }
-    else_if = { # Fascist World           [ET_flag_global_scenario_2]
+    else_if = { # A Eagle World           [ET_flag_global_scenario_2]
         limit = {
             NOT = { has_global_flag = ET_flag_global_usa_surrender_to_jap }
-
             has_global_flag = ET_flag_global_allies_surrender_to_ger
             
-            OR = {
+            # Focuses
+            GER = { has_completed_focus = GER_rhineland }
+
+            # Nations
+            OR = { # ENG
                 NOT = { country_exists = ENG }
                 ENG = { NOT = { has_government = democratic } }
             }
 
-            OR = {
+            OR = { # SOV
                 NOT = { country_exists = SOV }
                 SOV = { NOT = { has_government = communism } }
             }
@@ -91,8 +105,8 @@ ET_set_scenario = {
             country_exists = USA
             USA = { has_government = democratic }
         }
-        
         set_global_flag = ET_flag_global_scenario_2
+
         every_country = {
             limit = { always = yes }
             news_event = {
@@ -101,7 +115,7 @@ ET_set_scenario = {
             }
         }
     }
-    else_if = { # Asian Giant             [ET_flag_global_scenario_3]
+    else_if = { # A Dragon Empire         [ET_flag_global_scenario_3]
         limit = {
             NOT = { has_global_flag = ET_flag_global_allies_surrender_to_ger }
 
@@ -109,6 +123,10 @@ ET_set_scenario = {
             has_global_flag = ET_flag_global_eng_abandon_pasific
             #has_global_flag = ET_flag_global_fra_abandon_pasific
 
+            # Focuses
+            GER = { has_completed_focus = GER_rhineland }
+
+            # Nations
             OR = {
                 NOT = { country_exists = GER }
                 GER = { NOT = { has_government = fascism } }
@@ -119,7 +137,6 @@ ET_set_scenario = {
 
             country_exists = ENG
             ENG = { has_government = democratic }
-
         }
         
         set_global_flag = ET_flag_global_scenario_3
@@ -131,26 +148,45 @@ ET_set_scenario = {
         #    }
         #}
     }
-    #else_if = { # Unused                  [ET_flag_global_scenario_4]
-    #}
-    #else_if = { # Unused                  [ET_flag_global_scenario_5]
-    #}
-    #else_if = { # Unused                  [ET_flag_global_scenario_6]
-    #}
-    #else_if = { # Unused                  [ET_flag_global_scenario_7]
-    #}
-    #else_if = { # Unused                  [ET_flag_global_scenario_8]
-    #}
-    #else_if = { # Unused                  [ET_flag_global_scenario_9]
-    #}
-    #else_if = { # Unused                  [ET_flag_global_scenario_10]
-    #}
-    #else_if = { # Unused                  [ET_flag_global_scenario_11]
-    #}
-    #else_if = { # Unused                  [ET_flag_global_scenario_12]
-    #}
+    else_if = { # Unused                  [ET_flag_global_scenario_4]
+        limit = { always = no }
+        set_global_flag = ET_flag_global_scenario_4
+    }
+    else_if = { # Unused                  [ET_flag_global_scenario_5]
+        limit = { always = no }
+        set_global_flag = ET_flag_global_scenario_5
+    }
+    else_if = { # Unused                  [ET_flag_global_scenario_6]
+        limit = { always = no }
+        set_global_flag = ET_flag_global_scenario_6
+    }
+    else_if = { # Unused                  [ET_flag_global_scenario_7]
+        limit = { always = no }
+        set_global_flag = ET_flag_global_scenario_7
+    }
+    else_if = { # Unused                  [ET_flag_global_scenario_8]
+        limit = { always = no }
+        set_global_flag = ET_flag_global_scenario_8
+    }
+    else_if = { # Unused                  [ET_flag_global_scenario_9]
+        limit = { always = no }
+        set_global_flag = ET_flag_global_scenario_9
+    }
+    else_if = { # Unused                  [ET_flag_global_scenario_10]
+        limit = { always = no }
+        set_global_flag = ET_flag_global_scenario_10
+    }
+    else_if = { # Unused                  [ET_flag_global_scenario_11]
+        limit = { always = no }
+        set_global_flag = ET_flag_global_scenario_11
+    }
+    else_if = { # Unused                  [ET_flag_global_scenario_12]
+        limit = { always = no }
+        set_global_flag = ET_flag_global_scenario_12
+    }
     else = {    # Unknown World           [ET_flag_global_scenario_0]
         set_global_flag = ET_flag_global_scenario_0
+        ET_scenario_allow_decolonization = yes
         #every_country = {
         #    limit = { always = yes }
         #    news_event = {
@@ -274,4 +310,11 @@ ET_set_new_focus_tree_effect = {
             load_focus_tree = { tree = ET_Generic keep_completed = yes }
         }
     }
+}
+
+# Checks
+
+# SCOPE: GLOBAL
+ET_scenario_allow_decolonization = {
+    set_global_flag = ET_flag_global_allow_decolonization
 }

@@ -3,16 +3,20 @@
 
 - **Unknown World** *(Scenario_ID: 0)*
 - **The Cold War** *(Scenario_ID: 1)*
-- **A Eagle World** *(Scenario_ID: 2)* (WIP)
-- **A Draggon Empire** *(Scenario_ID: 3)* (WIP)
+- **A Eagle World** *(Scenario_ID: 2)* (WIP & Disabled)
+- **A Draggon Empire** *(Scenario_ID: 3)* (WIP & Disabled)
 
 ## Effects Triggers, Flags, Localization
 
 ### Adding a Scenaro
 1. Figure out a possible scenario World War 2 ending scenario that you've seen or experienced your self.
-1. Select a Scenario ID
-1. Setup the trigger this is done under [`ET_set_scenario`](https://github.com/ExtendedTimeline/ExtendedTimeline/blob/main/common/scripted_effects/ET_scenario_scripted_effect.txt#L40) in [common/scripted_effects/ET_scenario_scripted_effect.txt](https://github.com/ExtendedTimeline/ExtendedTimeline/blob/main/common/scripted_effects/ET_scenario_scripted_effect.txt). Make sure this triggers are specific but general enought to be missed or get caught.
-1. You can add focus trees for your scenario. Scenario specific effects should use a id prefix. *Exsample: `ET_S2_MyScenarioSpecificEvents.txt`*
+2. Select a Scenario ID (Recomended to just take next in line)
+3. Setup the trigger this is done under [`ET_set_scenario`](https://github.com/ExtendedTimeline/ExtendedTimeline/blob/main/common/scripted_effects/ET_scenario_scripted_effect.txt#L40) in [`common/scripted_effects/ET_scenario_scripted_effect.txt`](https://github.com/ExtendedTimeline/ExtendedTimeline/blob/main/common/scripted_effects/ET_scenario_scripted_effect.txt).
+   Make sure this triggers are specific but general enought to be missed or get caught.
+   Also make sure there are no other triggers that is the same as yours.
+   1. *(Optional)* if you scenaro allow decolinazion add `ET_scenario_allow_decolonization = yes`
+5. You can add focus trees for your scenario. Scenario specific effects should use a id prefix. *Exsample: `ET_S2_MyScenarioSpecificEvents.txt`*
+
 ### Effects
 
 | Effect                            | Description                                                                   | Scope    |
