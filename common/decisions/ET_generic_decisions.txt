@@ -27,7 +27,7 @@ ET_era_decisions = {
 }
 
 political_actions = {
-    ET_surrender_to_germany = {
+    ET_surrender_to_germany = { # FIXME: Disabled
         icon = GFX_ET_decision_Surrender
 
         priority = 10
@@ -35,6 +35,106 @@ political_actions = {
         available = {
             date > 1945.01.01
             NOT = { original_tag = GER }
+
+            OR = {
+                has_war_support < 0.30
+                surrender_progress > 0.05
+            }
+
+            # Following nation have fallen
+            OR = { # SOV
+                NOT = { country_exists = SOV }
+                SOV = { NOT = { has_government = communism } }
+                SOV = { has_capitulated = yes }
+            }
+        
+            # THIS has no land in main land europe
+            ET_has_any_land_in_mainland_europe = No
+
+            OR = { # Special Nation Cases
+                AND = { # USA is faction leader
+                    original_tag = USA
+                    is_faction_leader = yes
+                    OR =  {
+                        NOT = { country_exists = ENG }
+                        ENG = { NOT = { has_government = democratic } }
+                        ENG = { has_capitulated = yes }
+                    }
+
+                }
+                AND = { # UK is faction leader
+                    original_tag = ENG
+                    is_faction_leader = yes
+                    NOT = { has_country_leader = { character = ENG_winston_churchill } }
+                }
+                AND = { # Any one else is faction leader
+                    NOT = { original_tag = USA }
+                    NOT = { original_tag = ENG }
+                    is_faction_leader = yes
+                }
+            }
+        }
+
+        visible = {
+            always = no # DISABLED
+            date > 1941.01.01 # Show 41
+            
+            ET_in_new_era = no
+            has_war_with = GER
+            is_faction_leader = yes
+
+            NOT = { original_tag = SOV }
+        }
+
+        fire_only_once = no
+        cost = 100
+
+        complete_effect = {
+            if = { # Tool tip ET_Surrender_to_GER_tt
+                limit = { GER = { is_in_faction = yes } }
+                custom_effect_tooltip = ET_Surrender_to_GER_tt
+            }
+            else = {
+                custom_effect_tooltip = ET_Surrender_to_GER_noFaction_tt
+            }
+
+            hidden_effect = {
+                set_global_flag = ET_flag_global_allies_surrender_to_ger
+
+                # German faction members and germany gain all occupied terretory.
+                every_country = {
+                    limit = { is_in_faction_with = GER }
+                    every_controlled_state = {
+                        limit = { is_controlled_by = PREV }
+                        set_state_owner_to = PREV
+                    }
+                }
+                white_peace = GER
+            }
+        }
+
+        ai_will_do = {
+            base = 0
+            modifier = {
+                date > 1952.06.01
+                add = 100
+            }
+            modifier = {
+                date > 1945.06.01
+                has_war_support < 0.25
+                add = 50
+            }
+        }
+    }
+
+    ET_surrender_the_pacific = { # FIXME: Disabled
+        icon = GFX_ET_decision_Surrender
+
+        priority = 10
+
+        available = {
+            date > 1945.01.01
+            NOT = { original_tag = JAP }
 
             OR = {
                 has_war_support < 0.30
@@ -69,6 +169,7 @@ political_actions = {
         }
 
         visible = {
+            always = no # DISABLED
             date > 1941.01.01 # Show 41
             
             ET_in_new_era = no
@@ -82,26 +183,28 @@ political_actions = {
         cost = 100
 
         complete_effect = {
-            if = { # Tool tip ET_Surrender_to_GER_tt
-                limit = { GER = { is_in_faction = yes } }
-                custom_effect_tooltip = ET_Surrender_to_GER_tt
-            }
-            else = {
-                custom_effect_tooltip = ET_Surrender_to_GER_noFaction_tt
-            }
-
-            hidden_effect = {
-                set_global_flag = ET_flag_global_allies_surrender_to_ger
-
-                every_country = {
-                    limit = { is_in_faction_with = GER }
-                    every_controlled_state = {
-                        limit = { is_controlled_by = PREV }
-                        set_state_owner_to = PREV
-                    }
+            if = {
+                limit = {
+                    original_tag = FRA
                 }
-                white_peace = GER
+                has_country_flag = ET_flag_country_FRA_abandon_asia
+                has_global_flag = ET_flag_global_FRA_abandon_asia
             }
+            if = {
+                limit = {
+                    original_tag = ENG
+                }
+                has_country_flag = ET_flag_country_ENG_abandon_asia
+                has_global_flag = ET_flag_global_ENG_abandon_asia
+            }
+            if = {
+                limit = {
+                    original_tag = USA
+                }
+                has_country_flag = ET_flag_country_usa_surrender_to_jap
+                has_global_flag = ET_flag_global_usa_surrender_to_jap
+            }
+            
         }
 
         ai_will_do = {
@@ -118,7 +221,7 @@ political_actions = {
         }
     }
 
-    ET_hold_elections = {
+    ET_hold_elections = { # FIXME: Disabled
         icon = generic_political_discourse
 
         #priority = 10
@@ -172,7 +275,7 @@ political_actions = {
         ai_will_do = { base = 0 }
     }
 
-    ET_allow_elections = {
+    ET_allow_elections = { # FIXME: Disabled
         icon = generic_political_discourse
 
         #priority = 10
@@ -181,11 +284,11 @@ political_actions = {
             OR = {
                 AND = {
                     has_government = democratic
-                    democratic < 0.25
+                    democratic > 0.25
                 }
                 AND = {
                     has_government = neutrality
-                    neutrality < 0.25
+                    neutrality > 0.25
                 }
                 AND = {
                     has_government = communism
@@ -196,6 +299,7 @@ political_actions = {
         }
 
         visible = {
+            always = no # DISABLED
             at_war = no
             OR = {
                 AND = {
