@@ -169,11 +169,6 @@ equipments = {
 		visual_level = 3
 		
 		is_convertable = no
-
-		can_convert_from = { 
-			infantry_equipment_3
-			infantry_equipment_4
-		}
 		
 		#Defensive Abilities
 		defense = 50
@@ -201,11 +196,6 @@ equipments = {
 		visual_level = 3
 		
 		is_convertable = no
-
-		can_convert_from = { 
-			infantry_equipment_4
-			infantry_equipment_5
-		}
 		
 		#Defensive Abilities
 		defense = 60
@@ -232,11 +222,6 @@ equipments = {
 		visual_level = 3
 		
 		is_convertable = no
-
-		can_convert_from = { 
-			infantry_equipment_4
-			infantry_equipment_5
-		}
 		
 		#Defensive Abilities
 		defense = 65
@@ -263,10 +248,6 @@ equipments = {
 		visual_level = 3
 		
 		is_convertable = no
-
-		can_convert_from = { 
-			
-		}
 		
 		#Defensive Abilities
 		defense = 70
@@ -293,11 +274,6 @@ equipments = {
 		visual_level = 3
 		
 		is_convertable = no
-
-		can_convert_from = { 
-			infantry_equipment_4
-			infantry_equipment_5
-		}
 		
 		#Defensive Abilities
 		defense = 80
