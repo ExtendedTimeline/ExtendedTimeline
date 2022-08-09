@@ -1,0 +1,22 @@
+spriteTypes = {	
+
+
+	spriteType = {
+		name = "GFX_idea_ET_generic_domino_theory_idea"
+		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_idea_ET_USA_domino_theory_idea"
+		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ET_USA_intervene_in_korea"
+		texturefile = "gfx/interface/ideas/idea_eng_imperial_conscription.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ET_USA_intervene_in_vietnam"
+		texturefile = "gfx/interface/ideas/idea_eng_imperial_conscription.dds"
+	}
+}
