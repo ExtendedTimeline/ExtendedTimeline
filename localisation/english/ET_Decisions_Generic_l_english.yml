@@ -1,3 +1,38 @@
 ﻿l_english:
+ET_decision_cost_ArmXP_10_blocked:0 "£army_experience  §R10§!"
+ET_decision_cost_ArmXP_10:0 "£army_experience  §Y10§!"
+ET_decision_cost_ArmXP_20_blocked:0 "£army_experience  §R20§!"
+ET_decision_cost_ArmXP_20:0 "£army_experience  §Y20§!"
+ET_decision_cost_ArmXP_25_blocked:0 "£army_experience  §R25§!"
+ET_decision_cost_ArmXP_25:0 "£army_experience  §Y25§!"
+ET_decision_cost_ArmXP_5_blocked:0 "£army_experience  §R5§!"
+ET_decision_cost_ArmXP_5:0 "£army_experience  §Y5§!"
+ET_decision_cost_ArmXP_50_blocked:0 "£army_experience  §R50§!"
+ET_decision_cost_ArmXP_50:0 "£army_experience  §Y50§!"
+ET_decision_cost_CP_50_pp_50_ArmXP_50_blocked:0 "£command_power  §R50§! £pol_power  §R50§! £army_experience  §R50§!"
+ET_decision_cost_CP_50_pp_50_ArmXP_50:0 "£command_power  §Y50§! £pol_power  §Y50§! £army_experience  §Y50§!"
+ET_decision_cost_pp_100_ArmXP_100_blocked:0 "£pol_power  §R100§! £army_experience  §R100§!"
+ET_decision_cost_pp_100_ArmXP_100:0 "£pol_power  §Y100§! £army_experience  §Y100§!"
+ET_decision_cost_pp_100_ArmXP_25_blocked:0 "£pol_power  §R100§! £army_experience  §R25§!"
+ET_decision_cost_pp_100_ArmXP_25:0 "£pol_power  §Y100§! £army_experience  §Y25§!"
+ET_decision_cost_pp_100_ArmXP_50_blocked:0 "£pol_power  §R100§! £army_experience  §R50§!"
+ET_decision_cost_pp_100_ArmXP_50:0 "£pol_power  §Y100§! £army_experience  §Y50§!"
+ET_decision_cost_pp_50_ArmXP_100_blocked:0 "£pol_power  §R50§! £army_experience  §R100§!"
+ET_decision_cost_pp_50_ArmXP_100:0 "£pol_power  §Y50§! £army_experience  §Y100§!"
+ET_decision_cost_pp_50_ArmXP_25_blocked:0 "£pol_power  §R50§! £army_experience  §R25§!"
+ET_decision_cost_pp_50_ArmXP_25:0 "£pol_power  §Y50§! £army_experience  §Y25§!"
+ET_decision_cost_pp_50_ArmXP_50_blocked:0 "£pol_power  §R50§! £army_experience  §R50§!"
+ET_decision_cost_pp_50_ArmXP_50:0 "£pol_power  §Y50§! £army_experience  §Y50§!"
+
+
 ET_surrender_to_germany:0 "Surrender to [GER.GetNameDef]"
 ET_surrender_to_germany_desc:0 "We must now accept our defeat and surrender to [GER.GetNameDef]"
+
+ET_military_decisions:0 "Military Actions"
+
+ET_establish_camelry_corps:0 "Establish Camalry Corps"
+ET_establish_camelry_corps_desc:0 "Camalry are common in the desert region of or territory. We could use this to our advantage by establish a Camalry corps"
+ET_establish_camelry_corps_tooltip:0 "Control state were cammel lives."
+
+ET_establish_bicycling_infantry:0 "Establish Bicycling Infantry"
+ET_establish_bicycling_infantry_desc:0 "Fast, flexible, low mentainence, an yet cheap; the bicycling can be utalized to transport divsions to locations without the need of fuel and horses."
