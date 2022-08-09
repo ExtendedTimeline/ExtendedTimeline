@@ -1,0 +1,96 @@
+
+# South Korea KOR
+ET_KOR_evil_north = {
+    allowed = {
+        original_tag = KOR
+    }
+    enable = {
+        date > 1942.01.01
+    }
+
+    abort = {
+    }
+
+    ai_strategy = {
+        type = antagonize
+        id = DPR
+        value = 200
+    }
+}
+ET_KOR_war_suppression = {
+    allowed = {
+        original_tag = KOR
+    }
+    enable = {
+        date > 1942.01.01
+    }
+
+    abort = {
+    }
+
+    ai_strategy = {
+        type = declare_war
+        id = DPR
+        value = -5000
+    }
+}
+
+# North Korea DPR
+ET_DPR_evil_south = {
+    allowed = {
+        original_tag = DPR
+    }
+    enable = {
+        date > 1942.01.01
+    }
+
+    abort = {
+    }
+
+    ai_strategy = {
+        type = antagonize
+        id = KOR
+        value = 200
+    }
+    ai_strategy = {
+        type = declare_war
+        id = KOR
+        value = -5000
+    }
+}
+ET_DPR_war_suppression = { # end 1950.06.24
+    allowed = {
+        original_tag = DPR
+    }
+    enable = {
+        date > 1942.01.01
+    }
+
+    abort = {
+        date > 1950.06.24
+    }
+
+    ai_strategy = {
+        type = declare_war
+        id = KOR
+        value = -5000
+    }
+}
+ET_DPR_first_korean_war = { # 1950.06.24 to 1953.07.27
+    allowed = {
+        original_tag = DPR
+    }
+    enable = {
+        date > 1950.06.24
+    }
+
+    abort = {
+        date > 1953.07.27
+    }
+
+    ai_strategy = {
+        type = declare_war
+        id = KOR
+        value = 5000
+    }
+}

@@ -15,7 +15,7 @@ focus_tree = {
         modifier = {
             add = 2000
 
-            original_tag = USA
+            original_tag = SOV
             ET_has_scenario_1 = yes
             ET_in_new_era_country = yes
         }

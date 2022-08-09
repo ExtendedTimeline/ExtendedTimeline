@@ -265,7 +265,7 @@ political_actions = {
         }
 
         fire_only_once = no
-		days_remove = 14
+        days_remove = 14
         cost = 200
 
         complete_effect = {
@@ -320,7 +320,7 @@ political_actions = {
         }
 
         fire_only_once = no
-		days_remove = 30
+        days_remove = 30
         cost = 200
 
         complete_effect = {
@@ -330,4 +330,88 @@ political_actions = {
 
         ai_will_do = { base = 0 }
     }
+}
+
+economy_decisions = {
+    # Vanilla overwrite
+    seize_some_trains_woo = { #repeating train seize
+
+        visible = { 
+            num_of_factories < 60
+        }
+        
+        available = {
+            has_equipment = { train_equipment < 101 }
+            OR = {
+                has_tech = basic_train
+                has_tech = 50_train
+                has_tech = 60_train
+                has_tech = 70_train
+                has_tech = 80_train
+                has_tech = 90_train
+            }
+        }
+        
+        days_remove = 180
+
+        ai_will_do = {
+            base = 0
+            modifier = {
+                add = 1
+                has_stability > 0.74
+            }
+        }
+
+        complete_effect = {
+            if = {
+                limit = { has_tech = 90_train }
+                add_equipment_to_stockpile = {
+                    type = train_equipment_8
+                    amount = 15
+                }
+            }
+            else_if = {
+                limit = { has_tech = 80_train }
+                add_equipment_to_stockpile = {
+                    type = train_equipment_7
+                    amount = 15
+                }
+            }
+            else_if = {
+                limit = { has_tech = 70_train }
+                add_equipment_to_stockpile = {
+                    type = train_equipment_6
+                    amount = 15
+                }
+            }
+            else_if = {
+                limit = { has_tech = 60_train }
+                add_equipment_to_stockpile = {
+                    type = train_equipment_5
+                    amount = 15
+                }
+            }
+            else_if = {
+                limit = { has_tech = 50_train }
+                add_equipment_to_stockpile = {
+                    type = train_equipment_4
+                    amount = 15
+                }
+            }
+            else_if = {
+                limit = { has_tech = basic_train }
+                add_equipment_to_stockpile = {
+                    type = train_equipment_1
+                    amount = 15
+                }
+            }
+            else = {
+                add_equipment_to_stockpile = {
+                    type = train_equipment
+                    amount = 15
+                }
+            }
+            add_stability = -0.05
+        }
+    }            
 }
