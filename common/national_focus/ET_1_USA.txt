@@ -8,14 +8,14 @@
 
 focus_tree = {
     id = ET_S1_USA
-    continuous_focus_position = { x = 0 y = 800 }
+    continuous_focus_position = { x = 900 y = 900 }
     default = no
     country = {
         factor = 0
         modifier = {
             add = 2000
 
-            original_tag = SOV
+            original_tag = USA
             ET_has_scenario_1 = yes
             ET_in_new_era_country = yes
         }
