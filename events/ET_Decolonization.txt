@@ -1136,6 +1136,53 @@ country_event = { # Releases
                 days = 19
             }
         }
+
+        if = { # North Korea    [2 September 1945] SOV*
+            # https://en.wikipedia.org/wiki/Korea
+            limit = {
+                at_war = no
+                
+                NOT = { has_country_flag = ET_flag_country_free_DPR }
+                OR = {
+                    date > 1945.8.02
+                    has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+                }
+                NOT = { original_tag = DPR }
+                controls_state = 527
+            }
+
+            set_country_flag = {
+                flag = ET_flag_country_free_DPR
+                days = 90
+            }
+            country_event = {
+                id = ET_Independence_NorthKorea.0
+                days = 19
+            }
+        }
+        if = { # South Korea    [2 September 1945] USA*
+            # https://en.wikipedia.org/wiki/Korea
+            limit = {
+                at_war = no
+
+                NOT = { has_country_flag = ET_flag_country_free_KOR }
+                OR = {
+                    date > 1945.8.02
+                    has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
+                }
+                NOT = { original_tag = KOR }
+                controls_state = 525
+            }
+
+            set_country_flag = {
+                flag = ET_flag_country_free_KOR
+                days = 90
+            }
+            country_event = {
+                id = ET_Independence_SouthKorea.0
+                days = 19
+            }
+        }
     }
 
     option = {}

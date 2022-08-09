@@ -1,0 +1,64 @@
+
+# DPR - North Korea
+# KOR - South Korea
+
+ET_DPR_INIT = {
+    set_temp_variable = { ET_var_current_date = date }
+    DPR = {
+        hidden_effect = {
+            set_politics = {
+                ruling_party = communism
+                elections_allowed = no
+                last_election = var:ET_var_current_date
+                election_frequency = 48
+                name = DPR_communism_party
+                long_name = DPR_communism_party_long
+            }
+
+            set_popularities = {
+                communism = 65
+                democratic = 25
+                neutrality = 10
+                fascism = 0
+            }
+
+            set_rule = {
+                can_declare_war_on_same_ideology = yes
+            }
+
+            ET_set_generic_tech = yes
+
+            add_state_core = 527 # North
+            add_state_core = 525 # South
+        }
+    }
+}
+ET_KOR_INIT = {
+    set_temp_variable = { ET_var_current_date = date }
+    KOR = {
+        hidden_effect = {
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = yes
+                last_election = var:ET_var_current_date
+                election_frequency = 48
+            }
+
+            set_popularities = {
+                democratic = 65
+                communism = 25
+                neutrality = 10
+                fascism = 0
+            }
+
+            set_rule = {
+                can_declare_war_on_same_ideology = no
+            }
+
+            ET_set_generic_tech = yes
+
+            add_state_core = 527 # North
+            add_state_core = 525 # South
+        }
+    }
+}
