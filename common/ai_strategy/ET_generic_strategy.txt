@@ -8,7 +8,7 @@ ET_Generic_Avoid_WorldWar_Continuation_War = {
 	}
 
 	abort = {
-        date < 1955.01.01
+        date > 1955.01.01
     }
 
 	ai_strategy = {
