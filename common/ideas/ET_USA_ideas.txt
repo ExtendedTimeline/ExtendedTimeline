@@ -1,0 +1,61 @@
+ideas = {
+    country = {
+        ET_USA_domino_theory_idea = {
+            picture = GFX_idea_ET_USA_domino_theory_idea
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+            
+            modifier = {
+                communism_acceptance = -25
+                drift_defence_factor = 0.10
+            }
+        }
+        
+        ET_USA_intervene_in_korea_idea = {
+            picture = GFX_idea_ET_USA_intervene_in_korea
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+            
+            modifier = {
+                send_volunteer_divisions_required = -0.5
+                send_volunteers_tension = -0.5
+                send_volunteer_size = 8
+            }
+        }
+        ET_USA_intervene_in_vietnam_idea = {
+            picture = GFX_idea_ET_USA_intervene_in_vietnam
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+            
+            modifier = {
+                send_volunteer_divisions_required = -0.5
+                send_volunteers_tension = -0.5
+                send_volunteer_size = 8
+            }
+        }
+    }
+}

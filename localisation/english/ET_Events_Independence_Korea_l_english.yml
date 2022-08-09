@@ -1,0 +1,22 @@
+﻿l_english:
+ET_Independence_NorthKorea.0.t:0 "North Korea"
+ET_Independence_NorthKorea.0.desc:0 "There has been talks to establish a communist North Korea at the 38th parallel to divide the region between communists and democrats."
+ET_Independence_NorthKorea.0.a:0 "We should create [DPR.GetName]"
+ET_Independence_NorthKorea.0.b:0 "Maintain Occupation of the Region"
+ET_Independence_NorthKorea.0.c:0 "We will rise as [DPR.GetName]!\n(Play as [DPR.GetName])"
+
+ET_Independence_SouthKorea.0.t:0 "South Korea"
+ET_Independence_SouthKorea.0.desc:0 "There has been talks to establish a democratic South Korea at the 38th parallel to divide the region between communists and democrats"
+ET_Independence_SouthKorea.0.a:0 "We should create [KOR.GetName]"
+ET_Independence_SouthKorea.0.b:0 "Maintain Occupation of this region"
+ET_Independence_SouthKorea.0.c:0 "We can only hope for a bright future here in [KOR.GetName]\n(Play as [KOR.GetName])"
+
+ET_Independence_UnifyKorea.0:0 "War goal on south"
+ET_Independence_UnifyKorea.0.t:0 ""
+ET_Independence_UnifyKorea.0.desc:0 ""
+ET_Independence_SouthKorea.0.a:0 "There should only be one korea!"
+
+ET_Independence_UnifyKorea.1:0 "War goal on north"
+ET_Independence_UnifyKorea.1.t:0 ""
+ET_Independence_UnifyKorea.1.desc:0 ""
+ET_Independence_SouthKorea.1.a:0 ""

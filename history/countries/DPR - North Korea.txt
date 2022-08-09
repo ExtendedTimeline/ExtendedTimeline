@@ -10,10 +10,12 @@ set_politics = {
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+	name = DPR_communism_party
+	long_name = DPR_communism_party_long
 }
 set_popularities = {
-	communism = 55
+	communism = 60
 	democratic = 35
 	neutrality = 5
-	fascism = 5
+	fascism = 0
 }
