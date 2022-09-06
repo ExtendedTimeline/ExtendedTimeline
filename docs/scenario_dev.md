@@ -52,6 +52,7 @@
 | `ET_has_scenario_10`              | Check if you have scenario 10                               | Global   |
 | `ET_has_scenario_11`              | Check if you have scenario 11                               | Global   |
 | `ET_has_scenario_12`              | Check if you have scenario 12                               | Global   |
+
 ### Localization
 
 | Localization                      | Description                                                                   | Scope    |
@@ -71,6 +72,7 @@
 | `ET_Scenario_10_Name`             | Writes scenaro name                                                           | Global   |
 | `ET_Scenario_11_Name`             | Writes scenaro name                                                           | Global   |
 | `ET_Scenario_12_Name`             | Writes scenaro name                                                           | Global   |
+
 ### Flags
 
 | Flags                             | Description                                                                   |
