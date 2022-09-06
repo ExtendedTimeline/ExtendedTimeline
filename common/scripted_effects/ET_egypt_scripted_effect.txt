@@ -54,6 +54,6 @@ ET_EGY_Setup_OBB = {
             division_template = "Colonial Garrison"
         }
 
-        load_oob = "EGY_1952"
+        load_oob = "ET_EGY_1952"
     }
 }
