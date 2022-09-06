@@ -18,5 +18,29 @@ ideas = {
                 drift_defence_factor = 0.10
             }
         }
+
+        ET_generic_world_war_two_participants = {
+            
+            allowed = {
+                always = no
+            }
+        
+            allowed_civil_war = {
+                NOT = {
+                    has_government = fascism
+                }
+            }
+            
+            removal_cost = -1
+                        
+            modifier = {
+                conscription_factor = -0.30
+                
+                industrial_capacity_factory = -0.07
+                industrial_capacity_dockyard = -0.07
+                production_speed_buildings_factor = -0.04
+                consumer_goods_factor = 0.04
+            }
+        }
     }
 }
