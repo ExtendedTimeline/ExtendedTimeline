@@ -24,9 +24,13 @@ ET_DPR_INIT = {
 
             set_rule = {
                 can_declare_war_on_same_ideology = yes
+                can_occupy_non_war = yes
             }
 
             ET_set_generic_tech = yes
+
+            set_province_controller = 4004
+            set_province_controller = 11958
 
             add_state_core = 527 # North
             add_state_core = 525 # South
@@ -53,6 +57,7 @@ ET_KOR_INIT = {
 
             set_rule = {
                 can_declare_war_on_same_ideology = no
+                can_occupy_non_war = yes
             }
 
             ET_set_generic_tech = yes
