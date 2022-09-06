@@ -83,6 +83,10 @@ ideologies = {
 			
 			anarchist_communism = {
 			}
+
+			ET_maoism = {
+				can_be_randomly_selected = no
+			}
 		}
 		
 		dynamic_faction_names = {
