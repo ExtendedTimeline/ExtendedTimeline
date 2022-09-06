@@ -11,6 +11,9 @@ ET_play_as_nation_effect_tt:0 "§GPlay as nation§!"
 ET_dem_arab_socialism:0 "Arab Socialism"
 ET_dem_arab_socialism_desc:0 "Arab socialism is distinct from the much broader tradition of socialist thought in the Arab world, which predates Arab socialism by as much as fifty years. Arab liberation struggle is a fight against imperialism, opposing the ruling classes and to fight for social justice."
 
+ET_neu_arab_socialism:0 "Arab Socialism"
+ET_neu_arab_socialism_desc:0 "Arab socialism is distinct from the much broader tradition of socialist thought in the Arab world, which predates Arab socialism by as much as fifty years. Arab liberation struggle is a fight against imperialism, opposing the ruling classes and to fight for social justice."
+
 ET_has_any_land_in_mainland_europe_tt:0 "Have any land in mainland europe"
 
 ET_NATO_Exists:0 "NATO has been formed"
