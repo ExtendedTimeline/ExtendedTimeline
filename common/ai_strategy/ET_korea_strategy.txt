@@ -3,12 +3,16 @@
 ET_KOR_evil_north = {
     allowed = {
         original_tag = KOR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
     }
     enable = {
         date > 1942.01.01
     }
 
     abort = {
+        NOT = { country_exists = DPR }
     }
 
     ai_strategy = {
@@ -20,12 +24,18 @@ ET_KOR_evil_north = {
 ET_KOR_war_suppression = {
     allowed = {
         original_tag = KOR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
     }
     enable = {
+        country_exists = DPR
+        country_exists = KOR
         date > 1942.01.01
     }
 
     abort = {
+        NOT = { country_exists = DPR }
     }
 
     ai_strategy = {
@@ -39,12 +49,16 @@ ET_KOR_war_suppression = {
 ET_DPR_evil_south = {
     allowed = {
         original_tag = DPR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
     }
     enable = {
         date > 1942.01.01
     }
 
     abort = {
+        NOT = { country_exists = KOR }
     }
 
     ai_strategy = {
@@ -58,16 +72,24 @@ ET_DPR_evil_south = {
         value = -5000
     }
 }
-ET_DPR_war_suppression = { # end 1950.06.24
+ET_DPR_war_suppression = {  # end 1950.06.24
     allowed = {
         original_tag = DPR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
     }
     enable = {
+        country_exists = DPR
+        country_exists = KOR
         date > 1942.01.01
     }
 
     abort = {
-        date > 1950.06.24
+        OR= {
+            NOT = { country_exists = KOR }
+            date > 1950.06.24
+        }
     }
 
     ai_strategy = {
@@ -79,18 +101,49 @@ ET_DPR_war_suppression = { # end 1950.06.24
 ET_DPR_first_korean_war = { # 1950.06.24 to 1953.07.27
     allowed = {
         original_tag = DPR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
     }
     enable = {
+        country_exists = DPR
+        country_exists = KOR
         date > 1950.06.24
     }
 
     abort = {
-        date > 1953.07.27
+        OR = {
+            NOT = { country_exists = KOR }
+            date > 1953.07.27
+        }
     }
 
     ai_strategy = {
         type = declare_war
         id = KOR
         value = 5000
+    }
+}
+ET_DPR_war_suppression_after = {  # start 1953.07.27
+    allowed = {
+        original_tag = DPR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
+    }
+    enable = {
+        country_exists = DPR
+        country_exists = KOR
+        date > 1953.07.27
+    }
+
+    abort = {
+        NOT = { country_exists = KOR }
+    }
+
+    ai_strategy = {
+        type = declare_war
+        id = KOR
+        value = -5000
     }
 }
