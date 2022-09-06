@@ -209,7 +209,7 @@ ET_set_new_era_effect = {
             limit = { has_idea = civilian_economy }
             set_country_flag = ET_flag_country_HasDemobalizedEconomy
         }
-
+        
         ET_set_new_era_country = yes
     }
 }
