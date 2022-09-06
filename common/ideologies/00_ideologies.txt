@@ -195,7 +195,10 @@ ideologies = {
 			
 			centrism = {
 			}
-			
+
+			ET_neu_arab_socialism = {
+				can_be_randomly_selected = no
+			}
 		}
 
 		dynamic_faction_names = {
