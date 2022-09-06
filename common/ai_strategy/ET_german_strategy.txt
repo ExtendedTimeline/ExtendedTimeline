@@ -1,0 +1,92 @@
+
+# West Germany
+ET_WGR_evil_east = {
+    allowed = {
+        original_tag = WGR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
+    }
+    enable = {
+        country_exists = WGR
+        country_exists = DDR
+    }
+
+    abort = {
+        NOT = { country_exists = DDR }
+    }
+
+    ai_strategy = {
+        type = antagonize
+        id = DDR
+        value = 200
+    }
+}
+ET_WGR_war_suppression = {
+    allowed = {
+        original_tag = WGR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
+    }
+    enable = {
+        country_exists = WGR
+        country_exists = DDR
+    }
+
+    abort = {
+        NOT = { country_exists = DDR }
+    }
+
+    ai_strategy = {
+        type = declare_war
+        id = DDR
+        value = -5000
+    }
+}
+
+# East Germany
+ET_DDR_evil_west = {
+    allowed = {
+        original_tag = DDR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
+    }
+    enable = {
+        country_exists = WGR
+        country_exists = DDR
+    }
+
+    abort = {
+        NOT = { country_exists = WGR }
+    }
+
+    ai_strategy = {
+        type = antagonize
+        id = WGR
+        value = 200
+    }
+}
+ET_DDR_war_suppression = {
+    allowed = {
+        original_tag = DDR
+        OR = {
+            ET_has_scenario_1 = yes
+        }
+    }
+    enable = {
+        country_exists = WGR
+        country_exists = DDR
+    }
+
+    abort = {
+        NOT = { country_exists = WGR }
+    }
+
+    ai_strategy = {
+        type = declare_war
+        id = WGR
+        value = -5000
+    }
+}

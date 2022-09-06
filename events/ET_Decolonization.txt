@@ -1144,6 +1144,8 @@ country_event = { # Releases
                 at_war = no
                 
                 NOT = { has_country_flag = ET_flag_country_free_DPR }
+                NOT = { has_global_flag = ET_flag_global_free_DPR }
+
                 OR = {
                     date > 1945.8.02
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
@@ -1167,6 +1169,8 @@ country_event = { # Releases
                 at_war = no
 
                 NOT = { has_country_flag = ET_flag_country_free_KOR }
+                NOT = { has_global_flag = ET_flag_global_free_KOR }
+
                 OR = {
                     date > 1945.8.02
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
