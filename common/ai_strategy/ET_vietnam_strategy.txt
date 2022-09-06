@@ -1,0 +1,120 @@
+
+# North Vietnam
+ET_VIN_evil_south = {
+    allowed = {
+        original_tag = VIN
+        OR = {
+            ET_has_scenario_1 = yes
+        }
+    }
+    enable = {
+        country_exists = VIN
+        country_exists = SVN
+    }
+
+    abort = {
+        NOT = { country_exists = SVN }
+    }
+
+    ai_strategy = {
+        type = antagonize
+        id = DDR
+        value = 200
+    }
+}
+ET_VIN_war_suppression = {  # end 1955.11.01
+    allowed = {
+        original_tag = VIN
+        country_exists = SVN
+    }
+    enable = {
+        country_exists = VIN
+        country_exists = SVN
+    }
+
+    abort = {
+        OR = {
+            NOT = { country_exists = SVN }
+            date > 1955.11.01
+        }
+    }
+
+    ai_strategy = {
+        type = declare_war
+        id = SVN
+        value = -5000
+    }
+}
+# https://en.wikipedia.org/wiki/Vietnam_War
+ET_VIN_vietnam_war = { # 1955.11.01 to 1975.04.30
+    allowed = {
+        original_tag = VIN
+        OR = {
+            ET_has_scenario_1 = yes
+        }
+    }
+    enable = {
+        country_exists = VIN
+        country_exists = SVN
+        date > 1950.06.24
+    }
+
+    abort = {
+        OR = {
+            NOT = { country_exists = SVN }
+            date > 1975.11.01
+        }
+    }
+
+    ai_strategy = {
+        type = declare_war
+        id = SVN
+        value = 5000
+    }
+}
+
+# South Vietnam
+ET_SVN_evil_north = {
+    allowed = {
+        original_tag = SVN
+        OR = {
+            ET_has_scenario_1 = yes
+        }
+    }
+    enable = {
+        country_exists = SVN
+        country_exists = VIN
+    }
+
+    abort = {
+        NOT = { country_exists = VIN }
+    }
+
+    ai_strategy = {
+        type = antagonize
+        id = WGR
+        value = 200
+    }
+}
+ET_SVN_war_suppression = {
+    allowed = {
+        original_tag = SVN
+        OR = {
+            ET_has_scenario_1 = yes
+        }
+    }
+    enable = {
+        country_exists = SVN
+        country_exists = VIN
+    }
+
+    abort = {
+        NOT = { country_exists = VIN }
+    }
+
+    ai_strategy = {
+        type = declare_war
+        id = WGR
+        value = -5000
+    }
+}
