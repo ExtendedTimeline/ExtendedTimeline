@@ -72,12 +72,13 @@ ET_set_scenario = {
             limit = { always = yes }
             news_event = {
                 id = ET_Scenario_1.0
-                days = 1
-            }
-            country_event = {
-                id = ET_S1_Division_Init.0
                 days = 3
             }
+            # Disabled needs updating and rework
+            #country_event = {
+            #    id = ET_S1_Division_Init.0
+            #    days = 3
+            #}
         }
     }
     else_if = { # A Eagle World           [ET_flag_global_scenario_2]
