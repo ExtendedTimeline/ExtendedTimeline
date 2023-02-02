@@ -8,9 +8,9 @@
 
 Extended Timeline aims to extend the playable time in vanilla Hearts of Iron 4 while still keeping the vanilla fealing.
 The mod is a submod for the Ultimate Tech Tree : New Horizons.
-The mod extends the playable timeline and apply new Focus Trees based on enabled scenarios.
+The mod extends the playable timeline by applying new Focus Trees and events based on the outcome of the second world war, these are called scenarios.
 
-Scenarios are applied based on how the world state is at the end of the World War 2 and each playthrue can differ. You can readme more about [scenarios here](https://github.com/ExtendedTimeline/ExtendedTimeline/blob/main/docs/scenario.md).
+Scenarios are applied based on how the world state is at the end of the World War 2 and each playthrue can differ. You can read more about [scenarios here](https://github.com/ExtendedTimeline/ExtendedTimeline/blob/main/docs/scenario.md).
 
 ## Install
 [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2747306152) (Recommended)
