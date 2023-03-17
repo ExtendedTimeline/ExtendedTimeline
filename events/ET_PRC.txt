@@ -1,0 +1,51 @@
+add_namespace = ET_CCP
+
+country_event = { #Load The Civil War Tree, Age Mao Too.
+	id = ET_CCP.1
+	title = ET_CCP.1.t
+	desc = ET_CCP.1.desc
+	picture = GFX_report_event_china_infiltration
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ET_CCP.1.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = cpc_load_focus_cw
+		IF = {
+		    limit = { 
+			    has_country_leader = {
+				    character = PRC_mao_zedong
+				}
+			}
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/PRC/Portrait_China_Mao_Zedong.dds"
+			}
+		}
+		hidden_effect = {
+		    add_ideas = ET_PRC_manchurian_guerillas
+			set_cosmetic_tag = PRC_ccp
+			load_focus_tree = ET_S1_PRC
+			add_ideas = ET_PRC_morale_debuff
+		}
+	}
+}
+
+country_event = {
+	id = ET_CCP.2
+	title = ET_CCP.2.t
+	desc = ET_CCP.2.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ET_CCP.2.a
+	
+	}
+}

@@ -1,0 +1,324 @@
+ideas = {
+    country = {
+	    ET_PRC_morale_debuff = {
+            picture = SPR_disbanded_army
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+            modifier = {
+				army_morale_factor = -0.2
+            }
+        }
+        ET_PRC_passive_defence = {
+            picture = YUG_federal_defense_council
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+            
+            modifier = {
+                army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.15
+            }
+        }
+		ET_PRC_lin_biao_command = {
+            picture = cpc_lin_biao
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+            
+            modifier = {
+                army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_speed_factor = 0.05
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+				breakthrough_factor = 0.05
+				dig_in_speed_factor = 0.1
+            }
+        }
+		ET_PRC_initial_land_reforms = {
+            picture = HUN_treaty_of_triannon
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+            
+            modifier = {
+                stability_factor = 0.05
+				political_power_factor = 0.15
+				research_speed_factor = 0.05
+				monthly_population = 0.5
+            }
+        }
+		ET_PRC_attack_plains = {
+            picture = chi_wargaming_division
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+			
+			cancel = {
+			    NOT = {
+				    has_war_with = CHI
+				}
+			}
+
+            removal_cost = -1
+			
+            targeted_modifier = {
+			    tag = CHI
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+            modifier = {
+                army_org_factor = 0.1
+            }
+        }
+		ET_PRC_push_south = {
+            picture = chi_wargaming_division
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+			
+			cancel = {
+			    NOT = {
+				    has_war_with = CHI
+				}
+			}
+
+            removal_cost = -1
+			
+            targeted_modifier = {
+			    tag = CHI
+				attack_bonus_against = 0.1
+                defense_bonus_against = 0.1
+			}
+            modifier = {
+                army_org_factor = 0.1
+            }
+        }
+		ET_PRC_peoples_army_1 = {
+            picture = cpc_civil_war
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+			
+			cancel = {
+			    NOT = {
+				    has_war_with = CHI
+				}
+			}
+
+            removal_cost = -1
+			
+            modifier = {
+                army_org_factor = 0.05
+				army_morale_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+            }
+        }
+		ET_PRC_peoples_army_2 = {
+            picture = cpc_civil_war
+            
+            allowed = {
+                always = no
+            }
+			
+			cancel = {
+			    NOT = {
+				    has_war_with = CHI
+				}
+			}
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+            modifier = {
+                army_org_factor = 0.15
+				army_morale_factor = 0.2
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+            }
+        }
+		ET_PRC_peoples_army_3 = {
+            picture = cpc_civil_war
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+			
+			cancel = {
+			    NOT = {
+				    has_war_with = CHI
+				}
+			}
+
+            removal_cost = -1
+			
+            modifier = {
+                army_org_factor = 0.25
+				army_morale_factor = 0.25
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.3
+            }
+        }
+		ET_CHI_collapsing_army = {
+            picture = chi_civil_war
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+			
+			cancel = {
+			    NOT = {
+				    has_war_with = PRC
+				}
+			}
+
+            removal_cost = -1
+			
+            modifier = {
+                army_org_factor = -0.25
+				army_morale_factor = -0.35
+				army_core_attack_factor = -0.35
+				army_core_defence_factor = -0.35
+            }
+        }
+		ET_PRC_manchurian_guerillas = { #NOTE, this simulates the 'guerilla warfare' aspect of the Chinese Civil War, it allows for the CPC to wage war on land that isn't connected to its capital. If Removed the Chinese Civil War WILL have to be reworked!
+            picture = FRA_scw_intervention_republicans_focus
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+            modifier = {
+			    no_supply_grace = 1032945
+				attrition = -0.2
+				supply_consumption_factor = -0.45
+				surrender_limit = 0.2
+            }
+        }
+		ET_PRC_morale_boost = {
+            picture = generic_communist_army
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+			
+			cancel = {
+			    NOT = {
+				    has_war_with = CHI
+				}
+			}
+
+            removal_cost = -1
+			
+            modifier = {
+				army_morale_factor = 0.25
+            }
+        }
+		ET_PRC_consolidate_china = {
+            picture = jap_intervene_in_china
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+            modifier = {
+				political_power_factor = -0.25
+				stability_weekly_factor = -0.001
+				drift_defence_factor = 0.25
+				communism_drift = 0.01
+            }
+        }
+		ET_PRC_purge_kmt = {
+            picture = generic_purge
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+            modifier = {
+				neutrality_drift = -0.01
+				democratic_drift = -0.01
+				fascism_drift = -0.01
+            }
+        }
+    }
+}
