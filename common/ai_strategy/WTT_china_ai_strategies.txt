@@ -315,9 +315,7 @@ SOV_support_chinese_in_japan_war = {
 		has_completed_focus = SOV_the_threat_from_the_land_of_the_rising_sun
 	}
 	abort = {
-	    NOT = {
-		    CHI = { has_war_with = JAP }
-		}
+	    CHI = { has_war = no }
 	}
 	ai_strategy = {
 	    type = support

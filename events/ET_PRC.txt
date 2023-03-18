@@ -31,6 +31,97 @@ country_event = { #Load The Civil War Tree, Age Mao Too.
 			load_focus_tree = ET_S1_PRC
 			add_ideas = ET_PRC_morale_debuff
 			create_faction = CHINESE_COMMUNIST_FACTION
+		PRC_lin_biao = { #This is very fucking annoying to fix, so bear with it.
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/lin_biao_50s.dds"
+			}
+		  }
+		}
+		PRC_xu_xiangqian = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/xu_xiangqian_50s.dds"
+			}
+		  }
+		}
+		PRC_liu_bocheng = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/liu_bocheng_50s.dds"
+			}
+		  }
+		}
+		PRC_chen_yi = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/chen_yi_50s.dds"
+			}
+		  }
+		}
+		PRC_peng_dehuai = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/peng_dehuai_50s.dds"
+			}
+		  }
+		}
+		PRC_nie_rongzhen = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/nie_rongzhen_50s.dds"
+			}
+		  }
+		}
+		PRC_ye_jianying = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/ye_jiangying_50s.dds"
+			}
+		  }
+		}
+		PRC_zhu_de = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/zhu_de_50s.dds"
+			}
+		  }
+		}
+		PRC_luo_ronghuan = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/luo_ronghuan_50s.dds"
+			}
+		  }
+		}
+		PRC_he_long = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/he_long_50s.dds"
+			}
+		  }
+		}
+		PRC_chen_geng = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/chen_geng_50s.dds"
+			}
+		  }
+		}
+		PRC_xu_guangda = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/xu_guangda_50s.dds"
+			}
+		  }
+		}
+		PRC_su_yu = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/su_yu_50s.dds"
+			}
+		  }
+		}
 		}
 	}
 }

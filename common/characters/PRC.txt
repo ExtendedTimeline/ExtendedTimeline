@@ -12,7 +12,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ trait_cautious politically_connected defensive_doctrine }
+			traits={ trait_cautious defensive_doctrine offensive_doctrine organizer logistics_wizard }
 			skill=4
 			attack_skill=2
 			defense_skill=4
@@ -397,7 +397,7 @@ characters={
 		name=PRC_ma_jin
 		portraits={
 			army={
-				small="GFX_idea_generic_army_asia_5"
+				small="gfx/interface/ideas/idea_luoronghuan.png"
 			}
 		}
 		advisor={	
@@ -423,7 +423,7 @@ characters={
 		name=PRC_ziao_jingguang
 		portraits={
 			army={
-				small="GFX_idea_generic_navy_asia_1"
+				small="gfx/interface/ideas/gfx_idea_ziao.dds"
 			}
 		}
 		advisor={
@@ -446,7 +446,7 @@ characters={
 		name=PRC_gao_qiu
 		portraits={
 			army={
-				small="GFX_idea_generic_navy_asia_2"
+				small="gfx/interface/ideas/gfx_idea_gao_qiu.png"
 			}
 		}
 		advisor={	
@@ -474,7 +474,7 @@ characters={
 		name=PRC_fang_zeyi
 		portraits={
 			army={
-				small="GFX_idea_generic_air_asia_3"
+				small="gfx/interface/ideas/gfx_idea_fang_zeyi.png"
 			}
 		}
 		advisor={
@@ -497,7 +497,7 @@ characters={
 		name=PRC_gao_gang
 		portraits={
 			army={
-				small="GFX_idea_generic_air_asia_2"
+				small="gfx/interface/ideas/gfx_idea_gao_gang.dds"
 			}
 		}
 		advisor={
@@ -559,7 +559,7 @@ characters={
 		name=PRC_nie_rongzhen
 		portraits={
 			army={
-				small="GFX_idea_generic_army_asia_1"
+				small="gfx/interface/ideas/gfx_idea_nie_rongzhen.dds"
 				large="gfx/leaders/PRC/portrait_prc_nie_rongzhen.dds"
 			}
 		}
@@ -594,6 +594,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_PRC_chen_geng"
+				large="gfx/leaders/PRC/portrait_prc_chen_geng.dds"
 			}
 		}
 		advisor={	
@@ -611,13 +612,22 @@ characters={
 				factor = 1.000
 			}
 		}
+		corps_commander={
+			traits={ trait_cautious trait_mountaineer organizer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
 	}
 	
 	PRC_ye_jianying={
 		name=PRC_ye_jianying
 		portraits={
 			army={
-				small="GFX_idea_generic_army_asia_2"
+				small="gfx/interface/ideas/gfx_idea_ye_jianying.dds"
 				large="gfx/leaders/PRC/portrait_prc_ye_jiangying.dds"
 			}
 		}
@@ -648,7 +658,7 @@ characters={
 		name=PRC_liang_shen
 		portraits={
 			army={
-				small="GFX_idea_generic_air_asia_3"
+				small="gfx/interface/ideas/gfx_idea_liang_shen.dds"
 			}
 		}
 		advisor={	
@@ -672,7 +682,7 @@ characters={
 		name=PRC_deng_ye_peng
 		portraits={
 			army={
-				small="GFX_idea_generic_navy_asia_1"
+				small="gfx/interface/ideas/gfx_idea_deng_yepeng.dds"
 			}
 		}
 		advisor={	
@@ -707,7 +717,7 @@ characters={
 		name=PRC_lin_bojiu
 		portraits={
 			civilian={
-				small="GFX_idea_generic_political_advisor_asia_1"
+				small="gfx/interface/ideas/gfx_idea_lin_bojiu.dds"
 			}
 		}
 		advisor={
@@ -736,7 +746,8 @@ characters={
 				original_tag  = PRC
 			}
 			traits  = {
-				ideological_crusader 
+				compassionate_gentleman
+				smooth_talking_charmer
 			}
 		}
 	}
@@ -755,7 +766,8 @@ characters={
 				original_tag  = PRC
 			}
 			traits  = {
-				silent_workhorse 
+				silent_workhorse
+				popular_figurehead
 			}
 		}
 	}
@@ -764,7 +776,7 @@ characters={
 		name=PRC_he_yuandang
 		portraits={
 			civilian={
-				small="GFX_idea_generic_political_advisor_asia_2"
+				small="gfx/interface/ideas/gfx_idea_he_yuandang.dds"
 			}
 		}
 		advisor={
@@ -775,6 +787,7 @@ characters={
 			}
 			traits  = {
 				war_industrialist 
+				fortification_engineer
 			}
 		}
 	}
@@ -794,7 +807,7 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			traits  = {
-				popular_figurehead 
+				ideological_crusader
 			}
 			ai_will_do  = {
 				factor  = 1.000
