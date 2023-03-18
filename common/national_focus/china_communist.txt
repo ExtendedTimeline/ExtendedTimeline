@@ -1286,6 +1286,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = ET_PRC_united_front
+			custom_effect_tooltip = united_front_tooltip
 			hidden_effect = {
 				CHI = { add_ideas = ET_PRC_united_front }
 			    SHX = { add_ideas = ET_PRC_united_front }

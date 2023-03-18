@@ -3,6 +3,7 @@
  cpc_seize_manchuria:0 "§HOur Soldiers Will Try To Seize Manchuria.§!"
  cpc_seize_shandong_tooltip:0 "§HOur Soldiers Will Seize And Take Over Shandong.§!"
  cpc_load_focus_cw:0 "§HLoad The Civil War Focus Tree!§!"
+ united_front_tooltip:0 "§HAll Other Chinese Nations Will Receive This Idea.§!"
  ## Factions ##
  CHINESE_COMMUNIST_FACTION:0 "People's Liberation Front"
  ## Cosmetic Tags ##
