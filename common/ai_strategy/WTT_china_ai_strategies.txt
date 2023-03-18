@@ -251,9 +251,7 @@ PRC_hate_the_chinese_nationalists = {
 	}
 	
 	abort = {
-        OR = {
-			CHI = { exists = no }
-		}
+        is_in_faction_with = CHI
 	}
 	
 	ai_strategy = {
