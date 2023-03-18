@@ -243,26 +243,26 @@ SOV_dont_support_if_exiles_and_friendly_with_japan = {
 
 PRC_beat_the_nationalists_in_civil_war = { #Mao will prioritize the nationalist borders.
 	allowed = {
-		original_tag = PRC
+		tag = PRC
 	}
 	enable = {		
         country_exists = CHI
 		is_neighbor_of = CHI
 	}
 	abort = {
-	    is_in_faction_with = PRC
+	    is_in_faction_with = CHI
 		CHI = { exists = no }
 	}
 	ai_strategy = {
 	   type = prepare_for_war
 	   id = CHI
-	   value = 5
+	   value = 100
 	}
 }
 
 CHI_beat_the_communists_in_civil_war = { #Chiang will prioritize the CPC borders.
 	allowed = {
-		original_tag = CHI
+		tag = CHI
 	}
 	enable = {		
         country_exists = PRC
@@ -275,13 +275,13 @@ CHI_beat_the_communists_in_civil_war = { #Chiang will prioritize the CPC borders
 	ai_strategy = {
 	   type = prepare_for_war
 	   id = PRC
-	   value = 5
+	   value = 100
 	}
 }
 
 SOV_befriend_the_communists = { #Stalin will only befriend the Chinese Communists if they share a border.
 	allowed = {
-		original_tag = SOV
+		tag = SOV
 	}
 	enable = {		
         country_exists = PRC
@@ -309,7 +309,7 @@ SOV_befriend_the_communists = { #Stalin will only befriend the Chinese Communist
 
 PRC_befriend_the_soviets = { #Mao will only befriend the Soviets if they share a border.
 	allowed = {
-		original_tag = PRC
+		tag = PRC
 	}
 	enable = {		
         country_exists = SOV
@@ -332,7 +332,7 @@ PRC_befriend_the_soviets = { #Mao will only befriend the Soviets if they share a
 
 PRC_make_more_divisions = { #Mao will make more divisons until Chiang dies.
     allowed = {
-	    original_tag = PRC
+	    tag = PRC
 	}
 	enable = {
 	    CHI = { exists = yes }
@@ -344,21 +344,20 @@ PRC_make_more_divisions = { #Mao will make more divisons until Chiang dies.
 	}
 	ai_strategy = {
 	    type = force_build_armies
-		value = 50
+		value = 100
 	}
 }
 
 PRC_dont_help_soviets = { #Mao won't help the Soviets until China is unified.
     allowed = {
-	    original_tag = PRC
+	    tag = PRC
 	}
 	enable = {
 	    SOV = { has_war_with = GER }
 	}
 	abort = {
-	    CHI = {
-		   exists = no
-		}
+	    CHI = { exists = no }
+		has_war = no
 	}
 	ai_strategy = {
 	    type = send_volunteers_desire
@@ -389,7 +388,7 @@ PRC_dont_help_soviets = { #Mao won't help the Soviets until China is unified.
 
 SOV_support_chiang_in_war = { #Stalin will support Chiang in the Sino-Japanese war.
     allowed = {
-	    original_tag = SOV
+	    tag = SOV
 	}
 	enable = {
 	    CHI = { has_war_with = JAP }

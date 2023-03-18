@@ -295,7 +295,7 @@ CHI_buffer_in_mainland = {
 
 CHI_hunker_down_now  = {
 	allowed = {
-		original_tag = CHI
+		tag = CHI
 	}
 
 	enable = {
@@ -305,7 +305,7 @@ CHI_hunker_down_now  = {
 	abort = {
 	    OR = {
 		    JAP = { has_war_with = USA }
-		    date<1943.1.1
+		    num_of_military_factories > 50
 		}
 	}
 
@@ -321,5 +321,19 @@ CHI_hunker_down_now  = {
 		execution_type = careful
 		execute_order = no
 	}
+}
 
+CHI_send_units_to_frontline  = { #Send More Units  To The Frontline With Japan
+	allowed = {
+		tag = CHI
+	}
+	enable = {
+		has_war_with = JAP
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+        tag = JAP
+        value = 100
+	}
 }

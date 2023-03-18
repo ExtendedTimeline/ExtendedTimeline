@@ -58,6 +58,7 @@ PRC_historical_plan = {
 		PRC_maoism
 		PRC_revolutionary_military_commission
 		PRC_mobile_warfare
+		PRC_land_redistribution
 		PRC_enforce_the_three_rules
 		PRC_ban_the_opium_trade
 		PRC_central_security_bureau
