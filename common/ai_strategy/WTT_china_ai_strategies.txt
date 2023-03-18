@@ -241,84 +241,169 @@ SOV_dont_support_if_exiles_and_friendly_with_japan = {
 	}
 }
 
-PRC_hate_the_chinese_nationalists = {
-    allowed = { 
-	    original_tag = PRC
-	}
-	
-	enable = {
-	    is_neighbor_of = CHI
-	}
-	
-	abort = {
-        is_in_faction_with = CHI
-	}
-	
-	ai_strategy = {
-	    type = prepare_for_war
-		id = CHI
-		value = 50
-	}
-}
-
-PRC_prepare_for_chinese_civil_war = {
-	allowed = { 
+PRC_beat_the_nationalists_in_civil_war = { #Mao will prioritize the nationalist borders.
+	allowed = {
 		original_tag = PRC
 	}
-	enable = {
-		CHI = { exists = yes }
-	}
-	abort_when_not_enabled = yes
-	
-	ai_strategy = {
-        type = force_build_armies
-        value = 100
-    }
-}
-
-SOV_support_mao_in_civil_war = {
-	allowed = { 
-		original_tag = SOV
-	}
-	enable = {
-		is_neighbor_of = PRC
-		PRC = { has_war_with = CHI }
+	enable = {		
+        country_exists = CHI
+		is_neighbor_of = CHI
 	}
 	abort = {
-	    NOT = {
-		    PRC = { has_war_with = CHI }
-		}
+	    is_in_faction_with = PRC
+		CHI = { exists = no }
 	}
 	ai_strategy = {
-        type = antagonize
-        id = CHI
-        value = -50
-    }
+	   type = prepare_for_war
+	   id = CHI
+	   value = 5
+	}
+}
+
+CHI_beat_the_communists_in_civil_war = { #Chiang will prioritize the CPC borders.
+	allowed = {
+		original_tag = CHI
+	}
+	enable = {		
+        country_exists = PRC
+		is_neighbor_of = PRC
+	}
+	abort = {
+	    is_in_faction_with = PRC
+		PRC = { exists = no }
+	}
+	ai_strategy = {
+	   type = prepare_for_war
+	   id = PRC
+	   value = 5
+	}
+}
+
+SOV_befriend_the_communists = { #Stalin will only befriend the Chinese Communists if they share a border.
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {		
+        country_exists = PRC
+		is_neighbor_of = PRC
+	}
+	abort = {
+		PRC = { exists = no }
+	}
 	ai_strategy = {
 	    type = befriend
 		id = PRC
-		value = 50
-	}
+		value = 100
+    }
 	ai_strategy = {
 	    type = support
 		id = PRC
+		value = 100
+	}
+	ai_strategy = {
+	    type = send_volunteers_desire
+		id = PRC
+		value = 100
+	}
+}
+
+PRC_befriend_the_soviets = { #Mao will only befriend the Soviets if they share a border.
+	allowed = {
+		original_tag = PRC
+	}
+	enable = {		
+        country_exists = SOV
+		is_neighbor_of = SOV
+	}
+	abort = {
+		PRC = { exists = no }
+	}
+	ai_strategy = {
+	    type = befriend
+		id = PRC
+		value = 75
+    }
+	ai_strategy = {
+	    type = support
+		id = PRC
+		value = 25
+	}
+}
+
+PRC_make_more_divisions = { #Mao will make more divisons until Chiang dies.
+    allowed = {
+	    original_tag = PRC
+	}
+	enable = {
+	    CHI = { exists = yes }
+	}
+	abort = {
+	    CHI = {
+		   exists = no
+		}
+	}
+	ai_strategy = {
+	    type = force_build_armies
 		value = 50
 	}
 }
 
-SOV_support_chinese_in_japan_war = {
-	allowed = { 
-		original_tag = SOV
+PRC_dont_help_soviets = { #Mao won't help the Soviets until China is unified.
+    allowed = {
+	    original_tag = PRC
 	}
 	enable = {
-		CHI = { has_war_with = JAP }
-		has_completed_focus = SOV_the_threat_from_the_land_of_the_rising_sun
+	    SOV = { has_war_with = GER }
 	}
 	abort = {
-	    CHI = { has_war = no }
+	    CHI = {
+		   exists = no
+		}
 	}
 	ai_strategy = {
-	    type = support
+	    type = send_volunteers_desire
+		id = SOV
+		value = -500
+	}
+	ai_strategy = {
+	    type = send_volunteers_desire
+		id = MON
+		value = -500
+	}
+	ai_strategy = {
+	    type = send_volunteers_desire
+		id = TAN
+		value = -500
+	}
+	ai_strategy = {
+	    type = send_volunteers_desire
+		id = EST
+		value = -500
+	}
+	ai_strategy = {
+	    type = send_volunteers_desire
+		id = FIN
+		value = -500
+	}
+}
+
+SOV_support_chiang_in_war = { #Stalin will support Chiang in the Sino-Japanese war.
+    allowed = {
+	    original_tag = SOV
+	}
+	enable = {
+	    CHI = { has_war_with = JAP }
+	}
+	abort = {
+	    CHI = { 
+		    OR = {
+			    has_war_with = PRC
+				has_war = no
+			}
+		}   
+	}
+	ai_strategy = {
+	    type = send_lend_lease_desire
 		id = CHI
 		value = 50
 	}

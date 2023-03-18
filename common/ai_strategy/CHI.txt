@@ -314,7 +314,7 @@ CHI_hunker_down_now  = {
 
 		tag = JAP
 
-		ratio = 0.6
+		ratio = 0.15
 
 		priority = 100
 		ordertype = front
@@ -323,28 +323,3 @@ CHI_hunker_down_now  = {
 	}
 
 }
-
-CHI_hate_the_chinese_communists = {
-    allowed = { 
-	    original_tag = CHI
-	}
-	
-	enable = {
-	    is_neighbor_of = PRC
-		date < 1938.1.1
-	}
-	
-	abort = {
-        OR = {
-		    has_war_with = JAP
-			PRC = { exists = no }
-		}
-	}
-	
-	ai_strategy = {
-	    type = prepare_for_war
-		id = PRC
-		value = 15
-	}
-}
-	
