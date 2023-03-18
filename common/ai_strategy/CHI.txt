@@ -344,7 +344,7 @@ CHI_hate_the_chinese_communists = {
 	ai_strategy = {
 	    type = prepare_for_war
 		id = PRC
-		value 15
+		value = 15
 	}
 }
 	
