@@ -30,6 +30,7 @@ country_event = { #Load The Civil War Tree, Age Mao Too.
 			set_cosmetic_tag = PRC_ccp
 			load_focus_tree = ET_S1_PRC
 			add_ideas = ET_PRC_morale_debuff
+			create_faction = CHINESE_COMMUNIST_FACTION
 		}
 	}
 }
