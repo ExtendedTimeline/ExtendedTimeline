@@ -48,8 +48,17 @@ focus_tree = {
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                 }
                 761 = {
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
@@ -79,8 +88,23 @@ focus_tree = {
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                 }
                 717 = {
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
@@ -154,6 +178,14 @@ focus_tree = {
                     transfer_state = 743
                 }
                 597 = {
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
                     create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }

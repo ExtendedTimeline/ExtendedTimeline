@@ -17,6 +17,23 @@ ideas = {
 				army_morale_factor = -0.2
             }
         }
+		ET_PRC_isolated_country = {
+            picture = hol_de_vaarplicht
+            
+            allowed = {
+                always = no
+            }
+
+            allowed_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+			
+            modifier = {
+				ai_get_ally_desire_factor = -1000
+            }
+        }
 		ET_PRC_army_loyalty = {
             picture = generic_communist_army
             
@@ -33,7 +50,7 @@ ideas = {
             modifier = {
 				army_morale_factor = 0.05
 				army_core_attack_factor = -0.05
-				army_core_defence_factor = 0.05
+				army_core_defence_factor = 0.1
 				drift_defence_factor = 0.25
             }
         }
@@ -257,6 +274,7 @@ ideas = {
             modifier = {
                 army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.15
+				army_morale_factor = 0.15
             }
         }
 		ET_PRC_lin_biao_command = {
@@ -478,7 +496,7 @@ ideas = {
             modifier = {
 			    no_supply_grace = 1032945
 				attrition = -0.2
-				supply_consumption_factor = -0.45
+				supply_consumption_factor = -0.5
 				surrender_limit = 0.2
             }
         }

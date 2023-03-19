@@ -27,10 +27,11 @@ country_event = { #Load The Civil War Tree, Age Mao Too.
 		}
 		hidden_effect = {
 		    add_ideas = ET_PRC_manchurian_guerillas
+			leave_faction = yes
 			set_cosmetic_tag = PRC_ccp
 			load_focus_tree = ET_S1_PRC
 			add_ideas = ET_PRC_morale_debuff
-			create_faction = CHINESE_COMMUNIST_FACTION
+			add_ideas = ET_PRC_isolated_country
 		PRC_lin_biao = { #This is very fucking annoying to fix, so bear with it.
 		  set_portraits = {
 		    army = {
@@ -122,6 +123,16 @@ country_event = { #Load The Civil War Tree, Age Mao Too.
 			}
 		  }
 		}
+		 remove_ideas = {
+		    PRC_mobile_warfare
+			ET_PRC_guerilla_warfare
+			PRC_focus_on_china
+			PRC_central_military_commission
+			ET_PRC_weapon_scavenge
+			ET_PRC_improved_literacy
+			ET_PRC_better_encryption
+			ET_PRC_political_mobilization
+		 }
 		}
 	}
 }

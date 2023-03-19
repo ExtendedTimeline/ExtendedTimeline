@@ -121,6 +121,7 @@
  ET_PRC_united_front_chi:0 "United Front (CHI)"
  ET_PRC_united_front_SHX:0 "United Front (SHX)"
  ET_PRC_political_mobilization:0 "Political Mobilization"
+ ET_PRC_isolated_country:0 "International Isolation"
  ## Victory Points ##
  VICTORY_POINTS_4205:0 "Weihai"
  VICTORY_POINTS_1104:0 "Longkou"
