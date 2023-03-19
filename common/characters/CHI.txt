@@ -8,7 +8,7 @@ characters={
 		}
 		country_leader={
 			ideology=despotism
-			traits={ generalissimo_trait indomitable_perseverance }
+			traits={ generalissimo_trait stout_defender indomitable_perseverance }
 			expire="1965.1.1.1"
 			id=-1
 		}

@@ -155,12 +155,19 @@ ideas = {
 			}
             removal_cost = -1
 			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+			
             modifier = {
 				stability_factor = 0.2
 				war_support_factor = 0.2
 				army_core_defence_factor = 0.2
-				surrender_limit = 0.15
-				political_power_factor = 0.05
+				army_morale_factor = 0.25
+				training_time_factor = -0.25
             }
         }
 		ET_PRC_united_front_SHX = {
@@ -185,6 +192,7 @@ ideas = {
 				stability_factor = 0.2
 				war_support_factor = 0.2
 				army_core_defence_factor = 0.15
+				army_morale_factor = 0.1
 				surrender_limit = 0.15
 				political_power_factor = 0.05
             }
