@@ -243,7 +243,7 @@ SOV_dont_support_if_exiles_and_friendly_with_japan = {
 
 PRC_beat_the_nationalists_in_civil_war = { #Mao will prioritize the nationalist borders.
 	allowed = {
-		tag = PRC
+		original_tag = PRC
 	}
 	enable = {		
         country_exists = CHI
@@ -262,7 +262,7 @@ PRC_beat_the_nationalists_in_civil_war = { #Mao will prioritize the nationalist 
 
 CHI_beat_the_communists_in_civil_war = { #Chiang will prioritize the CPC borders.
 	allowed = {
-		tag = CHI
+		original_tag = CHI
 	}
 	enable = {		
         country_exists = PRC
@@ -281,7 +281,7 @@ CHI_beat_the_communists_in_civil_war = { #Chiang will prioritize the CPC borders
 
 SOV_befriend_the_communists = { #Stalin will only befriend the Chinese Communists if they share a border.
 	allowed = {
-		tag = SOV
+		original_tag = SOV
 	}
 	enable = {		
         country_exists = PRC
@@ -309,7 +309,7 @@ SOV_befriend_the_communists = { #Stalin will only befriend the Chinese Communist
 
 PRC_befriend_the_soviets = { #Mao will only befriend the Soviets if they share a border.
 	allowed = {
-		tag = PRC
+		original_tag = PRC
 	}
 	enable = {		
         country_exists = SOV
@@ -332,7 +332,7 @@ PRC_befriend_the_soviets = { #Mao will only befriend the Soviets if they share a
 
 PRC_make_more_divisions = { #Mao will make more divisons until Chiang dies.
     allowed = {
-	    tag = PRC
+	    original_tag = PRC
 	}
 	enable = {
 	    CHI = { exists = yes }
@@ -350,7 +350,7 @@ PRC_make_more_divisions = { #Mao will make more divisons until Chiang dies.
 
 PRC_dont_help_soviets = { #Mao won't help the Soviets until China is unified.
     allowed = {
-	    tag = PRC
+	    original_tag = PRC
 	}
 	enable = {
 	    SOV = { has_war_with = GER }
@@ -388,7 +388,7 @@ PRC_dont_help_soviets = { #Mao won't help the Soviets until China is unified.
 
 SOV_support_chiang_in_war = { #Stalin will support Chiang in the Sino-Japanese war.
     allowed = {
-	    tag = SOV
+	    original_tag = SOV
 	}
 	enable = {
 	    CHI = { has_war_with = JAP }
@@ -404,6 +404,6 @@ SOV_support_chiang_in_war = { #Stalin will support Chiang in the Sino-Japanese w
 	ai_strategy = {
 	    type = send_lend_lease_desire
 		id = CHI
-		value = 50
+		value = 100
 	}
 }

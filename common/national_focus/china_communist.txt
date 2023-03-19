@@ -714,7 +714,7 @@ focus_tree = {
 						tag = ROOT
 					}
 				}
-				country_event = wtt_prc.10
+				country_event = ET_CCP.2
 			}
 		}
 	}
@@ -1288,8 +1288,8 @@ focus_tree = {
 			add_ideas = ET_PRC_united_front
 			custom_effect_tooltip = united_front_tooltip
 			hidden_effect = {
-				CHI = { add_ideas = ET_PRC_united_front }
-			    SHX = { add_ideas = ET_PRC_united_front }
+				CHI = { add_ideas = ET_PRC_united_front_chi }
+			    SHX = { add_ideas = ET_PRC_united_front_SHX }
 			    XSM = { add_ideas = ET_PRC_united_front }
 			    YUN = { add_ideas = ET_PRC_united_front }
 			    GXC = { add_ideas = ET_PRC_united_front }

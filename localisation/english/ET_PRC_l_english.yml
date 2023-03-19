@@ -6,6 +6,11 @@
  united_front_tooltip:0 "§HAll Other Chinese Nations Will Receive This Idea.§!"
  ## Factions ##
  CHINESE_COMMUNIST_FACTION:0 "People's Liberation Front"
+ chinese_united_front:0 "Second United Front"
+ ## Leader Traits ##
+ great_chairman:0 "Mìshūcháng"
+ strategic_planner:0 "Great Strategic Planner"
+ generalissimo_trait:0 "Generalissimo"
  ## Cosmetic Tags ##
  PRC_civil_communism:0 "People's Liberation Army"
  PRC_civil_communism_DEF:0 "the People's Liberation Army"
@@ -13,6 +18,9 @@
  PRC_ccp_communism:0 "Chinese Communist Party"
  PRC_ccp_communism_DEF:0 "the Chinese Communist Party"
  PRC_ccp_communism_ADJ:0 "Chinese"
+ PRC_gcd_communism:0 "Shaan-Gan-Ning Border Region"
+ PRC_gcd_communism_DEF:0 "the Shaan-Gan-Ning Border Region"
+ PRC_gcd_communism_ADJ:0 "Chinese"
  ## National Focuses ##
  PRC_war_of_anti_japan:0 "The Anti-Japanese War"
  PRC_war_of_anti_japan_desc:0 "It has finally begun, the Japanese aggressors have finally attacked our great homeland. They intend to destroy and humiliate us just like they did in the first Sino-Japanese War, however WE will not let this happen, we will resist the Japanese and bide our time."
@@ -110,6 +118,8 @@
  ET_PRC_improved_literacy:0 "Improved Literacy"
  ET_PRC_better_encryption:0 "Improved Encryption"
  ET_PRC_united_front:0 "United Front"
+ ET_PRC_united_front_chi:0 "United Front (CHI)"
+ ET_PRC_united_front_SHX:0 "United Front (SHX)"
  ET_PRC_political_mobilization:0 "Political Mobilization"
  ## Victory Points ##
  VICTORY_POINTS_4205:0 "Weihai"
@@ -123,3 +133,6 @@
  ET_CCP.1.t:0 "Our Final Enemy"
  ET_CCP.1.desc:0 "With the defeat of the Japanese and the return of our stolen lands, our forces have engaged in a local skirmishs in order to consolidate our gains. The Nanjing government has also recognized this and has stepped up their manpower deployment in the contested regions, despite this we have held on to most of the Manchurian lands and Shandong province. However we don't know how long this can last considering our limited intelligence, regardless we should keep an eyeful watch on kuomintang troop movements."
  ET_CCP.1.a:0 "Down With The KMT!"
+ ET_CCP.3.t:0 "The Chinese United Front"
+ ET_CCP.3.d:0 "In accordance with the agreements laid out by the second united front, we will establish the Shaan  Gan-ning Border Region. However our autonomy remains relatively intact as were allowed to control our armies regardless of the policies by the united front, however considering the Japanese threat. We should still consider helping the Nationalists in their war efforts against the Japanese, in addition the Japanese invasion could be the lifeline in temporarily preventing the inevitable civil war. However the state of the Nationalist army seems relatively awful, so we should still be cautious."
+ ET_CCP.3.a:0 "Down With The Japanese Tyrants!"

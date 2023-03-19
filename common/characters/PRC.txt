@@ -22,7 +22,7 @@ characters={
 		}
 		country_leader={
 			ideology=marxism
-			traits={ cornered_fox }
+			traits={ cornered_fox great_chairman strategic_planner }
 			expire="1965.1.1.1"
 			id=-1
 		}

@@ -128,8 +128,9 @@ country_event = { #Load The Civil War Tree, Age Mao Too.
 
 country_event = {
 	id = ET_CCP.2
-	title = ET_CCP.2.t
-	desc = ET_CCP.2.desc
+	title = wtt_prc.10.t
+	desc = wtt_prc.10.desc
+	picture = GFX_report_event_chinese_soldiers_02
 
 	is_triggered_only = yes
 
@@ -137,7 +138,54 @@ country_event = {
 	}
 
 	option = {
-		name = ET_CCP.2.a
+		name = wtt_prc.10.a
+	    ai_chance = {
+			base = 50
+		}
+		FROM = {
+			country_event = wtt_prc.11
+		}
+		hidden_effect = {
+		    CHI  = { add_to_faction = XSM }
+			CHI  = { add_to_faction = GXC }
+			CHI  = { add_to_faction = YUN }
+			CHI  = { add_to_faction = SHX }
+			CHI  = { add_to_faction = SIK }
+		}
+	}
+}
+
+country_event = {
+	id = ET_CCP.3
+	title = ET_CCP.3.t
+	desc = ET_CCP.3.d
+	picture = GFX_report_event_chinese_officers
 	
+	trigger = {
+	    is_in_faction_with = CHI
+		date > 1937.1.1
+		date < 1938.1.1
+	}
+
+	is_triggered_only = no
+    fire_only_once = yes
+	
+	option = {
+		name = ET_CCP.3.a
+	    ai_chance = {
+			base = 50
+		}
+	    add_stability = 0.05
+		add_war_support = 0.05
+		hidden_effect = {
+		    set_cosmetic_tag = PRC_gcd
+			CHI = {
+			    add_equipment_to_stockpile = {  #Counteract to China wasting their equipment on useless offensives.
+				    type = infantry_equipment
+					amount = 25000
+					producer = CHI
+				}
+			}
+		}
 	}
 }

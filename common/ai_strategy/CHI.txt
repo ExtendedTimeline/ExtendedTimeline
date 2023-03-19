@@ -266,46 +266,20 @@ CHI_you_should_be_prepared_for_war = {
     }
 }
 
-CHI_buffer_in_mainland = {
-	allowed = {
-		is_literally_china = yes
-	}
-	enable = {
-		date < 1941.1.1
-	}
-	abort_when_not_enabled = yes
-	
-	ai_strategy = {
-		type = put_unit_buffers
-		states = {
-			620 #Mainland china, without coast. This should slow down japanese advance due to tendency for china to retreat in disarray.
-			602
-			600
-			750
-			603
-			748
-			605
-		}
-		ratio = 0.15
-		area = asia
-		subtract_invasions_from_need = no
-		subtract_fronts_from_need = no
-	}
-}
-
 CHI_hunker_down_now  = {
 	allowed = {
-		tag = CHI
+		original_tag = CHI
 	}
 
 	enable = {
 		has_war_with = JAP
+		date < 1944.1.1 #We should've won at this point.
 	}
 
 	abort = {
-	    OR = {
-		    JAP = { has_war_with = USA }
-		    num_of_military_factories > 50
+	    or = {
+	        num_of_military_factories > 44
+			date > 1944.1.1
 		}
 	}
 
@@ -314,7 +288,7 @@ CHI_hunker_down_now  = {
 
 		tag = JAP
 
-		ratio = 0.15
+		ratio = 0.1
 
 		priority = 100
 		ordertype = front
