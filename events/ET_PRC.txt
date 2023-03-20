@@ -32,6 +32,13 @@ country_event = { #Load The Civil War Tree, Age Mao Too.
 			load_focus_tree = ET_S1_PRC
 			add_ideas = ET_PRC_morale_debuff
 			add_ideas = ET_PRC_isolated_country
+			set_rule = { can_send_volunteers = no }
+			PRC = {
+			    transfer_state = 746
+				transfer_state = 621
+				transfer_state = 612
+				transfer_state = 611
+			}
 		PRC_lin_biao = { #This is very fucking annoying to fix, so bear with it.
 		  set_portraits = {
 		    army = {

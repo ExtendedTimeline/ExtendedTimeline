@@ -50,7 +50,7 @@ ideas = {
             modifier = {
 				army_morale_factor = 0.05
 				army_core_attack_factor = -0.05
-				army_core_defence_factor = 0.1
+				army_core_defence_factor = 0.15
 				drift_defence_factor = 0.25
             }
         }
@@ -396,10 +396,10 @@ ideas = {
             removal_cost = -1
 			
             modifier = {
-                army_org_factor = 0.05
-				army_morale_factor = 0.1
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+                army_org_factor = 0.8
+				army_morale_factor = 0.12
+				army_core_attack_factor = 0.08
+				army_core_defence_factor = 0.08
             }
         }
 		ET_PRC_peoples_army_2 = {
@@ -480,7 +480,7 @@ ideas = {
 				army_core_defence_factor = -0.35
             }
         }
-		ET_PRC_manchurian_guerillas = { #NOTE, this simulates the 'guerilla warfare' aspect of the Chinese Civil War, it allows for the CPC to wage war on land that isn't connected to its capital. If Removed the Chinese Civil War WILL have to be reworked!
+		ET_PRC_manchurian_guerillas = {
             picture = FRA_scw_intervention_republicans_focus
             
             allowed = {
@@ -494,9 +494,11 @@ ideas = {
             removal_cost = -1
 			
             modifier = {
-			    no_supply_grace = 1032945
+			    no_supply_grace = 480
 				attrition = -0.2
-				supply_consumption_factor = -0.5
+				supply_consumption_factor = -0.2
+				supply_combat_penalties_on_core_factor = -0.2
+				out_of_supply_factor = -0.2
 				surrender_limit = 0.2
             }
         }

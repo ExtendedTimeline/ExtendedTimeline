@@ -38,7 +38,8 @@ focus_tree = {
                     transfer_state = 717
                     transfer_state = 714
                     transfer_state = 761
-                    transfer_state = 612
+                    transfer_state = 328
+                    transfer_state = 610
                 }
                 612 = {
                     create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
