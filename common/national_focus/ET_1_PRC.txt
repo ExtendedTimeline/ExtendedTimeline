@@ -378,7 +378,7 @@ focus_tree = {
         completion_reward = {
             create_corps_commander = {
                 name = "Zhang Yunyi"
-                picture = "gfx/leaders/PRC/cw/zhang_yunyi.dds"
+                portrait_path = "gfx/leaders/PRC/cw/zhang_yunyi.dds"
                 traits = { trait_mountaineer infantry_officer }
                 skill = 4
                 attack_skill = 4
@@ -388,7 +388,7 @@ focus_tree = {
             }
             create_corps_commander = {
                 name = "Xu Haidong"
-                picture = "gfx/leaders/PRC/cw/xu_haidong.dds"
+                portrait_path = "gfx/leaders/PRC/cw/xu_haidong.dds"
                 traits = { trait_mountaineer infantry_officer }
                 skill = 4
                 attack_skill = 3

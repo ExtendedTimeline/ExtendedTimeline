@@ -62,3 +62,7 @@ KOR_South_communism_ADJ:0 "South Korean"
 KOR_South:0 "South Korea"
 KOR_South_DEF:0 "South Korea"
 KOR_South_ADJ:0 "South Korean"
+
+PRC_communism:1 "Chinese Soviet Republic"
+PRC_communism_DEF:1 "the Chinese Soviet Republic"
+PRC_communism_ADJ:0 "Chinese"

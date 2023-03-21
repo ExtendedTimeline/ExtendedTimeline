@@ -38,6 +38,7 @@ country_event = { #Load The Civil War Tree, Age Mao Too.
 				transfer_state = 621
 				transfer_state = 612
 				transfer_state = 611
+				transfer_state = 609
 			}
 		PRC_lin_biao = { #This is very fucking annoying to fix, so bear with it.
 		  set_portraits = {
@@ -199,7 +200,7 @@ country_event = {
 			CHI = {
 			    add_equipment_to_stockpile = {  #Counteract to China wasting their equipment on useless offensives.
 				    type = infantry_equipment
-					amount = 25000
+					amount = 10000
 					producer = CHI
 				}
 			}
