@@ -174,7 +174,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { #Form Shaan Gan Ning
 	id = ET_CCP.3
 	title = ET_CCP.3.t
 	desc = ET_CCP.3.d
@@ -198,10 +198,14 @@ country_event = {
 		hidden_effect = {
 		    set_cosmetic_tag = PRC_gcd
 			CHI = {
-			    add_equipment_to_stockpile = {  #Counteract to China wasting their equipment on useless offensives.
+			    add_equipment_to_stockpile = {  #Helps china survive better in the early stages.
 				    type = infantry_equipment
 					amount = 10000
 					producer = CHI
+				}
+				annex_country = {
+				    target = NEA
+					transfer_troops = yes
 				}
 			}
 		}

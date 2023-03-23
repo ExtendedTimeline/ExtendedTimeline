@@ -1,2 +1,5 @@
 SVN = "countries/South Vietnam.txt"
 DPR = "countries/North Korea.txt"
+SIC = "countries/Sichuan Clique.txt"
+XIK = "countries/Xikang Clique.txt"
+NEA = "countries/Northeastern Army.txt"
