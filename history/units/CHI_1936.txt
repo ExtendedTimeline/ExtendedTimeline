@@ -310,6 +310,50 @@ units = {
 		start_equipment_factor = 0.7
 
 	}
+	division = { # "17 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 4114
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "17 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 4114
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "17 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 4114
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "17 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 4114
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
 	division = { # "6 Qibing Jun"
 		division_name = {
 			is_name_ordered = yes
@@ -418,6 +462,34 @@ units = {
 	}
 	division = {
 		name = "8 Lujun Shi"
+		location = 7097
+		division_template = "Juntuán"
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Lujun Shi"
+		location = 7097
+		division_template = "Juntuán"
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Lujun Shi"
+		location = 7097
+		division_template = "Juntuán"
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Lujun Shi"
+		location = 7097
+		division_template = "Juntuán"
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Lujun Shi"
 		location = 7097
 		division_template = "Juntuán"
 		start_equipment_factor = 0.8

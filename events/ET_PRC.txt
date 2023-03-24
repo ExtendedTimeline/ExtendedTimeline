@@ -161,6 +161,8 @@ country_event = {
 	    ai_chance = {
 			base = 50
 		}
+		add_war_support = 0.05
+		add_stability = 0.05
 		FROM = {
 			country_event = wtt_prc.11
 		}
@@ -170,6 +172,8 @@ country_event = {
 			CHI  = { add_to_faction = YUN }
 			CHI  = { add_to_faction = SHX }
 			CHI  = { add_to_faction = SIK }
+			CHI  = { add_to_faction = SIC }
+			CHI  = { add_to_faction = XIK }
 		}
 	}
 }
@@ -202,10 +206,6 @@ country_event = { #Form Shaan Gan Ning
 				    type = infantry_equipment
 					amount = 10000
 					producer = CHI
-				}
-				annex_country = {
-				    target = NEA
-					transfer_troops = yes
 				}
 			}
 		}

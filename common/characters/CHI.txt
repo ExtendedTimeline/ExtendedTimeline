@@ -5,12 +5,24 @@ characters={
 			civilian={
 				large=GFX_portrait_CHI_chiang_kaishek
 			}
+			army={
+			    large="gfx/leaders/CHI/Portrait_China_Chiang_Kai_Shek_Army.dds"
+			}
 		}
 		country_leader={
 			ideology=despotism
 			traits={ generalissimo_trait stout_defender indomitable_perseverance }
 			expire="1965.1.1.1"
 			id=-1
+		}
+		field_marshal={
+			traits={ harsh_leader politically_connected war_hero logistics_wizard defensive_doctrine }
+			skill=4
+			attack_skill=2
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 	
@@ -396,6 +408,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_CHI_he_yingqin"
+				large="gfx/leaders/CHI/Portrait_China_He_Yingqin.dds"
 			}
 		}
 		advisor={	
@@ -411,6 +424,15 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
+		}
+		field_marshal={
+			traits={ trait_reckless politically_connected offensive_doctrine }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 
@@ -445,6 +467,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_asia_2"
+				large="gfx/leaders/CHI/Portrait_China_Bai_Chongxi.dds"
 			}
 		}
 		advisor={
@@ -460,6 +483,15 @@ characters={
 			ai_will_do = {
 				factor = 0.200
 			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
 		}
 	}
 
@@ -592,6 +624,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_CHI_chen_cheng"
+				large="gfx/leaders/CHI/Portrait_China_Chen_geng.dds"
 			}
 		}
 		advisor={
@@ -608,6 +641,14 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
+		}
+		corps_commander={
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=-1
 		}
 	}
 	
