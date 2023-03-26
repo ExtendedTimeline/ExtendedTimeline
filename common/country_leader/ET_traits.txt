@@ -2,7 +2,7 @@
 
 
 leader_traits = {
-    great_chairman = {
+    great_chairman = { # PRC
 		random = no
 		political_power_factor = 0.25
 		stability_weekly_factor = 0.001
