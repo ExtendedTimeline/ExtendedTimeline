@@ -276,20 +276,14 @@ CHI_hunker_down_now  = {
 	}
 
 	abort = {
-	    or = {
-	        num_of_military_factories > 45
-			JAP = { has_war_with = USA }
-		}
+	    JAP = { has_war_with = USA }
 	}
 
 	ai_strategy = {
 		type = front_control
-
 		tag = JAP
-
 		ratio = 0.1
-
-		priority = 100
+		priority = 150
 		ordertype = front
 		execution_type = careful
 		execute_order = no
@@ -298,7 +292,7 @@ CHI_hunker_down_now  = {
 
 CHI_send_units_to_frontline  = { #Send More Units  To The Frontline With Japan
 	allowed = {
-		tag = CHI
+		is_literally_china = yes
 	}
 	enable = {
 		has_war_with = JAP
@@ -308,5 +302,76 @@ CHI_send_units_to_frontline  = { #Send More Units  To The Frontline With Japan
 		type = front_unit_request
         tag = JAP
         value = 500
+	}
+}
+
+CHI_dont_spam_that_much_army = { 
+	enable = {
+		is_literally_china = yes
+	    num_divisions > 250
+	}
+    abort = {
+	    num_divisions < 250
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = -5999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = -5999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = -5999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = -5999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -5999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -5999
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -5999
+	}
+    ai_strategy = {
+        type = force_build_armies
+        value = -5999
+	}
+}
+
+zhang_hate_chiang = {
+	allowed = { tag = NEA }
+	enable = {
+		always = yes
+	}
+	abort = {
+		NOT = { country_exists = PRC }
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "CHI"
+		value = 2000
 	}
 }

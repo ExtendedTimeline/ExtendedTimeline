@@ -7,9 +7,8 @@
         infantry = { x = 1 y = 0 }
         infantry = { x = 1 y = 1 }
         infantry = { x = 1 y = 2 }
-    }
-    support = {
-        engineer = { x = 0 y = 0 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
     }
 }
 
@@ -19,48 +18,76 @@ units = {
         location = 7418 
         division_template = "Fan Pànluàn Shi"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.9
     }
     division = {
         name = "2. Píngpàn"
         location = 7418 
         division_template = "Fan Pànluàn Shi"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.9
     }
     division = {
         name = "3. Shaanxi Jingbei"
         location = 2006 
         division_template = "Fan Pànluàn Shi"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.9
     }
     division = {
         name = "4. Xian Píngpàn"
         location = 1976 
         division_template = "Fan Pànluàn Shi"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.9
     }
     division = {
         name = "5. Píngpàn Shi"
         location = 7301 
         division_template = "Fan Pànluàn Shi"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.9
     }
     division = {
         name = "6. Shaanxi Minbing"
         location = 12713 
         division_template = "Fan Pànluàn Shi"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.9
     }
     division = {
         name = "7. Xian Shi"
         location = 4295 
         division_template = "Fan Pànluàn Shi"
 		start_experience_factor = 0.5
-		start_equipment_factor = 0.8
+		start_equipment_factor = 0.9
+    }
+	division = {
+        name = "8. Xian Minbing"
+        location = 4295 
+        division_template = "Fan Pànluàn Shi"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+    }
+	division = {
+        name = "9. Zhongguo Minbing"
+        location = 12713 
+        division_template = "Fan Pànluàn Shi"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+    }
+	division = {
+        name = "10. Xian Píngpàn"
+        location = 1976 
+        division_template = "Fan Pànluàn Shi"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+    }
+	division = {
+        name = "11. Shaanxi Píngpàn"
+        location = 2006 
+        division_template = "Fan Pànluàn Shi"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
     }
 }

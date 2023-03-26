@@ -1294,6 +1294,8 @@ focus_tree = {
 			    YUN = { add_ideas = ET_PRC_united_front }
 			    GXC = { add_ideas = ET_PRC_united_front }
 			    SIK = { add_ideas = ET_PRC_united_front }
+				SIC = { add_ideas = ET_PRC_united_front }
+				XIK = { add_ideas = ET_PRC_united_front }
 			}
 		}
 	}

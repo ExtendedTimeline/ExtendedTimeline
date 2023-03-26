@@ -14,7 +14,7 @@ ideas = {
             removal_cost = -1
 			
             modifier = {
-				army_morale_factor = -0.2
+				army_morale_factor = -0.1
             }
         }
 		ET_PRC_isolated_country = {
@@ -172,19 +172,10 @@ ideas = {
 			}
             removal_cost = -1
 			
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-			}
-			
             modifier = {
 				stability_factor = 0.2
 				war_support_factor = 0.2
-				army_core_defence_factor = 0.15
-				army_morale_factor = 0.25
-				training_time_factor = -0.25
+				political_power_factor = 0.05
             }
         }
 		ET_PRC_united_front_SHX = {
@@ -249,12 +240,12 @@ ideas = {
             removal_cost = -1
 			targeted_modifier = {
 			    tag = JAP
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.15
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
             modifier = {
 				army_morale_factor = 0.15
-				army_org_factor = 0.05
+				army_org_factor = 0.15
 				supply_consumption_factor = -0.25
             }
         }
@@ -495,10 +486,10 @@ ideas = {
 			
             modifier = {
 			    no_supply_grace = 480
-				attrition = -0.2
-				supply_consumption_factor = -0.2
-				supply_combat_penalties_on_core_factor = -0.2
-				out_of_supply_factor = -0.2
+				attrition = -0.3
+				supply_consumption_factor = -0.35
+				supply_combat_penalties_on_core_factor = -1
+				out_of_supply_factor = -1
 				surrender_limit = 0.2
             }
         }
