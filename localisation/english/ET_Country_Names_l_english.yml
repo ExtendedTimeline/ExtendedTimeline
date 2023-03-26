@@ -68,13 +68,3 @@
  PRC_communism_ADJ:0 "Chinese"
  CHI_neutrality:0 "Republic Of China"
  CHI_neutrality_DEF:0 "the Republic Of China"
-
- NEA_neutrality:0 "Northeast Bandit Suppression Headquarters"
- NEA_neutrality_DEF:0 "the Northeast Bandit Suppression Headquarters"
- NEA_neutrality_ADJ:0 "Chinese"
- SIC_neutrality:0 "Sichuan Clique"
- SIC_neutrality_DEF:0 "the Sichuan Clique"
- SIC_neutrality_ADJ:0 "Chinese"
- XIK_neutrality:0 "Xikang Clique"
- XIK_neutrality_DEF:0:0 "the Xikang Clique"
- XIK_neutrality_ADJ:0 "Chinese"
