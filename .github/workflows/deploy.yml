@@ -22,3 +22,10 @@ jobs:
           args: release/ExtendedTimeline.zip application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Steam Release
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: release/ExtendedTimeline_steambuild.zip application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
