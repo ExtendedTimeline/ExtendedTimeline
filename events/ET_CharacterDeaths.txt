@@ -1,0 +1,53 @@
+add_namespace = ET_CharacterDeaths
+
+
+news_event = { # Joseph Stalin
+	id = ET_CharacterDeaths.0
+	
+	hidden = yes
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1952.10.1
+		country_exists = SOV
+		has_government = communism
+		has_country_leader = { character = SOV_iosif_stalin }
+	}
+
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Joseph Stalin is dead." }
+		kill_country_leader = yes
+		
+		add_country_leader_role = {
+			character = "SOV_supreme_soviet"
+			country_leader = {
+				ideology = marxism
+				traits = { strong_party_discipline }
+				expire = "1953.3.1.1"
+			}
+			promote_leader = yes 
+		}
+		SOV = { news_event = { id = ET_CharacterDeaths.1 } }
+	}
+
+	option = {
+	}
+}
+
+news_event = { # Joseph Stalin
+	id = ET_CharacterDeaths.1
+	title = ET_CharacterDeaths.1.t
+	desc = ET_CharacterDeaths.1.desc
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = ET_CharacterDeaths.1.a
+		if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] is informed about the death of Joseph Stalin." }
+	}
+}

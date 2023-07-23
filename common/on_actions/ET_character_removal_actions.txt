@@ -1,0 +1,26 @@
+on_actions = {
+    on_monthly = {
+        effect = {
+			if = { # Franklin D. Roosevelt # 1945.4.12
+				limit = {
+					date > 1945.3.1
+					country_exists = USA
+					has_government = democratic
+					has_country_leader = { character = USA_franklin_delano_roosevelt }
+				}
+				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Franklin D. Roosevelt is dead." }
+				kill_country_leader = yes
+			}
+			if = { # Joseph Stalin 1953.3.5
+				limit = {
+					date > 1953.2.1
+					country_exists = SOV
+					has_government = communism
+					has_country_leader = { character = SOV_iosif_stalin }
+				}
+				if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] Joseph Stalin is dead." }
+				kill_country_leader = yes
+			}
+		}
+	}
+}
