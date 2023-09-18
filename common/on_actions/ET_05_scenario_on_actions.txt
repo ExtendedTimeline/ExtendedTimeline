@@ -23,6 +23,13 @@ on_actions = {
                     }
                 }
 
+                ROOT = {
+                    add_timed_idea = {
+                        idea = ET_generic_world_war_two_participants
+                        days = 2190
+                    }
+                }
+                
                 if = { limit = { is_debug = yes } log = "[GetDateText]: NewEra inizialized." }
                 ET_set_new_era = yes
                 ET_set_scenario = yes
