@@ -1,0 +1,306 @@
+ET_alliances_nato_decisions = {
+	ET_alliances_nato_create = {
+		icon = generic_decision
+
+		is_good = yes
+
+		available = {
+			original_tag = USA
+			has_government = democratic
+			date > 1945.01.01
+		}
+
+		visible = {
+			always = yes
+			NOT = { has_global_flag = ET_flag_global_alliance_nato }
+			
+			#NOT = { has_government = fascism }
+			#NOT = { has_government = communism }
+
+			#has_war = no
+		}
+
+		fire_only_once = yes
+		cost = 250
+
+		complete_effect = {
+			set_global_flag = ET_flag_global_alliance_nato
+			set_country_flag = ET_flag_country_nato
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				date > 1949.04.01
+			}
+		}
+	}
+	ET_alliances_nato_join = {
+		icon = generic_decision
+
+		is_good = yes
+
+		available = {
+			has_stability > 0.5
+			has_war_support > 0.1
+			has_war = no
+		}
+
+		visible = {
+			has_global_flag = ET_flag_global_alliance_nato
+			NOT = { has_country_flag = ET_flag_country_nato }
+			
+			NOT = { has_government = fascism }
+			NOT = { has_government = communism }
+		}
+
+		fire_only_once = no
+		cost = 250
+
+		complete_effect = {
+			set_country_flag = ET_flag_country_nato
+		}
+
+		ai_will_do = {
+			base = 0
+			
+			modifier = {
+				add = 100
+				original_tag = ENG
+				ENG = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = NOR
+				NOR = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = DEN
+				DEN = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = FRA
+				FRA = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = BEL
+				BEL = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = CAN
+				CAN = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = ICE
+				ICE = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = ITA
+				ITA = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = LUX
+				LUX = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = HOL
+				HOL = { has_government = democratic }
+			}
+			modifier = {
+				add = 100
+				original_tag = POR
+				
+				POR = {
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+			}
+		}
+	}
+	ET_alliances_nato_leave = {
+		icon = generic_decision
+
+		is_good = yes
+
+		available = {
+			has_government = fascism
+			has_government = communism
+		}
+
+		visible = {
+			has_global_flag = ET_flag_global_alliance_nato
+			has_country_flag = ET_flag_country_nato
+		}
+
+		fire_only_once = no
+		cost = 250
+
+		complete_effect = {
+			set_country_flag = ET_flag_country_nato
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	# Standardization
+	
+	ET_alliances_nato_standard_found = {
+		icon = generic_decision
+
+		is_good = yes
+
+		available = {}
+
+		visible = {
+			NOT = { has_global_flag = ET_flag_global_alliance_nato_standard_founded }
+			
+			has_global_flag = ET_flag_global_alliance_nato
+			has_country_flag = ET_flag_country_nato
+		}
+
+		fire_only_once = no
+		cost = 50
+
+		complete_effect = {
+			set_global_flag = ET_flag_global_alliance_nato_standard_founded
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	ET_alliances_nato_standard_ammo_suggest = {
+		icon = ger_mefo_bills
+
+		is_good = yes
+
+		available = {}
+
+		visible = {
+			NOT = { has_global_flag = ET_flag_global_alliance_nato_standard_ammo }
+			has_global_flag = ET_flag_global_alliance_nato_standard_founded
+
+			has_global_flag = ET_flag_global_alliance_nato
+			has_country_flag = ET_flag_country_nato
+		}
+
+		fire_only_once = no
+		cost = 50
+
+		complete_effect = {
+			set_global_flag = ET_flag_global_alliance_nato_standard_ammo
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ET_alliances_nato_standard_ammo_adopt = {
+		icon = generic_industry
+
+		is_good = yes
+
+		available = {}
+
+		visible = {
+			has_global_flag = ET_flag_global_alliance_nato_standard_ammo
+			has_global_flag = ET_flag_global_alliance_nato_standard_founded
+
+			has_global_flag = ET_flag_global_alliance_nato
+			has_country_flag = ET_flag_country_nato
+		}
+
+		fire_only_once = no
+		
+		custom_cost_trigger = {
+			has_command_power > 9
+			has_army_experience > 24
+		}
+		custom_cost_text = ET_decision_cost_CP_10_ArmXP_25
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -10
+				army_experience = -25
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	
+	ET_alliances_nato_standard_ammo2_suggest = {
+		icon = ger_mefo_bills
+
+		is_good = yes
+
+		available = {}
+
+		visible = {
+			NOT = { has_global_flag = ET_flag_global_alliance_nato_standard_ammo2 }
+			has_global_flag = ET_flag_global_alliance_nato_standard_founded
+
+			has_global_flag = ET_flag_global_alliance_nato
+			has_country_flag = ET_flag_country_nato
+		}
+
+		fire_only_once = no
+		cost = 50
+
+		complete_effect = {
+			set_global_flag = ET_flag_global_alliance_nato_standard_ammo2
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+	ET_alliances_nato_standard_ammo2_adopt = {
+		icon = generic_industry
+
+		is_good = yes
+
+		available = {}
+
+		visible = {
+			has_global_flag = ET_flag_global_alliance_nato_standard_ammo2
+			has_global_flag = ET_flag_global_alliance_nato_standard_founded
+
+			has_global_flag = ET_flag_global_alliance_nato
+			has_country_flag = ET_flag_country_nato
+		}
+
+		fire_only_once = no
+
+		custom_cost_trigger = {
+			has_command_power > 9
+			has_army_experience > 24
+		}
+		custom_cost_text = ET_decision_cost_CP_10_ArmXP_25
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -10
+				army_experience = -25
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

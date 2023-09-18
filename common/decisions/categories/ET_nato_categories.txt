@@ -1,0 +1,12 @@
+ET_alliances_nato_decisions = {
+	icon = usa_congress
+
+	visible = {
+		OR = {
+			is_debug = yes
+			has_global_flag = ET_flag_global_alliance_nato
+			
+			has_global_flag = ET_flag_global_scenario_1
+		}
+	}
+}
