@@ -1,0 +1,31 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_goal_cpc_consolidate_manchuria"
+		textureFile = "gfx/interface/goals/cpc_consolidate_manchuria.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_cpc_seize_shandong"
+		textureFile = "gfx/interface/goals/cpc_seize_shandong.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_cpc_linbiao_command"
+		textureFile = "gfx/interface/goals/cpc_linbiao_command.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_cpc_show_kmt_out"
+		textureFile = "gfx/interface/goals/cpc_show_kmt_out.dds"
+	}
+	## IDEAS ##
+	spriteType = {
+		name = "GFX_idea_cpc_lin_biao"
+		textureFile = "gfx/interface/ideas/gfx_idea_cpc_lin_biao.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chi_civil_war"
+		textureFile = "gfx/interface/ideas/gfx_idea_chi_civil_war.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_cpc_civil_war"
+		textureFile = "gfx/interface/ideas/gfx_idea_cpc_civil_war.dds"
+	}
+}

@@ -9,6 +9,9 @@ DPR_neutrality_party:0 "Yi Dynasty"
 DPR_fascism_party:0 "NDPC"
 DPR_fascism_party_long:0 "National Defense Policy Committee"
 
+NEA_neutrality_party:0 "National Revolutionary Army"
+NEA_neutrality_party_long:0 "National Revolutionary Army Military Council"
+
 VIN_FirstIndochinaWar_communism_party:0 "Viet Minh"
 CAM_FirstIndochinaWar_communism_party:0 "Khmer Issarak Front"
 LAO_FirstIndochinaWar_communism_party:0 "Pathet Lao"

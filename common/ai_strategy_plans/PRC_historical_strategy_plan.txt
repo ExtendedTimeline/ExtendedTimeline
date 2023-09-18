@@ -1,0 +1,105 @@
+PRC_historical_plan = {
+	name = "Communist China historical plan"
+	desc = "Historical behavior for Communist China"
+
+	allowed = {
+		original_tag = PRC
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = PRC_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = PRC_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = PRC_ai_behavior
+				option = HISTORICAL
+			}
+		}
+	}
+	abort = {
+		has_game_rule = {
+			rule = PRC_ai_behavior
+			option = DEFAULT
+		}
+		OR = {
+			JAP = {
+				has_government = communism
+			}
+			USA = {
+				has_government = communism
+			}
+			NOT = {
+				any_other_country = {
+					has_government = communism
+					is_major = yes
+				}
+			}
+		}
+	}
+
+	ai_national_focuses = {
+		PRC_strengthen_the_central_secretariat
+		PRC_agrarian_socialism
+		PRC_the_yanan_base_area
+		PRC_armed_forces
+		PRC_prepare_for_war_with_japan
+		PRC_focus_on_china
+		PRC_equip_soldier
+		PRC_guerilla_warfare
+		PRC_confrontation_with_the_warlords
+		PRC_chinese_united_front
+		PRC_comintern_support
+		PRC_political_mobilization
+		PRC_maoism
+		PRC_revolutionary_military_commission
+		PRC_mobile_warfare
+		PRC_land_redistribution
+		PRC_enforce_the_three_rules
+		PRC_ban_the_opium_trade
+		PRC_central_security_bureau
+		PRC_ensure_loyalty
+		PRC_recruit_peasant
+		PRC_mobilize_militia
+		PRC_100_regiments_campaign
+		PRC_central_military_commission
+		PRC_scavenge_guns
+		PRC_abolish_the_land_rent
+		PRC_improved_literacy
+		PRC_better_life
+		PRC_socialism_with_chinese_characteristics
+		PRC_party_commands_gun
+		PRC_socialist_market_economy
+		PRC_infantry_tactics
+		PRC_reborn_army
+		PRC_war_of_anti_japan
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = -500
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
