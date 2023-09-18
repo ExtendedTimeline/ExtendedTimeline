@@ -5,7 +5,11 @@ spriteTypes = {
 		name = "GFX_idea_ET_generic_domino_theory_idea"
 		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
 	}
-
+	spriteType = {
+		name = "GFX_idea_ET_generic_world_war_two_participants"
+		texturefile = "gfx/interface/ideas/the_war_to_end_all_wars.dds"
+	}
+	
 
 	spriteType = {
 		name = "GFX_idea_ET_USA_domino_theory_idea"
@@ -19,4 +23,5 @@ spriteTypes = {
 		name = "GFX_idea_ET_USA_intervene_in_vietnam"
 		texturefile = "gfx/interface/ideas/idea_eng_imperial_conscription.dds"
 	}
+
 }

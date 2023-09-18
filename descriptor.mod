@@ -10,6 +10,3 @@ dependencies={
 }
 
 path="mod/ExtendedTimeline"
-remote_file_id="2747306152"
-
-replace_path="common/ai_peace"
