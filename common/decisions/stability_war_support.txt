@@ -1,4 +1,5 @@
 crisis = {
+
 	draft_dodging = {
 
 		icon = generic_civil_support
@@ -47,6 +48,7 @@ crisis = {
 			country_event = stability.21
 		}
 	}
+
 	strikes_1 = {
 
 		icon = generic_civil_support
@@ -99,6 +101,7 @@ crisis = {
 			country_event = stability.22
 		}
 	}
+	
 	draft_dodging_mission = {
 
 		icon = generic_civil_support
@@ -471,7 +474,6 @@ crisis = {
 		}
 	}
 }
-
 demobilization = {
 	demobilization_economic = {
 
@@ -524,6 +526,31 @@ demobilization = {
 		complete_effect = {
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] demobilization_economic triggerd!" }
 			
+			# Extended Timeline: Moved in to if below
+			#if = {
+			#	limit = {
+			#		has_war_support < 0.15
+			#	}
+			#	add_ideas = civilian_economy
+			#}
+			#else_if = {
+			#	limit = {
+			#		has_war_support < 0.25
+			#	}
+			#	add_ideas = low_economic_mobilisation
+			#}
+			#else_if = {
+			#	limit = {
+			#		has_war_support < 0.5
+			#	}
+			#	add_ideas = partial_economic_mobilisation
+			#}
+			#else_if = {
+			#	limit = {
+			#		has_war_support < 0.8
+			#	}
+			#	add_ideas = war_economy
+			#}
 			if = {
 				limit = {
 					has_idea = strikes_1
@@ -601,6 +628,10 @@ demobilization = {
 				AND = {
 					has_unsupported_economic_law = yes
 					has_war = no
+					NOT = {
+						original_tag = SWE
+						SWE = { has_completed_focus = SWE_totalforsvar }
+					}
 				}
 				AND = {
 					hidden_trigger = { ET_in_new_era_country = yes }

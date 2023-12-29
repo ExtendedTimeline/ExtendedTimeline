@@ -2,6 +2,8 @@ add_namespace = ET_Independence_Mozambique # MZB
 
 country_event = { 
     id = ET_Independence_Mozambique.0
+    title = "AI Event"
+    desc = "Decolonization"
 
     is_triggered_only = yes
     

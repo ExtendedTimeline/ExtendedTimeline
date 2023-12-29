@@ -1,0 +1,3 @@
+# VIN - Vietnam
+
+ET_init_country_FirstIndochinaWar = {} # WIP

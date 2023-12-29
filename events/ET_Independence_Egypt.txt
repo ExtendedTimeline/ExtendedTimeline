@@ -174,48 +174,6 @@ country_event = { #33: [1951.10.01] Refused to leave, gets attacked - https://en
     }
     
     immediate = {
-        if = {
-            limit = {
-                OR = {
-                    divisions_in_state = {
-                        size > 0
-                        state = 446
-                    }
-                    divisions_in_state = {
-                        size > 0
-                        state = 453
-                    }
-                }
-                OR = {
-                    divisions_in_state = {
-                        size < 4
-                        state = 446
-                    }
-                    divisions_in_state = {
-                        size < 4
-                        state = 453
-                    }
-                }
-            }
-            custom_effect_tooltip = ET_Independence_Egypt_Div_Damaged_tt
-            hidden_effect = {
-                damage_units = {
-                    state = 446
-                    org_damage = 0.30
-                    str_damage = 0.10
-                    ratio = yes
-                    army = yes
-                }
-                damage_units = {
-                    state = 453
-                    org_damage = 0.30
-                    str_damage = 0.10
-                    ratio = yes
-                    army = yes
-                }
-            }
-        }
-
         custom_effect_tooltip = ET_Independence_Egypt_Inf_Damaged_tt
         hidden_effect = {
             if = {

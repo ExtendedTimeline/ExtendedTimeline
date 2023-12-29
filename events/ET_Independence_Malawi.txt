@@ -2,6 +2,8 @@ add_namespace = ET_Independence_Malawi # MLW
 
 country_event = { 
     id = ET_Independence_Malawi.0
+    title = "AI Event"
+    desc = "Decolonization"
 
     is_triggered_only = yes
     

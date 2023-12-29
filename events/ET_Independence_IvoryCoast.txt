@@ -2,6 +2,8 @@ add_namespace = ET_Independence_IvoryCoast # IVO
 
 country_event = { 
     id = ET_Independence_IvoryCoast.0
+    title = "AI Event"
+    desc = "Decolonization"
 
     is_triggered_only = yes
     
