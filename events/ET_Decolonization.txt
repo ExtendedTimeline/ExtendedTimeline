@@ -1126,7 +1126,7 @@ country_event = { # Releases
                     controls_state = 286
                 }
             }
-            ET_init_countrys_firstIndochinaWar = yes
+            ET_init_country_FirstIndochinaWar = yes
 
             set_country_flag = {
                 flag = ET_flag_country_free_VIN
@@ -1141,7 +1141,7 @@ country_event = { # Releases
         if = { # North Korea    [2 September 1945] SOV*
             # https://en.wikipedia.org/wiki/Korea
             limit = {
-                at_war = no
+                has_war = no
                 
                 NOT = { has_country_flag = ET_flag_country_free_DPR }
                 NOT = { has_global_flag = ET_flag_global_free_DPR }
@@ -1166,7 +1166,7 @@ country_event = { # Releases
         if = { # South Korea    [2 September 1945] USA*
             # https://en.wikipedia.org/wiki/Korea
             limit = {
-                at_war = no
+                has_war = no
 
                 NOT = { has_country_flag = ET_flag_country_free_KOR }
                 NOT = { has_global_flag = ET_flag_global_free_KOR }

@@ -187,22 +187,22 @@ political_actions = {
                 limit = {
                     original_tag = FRA
                 }
-                has_country_flag = ET_flag_country_FRA_abandon_asia
-                has_global_flag = ET_flag_global_FRA_abandon_asia
+                set_country_flag = ET_flag_country_FRA_abandon_asia
+                set_global_flag = ET_flag_global_FRA_abandon_asia
             }
             if = {
                 limit = {
                     original_tag = ENG
                 }
-                has_country_flag = ET_flag_country_ENG_abandon_asia
-                has_global_flag = ET_flag_global_ENG_abandon_asia
+                set_country_flag = ET_flag_country_ENG_abandon_asia
+                set_global_flag = ET_flag_global_ENG_abandon_asia
             }
             if = {
                 limit = {
                     original_tag = USA
                 }
-                has_country_flag = ET_flag_country_usa_surrender_to_jap
-                has_global_flag = ET_flag_global_usa_surrender_to_jap
+                set_country_flag = ET_flag_country_usa_surrender_to_jap
+                set_global_flag = ET_flag_global_usa_surrender_to_jap
             }
             
         }
@@ -246,7 +246,7 @@ political_actions = {
 
         visible = {
             has_elections = yes
-            at_war = no
+            has_war = no
             OR = {
                 AND = {
                     has_government = democratic
@@ -300,7 +300,7 @@ political_actions = {
 
         visible = {
             always = no # DISABLED
-            at_war = no
+            has_war = no
             OR = {
                 AND = {
                     has_government = democratic
@@ -325,7 +325,7 @@ political_actions = {
 
         complete_effect = {
             add_stability = 0.10
-            has_elections = yes
+            hold_election = THIS
         }
 
         ai_will_do = { base = 0 }

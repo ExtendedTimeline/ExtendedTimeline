@@ -1061,10 +1061,6 @@ focus_tree = {
         
         available = {
             has_government = fascism
-            add_popularity = {
-                ideology = fascism
-                popularity = 0.05
-            }
         }
 
         completion_reward = {
