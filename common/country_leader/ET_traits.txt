@@ -1,0 +1,37 @@
+leader_traits = {
+    great_chairman = { # PRC
+		random = no
+		political_power_factor = 0.25
+		stability_weekly_factor = 0.001
+		drift_defence_factor = 0.25
+		weekly_casualties_war_support = 0.001
+		ai_desired_divisions_factor = 0.50
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	strategic_planner = { 
+		random = no
+		max_planning_factor = 0.15
+		dig_in_speed_factor = 0.1
+		land_night_attack = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	generalissimo_trait = { #Chiang
+		random = no
+		defensive_war_stability_factor = 0.4
+		drift_defence_factor = 0.25
+		weekly_casualties_war_support = 0.003
+		ai_desired_divisions_factor = 0.50
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

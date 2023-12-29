@@ -1,0 +1,16 @@
+characters={
+    CHI_chiang_kaishek={
+		name=CHI_chiang_kaishek
+		portraits={
+			civilian={
+				large=GFX_portrait_CHI_chiang_kaishek
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ generalissimo_trait indomitable_perseverance stout_defender }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}
