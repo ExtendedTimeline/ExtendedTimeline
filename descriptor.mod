@@ -6,7 +6,7 @@ tags={
 	"Gameplay"
 }
 dependencies={
-	"UTNH_DEV"
+	"UTNH DevBuild"
 }
 
 path="mod/ExtendedTimeline"
