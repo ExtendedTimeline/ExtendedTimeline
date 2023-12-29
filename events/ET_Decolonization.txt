@@ -1110,30 +1110,37 @@ country_event = { # Releases
         #  Asia
         # #
 
-        if = { # Vietnam        [19 December 1959] FRA* "First Indochina War"
+        if = { # Vietnam        [19 December 1946] FRA* "First Indochina War"
             # https://en.wikipedia.org/wiki/First_Indochina_War
             limit = {
                 is_ai = yes
+
                 NOT = { has_country_flag = ET_flag_country_free_VIN }
+                NOT = { has_global_flag = ET_flag_global_free_VIN }
+
                 OR = {
-                    date > 1959.11.01
+                    date > 1946.11.01
                     has_global_flag = ET_Flag_Global_DEBUG_Decolonization_Ignore_Dates
                     has_global_flag = ET_DEBUG_Trigger_FirstIndochinaWar
                 }
                 NOT = { original_tag = VIN }
+                NOT = { original_tag = VIN }
+                NOT = { original_tag = VIN }
+                NOT = { original_tag = VIN }
                 OR = {
-                    controls_state = 671
-                    controls_state = 286
+                    controls_state = 671 # North Vietnam
+                    controls_state = 286 # South Vietnam
+                    controls_state = 670 # Laos
+                    controls_state = 741 # Cambodia
                 }
             }
-            ET_init_countrys_firstIndochinaWar = yes
 
             set_country_flag = {
                 flag = ET_flag_country_free_VIN
                 days = 90
             }
             country_event = {
-                id = ET_Independence_Vietnam.0
+                id = ET_IndoChina.0
                 days = 19
             }
         }

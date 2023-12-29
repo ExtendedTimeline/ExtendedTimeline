@@ -1,42 +1,20 @@
-add_namespace = ET_Independence_Vietnam # VIN
+add_namespace = ET_IndoChina
+add_namespace = ET_Independence_NorthVietnam # VIN
+add_namespace = ET_Independence_SouthVietnam # SVN
+add_namespace = ET_Independence_Cambodia     # CAM
+add_namespace = ET_Independence_Laos         # LAO
 
-country_event = { 
-    id = ET_Independence_Vietnam.0
+country_event = {
+    id = ET_IndoChina.0
 
     is_triggered_only = yes
     
-    immediate = {}
-
-    option = { # Release
-        ai_chance = {
-            base = 10
-            
-            modifier = {
-                factor = 0
-                OR = {
-                    has_war = no
-                    is_puppet = no
-                    is_subject = no
-                    threat < 0.30
-                }
-            }
-        }
-
-        release_on_controlled = VIN
+    immediate = {
+        # 671 North Vietnam
+        # 286 South Vietnam
+        # 670 Laos
+        # 741 Cambodia
     }
 
-    option = { # Dont Release
-        ai_chance = {
-            base = 0
-            modifier = {
-                add = 10
-                OR = {
-                    has_war = yes
-                    is_puppet = yes
-                    is_subject = yes
-                    threat > 0.30
-                }
-            }
-        }
-    }
+    option = {}
 }
