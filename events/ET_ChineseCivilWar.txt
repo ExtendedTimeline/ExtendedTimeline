@@ -1,0 +1,348 @@
+add_namespace = ET_ChineseCivilWar
+
+country_event = { # 0 - Resurges type check
+    id = ET_ChineseCivilWar.0
+
+    is_triggered_only = yes
+    fire_only_once = no
+    hidden = yes
+
+    immediate = {
+        if = {
+            limit = {
+                exists = PRC
+                exists = CHI
+            }
+            country_event = { id = ET_ChineseCivilWar.1 }
+        }
+        else_if = {
+            limit = {
+                NOT = { exists = PRC }
+                exists = CHI
+                CHI = { communism > 5 }
+            }
+            country_event = { id = ET_ChineseCivilWar.2 }
+        }
+        else_if = {
+            limit = {
+                NOT = { exists = PRC }
+                NOT = { exists = CHI }
+            }
+            country_event = { id = ET_ChineseCivilWar.3 }
+        }
+    }
+
+    option = {}
+}
+
+# Nations  : PRC CHI TIB (MAN)
+# Warlords : XSM SHX GXC YUN
+
+country_event = { # 1 - Normal; CHI and PRC exist
+    id = ET_ChineseCivilWar.1
+
+    is_triggered_only = yes
+    fire_only_once = no
+    hidden = yes
+
+    immediate = {
+        # Breakup Chinese United Front
+        PRC = { leave_faction = yes } # Communist China
+        if = { limit = { exists = XSM } XSM = { leave_faction = yes } }
+        if = { limit = { exists = SHX } SHX = { leave_faction = yes } }
+        if = { limit = { exists = GXC } GXC = { leave_faction = yes } }
+        if = { limit = { exists = YUN } YUN = { leave_faction = yes } }
+        if = { limit = { exists = TIB } TIB = { leave_faction = yes } } # Tibet
+        CHI = { dismantle_faction = yes }   # Nationalist China
+
+        # Wargoals
+        CHI = {
+            create_wargoal = {
+                type = civil_war
+                target = PRC
+            }
+        }
+        PRC = {
+            create_wargoal = {
+                type = civil_war
+                target = PRC
+            }
+
+            if = {
+                limit = { exists = XSM }
+                create_wargoal = {
+                    type = annex_everything
+                    target = XSM
+                }
+            }
+            if = {
+                limit = { exists = SHX }
+                create_wargoal = {
+                    type = annex_everything
+                    target = SHX
+                }
+            }
+            if = {
+                limit = { exists = GXC }
+                create_wargoal = {
+                    type = annex_everything
+                    target = GXC
+                }
+            }
+            if = {
+                limit = { exists = YUN }
+                create_wargoal = {
+                    type = annex_everything
+                    target = YUN
+                }
+            }
+            if = {
+                limit = { exists = TIB }
+                create_wargoal = {
+                    type = annex_everything
+                    target = TIB
+                }
+            }
+        }
+    }
+
+    option = {}
+}
+
+country_event = { # 2 - PRC dont exist but CHI has more then 10% communist support.
+    id = ET_ChineseCivilWar.2
+
+    is_triggered_only = yes
+    fire_only_once = no
+    hidden = yes
+
+    immediate = {
+        # Breakup Chinese United Front
+        PRC = { leave_faction = yes } # Communist China
+        if = { limit = { exists = XSM } XSM = { leave_faction = yes } }
+        if = { limit = { exists = SHX } SHX = { leave_faction = yes } }
+        if = { limit = { exists = GXC } GXC = { leave_faction = yes } }
+        if = { limit = { exists = YUN } YUN = { leave_faction = yes } }
+        if = { limit = { exists = TIB } TIB = { leave_faction = yes } } # Tibet
+        CHI = { dismantle_faction = yes }   # Nationalist China
+
+        # Recreate the PRC
+        if = {      # communism > 60
+            limit = {
+                CHI = { communism > 60 }
+            }
+            CHI = { 622 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 615 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 746 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 621 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 283 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 616 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 756 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 612 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 611 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 608 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 608 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 610 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 609 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 715 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 716 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 328 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 714 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 717 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 597 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 607 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 607 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 744 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 753 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 752 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 601 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 604 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 754 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 755 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 760 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 618 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 617 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 619 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 287 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 287 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 759 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 758 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+        }
+        else_if = { # communism > 50
+            limit = {
+                CHI = {
+                    communism > 50
+                    communism < 59
+                }
+            }
+            CHI = { 622 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 615 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 746 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 621 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 283 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 616 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 756 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 612 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 611 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 608 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 608 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 610 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 609 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 715 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 716 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 328 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 714 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 717 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 597 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 607 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 607 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 744 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 753 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 752 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 601 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 604 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 754 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 755 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 760 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+        }
+        else_if = { # communism > 40
+            limit = {
+                CHI = {
+                    communism > 40
+                    communism < 49
+                }
+            }
+            CHI = { 622 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 615 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 746 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 621 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 283 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 616 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 756 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 612 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 611 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 608 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 608 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 610 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 609 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 715 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 716 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 328 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 714 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 717 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+        }
+        else_if = { # communism > 30
+            limit = {
+                CHI = {
+                    communism > 30
+                    communism < 39
+                }
+            }
+            CHI = { 622 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 615 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 746 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 621 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+            CHI = { 283 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 616 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 756 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 612 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 611 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            
+        }
+        else_if = { # communism > 20
+            limit = {
+                CHI = {
+                    communism > 20
+                    communism < 29
+                }
+            }
+            CHI = { 622 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 615 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 746 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+            CHI = { 621 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+
+        }
+        else = {
+            CHI = { 622 = { if = { limt = { controller = CHI } transfer_state_to = PRC } } }
+        }
+
+        # Wargoals
+        CHI = {
+            create_wargoal = {
+                type = civil_war
+                target = PRC
+            }
+        }
+        PRC = {
+            create_wargoal = {
+                type = civil_war
+                target = PRC
+            }
+
+            if = {
+                limit = { exists = XSM }
+                create_wargoal = {
+                    type = annex_everything
+                    target = XSM
+                }
+            }
+            if = {
+                limit = { exists = SHX }
+                create_wargoal = {
+                    type = annex_everything
+                    target = SHX
+                }
+            }
+            if = {
+                limit = { exists = GXC }
+                create_wargoal = {
+                    type = annex_everything
+                    target = GXC
+                }
+            }
+            if = {
+                limit = { exists = YUN }
+                create_wargoal = {
+                    type = annex_everything
+                    target = YUN
+                }
+            }
+            if = {
+                limit = { exists = TIB }
+                create_wargoal = {
+                    type = annex_everything
+                    target = TIB
+                }
+            }
+        }
+
+        PRC = { load_oob = "PRC_1939" }
+    }
+
+    option = {}
+}
+
+country_event = { # 3 - PRC and CHI dont exist
+    id = ET_ChineseCivilWar.3
+
+    is_triggered_only = yes
+    fire_only_once = no
+    hidden = yes
+
+    immediate = {
+        release = CHI
+        country_event = { id = ET_ChineseCivilWar.2 }
+    }
+
+    option = {}
+}
