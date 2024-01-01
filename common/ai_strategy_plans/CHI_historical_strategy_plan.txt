@@ -1,0 +1,116 @@
+CHI_nationalist_historical_plan = {
+	name = "Nationalist China historical plan"
+	desc = "Essentially historical behavior for Nationalist China"
+
+	allowed = {
+		original_tag = CHI
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = CHI_ai_behavior
+					option = DEFAULT
+				}	
+			}
+			has_country_flag = CHI_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = CHI_ai_behavior
+				option = HISTORICAL
+			}
+		}
+	}
+	abort = {
+		JAP = {
+			OR = {
+				has_completed_focus = JAP_strengthen_civilian_government
+				has_completed_focus = JAP_the_unthinkable_option
+				has_completed_focus = JAP_support_the_kodoha_faction
+				is_in_faction_with = ENG 
+				is_in_faction_with = USA 
+			}
+		}
+		has_game_rule = {
+			rule = CHI_ai_behavior
+			option = ALTERNATE
+		}
+		MAN = {
+			is_subject = no
+		}
+	}
+
+	ai_national_focuses = {
+		CHI_invite_foreign_investors
+		CHI_unified_industrial_planning
+		CHI_rural_reconstruction_movement
+		CHI_three_principles_of_the_people
+		CHI_nationalism
+		CHI_financial_policy
+		CHI_military_affairs_commission
+		CHI_expand_the_academica_sinica
+		CHI_army_reform
+		CHI_price_controls
+		CHI_grain_tax
+		CHI_bureau_of_investigation_and_statistics
+		CHI_prioritize_the_interior
+		CHI_british_cooperation
+		CHI_mission_to_the_soviet_union
+		CHI_burma_road
+		CHI_rapprochement_with_soviet_union
+		CHI_war_of_resistance 
+		CHI_construction_battalions
+		CHI_war_of_national_liberation
+		CHI_mission_to_the_us
+		CHI_mining_commission 
+		CHI_reform_the_national_bank 
+		CHI_hire_chennault
+		CHI_the_hump
+		CHI_fighter_purchases
+		CHI_camco
+		CHI_ledo_road
+		CHI_modern_logistics
+		CHI_whampoa_military_academy
+		CHI_renegotiate_the_unequal_treaties
+		CHI_subjugate_the_warlords
+		CHI_democracy
+		CHI_executive_yuan
+		CHI_welfare
+		CHI_forced_loans
+		CHI_refugee_relief_agency
+		CHI_land_tax_reform
+		CHI_anti_imperialism
+		CHI_new_life_movement
+		CHI_unemployment_assistance
+		CHI_constitutional_reform
+		CHI_republicanism
+		CHI_free_hospitals
+		CHI_chemical_research_institute
+		CHI_rural_schooling
+	}
+
+	research = {
+
+	}
+	focus_factors = {
+		#Never attempt a take over
+		CHI_one_china_policy = 0
+		CHI_industrial_evacuations
+		
+	}
+
+	ideas = {
+		CHI_xiao_yisu = 20
+		CHI_soong_mei_ling = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

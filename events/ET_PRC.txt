@@ -1,0 +1,228 @@
+add_namespace = ET_CCP
+
+country_event = { #Load The Civil War Tree, Age Mao Too.
+	id = ET_CCP.1
+	title = ET_CCP.1.t
+	desc = ET_CCP.1.desc
+	picture = GFX_report_event_china_infiltration
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = ET_CCP.1.a
+		ai_chance = { factor = 1 }
+		custom_effect_tooltip = cpc_load_focus_cw
+		IF = {
+		    limit = { 
+			    has_country_leader = {
+				    character = PRC_mao_zedong
+				}
+			}
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/PRC/Portrait_China_Mao_Zedong.dds"
+			}
+		}
+		hidden_effect = {
+		    add_ideas = ET_PRC_manchurian_guerillas
+			leave_faction = yes
+			set_cosmetic_tag = PRC_ccp
+			load_focus_tree = ET_S1_PRC
+			add_ideas = ET_PRC_morale_debuff
+			add_ideas = ET_PRC_isolated_country
+			set_rule = { can_send_volunteers = no }
+			PRC = {
+				transfer_state = 612
+				transfer_state = 611
+				transfer_state = 609
+				transfer_state = 614
+				add_equipment_to_stockpile = {
+			        type = infantry_equipment
+			        amount = 100000
+		        }  
+				add_equipment_to_stockpile = {
+			        type = artillery_equipment
+			        amount = 7250
+		        } 
+				add_equipment_to_stockpile = {
+			        type = support_equipment
+			        amount = 7250
+		        } 
+				annex_country = {
+				    target = SHX
+			        transfer_troops = yes
+			    }
+			}
+		PRC_lin_biao = { #This is very fucking annoying to fix, so bear with it.
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/lin_biao_50s.dds"
+			}
+		  }
+		}
+		PRC_xu_xiangqian = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/xu_xiangqian_50s.dds"
+			}
+		  }
+		}
+		PRC_liu_bocheng = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/liu_bocheng_50s.dds"
+			}
+		  }
+		}
+		PRC_chen_yi = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/chen_yi_50s.dds"
+			}
+		  }
+		}
+		PRC_peng_dehuai = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/peng_dehuai_50s.dds"
+			}
+		  }
+		}
+		PRC_nie_rongzhen = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/nie_rongzhen_50s.dds"
+			}
+		  }
+		}
+		PRC_ye_jianying = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/ye_jiangying_50s.dds"
+			}
+		  }
+		}
+		PRC_zhu_de = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/zhu_de_50s.dds"
+			}
+		  }
+		}
+		PRC_luo_ronghuan = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/luo_ronghuan_50s.dds"
+			}
+		  }
+		}
+		PRC_he_long = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/he_long_50s.dds"
+			}
+		  }
+		}
+		PRC_chen_geng = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/chen_geng_50s.dds"
+			}
+		  }
+		}
+		PRC_xu_guangda = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/xu_guangda_50s.dds"
+			}
+		  }
+		}
+		PRC_su_yu = {
+		  set_portraits = {
+		    army = {
+			    large="gfx/leaders/PRC/cw/su_yu_50s.dds"
+			}
+		  }
+		}
+		 remove_ideas = {
+		    PRC_mobile_warfare
+			ET_PRC_guerilla_warfare
+			PRC_focus_on_china
+			PRC_central_military_commission
+			ET_PRC_weapon_scavenge
+			ET_PRC_improved_literacy
+			ET_PRC_better_encryption
+			ET_PRC_political_mobilization
+		 }
+		}
+	}
+}
+
+country_event = {
+	id = ET_CCP.2
+	title = wtt_prc.10.t
+	desc = wtt_prc.10.desc
+	picture = GFX_report_event_chinese_soldiers_02
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = wtt_prc.10.a
+	    ai_chance = {
+			base = 50
+		}
+		add_war_support = 0.05
+		add_stability = 0.05
+		FROM = {
+			country_event = wtt_prc.11
+		}
+		hidden_effect = {
+		    CHI  = { add_to_faction = XSM }
+			CHI  = { add_to_faction = GXC }
+			CHI  = { add_to_faction = YUN }
+			CHI  = { add_to_faction = SHX }
+			CHI  = { add_to_faction = SIK }
+			CHI  = { add_to_faction = SIC }
+			CHI  = { add_to_faction = XIK }
+		}
+	}
+}
+
+country_event = { #Form Shaan Gan Ning
+	id = ET_CCP.3
+	title = ET_CCP.3.t
+	desc = ET_CCP.3.d
+	picture = GFX_report_event_chinese_officers
+	
+	trigger = {
+	    TAG = PRC
+	    is_in_faction_with = CHI
+		date < 1939.1.1
+	}
+	is_triggered_only = no
+    fire_only_once = yes
+	
+	option = {
+		name = ET_CCP.3.a
+	    ai_chance = {
+			base = 50
+		}
+	    add_stability = 0.05
+		add_war_support = 0.05
+		hidden_effect = {
+		    set_cosmetic_tag = PRC_gcd
+			CHI = {
+			    add_equipment_to_stockpile = {  #Helps china survive better in the early stages.
+				    type = infantry_equipment
+					amount = 10000
+					producer = CHI
+				}
+			}
+		}
+	}
+}

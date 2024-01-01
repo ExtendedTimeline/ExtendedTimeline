@@ -246,6 +246,11 @@ ET_set_new_focus_tree_effect = {
                 if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to USA" }
                 load_focus_tree = { tree = ET_S1_USA keep_completed = yes }
             }
+            else_if = { # USA
+                limit = { original_tag = PRC }
+                if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to PRC" }
+                country_event = ET_CCP.1
+            }
             else = {    # Generic
                 if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] have changed focus tree to GENERIC" }
                 load_focus_tree = { tree = ET_Generic keep_completed = yes }

@@ -1,0 +1,111 @@
+﻿add_namespace = wtt_japan
+
+country_event = {
+	id = wtt_japan.126
+	title = wtt_japan.126.t
+	desc = wtt_japan.126.desc
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	# We accept their surrender.
+	option = {
+		name = wtt_japan.126.a
+		effect_tooltip = {
+			if = {
+				limit = {
+					NOT = {
+						MAN = {
+							controls_state = 525
+							controls_state = 527
+						}
+					}
+				}
+				FROM = { release = KOR }
+			}
+			if = {
+				limit = {
+					524 = {
+						is_controlled_by = JAP
+					}
+				}
+				event_target:WTT_current_china_leader = {
+					transfer_state = 524
+				}
+			}
+			if = {
+				limit = {
+					event_target:WTT_current_china_leader = { #Chinese United Front
+						is_faction_leader = yes
+					}
+				}
+				every_country = {
+					limit = {
+						is_literally_china = yes
+						has_war_with = ROOT
+						is_in_faction_with = event_target:WTT_current_china_leader
+					}
+					every_controlled_state = {
+						limit = {
+							OWNER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						CONTROLLER = {
+							transfer_state = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						is_literally_china = yes
+						has_war_with = ROOT
+						is_in_faction_with = event_target:WTT_current_china_leader
+					}
+					white_peace = ROOT
+				}
+			}
+			else = {
+				every_other_country = {
+					limit = {
+						is_literally_china = yes
+						has_war_with = ROOT
+					}
+					every_controlled_state = {
+						limit = {
+							OWNER = {
+								OR = {
+									original_tag = JAP
+									is_subject_of = JAP
+									is_in_faction_with = JAP
+								}
+							}
+						}
+						CONTROLLER = {
+							transfer_state = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						is_literally_china = yes
+						has_war_with = ROOT
+					}
+					white_peace = ROOT
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = wtt_japan.127 }
+		}
+		set_country_flag = achievement_JAP_sue_for_peace_CHI_completed
+		
+		ai_chance = {
+			factor = 90
+		}
+	}
+}
