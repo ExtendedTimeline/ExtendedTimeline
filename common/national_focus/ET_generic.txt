@@ -1279,7 +1279,7 @@ focus_tree = {
         prerequisite = { focus = ET_Generic_International_political_effort  }
         
         allow_branch = {
-            ET_has_senario_1 = yes
+            ET_has_scenario_1 = yes
         }
 
         available = {
@@ -1305,8 +1305,8 @@ focus_tree = {
         
         allow_branch = {
             OR = {
-                ET_has_senario_1 = yes
-                ET_has_senario_2 = yes
+                ET_has_scenario_1 = yes
+                ET_has_scenario_2 = yes
             }
             OR = {
                 capital_scope = { is_on_continent = europe }
