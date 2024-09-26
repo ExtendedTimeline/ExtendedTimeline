@@ -1,0 +1,577 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+
+focus_tree = {
+    id = ET_S1_PRC
+    continuous_focus_position = { x = 100 y = 1500 }
+    default = no
+    country = {
+        factor = 0
+        modifier = {
+            add = 2000
+            original_tag = PRC
+            ET_has_scenario_1 = yes
+            ET_in_new_era_country = yes #Brostrom Change this, I don't know how your mod works lol
+        }
+    }
+    
+    focus = {
+        id = cpc_consolidate_manchuria
+        icon = GFX_goal_cpc_consolidate_manchuria
+        x = 6
+        y = 0
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_stability = 0.15
+            add_war_support = 0.2
+            custom_effect_tooltip = cpc_seize_manchuria
+            hidden_effect = {
+                PRC = {
+                    transfer_state = 715
+                    transfer_state = 717
+                    transfer_state = 714
+                    transfer_state = 761
+                    transfer_state = 328
+                    transfer_state = 610
+                }
+                CHI = {
+                    transfer_units_fraction = {
+                        target = PRC
+                        size = 0.4
+                        stockpile_ratio = 0
+                        army_ratio = 0.4
+                        keep_unit_leaders_trigger = { always = yes }
+                    }
+                }
+                612 = {
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                }
+                761 = {
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                }
+                715 = {
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                }
+                714 = {
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                }
+                717 = {
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongbei Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                }
+            }
+        }
+    }
+    focus = {
+        id = cpc_reuse_japanese_weapons
+        icon = GFX_focus_ETH_freedom_at_gunpoint
+        prerequisite = { focus = cpc_consolidate_manchuria }
+        x = 5
+        y = 1
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_stability = -0.05
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 15000
+                producer = JAP
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 750
+                producer = JAP
+            }
+            add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = 575
+                producer = JAP
+            }
+        }
+    }
+    focus = {
+        id = cpc_passive_defense
+        icon = GFX_goal_generic_defence
+        prerequisite = { focus = cpc_consolidate_manchuria }
+        x = 7
+        y = 1
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_ideas = ET_PRC_passive_defence
+        }
+    }
+    focus = {
+        id = cpc_seize_shandong
+        icon = GFX_goal_cpc_seize_shandong
+        prerequisite = { focus = cpc_passive_defense }
+        prerequisite = { focus = cpc_reuse_japanese_weapons }
+        x = 6
+        y = 2
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_war_support = 0.03
+            custom_effect_tooltip = cpc_seize_shandong_tooltip
+            hidden_effect = {
+                PRC = {
+                    transfer_state = 597
+                    transfer_state = 743
+                }
+                597 = {
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                }
+                743 = {
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                    create_unit = { division = "name = \"Dongshan Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                }
+            }
+        }
+    }
+    focus = {
+        id = cpc_mobilizing_militia
+        icon = GFX_focus_generic_little_entente
+        prerequisite = { focus = cpc_seize_shandong }
+        available = { has_completed_focus = cpc_war_of_liberation }
+        x = 2
+        y = 3
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            622 = {
+                create_unit = { division = "name = \"1. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"2. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"3. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"4. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"5. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"6. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"7. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"8. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"9. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"10. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+                create_unit = { division = "name = \"11. Zhongguo Minbing\" division_template = \"Renmin Jundui\" start_experience_factor = 0.5" owner = PRC }
+            }
+        }
+    }
+    focus = {
+        id = cpc_reinstating_defecting_nra
+        icon = GFX_focus_YUG_pan_slavic_congress
+        prerequisite = { focus = cpc_mobilizing_militia }
+        x = 2
+        y = 4
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            CHI = {
+                transfer_units_fraction = {
+                    target = PRC
+                    size = 0.2
+                    stockpile_ratio = 0
+                    army_ratio = 0.2
+                    navy_ratio = 0
+                    air_ratio = 0
+                    keep_unit_leaders_trigger = { always = yes }
+                }
+            }
+        }
+    }
+    focus = {
+        id = cpc_boost_morale
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { focus = cpc_reinstating_defecting_nra }
+        x = 2
+        y = 5
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = ET_PRC_morale_debuff
+                add_idea = ET_PRC_morale_boost
+            }
+        }
+    }
+    focus = {
+        id = cpc_linbiao_command
+        icon = GFX_goal_cpc_linbiao_command
+        prerequisite = { focus = cpc_seize_shandong }
+        available = { has_completed_focus = cpc_war_of_liberation }
+        x = 4
+        y = 3
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_ideas = ET_PRC_lin_biao_command
+            PRC_lin_biao = {
+                gain_xp = 35
+            }
+        }
+    }
+    focus = {
+        id = cpc_recruit_peasants
+        icon = GFX_focus_generic_military_mission
+        prerequisite = { focus = cpc_linbiao_command }
+        x = 4
+        y = 4
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_manpower = 500000
+            add_equipment_to_stockpile = {
+                type = motorized_equipment
+                amount = 550
+                producer = PRC
+            }
+        }
+    }
+    focus = {
+        id = cpc_initiate_reforms
+        icon = GFX_focus_generic_treaty
+        prerequisite = { focus = cpc_recruit_peasants }
+        x = 4
+        y = 5
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_stability = 0.05
+            add_war_support = 0.05
+            add_ideas = ET_PRC_initial_land_reforms
+        }
+    }
+    focus = {
+        id = cpc_war_of_liberation
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = cpc_seize_shandong }
+        x = 6
+        y = 3
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        cancelable = no
+        will_lead_to_war_with = CHI
+        completion_reward = {
+            declare_war_on = {
+                target = CHI
+                type = annex_everything
+            }
+            add_ideas = ET_PRC_peoples_army_1
+        }
+    }
+    focus = {
+        id = cpc_formation_of_pla
+        icon = GFX_focus_SOV_builder_of_the_red_army
+        prerequisite = { focus = cpc_war_of_liberation }
+        x = 6
+        y = 4
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            set_cosmetic_tag = PRC_civil
+        }
+    }
+    focus = {
+        id = cpc_promote_officers
+        icon = GFX_focus_generic_military_academy
+        prerequisite = { focus = cpc_formation_of_pla }
+        x = 6
+        y = 5
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            create_corps_commander = {
+                name = "Zhang Yunyi"
+                portrait_path = "gfx/leaders/PRC/cw/zhang_yunyi.dds"
+                traits = { trait_mountaineer infantry_officer }
+                skill = 4
+                attack_skill = 4
+	            defense_skill = 3
+	            planning_skill = 4
+	            logistics_skill = 4
+            }
+            create_corps_commander = {
+                name = "Xu Haidong"
+                portrait_path = "gfx/leaders/PRC/cw/xu_haidong.dds"
+                traits = { trait_mountaineer infantry_officer }
+                skill = 4
+                attack_skill = 3
+	            defense_skill = 5
+	            planning_skill = 4
+	            logistics_skill = 4
+            }
+        }
+    }
+    focus = {
+        id = cpc_attack_plains
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = cpc_seize_shandong }
+        available = { has_completed_focus = cpc_war_of_liberation }
+        x = 8
+        y = 3
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ET_PRC_attack_plains
+                days = 210
+            }
+        }
+    }
+    focus = {
+        id = cpc_pushing_south
+        icon = GFX_focus_SOV_mobilization_plan
+        prerequisite = { focus = cpc_attack_plains }
+        available = {
+            NOT = {
+                has_idea = ET_PRC_attack_plains
+            }
+        }
+        x = 8
+        y = 4
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ET_PRC_push_south
+                days = 210
+            }
+        }
+    }
+    focus = {
+        id = cpc_show_kmt_out
+        icon = GFX_goal_cpc_show_kmt_out
+        prerequisite = { focus = cpc_pushing_south }
+        x = 8
+        y = 5
+        cost = 10
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            CHI = {
+                add_ideas = ET_CHI_collapsing_army
+                add_stability = -0.1
+                add_war_support = -0.1
+            }
+        }
+    }
+    focus = {
+        id = cpc_secure_beijing
+        icon = GFX_focus_SOV_organization_centralization_discipline
+        prerequisite = { focus = cpc_seize_shandong }
+        available = {
+            controls_state = 608
+            has_completed_focus = cpc_war_of_liberation
+        }
+        x = 10
+        y = 3
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_stability = 0.05
+            add_war_support = 0.05
+            PRC = {
+                transfer_state = 608
+                set_capital = {
+                    state = 608
+                    remember_old_capital = no
+                }
+            }
+        }
+    }
+    focus = {
+        id = cpc_counterattacks
+        icon = GFX_focus_generic_manpower
+        prerequisite = { focus = cpc_secure_beijing }
+        x = 10
+        y = 4
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = ET_PRC_peoples_army_1
+                add_idea = ET_PRC_peoples_army_2
+            }
+        }
+    }
+    focus = {
+        id = cpc_cover_more_ground
+        icon = GFX_focus_prc_infiltration
+        prerequisite = { focus = cpc_counterattacks }
+        x = 10
+        y = 5
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = ET_PRC_peoples_army_2
+                add_idea = ET_PRC_peoples_army_3
+            }
+        }
+    }
+    focus = {
+        id = cpc_consolidating_china
+        icon = GFX_focus_chi_one_china_policy
+        prerequisite = { focus = cpc_promote_officers }
+        prerequisite = { focus = cpc_initiate_reforms }
+        prerequisite = { focus = cpc_boost_morale }
+        x = 5
+        y = 6
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ET_PRC_consolidate_china
+                days = 352
+            }
+        }
+    }
+    focus = {
+        id = cpc_purge_kmt_remnants
+        icon = GFX_focus_prc_remove_chiang_kai_shek
+        prerequisite = { focus = cpc_show_kmt_out }
+        prerequisite = { focus = cpc_cover_more_ground }
+        prerequisite = { focus = cpc_promote_officers }
+        x = 7
+        y = 6
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            add_timed_idea = {
+                idea = ET_PRC_purge_kmt
+                days = 352
+            }
+        }
+    }
+    focus = {
+        id = cpc_a_new_china
+        icon = GFX_focus_prc_proclaim_the_peoples_republic
+        prerequisite = { focus = cpc_consolidating_china }
+        prerequisite = { focus = cpc_purge_kmt_remnants }
+        x = 6
+        y = 7
+        cost = 5
+        search_filters = { FOCUS_FILTER_RESEARCH }
+        ai_will_do = { factor = 1 }
+        completion_reward = {
+            set_cosmetic_tag = PRC_proclaimed
+			hidden_effect = {
+				news_event = { id = wtt_news.37 days = 3 random_days = 3 }
+                set_rule = { can_send_volunteers = yes }
+                remove_ideas = ET_PRC_isolated_country
+			}
+        }
+    }
+}
