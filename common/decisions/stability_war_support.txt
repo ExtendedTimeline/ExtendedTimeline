@@ -481,6 +481,7 @@ demobilization = {
 		
 		is_good = no
 
+		# ET CHANGE START
 		available = {
 			OR = {
 				AND = {
@@ -508,8 +509,11 @@ demobilization = {
 				}
 			}
 		}
+		# ET CHANGE END
+
 		cost = 50
 
+		# ET CHANGE START
 		visible = {
 			OR = {
 				AND = {
@@ -524,6 +528,7 @@ demobilization = {
 			}
 		}
 		complete_effect = {
+			# ET CHANGE START
 			if = { limit = { is_debug = yes } log = "[GetDateText]: [This.Owner.GetTag] demobilization_economic triggerd!" }
 			
 			# Extended Timeline: Moved in to if below
@@ -604,6 +609,7 @@ demobilization = {
 					add_ideas = war_economy
 				}
 			}
+			# ET CHANGE END
 		}
 		ai_will_do = {
 			factor = 500 #should really get on this
@@ -611,6 +617,7 @@ demobilization = {
 		
 	}
 	demob_economic_mission = {
+		# ET CHANGE START
 		available = {
 			OR = {
 				has_unsupported_economic_law = no
@@ -622,6 +629,7 @@ demobilization = {
 				}
 			}
 		}
+
 
 		activation = {
 			OR = {
@@ -640,6 +648,8 @@ demobilization = {
 				}
 			}
 		}
+		# ET CHANGE END
+
 		icon = revolt
 		is_good = no
 		days_mission_timeout = 120

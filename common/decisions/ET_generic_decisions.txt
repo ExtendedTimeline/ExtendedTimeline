@@ -344,11 +344,11 @@ economy_decisions = {
             has_equipment = { train_equipment < 101 }
             OR = {
                 has_tech = basic_train
-                has_tech = 50_train
-                has_tech = 60_train
-                has_tech = 70_train
-                has_tech = 80_train
-                has_tech = 90_train
+                has_tech = train_50
+                has_tech = train_60
+                has_tech = train_70
+                has_tech = train_80
+                has_tech = train_90
             }
         }
         
@@ -364,35 +364,35 @@ economy_decisions = {
 
         complete_effect = {
             if = {
-                limit = { has_tech = 90_train }
+                limit = { has_tech = train_90 }
                 add_equipment_to_stockpile = {
                     type = train_equipment_8
                     amount = 15
                 }
             }
             else_if = {
-                limit = { has_tech = 80_train }
+                limit = { has_tech = train_80 }
                 add_equipment_to_stockpile = {
                     type = train_equipment_7
                     amount = 15
                 }
             }
             else_if = {
-                limit = { has_tech = 70_train }
+                limit = { has_tech = train_70 }
                 add_equipment_to_stockpile = {
                     type = train_equipment_6
                     amount = 15
                 }
             }
             else_if = {
-                limit = { has_tech = 60_train }
+                limit = { has_tech = train_60 }
                 add_equipment_to_stockpile = {
                     type = train_equipment_5
                     amount = 15
                 }
             }
             else_if = {
-                limit = { has_tech = 50_train }
+                limit = { has_tech = train_50 }
                 add_equipment_to_stockpile = {
                     type = train_equipment_4
                     amount = 15
